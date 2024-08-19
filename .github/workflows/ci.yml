@@ -1,0 +1,116 @@
+name: CI
+on:
+  push:
+    branches:
+      - "main"
+  pull_request:
+
+permissions: write-all
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: ./.github/actions/setup-node-env
+
+      - name: Run unit tests
+        run: pnpm test -- --ci
+
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: ./.github/actions/setup-node-env
+
+      - name: Lint files
+        run: pnpm lint
+
+      - name: Check formatting
+        run: pnpm prettier:check
+
+  types:
+    name: Type check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: ./.github/actions/setup-node-env
+
+      - name: Check types
+        run: pnpm tsc
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: ./.github/actions/setup-node-env
+
+      - name: Build package
+        run: pnpm build
+
+      - name: Save build
+        if: github.ref == 'refs/heads/main'
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist
+
+  # release:
+  #   name: Release
+  #   needs: [build, test, lint, types]
+  #   if: github.ref == 'refs/heads/main'
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v4
+  #       with:
+  #         fetch-depth: 0
+  #         persist-credentials: false
+
+  #     - name: Set up Node
+  #       uses: ./.github/actions/setup-node-env
+
+  #     - name: Fetch build
+  #       uses: actions/download-artifact@v4
+  #       with:
+  #         name: dist
+  #         path: dist
+
+  #     - name: Use GitHub App Token
+  #       uses: actions/create-github-app-token@v1
+  #       id: app-token
+  #       with:
+  #         app-id: ${{ secrets.GU_CHANGESETS_APP_ID }}
+  #         private-key: ${{ secrets.GU_CHANGESETS_PRIVATE_KEY }}
+
+  #     - name: Set git user to Gu Changesets app
+  #       run: |
+  #         git config user.name "gu-changesets-release-pr[bot]"
+  #         git config user.email "gu-changesets-release-pr[bot]@users.noreply.github.com"
+
+  #     - name: Create Release Pull Request or Publish to npm
+  #       id: changesets
+  #       uses: changesets/action@v1
+  #       with:
+  #         publish: pnpm changeset publish
+  #         title: "🦋 Release package updates"
+  #         commit: "Bump package versions"
+  #         setupGitUser: false
+  #       env:
+  #         GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
+  #         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
