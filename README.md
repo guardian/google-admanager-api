@@ -1,25 +1,25 @@
 <p align="center">
   <a href="https://developers.google.com/ad-manager/api/start" target="blank"><img src="https://developers.google.com/ads/images/logo_admanager_192px.svg" width="120" alt="Ad Manager Logo" /></a>
 </p>
-
-[circleci-image]: https://img.shields.io/circleci/build/github/Niurmiguel/google-admanager-api/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/Niurmiguel/google-admanager-api
-
   <p align="center"><a href="https://developers.google.com/ad-manager/api/start" target="_blank">Google Ad Manager API</a> Client Library for NodeJs.</p>
     <p align="center">
-<a href="https://www.npmjs.com/~niur" target="_blank"><img src="https://img.shields.io/npm/v/@niur/google-admanager-api.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~niur" target="_blank"><img src="https://img.shields.io/npm/l/@niur/google-admanager-api.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~niur" target="_blank"><img src="https://img.shields.io/npm/dm/@niur/google-admanager-api.svg" alt="NPM Downloads" /></a>
+<a href="https://www.npmjs.com/~guardian" target="_blank"><img src="https://img.shields.io/npm/v/@guardian/google-admanager-api.svg" alt="NPM Version" /></a>
+<a href="https://www.npmjs.com/~guardian" target="_blank"><img src="https://img.shields.io/npm/l/@guardian/google-admanager-api.svg" alt="Package License" /></a>
+<a href="https://www.npmjs.com/~guardian" target="_blank"><img src="https://img.shields.io/npm/dm/@guardian/google-admanager-api.svg" alt="NPM Downloads" /></a>
 </p>
 
 ## Description
+
+Forked from https://github.com/Niurmiguel/google-admanager-api as the original package was not maintained.
 
 Developers can use the Google Ad Manager API to build applications that manage inventory, create orders, pull reports, and more.
 
 ### Installing the library
 
 ```bash
-$ npm install @niur/google-admanager-api
+$ npm install @guardian/google-admanager-api
+$ yarn add @guardian/google-admanager-api
+$ pnpm add @guardian/google-admanager-api
 ```
 ### Overview
 
@@ -87,10 +87,3 @@ const orderPage = await orderService.getOrdersByStatement(statement.toStatement(
     <td>An arbitrary string name identifying your application. This will be shown in Google's log files. For example: "My Inventory Application" or "App_1" (<b>optional</b>).</td>
   </tr>
 </table>
-
-## Stay in touch
-
-* Author - [Niurmiguel](https://github.com/Niurmiguel)
-
-## License
-Nestjs Azure Service Bus is [MIT licensed](LICENSE).
