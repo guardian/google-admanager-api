@@ -1,6 +1,6 @@
 {
-  "name": "@niur/google-admanager-api",
-  "version": "0.0.6",
+  "name": "@guardian/google-admanager-api",
+  "version": "0.0.0",
   "description": "Google Ad Manager API Client Library for NodeJs",
   "main": "dist/index",
   "types": "dist/index",
@@ -9,21 +9,31 @@
     "build": "rm -rf dist && tsc -p tsconfig.json",
     "format": "prettier --write \"**/*.ts\"",
     "lint": "eslint 'lib/**/*.ts' --fix",
-    "prepublish:npm": "npm run build",
+    "prepublish:npm": "pnpm build",
     "publish:npm": "npm publish --access public",
     "test": "jest --config jestconfig.json",
-    "prerelease": "npm run build"
+    "prerelease": "pnpm build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Niurmiguel/google-admanager-api.git"
+    "url": "git+https://github.com/guardian/google-admanager-api.git"
   },
   "author": "Niurmiguel Gonzalez",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Niurmiguel/google-admanager-api/issues"
+    "url": "https://github.com/guardian/google-admanager-api/issues"
   },
-  "homepage": "https://github.com/Niurmiguel/google-admanager-api#readme",
+  "contributors": [
+    {
+      "name": "Niurmiguel Gonzalez",
+      "url": "https://github.com/niurmiguel"
+    },
+    {
+      "name": "The Guardian",
+      "url": "https://github.com/guardian"
+    }
+  ],
+  "homepage": "https://github.com/guardian/google-admanager-api#readme",
   "devDependencies": {
     "@types/jest": "^27.5.2",
     "@types/node": "^17.0.21",
