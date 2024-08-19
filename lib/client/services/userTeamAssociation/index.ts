@@ -1,1 +1,1 @@
-export { UserTeamAssociationService } from './userTeamAssociation.service';
+export { UserTeamAssociationService } from "./userTeamAssociation.service";

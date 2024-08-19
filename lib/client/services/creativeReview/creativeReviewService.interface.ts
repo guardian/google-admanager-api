@@ -1,6 +1,6 @@
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { CreativeReviewAction } from './creativeReview.action';
-import type { CreativeReviewPage } from './creativeReview.type';
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { CreativeReviewAction } from "./creativeReview.action";
+import type { CreativeReviewPage } from "./creativeReview.type";
 
 export interface CreativeReviewServiceOperations {
   /**
@@ -13,7 +13,9 @@ export interface CreativeReviewServiceOperations {
    * @param statement a Publisher Query Language statement used to specify the page of CreativeReview to be fetch. Only LIMIT is supported.
    * @returns the CreativeReviews that match the given filter
    */
-  getCreativeReviewsByStatement(statement: Statement): Promise<CreativeReviewPage>;
+  getCreativeReviewsByStatement(
+    statement: Statement,
+  ): Promise<CreativeReviewPage>;
   /**
    * Performs actions on {@link https://developers.google.com/ad-manager/api/reference/v202202/CreativeReviewService.CreativeReview CreativeReview} objects that match the given Statement.
    *

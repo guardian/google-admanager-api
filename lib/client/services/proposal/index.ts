@@ -1,1 +1,1 @@
-export { ProposalService } from './proposal.service';
+export { ProposalService } from "./proposal.service";

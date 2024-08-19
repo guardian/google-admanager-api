@@ -1,5 +1,5 @@
-import type { Statement } from '../../../common/types';
-import type { CreativeSet, CreativeSetPage } from './creativeSet.type';
+import type { Statement } from "../../../common/types";
+import type { CreativeSet, CreativeSetPage } from "./creativeSet.type";
 
 /**
  * Provides operations for creating, updating and retrieving {@link https://developers.google.com/ad-manager/api/reference/v202202/CreativeSetService.CreativeSet CreativeSet} objects.
@@ -28,7 +28,9 @@ export interface CreativeSetServiceOperations {
    * @param filterStatement a Publisher Query Language statement used to filter a set of creative sets
    * @returns the creative sets that match the given filter
    */
-  getCreativeSetsByStatement(filterStatement: Statement): Promise<CreativeSetPage>;
+  getCreativeSetsByStatement(
+    filterStatement: Statement,
+  ): Promise<CreativeSetPage>;
   /**
    * Updates the specified {@link https://developers.google.com/ad-manager/api/reference/v202202/CreativeSetService.CreativeSet CreativeSet}.
    *

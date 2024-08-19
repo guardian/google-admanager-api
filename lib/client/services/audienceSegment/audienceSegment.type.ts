@@ -1,11 +1,11 @@
-import type { DateTime, PageResult } from '../../../common/types';
-import type { Money } from '../../common/types';
+import type { DateTime, PageResult } from "../../../common/types";
+import type { Money } from "../../common/types";
 import type {
   AudienceSegmentApprovalStatus,
   AudienceSegmentStatus,
   AudienceSegmentType,
   LicenseType,
-} from './audienceSegment.enum';
+} from "./audienceSegment.enum";
 
 /**
  * Data provider that owns this segment.

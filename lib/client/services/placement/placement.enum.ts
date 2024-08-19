@@ -5,13 +5,13 @@ export enum InventoryStatus {
   /**
    * The object is active.
    */
-  ACTIVE = 'ACTIVE',
+  ACTIVE = "ACTIVE",
   /**
    * The object is no longer active.
    */
-  INACTIVE = 'INACTIVE',
+  INACTIVE = "INACTIVE",
   /**
    * The object has been archived.
    */
-  ARCHIVED = 'ARCHIVED',
+  ARCHIVED = "ARCHIVED",
 }

@@ -1,8 +1,8 @@
-import type { Client} from 'soap';
-import { BearerSecurity, createClientAsync } from 'soap';
-import { API_VERSION, SERVICE_MAP } from '../common/constants';
-import type { GoogleSoapServiceOptions, ImportClass } from '../common/types';
-import { promiseFromCallback } from '../common/utils';
+import type { Client } from "soap";
+import { BearerSecurity, createClientAsync } from "soap";
+import { API_VERSION, SERVICE_MAP } from "../common/constants";
+import type { GoogleSoapServiceOptions, ImportClass } from "../common/types";
+import { promiseFromCallback } from "../common/utils";
 
 export class GoogleSoapService<T extends keyof typeof SERVICE_MAP> {
   private networkCode: number;
@@ -32,15 +32,16 @@ export class GoogleSoapService<T extends keyof typeof SERVICE_MAP> {
       get: function get(target, propertyKey) {
         const method = propertyKey.toString();
 
-        if (target.hasOwnProperty(method) && !['setToken'].includes(method)) {
+        if (target.hasOwnProperty(method) && !["setToken"].includes(method)) {
           return async function run(dto: any = {}) {
-            const res = await promiseFromCallback((cb) => client[method](dto, cb));
+            const res = await promiseFromCallback((cb) =>
+              client[method](dto, cb),
+            );
 
             return res?.rval || null;
           };
-        } 
-          return target[method];
-        
+        }
+        return target[method];
       },
     });
 
@@ -53,15 +54,16 @@ export class GoogleSoapService<T extends keyof typeof SERVICE_MAP> {
     return {
       RequestHeader: {
         attributes: {
-          'soapenv:actor': 'http://schemas.xmlsoap.org/soap/actor/next',
-          'soapenv:mustUnderstand': 0,
-          'xsi:type': 'ns1:SoapRequestHeader',
-          'xmlns:ns1': 'https://www.google.com/apis/ads/publisher/' + API_VERSION,
-          'xmlns:xsi': 'http://www.w3.org/2001/XMLSchema-instance',
-          'xmlns:soapenv': 'http://schemas.xmlsoap.org/soap/envelope/',
+          "soapenv:actor": "http://schemas.xmlsoap.org/soap/actor/next",
+          "soapenv:mustUnderstand": 0,
+          "xsi:type": "ns1:SoapRequestHeader",
+          "xmlns:ns1":
+            "https://www.google.com/apis/ads/publisher/" + API_VERSION,
+          "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+          "xmlns:soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
         },
-        'ns1:networkCode': this.networkCode,
-        'ns1:applicationName': this.applicationName,
+        "ns1:networkCode": this.networkCode,
+        "ns1:applicationName": this.applicationName,
       },
     };
   }

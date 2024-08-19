@@ -1,6 +1,6 @@
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { NativeStyleAction } from './nativeStyle.action';
-import type { NativeStyle, NativeStylePage } from './nativeStyle.type';
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { NativeStyleAction } from "./nativeStyle.action";
+import type { NativeStyle, NativeStylePage } from "./nativeStyle.type";
 
 /**
  * Provides operations for creating, updating and retrieving {@link https://developers.google.com/ad-manager/api/reference/v202202/NativeStyleService.NativeStyle NativeStyle} objects.
@@ -27,7 +27,9 @@ export interface NativeStyleServiceOperations {
    * @param filterStatement a Publisher Query Language statement used to filter a set of native styles
    * @returns the native styles that match the given filter
    */
-  getNativeStylesByStatement(filterStatement: Statement): Promise<NativeStylePage>;
+  getNativeStylesByStatement(
+    filterStatement: Statement,
+  ): Promise<NativeStylePage>;
   /**
    * Performs actions on {@link https://developers.google.com/ad-manager/api/reference/v202202/NativeStyleService.NativeStyle native styles} objects that match the given Statement.
    *
@@ -35,7 +37,10 @@ export interface NativeStyleServiceOperations {
    * @param filterStatement a PQL statement used to filter native styles
    * @returns the result of the action performed
    */
-  performNativeStyleAction(nativeStyleAction: NativeStyleAction, filterStatement: Statement): Promise<UpdateResult>;
+  performNativeStyleAction(
+    nativeStyleAction: NativeStyleAction,
+    filterStatement: Statement,
+  ): Promise<UpdateResult>;
   /**
    * Updates the specified {@link https://developers.google.com/ad-manager/api/reference/v202202/NativeStyleService.NativeStyle NativeStyle} objects.
    *

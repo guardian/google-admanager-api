@@ -6,7 +6,7 @@ import type {
   ProspectiveLineItem,
   TrafficDataRequest,
   TrafficDataResponse,
-} from './forecast.type';
+} from "./forecast.type";
 
 /**
  * Provides methods for estimating traffic (clicks/impressions) for line items.
@@ -62,7 +62,10 @@ export interface ForecastServiceOperations {
    * @param lineItemIds the IDs of line items to be forecasted for delivery
    * @param forecastOptions options controlling the forecast
    */
-  getDeliveryForecastByIds(lineItemIds: number[], forecastOptions: DeliveryForecastOptions): Promise<DeliveryForecast>;
+  getDeliveryForecastByIds(
+    lineItemIds: number[],
+    forecastOptions: DeliveryForecastOptions,
+  ): Promise<DeliveryForecast>;
   /**
    * Returns forecasted and historical traffic data for the segment of traffic specified by the provided request.
    *
@@ -71,5 +74,7 @@ export interface ForecastServiceOperations {
    * @param trafficDataRequest the request specifying the segment of traffic for which data should be returned
    * @returns a dto containing forecasted and historical traffic data for the specified segment of traffic
    */
-  getTrafficData(trafficDataRequest: TrafficDataRequest): Promise<TrafficDataResponse>;
+  getTrafficData(
+    trafficDataRequest: TrafficDataRequest,
+  ): Promise<TrafficDataResponse>;
 }

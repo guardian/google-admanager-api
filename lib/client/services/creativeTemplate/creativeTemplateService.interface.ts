@@ -1,5 +1,5 @@
-import type { Statement } from '../../../common/types';
-import type { CreativeTemplatePage } from './creativeTemplate.type';
+import type { Statement } from "../../../common/types";
+import type { CreativeTemplatePage } from "./creativeTemplate.type";
 
 /**
  * Provides methods for retrieving {@link https://developers.google.com/ad-manager/api/reference/v202202/CreativeTemplateService.CreativeTemplate CreativeTemplate} objects.
@@ -21,5 +21,7 @@ export interface CreativeTemplateServiceOperations {
    * @param filterStatement a Publisher Query Language statement used to filter a set of creative templates.
    * @returns the creative templates that match the given filter
    */
-  getCreativeTemplatesByStatement(filterStatement: Statement): Promise<CreativeTemplatePage>;
+  getCreativeTemplatesByStatement(
+    filterStatement: Statement,
+  ): Promise<CreativeTemplatePage>;
 }

@@ -1,4 +1,4 @@
-import type { Client } from 'soap';
+import type { Client } from "soap";
 import type {
   AvailabilityForecast,
   AvailabilityForecastOptions,
@@ -7,8 +7,8 @@ import type {
   ProspectiveLineItem,
   TrafficDataRequest,
   TrafficDataResponse,
-} from './forecast.type';
-import type { ForecastServiceOperations } from './forecastService.interface';
+} from "./forecast.type";
+import type { ForecastServiceOperations } from "./forecastService.interface";
 
 export class ForecastService implements ForecastServiceOperations {
   private _client: Client;
@@ -40,14 +40,19 @@ export class ForecastService implements ForecastServiceOperations {
     return this._client.getDeliveryForecast({ lineItems, forecastOptions });
   }
 
-  getDeliveryForecastByIds(lineItemIds: number[], forecastOptions: DeliveryForecastOptions): Promise<DeliveryForecast> {
+  getDeliveryForecastByIds(
+    lineItemIds: number[],
+    forecastOptions: DeliveryForecastOptions,
+  ): Promise<DeliveryForecast> {
     return this._client.getDeliveryForecastByIds({
       lineItemIds,
       forecastOptions,
     });
   }
 
-  getTrafficData(trafficDataRequest: TrafficDataRequest): Promise<TrafficDataResponse> {
+  getTrafficData(
+    trafficDataRequest: TrafficDataRequest,
+  ): Promise<TrafficDataResponse> {
     return this._client.getTrafficData({ trafficDataRequest });
   }
 }

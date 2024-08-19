@@ -1,4 +1,4 @@
-import type { DateTime, PageResult } from '../../../common/types';
+import type { DateTime, PageResult } from "../../../common/types";
 
 /**
  * A creative set is comprised of a master creative and its companion creatives.

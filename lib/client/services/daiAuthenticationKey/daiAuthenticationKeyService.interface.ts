@@ -1,6 +1,9 @@
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { DaiAuthenticationKeyAction } from './daiAuthenticationKey.action';
-import type { DaiAuthenticationKey, DaiAuthenticationKeyPage } from './daiAuthenticationKey.type';
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { DaiAuthenticationKeyAction } from "./daiAuthenticationKey.action";
+import type {
+  DaiAuthenticationKey,
+  DaiAuthenticationKeyPage,
+} from "./daiAuthenticationKey.type";
 
 /**
  * Provides methods for creating, updating and retrieving
@@ -17,7 +20,9 @@ export interface DaiAuthenticationKeyServiceOperations {
    * @param daiAuthenticationKeys the DAI authentication keys to create
    * @returns the created DAI authentication keys with their IDs filled in
    */
-  createDaiAuthenticationKeys(daiAuthenticationKeys: DaiAuthenticationKey[]): Promise<DaiAuthenticationKey[]>;
+  createDaiAuthenticationKeys(
+    daiAuthenticationKeys: DaiAuthenticationKey[],
+  ): Promise<DaiAuthenticationKey[]>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202202/DaiAuthenticationKeyService.DaiAuthenticationKeyPage DaiAuthenticationKeyPage}
    * of {@link https://developers.google.com/ad-manager/api/reference/v202202/DaiAuthenticationKeyService.DaiAuthenticationKey DaiAuthenticationKey} objects that satisfy the given
@@ -33,7 +38,9 @@ export interface DaiAuthenticationKeyServiceOperations {
    * @param filterStatement a Publisher Query Language statement to filter a list of DAI authentication keys
    * @returns the DAI authentication keys that match the filter
    */
-  getDaiAuthenticationKeysByStatement(filterStatement: Statement): Promise<DaiAuthenticationKeyPage>;
+  getDaiAuthenticationKeysByStatement(
+    filterStatement: Statement,
+  ): Promise<DaiAuthenticationKeyPage>;
   /**
    * Performs actions on {@link https://developers.google.com/ad-manager/api/reference/v202202/DaiAuthenticationKeyService.DaiAuthenticationKey DaiAuthenticationKey} objects that match the given
    * {@link https://developers.google.com/ad-manager/api/reference/v202202/DaiAuthenticationKeyService.Statement#query Statement.query}.
@@ -55,5 +62,7 @@ export interface DaiAuthenticationKeyServiceOperations {
    * @param daiAuthenticationKeys the video DAI authentication keys to update
    * @returns the updated DAI authentication keys
    */
-  updateDaiAuthenticationKeys(daiAuthenticationKeys: DaiAuthenticationKey[]): Promise<DaiAuthenticationKey[]>;
+  updateDaiAuthenticationKeys(
+    daiAuthenticationKeys: DaiAuthenticationKey[],
+  ): Promise<DaiAuthenticationKey[]>;
 }

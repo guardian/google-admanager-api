@@ -1,6 +1,6 @@
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { LineItemAction } from './lineItem.action';
-import type { LineItem, LineItemPage } from './lineItem.type';
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { LineItemAction } from "./lineItem.action";
+import type { LineItem, LineItemPage } from "./lineItem.type";
 
 /**
  * Provides operations for creating, updating and retrieving {@link https://developers.google.com/ad-manager/api/reference/v202202/LineItemService.LineItem LineItem} objects.
@@ -61,7 +61,10 @@ export interface LineItemServiceOperations {
    * @param filterStatement a Publisher Query Language statement used to filter a set of line items
    * @returns the result of the action performed
    */
-  performLineItemAction(lineItemAction: LineItemAction, filterStatement: Statement): Promise<UpdateResult>;
+  performLineItemAction(
+    lineItemAction: LineItemAction,
+    filterStatement: Statement,
+  ): Promise<UpdateResult>;
   /**
    * Updates the specified {@link https://developers.google.com/ad-manager/api/reference/v202202/LineItemService.LineItem LineItem} objects.
    *

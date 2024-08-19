@@ -1,1 +1,1 @@
-export { ContentBundleService } from './contentBundles.service';
+export { ContentBundleService } from "./contentBundles.service";

@@ -1,6 +1,6 @@
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { TeamAction } from './team.action';
-import type { Team, TeamPage } from './team.type';
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { TeamAction } from "./team.action";
+import type { Team, TeamPage } from "./team.type";
 
 /**
  * Provides methods for creating, updating,
@@ -44,7 +44,10 @@ export interface TeamServiceOperations {
    * @param filterStatement	a Publisher Query Language statement used to filter a set of teams
    * @returns the result of the action performed
    */
-  performTeamAction(teamAction: TeamAction, filterStatement: Statement): Promise<UpdateResult>;
+  performTeamAction(
+    teamAction: TeamAction,
+    filterStatement: Statement,
+  ): Promise<UpdateResult>;
   /**
    * Updates the specified {@link https://developers.google.com/ad-manager/api/reference/v202202/TeamService.Team Team} objects.
    *

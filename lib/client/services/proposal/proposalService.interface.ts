@@ -1,6 +1,10 @@
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { ProposalAction } from './proposal.action';
-import type { MarketplaceCommentPage, Proposal, ProposalPage } from './proposal.type';
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { ProposalAction } from "./proposal.action";
+import type {
+  MarketplaceCommentPage,
+  Proposal,
+  ProposalPage,
+} from "./proposal.type";
 
 /**
  * Provides operations for creating, updating and retrieving {@link https://developers.google.com/ad-manager/api/reference/v202202/ProposalService.Proposal Proposal} objects.
@@ -39,7 +43,9 @@ export interface ProposalServiceOperations {
    * @param filterStatement a Publisher Query Language statement used to filter a set of marketplace comments
    * @returns the marketplace comments that match the given filter
    */
-  getMarketplaceCommentsByStatement(filterStatement: Statement): Promise<MarketplaceCommentPage>;
+  getMarketplaceCommentsByStatement(
+    filterStatement: Statement,
+  ): Promise<MarketplaceCommentPage>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202202/ProposalService.ProposalPage ProposalPage}
    * of {@link https://developers.google.com/ad-manager/api/reference/v202202/ProposalService.Proposal Proposal} objects that satisfy the given
@@ -75,7 +81,10 @@ export interface ProposalServiceOperations {
    * @param filterStatement 	a PQL statement used to filter proposals
    * @returns 	the result of the action performed
    */
-  performProposalAction(proposalAction: ProposalAction, filterStatement: Statement): Promise<UpdateResult>;
+  performProposalAction(
+    proposalAction: ProposalAction,
+    filterStatement: Statement,
+  ): Promise<UpdateResult>;
   /**
    * Updates the specified {@link https://developers.google.com/ad-manager/api/reference/v202202/ProposalService.Proposal Proposal} objects.
    *

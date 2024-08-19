@@ -1,6 +1,6 @@
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { OrderAction } from './order.action';
-import type { Order, OrderPage } from './order.type';
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { OrderAction } from "./order.action";
+import type { Order, OrderPage } from "./order.type";
 
 /**
  * Provides methods for creating, updating and retrieving {@link https://developers.google.com/ad-manager/api/reference/v202202/OrderService.Order Order} objects.
@@ -47,7 +47,10 @@ export interface OrderServiceOperations {
    * @param filterStatement a Publisher Query Language statement used to filter a set of orders
    * @returns the result of the action performed
    */
-  performOrderAction(orderAction: OrderAction, filterStatement: Statement): Promise<UpdateResult>;
+  performOrderAction(
+    orderAction: OrderAction,
+    filterStatement: Statement,
+  ): Promise<UpdateResult>;
   /**
    * Updates the specified {@link https://developers.google.com/ad-manager/api/reference/v202202/OrderService.Order Order} objects.
    * @param orders the orders to update

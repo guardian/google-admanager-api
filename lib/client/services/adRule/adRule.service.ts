@@ -1,9 +1,14 @@
-import type { Client } from 'soap';
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { AdRuleAction } from './adRule.action';
-import type { AdRule, AdRulePage, BreakTemplate, BreakTemplatePage } from './adRule.type';
-import type { AdRuleServiceOperations } from './adRuleService.interface';
-import type { AdSpot, AdSpotPage } from './adSpot.type';
+import type { Client } from "soap";
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { AdRuleAction } from "./adRule.action";
+import type {
+  AdRule,
+  AdRulePage,
+  BreakTemplate,
+  BreakTemplatePage,
+} from "./adRule.type";
+import type { AdRuleServiceOperations } from "./adRuleService.interface";
+import type { AdSpot, AdSpotPage } from "./adSpot.type";
 
 export class AdRuleService implements AdRuleServiceOperations {
   private _client: Client;
@@ -20,7 +25,9 @@ export class AdRuleService implements AdRuleServiceOperations {
     return this._client.createAdSpots({ adSports });
   }
 
-  createBreakTemplates(breakTemplate: BreakTemplate[]): Promise<BreakTemplate[]> {
+  createBreakTemplates(
+    breakTemplate: BreakTemplate[],
+  ): Promise<BreakTemplate[]> {
     return this._client.createBreakTemplates({ breakTemplate });
   }
 
@@ -36,17 +43,22 @@ export class AdRuleService implements AdRuleServiceOperations {
     });
   }
 
-  getBreakTemplatesByStatement(filterStatement: Statement): Promise<BreakTemplatePage> {
+  getBreakTemplatesByStatement(
+    filterStatement: Statement,
+  ): Promise<BreakTemplatePage> {
     return this._client.getBreakTemplatesByStatement({
       filterStatement,
     });
   }
 
-  performAdRuleAction(adRuleAction: AdRuleAction, filterStatement: Statement): Promise<UpdateResult> {
+  performAdRuleAction(
+    adRuleAction: AdRuleAction,
+    filterStatement: Statement,
+  ): Promise<UpdateResult> {
     return this._client.performAdRuleAction({
       adRuleAction: {
         attributes: {
-          'xsi:type': adRuleAction.constructor.name,
+          "xsi:type": adRuleAction.constructor.name,
         },
       },
       filterStatement,
@@ -61,7 +73,9 @@ export class AdRuleService implements AdRuleServiceOperations {
     return this._client.updateAdSpots({ adSports });
   }
 
-  updateBreakTemplates(breakTemplate: BreakTemplate[]): Promise<BreakTemplate[]> {
+  updateBreakTemplates(
+    breakTemplate: BreakTemplate[],
+  ): Promise<BreakTemplate[]> {
     return this._client.updateBreakTemplates({ breakTemplate });
   }
 }

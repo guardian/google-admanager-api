@@ -1,1 +1,1 @@
-export { TeamService } from './team.service';
+export { TeamService } from "./team.service";

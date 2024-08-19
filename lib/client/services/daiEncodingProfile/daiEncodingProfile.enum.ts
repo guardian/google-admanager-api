@@ -5,15 +5,15 @@ export enum DaiEncodingProfileStatus {
   /**
    * Indicates the DaiEncodingProfile has been created and is eligible for streaming.
    */
-  ACTIVE = 'ACTIVE',
+  ACTIVE = "ACTIVE",
   /**
    * Indicates the DaiEncodingProfile has been archived.
    */
-  ARCHIVED = 'ARCHIVED',
+  ARCHIVED = "ARCHIVED",
   /**
    * The value returned if the actual value is not exposed by the requested API version.
    */
-  UNKNOWN = 'UNKNOWN',
+  UNKNOWN = "UNKNOWN",
 }
 
 /**
@@ -23,19 +23,19 @@ export enum VariantType {
   /**
    * Media variant playlist type. Media playlists may: contain audio only, video only, or audio and video.
    */
-  MEDIA = 'MEDIA',
+  MEDIA = "MEDIA",
   /**
    * iFrame variant playlist type. iFrame playlists may: contain video or contain audio and video (i.e. video must be present).
    */
-  IFRAME = 'IFRAME',
+  IFRAME = "IFRAME",
   /**
    * Subtitles variant playlist type.
    */
-  SUBTITLES = 'SUBTITLES',
+  SUBTITLES = "SUBTITLES",
   /**
    * The value returned if the actual value is not exposed by the requested API version.
    */
-  UNKNOWN = 'UNKNOWN',
+  UNKNOWN = "UNKNOWN",
 }
 
 /**
@@ -45,17 +45,17 @@ export enum ContainerType {
   /**
    * Transport stream (TS) container.
    */
-  TS = 'TS',
+  TS = "TS",
   /**
    * Fragmented MPEG-4 (fMP4) output container.
    */
-  FMP4 = 'FMP4',
+  FMP4 = "FMP4",
   /**
    * HTTP live streaming (HLS) packed audio container.
    */
-  HLS_AUDIO = 'HLS_AUDIO',
+  HLS_AUDIO = "HLS_AUDIO",
   /**
    * The value returned if the actual value is not exposed by the requested API version.
    */
-  UNKNOWN = 'UNKNOWN',
+  UNKNOWN = "UNKNOWN",
 }

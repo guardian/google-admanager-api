@@ -1,8 +1,8 @@
-import type { Client } from 'soap';
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { UserAction } from './user.action';
-import type { Role, User, UserPage } from './user.type';
-import type { UserServiceOperations } from './userService.interface';
+import type { Client } from "soap";
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { UserAction } from "./user.action";
+import type { Role, User, UserPage } from "./user.type";
+import type { UserServiceOperations } from "./userService.interface";
 
 export class UserService implements UserServiceOperations {
   private _client: Client;
@@ -29,11 +29,14 @@ export class UserService implements UserServiceOperations {
     });
   }
 
-  async performUserAction(userAction: UserAction, filterStatement: Statement): Promise<UpdateResult> {
+  async performUserAction(
+    userAction: UserAction,
+    filterStatement: Statement,
+  ): Promise<UpdateResult> {
     return this._client.performUserAction({
       userAction: {
         attributes: {
-          'xsi:type': userAction.constructor.name,
+          "xsi:type": userAction.constructor.name,
         },
       },
       filterStatement,

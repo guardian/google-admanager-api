@@ -1,36 +1,49 @@
-import type { Client } from 'soap';
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { CustomTargetingKeyAction, CustomTargetingValueAction } from './customTargeting.action';
-import type { CustomTargetingServiceOperations } from './customTargeting.interface';
+import type { Client } from "soap";
+import type { Statement, UpdateResult } from "../../../common/types";
+import type {
+  CustomTargetingKeyAction,
+  CustomTargetingValueAction,
+} from "./customTargeting.action";
+import type { CustomTargetingServiceOperations } from "./customTargeting.interface";
 import type {
   CustomTargetingKey,
   CustomTargetingKeyPage,
   CustomTargetingValue,
   CustomTargetingValuePage,
-} from './customTargeting.type';
+} from "./customTargeting.type";
 
-export class CustomTargetingService implements CustomTargetingServiceOperations {
+export class CustomTargetingService
+  implements CustomTargetingServiceOperations
+{
   private _client: Client;
 
   constructor(client: Client) {
     this._client = client;
   }
 
-  async createCustomTargetingKeys(keys: CustomTargetingKey[]): Promise<CustomTargetingKey[]> {
+  async createCustomTargetingKeys(
+    keys: CustomTargetingKey[],
+  ): Promise<CustomTargetingKey[]> {
     return this._client.createCustomTargetingKeys({ keys });
   }
 
-  async createCustomTargetingValues(values: CustomTargetingValue[]): Promise<CustomTargetingValue[]> {
+  async createCustomTargetingValues(
+    values: CustomTargetingValue[],
+  ): Promise<CustomTargetingValue[]> {
     return this._client.createCustomTargetingValues({ values });
   }
 
-  async getCustomTargetingKeysByStatement(filterStatement: Statement): Promise<CustomTargetingKeyPage> {
+  async getCustomTargetingKeysByStatement(
+    filterStatement: Statement,
+  ): Promise<CustomTargetingKeyPage> {
     return this._client.getCustomTargetingKeysByStatement({
       filterStatement,
     });
   }
 
-  async getCustomTargetingValuesByStatement(filterStatement: Statement): Promise<CustomTargetingValuePage> {
+  async getCustomTargetingValuesByStatement(
+    filterStatement: Statement,
+  ): Promise<CustomTargetingValuePage> {
     return this._client.getCustomTargetingValuesByStatement({
       filterStatement,
     });
@@ -43,7 +56,7 @@ export class CustomTargetingService implements CustomTargetingServiceOperations 
     return this._client.performCustomTargetingKeyAction({
       customTargetingKeyAction: {
         attributes: {
-          'xsi:type': customTargetingKeyAction.constructor.name,
+          "xsi:type": customTargetingKeyAction.constructor.name,
         },
       },
       filterStatement,
@@ -57,18 +70,22 @@ export class CustomTargetingService implements CustomTargetingServiceOperations 
     return this._client.performCustomTargetingValueAction({
       customTargetingValueAction: {
         attributes: {
-          'xsi:type': customTargetingValueAction.constructor.name,
+          "xsi:type": customTargetingValueAction.constructor.name,
         },
       },
       filterStatement,
     });
   }
 
-  async updateCustomTargetingKeys(keys: CustomTargetingKey[]): Promise<CustomTargetingKey[]> {
+  async updateCustomTargetingKeys(
+    keys: CustomTargetingKey[],
+  ): Promise<CustomTargetingKey[]> {
     return this._client.updateCustomTargetingKeys({ keys });
   }
 
-  async updateCustomTargetingValues(values: CustomTargetingValue[]): Promise<CustomTargetingValue[]> {
+  async updateCustomTargetingValues(
+    values: CustomTargetingValue[],
+  ): Promise<CustomTargetingValue[]> {
     return this._client.updateCustomTargetingValues({ values });
   }
 }

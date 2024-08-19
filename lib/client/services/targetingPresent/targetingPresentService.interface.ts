@@ -1,5 +1,5 @@
-import type { Statement } from '../../../common/types';
-import type { TargetingPresetPage } from './targetingPresent.type';
+import type { Statement } from "../../../common/types";
+import type { TargetingPresetPage } from "./targetingPresent.type";
 
 /**
  * Service for interacting with Targeting Presets.
@@ -19,5 +19,7 @@ export interface TargetingPresetServiceOperations {
    * @param filterStatement a Publisher Query Language statement used to filter a set of labels.
    * @returns the targeting presets that match the given filter
    */
-  getTargetingPresetsByStatement(filterStatement: Statement): Promise<TargetingPresetPage>;
+  getTargetingPresetsByStatement(
+    filterStatement: Statement,
+  ): Promise<TargetingPresetPage>;
 }

@@ -1,10 +1,10 @@
-import type { PageResult } from '../../../common/types';
+import type { PageResult } from "../../../common/types";
 import type {
   CdnConfigurationStatus,
   CdnConfigurationType,
   OriginForwardingType,
   SecurityPolicyType,
-} from './cdnConfiguration.enum';
+} from "./cdnConfiguration.enum";
 
 /**
  * A set of security requirements to authenticate against in order to access video content. Different locations (e.g. different CDNs) can have different security policies.

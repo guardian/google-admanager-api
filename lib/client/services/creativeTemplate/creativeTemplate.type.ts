@@ -1,9 +1,9 @@
-import type { PageResult } from '../../../common/types';
+import type { PageResult } from "../../../common/types";
 import type {
   AssetCreativeTemplateVariableMimeType,
   CreativeTemplateStatus,
   CreativeTemplateType,
-} from './creativeTemplate.enum';
+} from "./creativeTemplate.enum";
 
 /**
  * Represents a file asset variable defined in a creative template.

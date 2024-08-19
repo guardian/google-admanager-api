@@ -1,6 +1,6 @@
-import type { PageResult } from '../../../common/types';
-import type { Size, Targeting } from '../../common/types';
-import type { NativeStyleStatus } from './nativeStyle.enum';
+import type { PageResult } from "../../../common/types";
+import type { Size, Targeting } from "../../common/types";
+import type { NativeStyleStatus } from "./nativeStyle.enum";
 
 /**
  * Used to define the look and feel of native ads, for both web and apps. Native styles determine how native creatives look for a segment of inventory.

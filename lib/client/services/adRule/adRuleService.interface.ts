@@ -1,7 +1,12 @@
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { AdRuleAction } from './adRule.action';
-import type { AdRule, AdRulePage, BreakTemplate, BreakTemplatePage } from './adRule.type';
-import type { AdSpot, AdSpotPage } from './adSpot.type';
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { AdRuleAction } from "./adRule.action";
+import type {
+  AdRule,
+  AdRulePage,
+  BreakTemplate,
+  BreakTemplatePage,
+} from "./adRule.type";
+import type { AdSpot, AdSpotPage } from "./adSpot.type";
 
 /**
  * Provides methods for creating, updating and retrieving AdRule objects.
@@ -31,7 +36,9 @@ export interface AdRuleServiceOperations {
    * @param breakTemplate the break template to create
    * @returns the created break template with their IDs filled in
    */
-  createBreakTemplates(breakTemplate: BreakTemplate[]): Promise<BreakTemplate[]>;
+  createBreakTemplates(
+    breakTemplate: BreakTemplate[],
+  ): Promise<BreakTemplate[]>;
 
   /**
    * Gets an AdRulePage of AdRule objects that satisfy the given Statement.query. The following fields are supported for filtering:
@@ -63,7 +70,9 @@ export interface AdRuleServiceOperations {
    * @param filterStatement a Publisher Query Language statement to filter a list of breakTemplate
    * @returns the break template that match the filter
    */
-  getBreakTemplatesByStatement(filterStatement: Statement): Promise<BreakTemplatePage>;
+  getBreakTemplatesByStatement(
+    filterStatement: Statement,
+  ): Promise<BreakTemplatePage>;
 
   /**
    * Performs actions on AdRule objects that match the given Statement.query.
@@ -72,7 +81,10 @@ export interface AdRuleServiceOperations {
    * @param filterStatement a Publisher Query Language statement used to filter a set of ad rules
    * @returns the result of the action performed
    */
-  performAdRuleAction(adRuleAction: AdRuleAction, filterStatement: Statement): Promise<UpdateResult>;
+  performAdRuleAction(
+    adRuleAction: AdRuleAction,
+    filterStatement: Statement,
+  ): Promise<UpdateResult>;
 
   /**
    * Updates the specified AdRule objects.
@@ -96,5 +108,7 @@ export interface AdRuleServiceOperations {
    * @param breakTemplate the break template to update
    * @returns the updated break template
    */
-  updateBreakTemplates(breakTemplate: BreakTemplate[]): Promise<BreakTemplate[]>;
+  updateBreakTemplates(
+    breakTemplate: BreakTemplate[],
+  ): Promise<BreakTemplate[]>;
 }

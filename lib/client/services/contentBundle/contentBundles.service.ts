@@ -1,8 +1,8 @@
-import type { Client } from 'soap';
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { ContentBundleAction } from './contentBundle.action';
-import type { ContentBundle, ContentBundlePage } from './contentBundle.type';
-import type { ContentBundleServiceOperations } from './contentBundleService.interface';
+import type { Client } from "soap";
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { ContentBundleAction } from "./contentBundle.action";
+import type { ContentBundle, ContentBundlePage } from "./contentBundle.type";
+import type { ContentBundleServiceOperations } from "./contentBundleService.interface";
 
 export class ContentBundleService implements ContentBundleServiceOperations {
   private _client: Client;
@@ -11,11 +11,15 @@ export class ContentBundleService implements ContentBundleServiceOperations {
     this._client = client;
   }
 
-  async createContentBundles(contentBundles: ContentBundle[]): Promise<ContentBundle[]> {
+  async createContentBundles(
+    contentBundles: ContentBundle[],
+  ): Promise<ContentBundle[]> {
     return this._client.createContentBundles({ contentBundles });
   }
 
-  async getContentBundlesByStatement(filterStatement: Statement): Promise<ContentBundlePage> {
+  async getContentBundlesByStatement(
+    filterStatement: Statement,
+  ): Promise<ContentBundlePage> {
     return this._client.getContentBundlesByStatement({
       filterStatement,
     });
@@ -28,14 +32,16 @@ export class ContentBundleService implements ContentBundleServiceOperations {
     return this._client.performContentBundleAction({
       contentBundleAction: {
         attributes: {
-          'xsi:type': contentBundleAction.constructor.name,
+          "xsi:type": contentBundleAction.constructor.name,
         },
       },
       filterStatement,
     });
   }
 
-  async updateContentBundles(contentBundles: ContentBundle[]): Promise<ContentBundle[]> {
+  async updateContentBundles(
+    contentBundles: ContentBundle[],
+  ): Promise<ContentBundle[]> {
     return this._client.updateContentBundles({ contentBundles });
   }
 }

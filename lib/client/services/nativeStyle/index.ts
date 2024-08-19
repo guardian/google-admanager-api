@@ -1,1 +1,1 @@
-export { NativeStyleService } from './nativeStyle.service';
+export { NativeStyleService } from "./nativeStyle.service";

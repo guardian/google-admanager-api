@@ -5,13 +5,13 @@ export enum TargetPlatform {
   /**
    * The desktop web.
    */
-  WEB = 'WEB',
+  WEB = "WEB",
   /**
    * Mobile devices.
    */
-  MOBILE = 'MOBILE',
+  MOBILE = "MOBILE",
   /**
    * An universal target platform that combines mobile and desktop features.
    */
-  ANY = 'ANY',
+  ANY = "ANY",
 }

@@ -1,1 +1,1 @@
-export { ActivityService } from './activity.service';
+export { ActivityService } from "./activity.service";

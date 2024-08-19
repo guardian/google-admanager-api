@@ -1,6 +1,6 @@
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { SiteAction } from './site.action';
-import type { Site, SitePage } from './site.type';
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { SiteAction } from "./site.action";
+import type { Site, SitePage } from "./site.type";
 
 export interface SiteServiceOperations {
   /**
@@ -36,7 +36,10 @@ export interface SiteServiceOperations {
    * @param filterStatement 	a PQL statement used to filter sites
    * @returns 	the result of the action performed
    */
-  performSiteAction(siteAction: SiteAction, filterStatement: Statement): Promise<UpdateResult>;
+  performSiteAction(
+    siteAction: SiteAction,
+    filterStatement: Statement,
+  ): Promise<UpdateResult>;
   /**
    * Updates the specified {@link https://developers.google.com/ad-manager/api/reference/v202202/SiteService.Site Site} objects.
    *

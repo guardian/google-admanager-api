@@ -1,1 +1,1 @@
-export { StreamActivityMonitorService } from './streamActivityMonitor.service';
+export { StreamActivityMonitorService } from "./streamActivityMonitor.service";

@@ -1,5 +1,5 @@
-import type { CreativeSizeType } from '../enums';
-import type { AppliedLabel, Size } from '.';
+import type { CreativeSizeType } from "../enums";
+import type { AppliedLabel, Size } from ".";
 
 /**
  * A CreativePlaceholder describes a slot that a creative is expected to fill.

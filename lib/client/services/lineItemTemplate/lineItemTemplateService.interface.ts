@@ -1,5 +1,5 @@
-import type { Statement } from '../../../common/types';
-import type { LineItemTemplatePage } from './lineItemTemplate.type';
+import type { Statement } from "../../../common/types";
+import type { LineItemTemplatePage } from "./lineItemTemplate.type";
 
 /**
  * Provides operations for creating, updating and retrieving {@link https://developers.google.com/ad-manager/api/reference/v202202/LineItemTemplateService.LineItemTemplate LineItemTemplate} objects.
@@ -18,5 +18,7 @@ export interface LineItemTemplateServiceOperations {
    * @param filterStatement a Publisher Query Language statement used to filter a set of line item templates
    * @returns the line item templates that match the given filter
    */
-  getLineItemTemplatesByStatement(filterStatement: Statement): Promise<LineItemTemplatePage>;
+  getLineItemTemplatesByStatement(
+    filterStatement: Statement,
+  ): Promise<LineItemTemplatePage>;
 }

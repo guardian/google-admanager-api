@@ -1,8 +1,8 @@
-import type { Client } from 'soap';
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { AdUnitAction } from './adUnit.action';
-import type { AdUnit, AdUnitPage, AdUnitSize } from './adUnit.type';
-import type { InventoryServiceOperations } from './inventoryService.interface';
+import type { Client } from "soap";
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { AdUnitAction } from "./adUnit.action";
+import type { AdUnit, AdUnitPage, AdUnitSize } from "./adUnit.type";
+import type { InventoryServiceOperations } from "./inventoryService.interface";
 
 export class InventoryService implements InventoryServiceOperations {
   private _client: Client;
@@ -15,7 +15,9 @@ export class InventoryService implements InventoryServiceOperations {
     return this._client.createAdUnits({ adUnits });
   }
 
-  async getAdUnitSizesByStatement(filterStatement: Statement): Promise<AdUnitSize[]> {
+  async getAdUnitSizesByStatement(
+    filterStatement: Statement,
+  ): Promise<AdUnitSize[]> {
     return this._client.getAdUnitSizesByStatement({
       filterStatement,
     });
@@ -27,11 +29,14 @@ export class InventoryService implements InventoryServiceOperations {
     });
   }
 
-  async performAdUnitAction(adUnitAction: AdUnitAction, filterStatement: Statement): Promise<UpdateResult> {
+  async performAdUnitAction(
+    adUnitAction: AdUnitAction,
+    filterStatement: Statement,
+  ): Promise<UpdateResult> {
     return this._client.performAdUnitAction({
       adUnitAction: {
         attributes: {
-          'xsi:type': adUnitAction.constructor.name,
+          "xsi:type": adUnitAction.constructor.name,
         },
       },
       filterStatement,

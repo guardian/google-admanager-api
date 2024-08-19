@@ -1,1 +1,1 @@
-export { AdjustmentService } from './adjustment.service';
+export { AdjustmentService } from "./adjustment.service";

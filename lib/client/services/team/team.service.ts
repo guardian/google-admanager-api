@@ -1,8 +1,8 @@
-import type { Client } from 'soap';
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { TeamAction } from './team.action';
-import type { Team, TeamPage } from './team.type';
-import type { TeamServiceOperations } from './teamService.interface';
+import type { Client } from "soap";
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { TeamAction } from "./team.action";
+import type { Team, TeamPage } from "./team.type";
+import type { TeamServiceOperations } from "./teamService.interface";
 
 export class TeamService implements TeamServiceOperations {
   private _client: Client;
@@ -21,11 +21,14 @@ export class TeamService implements TeamServiceOperations {
     });
   }
 
-  async performTeamAction(teamAction: TeamAction, filterStatement: Statement): Promise<UpdateResult> {
+  async performTeamAction(
+    teamAction: TeamAction,
+    filterStatement: Statement,
+  ): Promise<UpdateResult> {
     return this._client.performTeamAction({
       teamAction: {
         attributes: {
-          'xsi:type': teamAction.constructor.name,
+          "xsi:type": teamAction.constructor.name,
         },
       },
       filterStatement,

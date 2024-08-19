@@ -1,1 +1,1 @@
-export { CreativeTemplateService } from './creativeTemplate.service';
+export { CreativeTemplateService } from "./creativeTemplate.service";

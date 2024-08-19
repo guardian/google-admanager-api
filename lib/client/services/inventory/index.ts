@@ -1,1 +1,1 @@
-export { InventoryService } from './inventory.service';
+export { InventoryService } from "./inventory.service";

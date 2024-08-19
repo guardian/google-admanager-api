@@ -1,1 +1,1 @@
-export { DaiAuthenticationKeyService } from './daiAuthenticationKey.service';
+export { DaiAuthenticationKeyService } from "./daiAuthenticationKey.service";

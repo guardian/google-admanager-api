@@ -1,6 +1,6 @@
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { ContentBundleAction } from './contentBundle.action';
-import type { ContentBundle, ContentBundlePage } from './contentBundle.type';
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { ContentBundleAction } from "./contentBundle.action";
+import type { ContentBundle, ContentBundlePage } from "./contentBundle.type";
 
 /**
  * Provides methods for creating, updating and retrieving
@@ -15,7 +15,9 @@ export interface ContentBundleServiceOperations {
    * @param contentBundles the content bundles to create
    * @returns the created content bundles with their IDs filled in
    */
-  createContentBundles(contentBundles: ContentBundle[]): Promise<ContentBundle[]>;
+  createContentBundles(
+    contentBundles: ContentBundle[],
+  ): Promise<ContentBundle[]>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202202/ContentBundleService.ContentBundlePage ContentBundlePage}
    * of {@link https://developers.google.com/ad-manager/api/reference/v202202/ContentBundleService.ContentBundle ContentBundle} objects that satisfy the given
@@ -31,7 +33,9 @@ export interface ContentBundleServiceOperations {
    * @param filterStatement a Publisher Query Language statement used to filter a set of content bundles
    * @returns the content bundles that match the given filter
    */
-  getContentBundlesByStatement(filterStatement: Statement): Promise<ContentBundlePage>;
+  getContentBundlesByStatement(
+    filterStatement: Statement,
+  ): Promise<ContentBundlePage>;
   /**
    * Performs actions on {@link https://developers.google.com/ad-manager/api/reference/v202202/ContentBundleService.ContentBundle ContentBundle} objects that match the given Statement.
    *
@@ -49,5 +53,7 @@ export interface ContentBundleServiceOperations {
    * @param contentBundles the content bundles to update
    * @returns the updated content bundles
    */
-  updateContentBundles(contentBundles: ContentBundle[]): Promise<ContentBundle[]>;
+  updateContentBundles(
+    contentBundles: ContentBundle[],
+  ): Promise<ContentBundle[]>;
 }

@@ -1,6 +1,6 @@
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { PlacementAction } from './placement.action';
-import type { Placement, PlacementPage } from './placement.type';
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { PlacementAction } from "./placement.action";
+import type { Placement, PlacementPage } from "./placement.type";
 
 /**
  * Provides operations for creating, updating and retrieving {@link https://developers.google.com/ad-manager/api/reference/v202202/PlacementService.Placement Placement} objects.
@@ -42,7 +42,10 @@ export interface PlacementServiceOperations {
    * @param filterStatement 	a PQL statement used to filter placements
    * @returns 	the result of the action performed
    */
-  performPlacementAction(placementAction: PlacementAction, filterStatement: Statement): Promise<UpdateResult>;
+  performPlacementAction(
+    placementAction: PlacementAction,
+    filterStatement: Statement,
+  ): Promise<UpdateResult>;
   /**
    * Updates the specified {@link https://developers.google.com/ad-manager/api/reference/v202202/PlacementService.Placement Placement} objects.
    *

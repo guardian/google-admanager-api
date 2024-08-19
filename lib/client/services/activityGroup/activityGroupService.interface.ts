@@ -1,5 +1,5 @@
-import type { Statement } from '../../../common/types';
-import type { ActivityGroup, ActivityGroupPage } from './activityGroup.type';
+import type { Statement } from "../../../common/types";
+import type { ActivityGroup, ActivityGroupPage } from "./activityGroup.type";
 
 /**
  * Provides methods for creating, updating and retrieving
@@ -16,7 +16,9 @@ export interface ActivityGroupServiceOperations {
    * @param activityGroups the activity groups to be created.
    * @returns the created activity groups with their IDs filled in.
    */
-  createActivityGroups(activityGroups: ActivityGroup[]): Promise<ActivityGroup[]>;
+  createActivityGroups(
+    activityGroups: ActivityGroup[],
+  ): Promise<ActivityGroup[]>;
   /**
    * Gets an {@link https://developers.google.com/ad-manager/api/reference/v202202/ActivityGroupService.ActivityGroupPage ActivityGroupPage}
    * of {@link https://developers.google.com/ad-manager/api/reference/v202202/ActivityGroupService.ActivityGroup ActivityGroup} objects that satisfy the given
@@ -33,12 +35,16 @@ export interface ActivityGroupServiceOperations {
    * @param filterStatement a statement used to filter a set of activity groups
    * @returns the activity groups that match the given filter
    */
-  getActivityGroupsByStatement(filterStatement: Statement): Promise<ActivityGroupPage>;
+  getActivityGroupsByStatement(
+    filterStatement: Statement,
+  ): Promise<ActivityGroupPage>;
   /**
    * Updates the specified {@link https://developers.google.com/ad-manager/api/reference/v202202/ActivityGroupService.ActivityGroup ActivityGroup} objects.
    *
    * @param activityGroups the activity groups to update.
    * @returns 	the updated activity groups.
    */
-  updateActivityGroups(activityGroups: ActivityGroup[]): Promise<ActivityGroup[]>;
+  updateActivityGroups(
+    activityGroups: ActivityGroup[],
+  ): Promise<ActivityGroup[]>;
 }

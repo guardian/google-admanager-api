@@ -1,1 +1,1 @@
-export { CustomFieldService } from './customField.service';
+export { CustomFieldService } from "./customField.service";

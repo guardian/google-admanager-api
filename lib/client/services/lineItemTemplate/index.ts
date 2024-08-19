@@ -1,1 +1,1 @@
-export { LineItemTemplateService } from './lineItemTemplate.service';
+export { LineItemTemplateService } from "./lineItemTemplate.service";

@@ -1,7 +1,7 @@
-import type { Client } from 'soap';
-import type { Statement } from '../../../common/types';
-import type { ContentPage } from './content.type';
-import type { ContentServiceOperations } from './contentService.interface';
+import type { Client } from "soap";
+import type { Statement } from "../../../common/types";
+import type { ContentPage } from "./content.type";
+import type { ContentServiceOperations } from "./contentService.interface";
 
 export class ContentService implements ContentServiceOperations {
   private _client: Client;

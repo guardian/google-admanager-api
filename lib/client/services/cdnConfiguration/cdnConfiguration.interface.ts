@@ -1,6 +1,9 @@
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { CdnConfigurationAction } from './cdnConfiguration.action';
-import type { CdnConfiguration, CdnConfigurationPage } from './cdnConfiguration.type';
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { CdnConfigurationAction } from "./cdnConfiguration.action";
+import type {
+  CdnConfiguration,
+  CdnConfigurationPage,
+} from "./cdnConfiguration.type";
 
 /**
  * Provides methods for creating, updating and retrieving
@@ -12,7 +15,9 @@ export interface CdnConfigurationServiceOperations {
    *
    * @param cdnConfigurations
    */
-  createCdnConfigurations(cdnConfigurations: CdnConfiguration[]): Promise<CdnConfiguration[]>;
+  createCdnConfigurations(
+    cdnConfigurations: CdnConfiguration[],
+  ): Promise<CdnConfiguration[]>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202202/CdnConfigurationService.CdnConfigurationPage CdnConfigurationPage}
    * of {@link https://developers.google.com/ad-manager/api/reference/v202202/CdnConfigurationService.CdnConfiguration CdnConfiguration} objects that satisfy
@@ -28,7 +33,9 @@ export interface CdnConfigurationServiceOperations {
    *
    * @param statement
    */
-  getCdnConfigurationsByStatement(statement: Statement): Promise<CdnConfigurationPage>;
+  getCdnConfigurationsByStatement(
+    statement: Statement,
+  ): Promise<CdnConfigurationPage>;
   /**
    * Performs actions on {@link https://developers.google.com/ad-manager/api/reference/v202202/CdnConfigurationService.CdnConfiguration CdnConfiguration}
    * objects that match the given {@link https://developers.google.com/ad-manager/api/reference/v202202/CdnConfigurationService.Statement#query Statement.query}.
@@ -46,5 +53,7 @@ export interface CdnConfigurationServiceOperations {
    *
    * @param cdnConfigurations
    */
-  updateCdnConfigurations(cdnConfigurations: CdnConfiguration[]): Promise<CdnConfiguration[]>;
+  updateCdnConfigurations(
+    cdnConfigurations: CdnConfiguration[],
+  ): Promise<CdnConfiguration[]>;
 }

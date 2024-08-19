@@ -1,4 +1,4 @@
-import type { DateTime } from '../types';
+import type { DateTime } from "../types";
 
 /**
  * A utility class that allows you to build Datetime objects from strings.
@@ -24,7 +24,10 @@ export class DateTimeUtilities {
    * @param timeZoneId The timeZoneId to use.
    * @returns A AdManager Datetime object.
    */
-  public fromDate(date: Date, timeZoneId: string = Intl.DateTimeFormat().resolvedOptions().timeZone): DateTime {
+  public fromDate(
+    date: Date,
+    timeZoneId: string = Intl.DateTimeFormat().resolvedOptions().timeZone,
+  ): DateTime {
     return {
       date: {
         year: date.getFullYear(),
@@ -48,7 +51,7 @@ export class DateTimeUtilities {
       `${dateTime.date.year}/${dateTime.date.month}/${dateTime.date.day} ${dateTime.hour}:${dateTime.minute}:${dateTime.second}`,
     );
 
-    date.toLocaleString('en-US', {
+    date.toLocaleString("en-US", {
       timeZone: dateTime.timeZoneId,
     });
 

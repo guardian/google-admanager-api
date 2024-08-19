@@ -1,4 +1,8 @@
-import type { CmsMetadataCriteriaComparisonOperator, ComparisonOperator, LogicalOperator } from '../enums';
+import type {
+  CmsMetadataCriteriaComparisonOperator,
+  ComparisonOperator,
+  LogicalOperator,
+} from "../enums";
 
 /**
  * A CustomCriteria object is used to perform custom criteria targeting on custom targeting keys of type CustomTargetingKey.Type.PREDEFINED or CustomTargetingKey.Type.FREEFORM.
@@ -62,5 +66,10 @@ export type CustomCriteriaSet = {
   /**
    * The custom criteria. This attribute is required.
    */
-  children: Array<CustomCriteriaSet | CustomCriteria | CmsMetadataCriteria | AudienceSegmentCriteria>;
+  children: Array<
+    | CustomCriteriaSet
+    | CustomCriteria
+    | CmsMetadataCriteria
+    | AudienceSegmentCriteria
+  >;
 };

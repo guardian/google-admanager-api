@@ -1,6 +1,10 @@
-import type { DateTime, PageResult } from '../../../common/types';
-import type { AppliedLabel, BaseCustomFieldValue, Money } from '../../common/types';
-import type { OrderStatus } from './order.enum';
+import type { DateTime, PageResult } from "../../../common/types";
+import type {
+  AppliedLabel,
+  BaseCustomFieldValue,
+  Money,
+} from "../../common/types";
+import type { OrderStatus } from "./order.enum";
 
 /**
  * An **`Order`** represents a grouping of individual {@link https://developers.google.com/ad-manager/api/reference/v202202/ForecastService.LineItem LineItem}

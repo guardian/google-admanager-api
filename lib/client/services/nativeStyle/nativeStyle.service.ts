@@ -1,8 +1,8 @@
-import type { Client } from 'soap';
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { NativeStyleAction } from './nativeStyle.action';
-import type { NativeStyle, NativeStylePage } from './nativeStyle.type';
-import type { NativeStyleServiceOperations } from './nativeStyleService.interface';
+import type { Client } from "soap";
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { NativeStyleAction } from "./nativeStyle.action";
+import type { NativeStyle, NativeStylePage } from "./nativeStyle.type";
+import type { NativeStyleServiceOperations } from "./nativeStyleService.interface";
 
 export class NativeStyleService implements NativeStyleServiceOperations {
   private _client: Client;
@@ -11,11 +11,15 @@ export class NativeStyleService implements NativeStyleServiceOperations {
     this._client = client;
   }
 
-  async createNativeStyles(nativeStyles: NativeStyle[]): Promise<NativeStyle[]> {
+  async createNativeStyles(
+    nativeStyles: NativeStyle[],
+  ): Promise<NativeStyle[]> {
     return this._client.createNativeStyles({ nativeStyles });
   }
 
-  async getNativeStylesByStatement(filterStatement: Statement): Promise<NativeStylePage> {
+  async getNativeStylesByStatement(
+    filterStatement: Statement,
+  ): Promise<NativeStylePage> {
     return this._client.getNativeStylesByStatement({
       filterStatement,
     });
@@ -28,14 +32,16 @@ export class NativeStyleService implements NativeStyleServiceOperations {
     return this._client.performNativeStyleAction({
       NativeStyleAction: {
         attributes: {
-          'xsi:type': nativeStyleAction.constructor.name,
+          "xsi:type": nativeStyleAction.constructor.name,
         },
       },
       filterStatement,
     });
   }
 
-  async updateNativeStyles(nativeStyles: NativeStyle[]): Promise<NativeStyle[]> {
+  async updateNativeStyles(
+    nativeStyles: NativeStyle[],
+  ): Promise<NativeStyle[]> {
     return this._client.updateNativeStyles({ nativeStyles });
   }
 }

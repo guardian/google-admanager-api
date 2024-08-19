@@ -1,5 +1,10 @@
-import type { PageResult } from '../../../common/types';
-import type { CreativeRotationType, DeliveryRateType, LineItemType, RoadblockingType } from '../../common/enums';
+import type { PageResult } from "../../../common/types";
+import type {
+  CreativeRotationType,
+  DeliveryRateType,
+  LineItemType,
+  RoadblockingType,
+} from "../../common/enums";
 
 /**
  * Represents the template that populates the fields of a new line item being created.

@@ -1,6 +1,9 @@
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { UserTeamAssociationAction } from './userTeamAssociation.action';
-import type { UserTeamAssociation, UserTeamAssociationPage } from './userTeamAssociation.type';
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { UserTeamAssociationAction } from "./userTeamAssociation.action";
+import type {
+  UserTeamAssociation,
+  UserTeamAssociationPage,
+} from "./userTeamAssociation.type";
 
 /**
  * Provides methods for creating, updating,
@@ -16,7 +19,9 @@ export interface UserTeamAssociationServiceOperations {
    * @param userTeamAssociations the user team associations to create
    * @returns the created user team associations with their IDs filled in
    */
-  createUserTeamAssociations(userTeamAssociations: UserTeamAssociation[]): Promise<UserTeamAssociation[]>;
+  createUserTeamAssociations(
+    userTeamAssociations: UserTeamAssociation[],
+  ): Promise<UserTeamAssociation[]>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202202/UserTeamAssociationService.UserTeamAssociationPage UserTeamAssociationPage}
    * of {@link https://developers.google.com/ad-manager/api/reference/v202202/UserTeamAssociationService.UserTeamAssociation UserTeamAssociation} objects that satisfy the given
@@ -31,7 +36,9 @@ export interface UserTeamAssociationServiceOperations {
    * @param filterStatement a Publisher Query Language statement used to filter a set of user team associations
    * @returns the user team associations that match the given filter
    */
-  getUserTeamAssociationsByStatement(filterStatement: Statement): Promise<UserTeamAssociationPage>;
+  getUserTeamAssociationsByStatement(
+    filterStatement: Statement,
+  ): Promise<UserTeamAssociationPage>;
   /**
    * Performs actions on {@link https://developers.google.com/ad-manager/api/reference/v202202/UserTeamAssociationService.UserTeamAssociation UserTeamAssociation} objects that match the given
    * {@link https://developers.google.com/ad-manager/api/reference/v202202/TeamService.Statement#query Statement.query}.
@@ -50,5 +57,7 @@ export interface UserTeamAssociationServiceOperations {
    * @param userTeamAssociations the user team associations to update
    * @returns the updated user team associations
    */
-  updateUserTeamAssociations(userTeamAssociations: UserTeamAssociation[]): Promise<UserTeamAssociation[]>;
+  updateUserTeamAssociations(
+    userTeamAssociations: UserTeamAssociation[],
+  ): Promise<UserTeamAssociation[]>;
 }

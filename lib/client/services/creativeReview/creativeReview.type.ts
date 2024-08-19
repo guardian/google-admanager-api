@@ -1,4 +1,4 @@
-import type { PageResult } from '../../../common/types';
+import type { PageResult } from "../../../common/types";
 
 export type CreativeReview = {
   /**

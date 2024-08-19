@@ -1,6 +1,6 @@
-import type { StartDateTimeType } from '../../../common/enums';
-import type { DateTime, PageResult } from '../../../common/types';
-import type { Targeting } from '../../common/types';
+import type { StartDateTimeType } from "../../../common/enums";
+import type { DateTime, PageResult } from "../../../common/types";
+import type { Targeting } from "../../common/types";
 import type {
   AdRuleSlotBehavior,
   AdRuleSlotBumper,
@@ -8,16 +8,12 @@ import type {
   AdSpotFillType,
   FrequencyCapBehavior,
   MidrollFrequencyType,
-} from './adRule.enum';
+} from "./adRule.enum";
 
 /**
  * Simple object representing an ad slot within an AdRule. Ad rule slots contain information about the types/number of ads to display, as well as additional information on how the ad server will generate playlists.
  */
-export type BaseAdRuleSlot =
-  | NoPoddingAdRuleSlot
-   
-   
-   ;
+export type BaseAdRuleSlot = NoPoddingAdRuleSlot;
 
 /**
  * An ad rule slot with no podding. It is defined by a BaseAdRuleSlot.maxVideoAdDuration.

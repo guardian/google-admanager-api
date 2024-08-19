@@ -1,6 +1,12 @@
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { CmsMetadataKeyAction, CmsMetadataValueAction } from './cmsMetadata.action';
-import type { CmsMetadataKeyPage, CmsMetadataValuePage } from './cmsMetadata.type';
+import type { Statement, UpdateResult } from "../../../common/types";
+import type {
+  CmsMetadataKeyAction,
+  CmsMetadataValueAction,
+} from "./cmsMetadata.action";
+import type {
+  CmsMetadataKeyPage,
+  CmsMetadataValuePage,
+} from "./cmsMetadata.type";
 
 /**
  * Provides methods for querying CMS metadata keys and values.
@@ -21,7 +27,9 @@ export interface CmsMetadataServiceOperations {
    *
    * @param statement
    */
-  getCmsMetadataKeysByStatement(statement: Statement): Promise<CmsMetadataKeyPage>;
+  getCmsMetadataKeysByStatement(
+    statement: Statement,
+  ): Promise<CmsMetadataKeyPage>;
   /**
    * Returns a page of {@link https://developers.google.com/ad-manager/api/reference/v202202/CmsMetadataService.CmsMetadataValue CmsMetadataValue}s
    * matching the specified {@link https://developers.google.com/ad-manager/api/reference/v202202/CmsMetadataService.Statement Statement}.
@@ -37,7 +45,9 @@ export interface CmsMetadataServiceOperations {
    *
    * @param statement
    */
-  getCmsMetadataValuesByStatement(statement: Statement): Promise<CmsMetadataValuePage>;
+  getCmsMetadataValuesByStatement(
+    statement: Statement,
+  ): Promise<CmsMetadataValuePage>;
   /**
    * Performs actions on {@link https://developers.google.com/ad-manager/api/reference/v202202/CmsMetadataService.CmsMetadataKey CmsMetadataKey}
    * objects that match the given {@link https://developers.google.com/ad-manager/api/reference/v202202/CmsMetadataService.Statement#query Statement.query}.
@@ -46,7 +56,10 @@ export interface CmsMetadataServiceOperations {
    * @param filterStatement a Publisher Query Language statement used to filter a set of cms metadata keys.
    * @returns the result of the action performed
    */
-  performCmsMetadataKeyAction(keyAction: CmsMetadataKeyAction, filterStatement: Statement): Promise<UpdateResult>;
+  performCmsMetadataKeyAction(
+    keyAction: CmsMetadataKeyAction,
+    filterStatement: Statement,
+  ): Promise<UpdateResult>;
   /**
    * Performs actions on {@link https://developers.google.com/ad-manager/api/reference/v202202/CmsMetadataService.CmsMetadataValue CmsMetadataValue}
    * objects that match the given {@link https://developers.google.com/ad-manager/api/reference/v202202/CmsMetadataService.Statement#query Statement.query}.
@@ -55,5 +68,8 @@ export interface CmsMetadataServiceOperations {
    * @param filterStatement a Publisher Query Language statement used to filter a set of cms metadata values.
    * @returns the result of the action performed
    */
-  performCmsMetadataValueAction(valueAction: CmsMetadataValueAction, filterStatement: Statement): Promise<UpdateResult>;
+  performCmsMetadataValueAction(
+    valueAction: CmsMetadataValueAction,
+    filterStatement: Statement,
+  ): Promise<UpdateResult>;
 }

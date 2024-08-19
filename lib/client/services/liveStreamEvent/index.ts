@@ -1,1 +1,1 @@
-export { LiveStreamEventService } from './liveStreamEvent.service';
+export { LiveStreamEventService } from "./liveStreamEvent.service";

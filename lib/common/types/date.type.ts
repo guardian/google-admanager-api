@@ -1,4 +1,4 @@
-import type { MinuteOfHour } from '../enums';
+import type { MinuteOfHour } from "../enums";
 
 /**
  * Represents a date.

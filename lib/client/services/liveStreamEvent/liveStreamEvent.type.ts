@@ -1,5 +1,5 @@
-import type { StartDateTimeType } from '../../../common/enums';
-import type { DateTime, PageResult } from '../../../common/types';
+import type { StartDateTimeType } from "../../../common/enums";
+import type { DateTime, PageResult } from "../../../common/types";
 import type {
   AdBreakFillType,
   AdBreakMarkupType,
@@ -11,7 +11,7 @@ import type {
   SlateStatus,
   StreamingFormat,
   TranscodeStatus,
-} from './liveStreamEvent.enum';
+} from "./liveStreamEvent.enum";
 
 /**
  * Settings for the HLS (HTTP Live Streaming) master playlist.
@@ -304,7 +304,7 @@ export type Slate = {
 /**
  * Represents the actions that can be performed on slates.
  */
-export type SlateAction = 'ArchiveSlates' | 'UnarchiveSlates';
+export type SlateAction = "ArchiveSlates" | "UnarchiveSlates";
 
 /**
  * Captures a page of Slate objects.

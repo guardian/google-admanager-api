@@ -1,21 +1,30 @@
-import type { Client } from 'soap';
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { UserTeamAssociationAction } from './userTeamAssociation.action';
-import type { UserTeamAssociation, UserTeamAssociationPage } from './userTeamAssociation.type';
-import type { UserTeamAssociationServiceOperations } from './userTeamAssociationService.interface';
+import type { Client } from "soap";
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { UserTeamAssociationAction } from "./userTeamAssociation.action";
+import type {
+  UserTeamAssociation,
+  UserTeamAssociationPage,
+} from "./userTeamAssociation.type";
+import type { UserTeamAssociationServiceOperations } from "./userTeamAssociationService.interface";
 
-export class UserTeamAssociationService implements UserTeamAssociationServiceOperations {
+export class UserTeamAssociationService
+  implements UserTeamAssociationServiceOperations
+{
   private _client: Client;
 
   constructor(client: Client) {
     this._client = client;
   }
 
-  async createUserTeamAssociations(userTeamAssociations: UserTeamAssociation[]): Promise<UserTeamAssociation[]> {
+  async createUserTeamAssociations(
+    userTeamAssociations: UserTeamAssociation[],
+  ): Promise<UserTeamAssociation[]> {
     return this._client.createUserTeamAssociations({ userTeamAssociations });
   }
 
-  async getUserTeamAssociationsByStatement(filterStatement: Statement): Promise<UserTeamAssociationPage> {
+  async getUserTeamAssociationsByStatement(
+    filterStatement: Statement,
+  ): Promise<UserTeamAssociationPage> {
     return this._client.getUserTeamAssociationsByStatement({
       filterStatement,
     });
@@ -28,14 +37,16 @@ export class UserTeamAssociationService implements UserTeamAssociationServiceOpe
     return this._client.performUserTeamAssociationAction({
       userTeamAssociationAction: {
         attributes: {
-          'xsi:type': userTeamAssociationAction.constructor.name,
+          "xsi:type": userTeamAssociationAction.constructor.name,
         },
       },
       filterStatement,
     });
   }
 
-  async updateUserTeamAssociations(userTeamAssociations: UserTeamAssociation[]): Promise<UserTeamAssociation[]> {
+  async updateUserTeamAssociations(
+    userTeamAssociations: UserTeamAssociation[],
+  ): Promise<UserTeamAssociation[]> {
     return this._client.updateUserTeamAssociations({ userTeamAssociations });
   }
 }

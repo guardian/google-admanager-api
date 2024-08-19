@@ -1,11 +1,11 @@
-import type { PageResult } from '../../../common/types';
-import type { ThirdPartyDataDeclaration } from '../../common/types';
+import type { PageResult } from "../../../common/types";
+import type { ThirdPartyDataDeclaration } from "../../common/types";
 import type {
   ConversionEvent,
   CreativeWrapperOrdering,
   CreativeWrapperStatus,
   CreativeWrapperType,
-} from './creativeWrapper.enum';
+} from "./creativeWrapper.enum";
 
 /**
  * A list of URLs that should be pinged for a conversion event.

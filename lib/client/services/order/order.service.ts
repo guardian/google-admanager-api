@@ -1,8 +1,8 @@
-import type { Client } from 'soap';
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { OrderAction } from './order.action';
-import type { Order, OrderPage } from './order.type';
-import type { OrderServiceOperations } from './orderService.interface';
+import type { Client } from "soap";
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { OrderAction } from "./order.action";
+import type { Order, OrderPage } from "./order.type";
+import type { OrderServiceOperations } from "./orderService.interface";
 
 export class OrderService implements OrderServiceOperations {
   private _client: Client;
@@ -21,11 +21,14 @@ export class OrderService implements OrderServiceOperations {
     });
   }
 
-  async performOrderAction(orderAction: OrderAction, filterStatement: Statement): Promise<UpdateResult> {
+  async performOrderAction(
+    orderAction: OrderAction,
+    filterStatement: Statement,
+  ): Promise<UpdateResult> {
     return this._client.performOrderAction({
       orderAction: {
         attributes: {
-          'xsi:type': orderAction.constructor.name,
+          "xsi:type": orderAction.constructor.name,
         },
         ...orderAction.buildAttributes(),
       },

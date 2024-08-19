@@ -1,8 +1,8 @@
-import type { Client } from 'soap';
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { LabelAction } from './label.action';
-import type { LabelServiceOperations } from './label.interface';
-import type { Label, LabelPage } from './label.type';
+import type { Client } from "soap";
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { LabelAction } from "./label.action";
+import type { LabelServiceOperations } from "./label.interface";
+import type { Label, LabelPage } from "./label.type";
 
 export class LabelService implements LabelServiceOperations {
   private _client: Client;
@@ -21,11 +21,14 @@ export class LabelService implements LabelServiceOperations {
     });
   }
 
-  async performLabelAction(labelAction: LabelAction, filterStatement: Statement): Promise<UpdateResult> {
+  async performLabelAction(
+    labelAction: LabelAction,
+    filterStatement: Statement,
+  ): Promise<UpdateResult> {
     return this._client.performLabelAction({
       labelAction: {
         attributes: {
-          'xsi:type': labelAction.constructor.name,
+          "xsi:type": labelAction.constructor.name,
         },
       },
       filterStatement,

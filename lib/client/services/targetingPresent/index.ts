@@ -1,1 +1,1 @@
-export { TargetingPresetService } from './targetingPresent.service';
+export { TargetingPresetService } from "./targetingPresent.service";

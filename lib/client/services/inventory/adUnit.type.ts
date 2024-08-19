@@ -1,6 +1,6 @@
-import type { DateTime, PageResult } from '../../../common/types';
-import type { EnvironmentType } from '../../common/enums';
-import type { AppliedLabel, FrequencyCap, Size } from '../../common/types';
+import type { DateTime, PageResult } from "../../../common/types";
+import type { EnvironmentType } from "../../common/enums";
+import type { AppliedLabel, FrequencyCap, Size } from "../../common/types";
 import type {
   AdSenseSettingsAdType,
   AdSenseSettingsBorderStyle,
@@ -10,7 +10,7 @@ import type {
   InventoryStatus,
   SmartSizeMode,
   ValueSourceType,
-} from './adUnit.enum';
+} from "./adUnit.enum";
 
 /**
  * Contains the AdSense configuration for an AdUnit.

@@ -1,1 +1,1 @@
-export { DaiEncodingProfileService } from './daiEncodingProfile.service';
+export { DaiEncodingProfileService } from "./daiEncodingProfile.service";

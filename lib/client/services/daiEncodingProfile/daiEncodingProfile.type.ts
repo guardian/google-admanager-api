@@ -1,6 +1,10 @@
-import type { PageResult } from '../../../common/types';
-import type { Size } from '../../common/types';
-import type { ContainerType, DaiEncodingProfileStatus, VariantType } from './daiEncodingProfile.enum';
+import type { PageResult } from "../../../common/types";
+import type { Size } from "../../common/types";
+import type {
+  ContainerType,
+  DaiEncodingProfileStatus,
+  VariantType,
+} from "./daiEncodingProfile.enum";
 
 /**
  * Information about the video settings of an encoding profile.

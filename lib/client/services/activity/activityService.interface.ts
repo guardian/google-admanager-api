@@ -1,5 +1,5 @@
-import type { Statement } from '../../../common/types';
-import type { Activity, ActivityPage } from './activity.type';
+import type { Statement } from "../../../common/types";
+import type { Activity, ActivityPage } from "./activity.type";
 
 /**
  * Provides methods for creating, updating and retrieving

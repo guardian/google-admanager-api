@@ -1,6 +1,9 @@
-import type { Statement } from '../../../common/types';
-import type { SuggestedAdUnitAction } from './suggestedAdUnit.action';
-import type { SuggestedAdUnitPage, SuggestedAdUnitUpdateResult } from './suggestedAdUnit.type';
+import type { Statement } from "../../../common/types";
+import type { SuggestedAdUnitAction } from "./suggestedAdUnit.action";
+import type {
+  SuggestedAdUnitPage,
+  SuggestedAdUnitUpdateResult,
+} from "./suggestedAdUnit.type";
 
 /**
  * This service provides operations for retrieving and approving
@@ -33,7 +36,9 @@ export interface SuggestedAdUnitServiceOperations {
    * @param filterStatement a Publisher Query Language statement used to filter a set of suggested ad units
    * @returns the suggested ad units that match the given filter
    */
-  getSuggestedAdUnitsByStatement(filterStatement: Statement): Promise<SuggestedAdUnitPage>;
+  getSuggestedAdUnitsByStatement(
+    filterStatement: Statement,
+  ): Promise<SuggestedAdUnitPage>;
   /**
    * Performs actions on {@link https://developers.google.com/ad-manager/api/reference/v202202/SuggestedAdUnitService.SuggestedAdUnit SuggestedAdUnit} objects that match the given
    * {@link https://developers.google.com/ad-manager/api/reference/v202202/SuggestedAdUnitService.Statement#query Statement.query}.

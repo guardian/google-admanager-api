@@ -1,6 +1,10 @@
-import type { Statement } from '../../../common/types';
-import type { ExportFormat, ReportJobStatus } from './report.enum';
-import type { ReportDownloadOptions, ReportJob, SavedQueryPage } from './report.type';
+import type { Statement } from "../../../common/types";
+import type { ExportFormat, ReportJobStatus } from "./report.enum";
+import type {
+  ReportDownloadOptions,
+  ReportJob,
+  SavedQueryPage,
+} from "./report.type";
 
 /**
  * Provides methods for executing a {@link https://developers.google.com/ad-manager/api/reference/v202202/ReportService.ReportJob ReportJob}
@@ -31,7 +35,10 @@ export interface ReportServiceOperations {
    * @param exportFormat the ExportFormat for the report file
    * @returns the URL for report file download
    */
-  getReportDownloadURL(reportJobId: number, exportFormat: ExportFormat): Promise<string>;
+  getReportDownloadURL(
+    reportJobId: number,
+    exportFormat: ExportFormat,
+  ): Promise<string>;
   /**
    * Returns the URL at which the report file can be downloaded, and allows for customization of the downloaded report.
    * By default, the report will be generated as a gzip archive, containing the report file itself. This can be changed by setting
@@ -41,7 +48,10 @@ export interface ReportServiceOperations {
    * @param reportDownloadOptions the ReportDownloadOptions for the request
    * @returns 	the URL for report file download
    */
-  getReportDownloadUrlWithOptions(reportJobId: number, reportDownloadOptions: ReportDownloadOptions): Promise<string>;
+  getReportDownloadUrlWithOptions(
+    reportJobId: number,
+    reportDownloadOptions: ReportDownloadOptions,
+  ): Promise<string>;
   /**
    * Returns the {@link Returns the ReportJobStatus of the report job with the specified ID. ReportJobStatus} of the report job with the specified ID.
    *
@@ -66,7 +76,9 @@ export interface ReportServiceOperations {
    * @param filterStatement a Publisher Query Language statement used to filter which saved queries should be returned.
    * @returns a SavedQueryPage that contains all SavedQuery instances which satisfy the given statement.
    */
-  getSavedQueriesByStatement(filterStatement: Statement): Promise<SavedQueryPage>;
+  getSavedQueriesByStatement(
+    filterStatement: Statement,
+  ): Promise<SavedQueryPage>;
   /**
    * Initiates the execution of a {@link https://developers.google.com/ad-manager/api/reference/v202202/ReportService.ReportQuery ReportQuery} on the server.
    *

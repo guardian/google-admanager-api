@@ -1,6 +1,9 @@
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { CreativeWrapperAction } from './creativeWrapper.action';
-import type { CreativeWrapper, CreativeWrapperPage } from './creativeWrapper.type';
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { CreativeWrapperAction } from "./creativeWrapper.action";
+import type {
+  CreativeWrapper,
+  CreativeWrapperPage,
+} from "./creativeWrapper.type";
 
 /**
  * Provides methods for the creation and management of creative wrappers.
@@ -22,7 +25,9 @@ export interface CreativeWrapperServiceOperations {
    * @param creativeWrappers the creative wrappers to create
    * @returns the creative wrappers with their IDs filled in
    */
-  createCreativeWrappers(creativeWrappers: CreativeWrapper[]): Promise<CreativeWrapper[]>;
+  createCreativeWrappers(
+    creativeWrappers: CreativeWrapper[],
+  ): Promise<CreativeWrapper[]>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202202/CreativeWrapperService.CreativeWrapperPage CreativeWrapperPage}
    * of {@link https://developers.google.com/ad-manager/api/reference/v202202/CreativeWrapperService.CreativeWrapper CreativeWrapper} objects that satisfy the given
@@ -39,7 +44,9 @@ export interface CreativeWrapperServiceOperations {
    * @param filterStatement a Publisher Query Language statement used to filter a set of creative wrappers.
    * @returns the creative wrappers that match the given filter
    */
-  getCreativeWrappersByStatement(filterStatement: Statement): Promise<CreativeWrapperPage>;
+  getCreativeWrappersByStatement(
+    filterStatement: Statement,
+  ): Promise<CreativeWrapperPage>;
   /**
    * Performs actions on {@link https://developers.google.com/ad-manager/api/reference/v202202/CreativeWrapperService.CreativeWrapper CreativeWrapper} objects that match the given Statement.
    *
@@ -57,5 +64,7 @@ export interface CreativeWrapperServiceOperations {
    * @param creativeWrappers the creative wrappers to update
    * @returns the updated creative wrapper objects
    */
-  updateCreativeWrappers(creativeWrappers: CreativeWrapper[]): Promise<CreativeWrapper[]>;
+  updateCreativeWrappers(
+    creativeWrappers: CreativeWrapper[],
+  ): Promise<CreativeWrapper[]>;
 }

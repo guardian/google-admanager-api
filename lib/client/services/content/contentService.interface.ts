@@ -1,5 +1,5 @@
-import type { Statement } from '../../../common/types';
-import type { ContentPage } from './content.type';
+import type { Statement } from "../../../common/types";
+import type { ContentPage } from "./content.type";
 
 /**
  * Service for retrieving {@link https://developers.google.com/ad-manager/api/reference/v202202/ContentService.Content Content}.

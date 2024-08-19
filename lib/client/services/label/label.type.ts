@@ -1,5 +1,5 @@
-import type { PageResult } from '../../../common/types';
-import type { LabelType } from './label.enum';
+import type { PageResult } from "../../../common/types";
+import type { LabelType } from "./label.enum";
 
 /**
  * A canonical ad category.

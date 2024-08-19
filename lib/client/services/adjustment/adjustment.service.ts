@@ -1,13 +1,13 @@
-import type { Client } from 'soap';
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { ForecastAdjustmentAction } from './adjustment.action';
+import type { Client } from "soap";
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { ForecastAdjustmentAction } from "./adjustment.action";
 import type {
   ForecastAdjustment,
   ForecastAdjustmentPage,
   TrafficForecastSegment,
   TrafficForecastSegmentPage,
-} from './adjustment.type';
-import type { AdjustmentServiceOperations } from './adjustmentService.interface';
+} from "./adjustment.type";
+import type { AdjustmentServiceOperations } from "./adjustmentService.interface";
 
 export class AdjustmentService implements AdjustmentServiceOperations {
   private _client: Client;
@@ -16,33 +16,43 @@ export class AdjustmentService implements AdjustmentServiceOperations {
     this._client = client;
   }
 
-  calculateDailyAdOpportunityCounts(forecastAdjustment: ForecastAdjustment): Promise<ForecastAdjustment> {
+  calculateDailyAdOpportunityCounts(
+    forecastAdjustment: ForecastAdjustment,
+  ): Promise<ForecastAdjustment> {
     const res = this._client.calculateDailyAdOpportunityCounts({
       forecastAdjustment,
     });
     return res;
   }
 
-  createForecastAdjustments(forecastAdjustments: ForecastAdjustment[]): Promise<ForecastAdjustment[]> {
+  createForecastAdjustments(
+    forecastAdjustments: ForecastAdjustment[],
+  ): Promise<ForecastAdjustment[]> {
     const res = this._client.createForecastAdjustments({ forecastAdjustments });
     return res;
   }
 
-  createTrafficForecastSegments(trafficForecastSegments: TrafficForecastSegment[]): Promise<TrafficForecastSegment[]> {
+  createTrafficForecastSegments(
+    trafficForecastSegments: TrafficForecastSegment[],
+  ): Promise<TrafficForecastSegment[]> {
     const res = this._client.createTrafficForecastSegments({
       trafficForecastSegments,
     });
     return res;
   }
 
-  getForecastAdjustmentsByStatement(filterStatement: Statement): Promise<ForecastAdjustmentPage> {
+  getForecastAdjustmentsByStatement(
+    filterStatement: Statement,
+  ): Promise<ForecastAdjustmentPage> {
     const res = this._client.getForecastAdjustmentsByStatement({
       filterStatement,
     });
     return res;
   }
 
-  getTrafficForecastSegmentsByStatement(filterStatement: Statement): Promise<TrafficForecastSegmentPage> {
+  getTrafficForecastSegmentsByStatement(
+    filterStatement: Statement,
+  ): Promise<TrafficForecastSegmentPage> {
     const res = this._client.getTrafficForecastSegmentsByStatement({
       filterStatement,
     });
@@ -56,7 +66,7 @@ export class AdjustmentService implements AdjustmentServiceOperations {
     const res = this._client.performForecastAdjustmentAction({
       forecastAdjustmentAction: {
         attributes: {
-          'xsi:type': forecastAdjustmentAction.constructor.name,
+          "xsi:type": forecastAdjustmentAction.constructor.name,
         },
       },
       filterStatement,
@@ -64,12 +74,16 @@ export class AdjustmentService implements AdjustmentServiceOperations {
     return res;
   }
 
-  updateForecastAdjustments(forecastAdjustments: ForecastAdjustment[]): Promise<ForecastAdjustment[]> {
+  updateForecastAdjustments(
+    forecastAdjustments: ForecastAdjustment[],
+  ): Promise<ForecastAdjustment[]> {
     const res = this._client.updateForecastAdjustments({ forecastAdjustments });
     return res;
   }
 
-  updateTrafficForecastSegments(trafficForecastSegments: TrafficForecastSegment[]): Promise<TrafficForecastSegment[]> {
+  updateTrafficForecastSegments(
+    trafficForecastSegments: TrafficForecastSegment[],
+  ): Promise<TrafficForecastSegment[]> {
     const res = this._client.updateTrafficForecastSegments({
       trafficForecastSegments,
     });

@@ -1,11 +1,11 @@
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { LineItemCreativeAssociationAction } from './lineItemCreativeAssociation.action';
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { LineItemCreativeAssociationAction } from "./lineItemCreativeAssociation.action";
 import type {
   CreativeNativeStylePreview,
   CreativePushOptions,
   LineItemCreativeAssociation,
   LineItemCreativeAssociationPage,
-} from './lineItemCreativeAssociation.type';
+} from "./lineItemCreativeAssociation.type";
 
 /**
  * Provides operations for creating, updating and retrieving {@link https://developers.google.com/ad-manager/api/reference/v202202/LineItemCreativeAssociationService.LineItemCreativeAssociation LineItemCreativeAssociation} objects.
@@ -48,7 +48,9 @@ export interface LineItemCreativeAssociationServiceOperations {
    * @param filterStatement a Publisher Query Language statement used to filter a set of line item creative associations
    * @returns the line item creative associations that match the given filter
    */
-  getLineItemCreativeAssociationsByStatement(filterStatement: Statement): Promise<LineItemCreativeAssociationPage>;
+  getLineItemCreativeAssociationsByStatement(
+    filterStatement: Statement,
+  ): Promise<LineItemCreativeAssociationPage>;
   /**
    * Returns an insite preview URL that references the specified site URL with the specified creative from the association served to it.
    * For Creative Set previewing you may specify the master creative Id.
@@ -59,7 +61,11 @@ export interface LineItemCreativeAssociationServiceOperations {
    *
    * @returns a URL that references the specified site URL with the specified creative served to it
    */
-  getPreviewUrl(lineItemId: number, creativeId: number, siteUrl: string): Promise<string>;
+  getPreviewUrl(
+    lineItemId: number,
+    creativeId: number,
+    siteUrl: string,
+  ): Promise<string>;
   /**
    * Returns a list of URLs that reference the specified site URL with the specified creative from the association served to it.
    * For Creative Set previewing you may specify the master creative Id.
@@ -95,7 +101,10 @@ export interface LineItemCreativeAssociationServiceOperations {
    * @param filterStatement a Publisher Query Language statement on the ID, Name, UserId and LinkedDeviceVisibility fields of the LinkedDevice table.
    * @param options criteria to use to push a given creative.
    */
-  pushCreativeToDevices(filterStatement: Statement, options: CreativePushOptions): Promise<UpdateResult>;
+  pushCreativeToDevices(
+    filterStatement: Statement,
+    options: CreativePushOptions,
+  ): Promise<UpdateResult>;
   /**
    * Updates the specified {@link https://developers.google.com/ad-manager/api/reference/v202202/LineItemCreativeAssociationService.LineItemCreativeAssociation LineItemCreativeAssociation} objects.
    *

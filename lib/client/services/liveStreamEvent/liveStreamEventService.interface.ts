@@ -1,6 +1,12 @@
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { LiveStreamEventAction } from './liveStreamEvent.action';
-import type { LiveStreamEvent, LiveStreamEventPage, Slate, SlateAction, SlatePage } from './liveStreamEvent.type';
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { LiveStreamEventAction } from "./liveStreamEvent.action";
+import type {
+  LiveStreamEvent,
+  LiveStreamEventPage,
+  Slate,
+  SlateAction,
+  SlatePage,
+} from "./liveStreamEvent.type";
 
 /**
  * Provides operations for creating, updating and retrieving {@link https://developers.google.com/ad-manager/api/reference/v202202/LiveStreamEventService.LiveStreamEvent LiveStreamEvent} objects.
@@ -22,7 +28,9 @@ export interface LiveStreamEventServiceOperations {
    * @param liveStreamEvents the live stream events to create
    * @returns the created live stream events with their IDs filled in
    */
-  createLiveStreamEvents(liveStreamEvents: LiveStreamEvent[]): Promise<LiveStreamEvent[]>;
+  createLiveStreamEvents(
+    liveStreamEvents: LiveStreamEvent[],
+  ): Promise<LiveStreamEvent[]>;
   /**
    * Create new slates.
    *
@@ -52,7 +60,9 @@ export interface LiveStreamEventServiceOperations {
    * @param filterStatement a Publisher Query Language statement to filter a list of live stream events
    * @returns the live stream events that match the filter
    */
-  getLiveStreamEventsByStatement(filterStatement: Statement): Promise<LiveStreamEventPage>;
+  getLiveStreamEventsByStatement(
+    filterStatement: Statement,
+  ): Promise<LiveStreamEventPage>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202202/LiveStreamEventService.SlatePage SlatePage}
    * of {@link https://developers.google.com/ad-manager/api/reference/v202202/LiveStreamEventService.Slate Slate} objects that satisfy the given
@@ -88,14 +98,19 @@ export interface LiveStreamEventServiceOperations {
    * @param filterStatement a Publisher Query Language statement used to filter a set of slates
    * @returns the result of the action performed
    */
-  performSlateAction(slateAction: SlateAction, filterStatement: Statement): Promise<UpdateResult>;
+  performSlateAction(
+    slateAction: SlateAction,
+    filterStatement: Statement,
+  ): Promise<UpdateResult>;
   /**
    * Updates the specified {@link https://developers.google.com/ad-manager/api/reference/v202202/LiveStreamEventService.LiveStreamEvent LiveStreamEvent} objects.
    *
    * @param liveStreamEvents the live stream events to update
    * @returns the updated live stream events
    */
-  updateLiveStreamEvents(liveStreamEvents: LiveStreamEvent[]): Promise<LiveStreamEvent[]>;
+  updateLiveStreamEvents(
+    liveStreamEvents: LiveStreamEvent[],
+  ): Promise<LiveStreamEvent[]>;
   /**
    * Update existing slates.
    *

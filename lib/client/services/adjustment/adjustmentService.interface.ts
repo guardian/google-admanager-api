@@ -1,11 +1,11 @@
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { ForecastAdjustmentAction } from './adjustment.action';
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { ForecastAdjustmentAction } from "./adjustment.action";
 import type {
   ForecastAdjustment,
   ForecastAdjustmentPage,
   TrafficForecastSegment,
   TrafficForecastSegmentPage,
-} from './adjustment.type';
+} from "./adjustment.type";
 
 /**
  * Provides methods for creating, updating, and retrieving
@@ -22,21 +22,27 @@ export interface AdjustmentServiceOperations {
    * @param forecastAdjustment the prospective forecast adjustment
    * @returns a forecast adjustment matching the one passed in, but with its calculatedDailyAdOpportunityCounts field populated
    */
-  calculateDailyAdOpportunityCounts(forecastAdjustment: ForecastAdjustment): Promise<ForecastAdjustment>;
+  calculateDailyAdOpportunityCounts(
+    forecastAdjustment: ForecastAdjustment,
+  ): Promise<ForecastAdjustment>;
   /**
    * Creates new {@link https://developers.google.com/ad-manager/api/reference/v202202/AdjustmentService.ForecastAdjustment ForecastAdjustment} objects.
    *
    * @param forecastAdjustments the forecast adjustments to create
    * @returns the persisted forecast adjustments with their IDs populated
    */
-  createForecastAdjustments(forecastAdjustments: ForecastAdjustment[]): Promise<ForecastAdjustment[]>;
+  createForecastAdjustments(
+    forecastAdjustments: ForecastAdjustment[],
+  ): Promise<ForecastAdjustment[]>;
   /**
    * Creates new {@link https://developers.google.com/ad-manager/api/reference/v202202/AdjustmentService.TrafficForecastSegment TrafficForecastSegment} objects.
    *
    * @param trafficForecastSegments the traffic forecast segments to create
    * @returns the persisted traffic forecast segments with their IDs populated
    */
-  createTrafficForecastSegments(trafficForecastSegments: TrafficForecastSegment[]): Promise<TrafficForecastSegment[]>;
+  createTrafficForecastSegments(
+    trafficForecastSegments: TrafficForecastSegment[],
+  ): Promise<TrafficForecastSegment[]>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202202/AdjustmentService.ForecastAdjustmentPage ForecastAdjustmentPage}
    * of {@link https://developers.google.com/ad-manager/api/reference/v202202/AdjustmentService.ForecastAdjustment ForecastAdjustment}
@@ -56,7 +62,9 @@ export interface AdjustmentServiceOperations {
    * @param filterStatement a Publisher Query Language statement to filter a list of traffic forecast segments
    * @returns a page of forecast adjustments that match the filter
    */
-  getForecastAdjustmentsByStatement(filterStatement: Statement): Promise<ForecastAdjustmentPage>;
+  getForecastAdjustmentsByStatement(
+    filterStatement: Statement,
+  ): Promise<ForecastAdjustmentPage>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202202/AdjustmentService.TrafficForecastSegmentPage TrafficForecastSegmentPage}
    * of {@link https://developers.google.com/ad-manager/api/reference/v202202/AdjustmentService.TrafficForecastSegment TrafficForecastSegment}
@@ -73,7 +81,9 @@ export interface AdjustmentServiceOperations {
    * @param filterStatement a Publisher Query Language statement to filter a list of traffic forecast segments
    * @returns a page of traffic forecast segments that match the filter
    */
-  getTrafficForecastSegmentsByStatement(filterStatement: Statement): Promise<TrafficForecastSegmentPage>;
+  getTrafficForecastSegmentsByStatement(
+    filterStatement: Statement,
+  ): Promise<TrafficForecastSegmentPage>;
   /**
    * Performs actions on {@link https://developers.google.com/ad-manager/api/reference/v202202/AdjustmentService.ForecastAdjustment ForecastAdjustment}
    *  objects that match the given {@link https://developers.google.com/ad-manager/api/reference/v202202/AdjustmentService.Statement#query Statement.query}.
@@ -95,7 +105,9 @@ export interface AdjustmentServiceOperations {
    * @param forecastAdjustments the forecast adjustments to update
    * @returns the updated forecast adjustments
    */
-  updateForecastAdjustments(forecastAdjustments: ForecastAdjustment[]): Promise<ForecastAdjustment[]>;
+  updateForecastAdjustments(
+    forecastAdjustments: ForecastAdjustment[],
+  ): Promise<ForecastAdjustment[]>;
 
   /**
    * Updates the specified {@link https://developers.google.com/ad-manager/api/reference/v202202/AdjustmentService.TrafficForecastSegment TrafficForecastSegment} objects.
@@ -103,5 +115,7 @@ export interface AdjustmentServiceOperations {
    * @param trafficForecastSegments the traffic forecast segments to update
    * @returns the updated traffic forecast segments
    */
-  updateTrafficForecastSegments(trafficForecastSegments: TrafficForecastSegment[]): Promise<TrafficForecastSegment[]>;
+  updateTrafficForecastSegments(
+    trafficForecastSegments: TrafficForecastSegment[],
+  ): Promise<TrafficForecastSegment[]>;
 }

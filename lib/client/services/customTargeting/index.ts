@@ -1,1 +1,1 @@
-export { CustomTargetingService } from './customTargeting.service';
+export { CustomTargetingService } from "./customTargeting.service";

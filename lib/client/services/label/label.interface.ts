@@ -1,6 +1,6 @@
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { LabelAction } from './label.action';
-import type { Label, LabelPage } from './label.type';
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { LabelAction } from "./label.action";
+import type { Label, LabelPage } from "./label.type";
 
 /**
  * Provides methods for the creation and management of Labels.
@@ -38,7 +38,10 @@ export interface LabelServiceOperations {
    * @param filterStatement a Publisher Query Language statement used to filter a set of labels
    * @returns	the result of the action performed
    */
-  performLabelAction(labelAction: LabelAction, filterStatement: Statement): Promise<UpdateResult>;
+  performLabelAction(
+    labelAction: LabelAction,
+    filterStatement: Statement,
+  ): Promise<UpdateResult>;
   /**
    * Updates the specified {@link https://developers.google.com/ad-manager/api/reference/v202202/LabelService.Label Label} objects.
    *

@@ -1,5 +1,10 @@
-import type { DateTime, PageResult } from '../../../common/types';
-import type { ContentStatus, ContentStatusDefinedBy, DaiIngestErrorReason, DaiIngestStatus } from './content.enum';
+import type { DateTime, PageResult } from "../../../common/types";
+import type {
+  ContentStatus,
+  ContentStatusDefinedBy,
+  DaiIngestErrorReason,
+  DaiIngestStatus,
+} from "./content.enum";
 
 /**
  * Represents an error associated with a DAI content's status.

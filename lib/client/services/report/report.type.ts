@@ -1,4 +1,4 @@
-import type { Date, PageResult, Statement } from '../../../common/types';
+import type { Date, PageResult, Statement } from "../../../common/types";
 import type {
   Column,
   DateRangeType,
@@ -7,7 +7,7 @@ import type {
   ExportFormat,
   ReportQueryAdUnitView,
   TimeZoneType,
-} from './report.enum';
+} from "./report.enum";
 
 /**
  * Represents the options for an API report download request.

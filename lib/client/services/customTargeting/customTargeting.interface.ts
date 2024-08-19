@@ -1,11 +1,14 @@
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { CustomTargetingKeyAction, CustomTargetingValueAction } from './customTargeting.action';
+import type { Statement, UpdateResult } from "../../../common/types";
+import type {
+  CustomTargetingKeyAction,
+  CustomTargetingValueAction,
+} from "./customTargeting.action";
 import type {
   CustomTargetingKey,
   CustomTargetingKeyPage,
   CustomTargetingValue,
   CustomTargetingValuePage,
-} from './customTargeting.type';
+} from "./customTargeting.type";
 
 /**
  * Provides operations for creating, updating and retrieving
@@ -24,7 +27,9 @@ export interface CustomTargetingServiceOperations {
    * @param keys the custom targeting keys to update
    * @returns the updated custom targeting keys
    */
-  createCustomTargetingKeys(keys: CustomTargetingKey[]): Promise<CustomTargetingKey[]>;
+  createCustomTargetingKeys(
+    keys: CustomTargetingKey[],
+  ): Promise<CustomTargetingKey[]>;
   /**
    * Creates new {@link https://developers.google.com/ad-manager/api/reference/v202202/CustomTargetingService.CustomTargetingValue CustomTargetingValue} objects.
    * The following fields are required:
@@ -35,7 +40,9 @@ export interface CustomTargetingServiceOperations {
    * @param values 	the custom targeting values to update
    * @returns the updated custom targeting values
    */
-  createCustomTargetingValues(values: CustomTargetingValue[]): Promise<CustomTargetingValue[]>;
+  createCustomTargetingValues(
+    values: CustomTargetingValue[],
+  ): Promise<CustomTargetingValue[]>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202202/CustomTargetingService.CustomTargetingKeyPage CustomTargetingKeyPage}
    * of {@link https://developers.google.com/ad-manager/api/reference/v202202/CustomTargetingService.CustomTargetingKey CustomTargetingKey} objects that satisfy
@@ -52,7 +59,9 @@ export interface CustomTargetingServiceOperations {
    * @param filterStatement a Publisher Query Language statement used to filter a set of custom targeting keys
    * @returns the custom targeting keys that match the given filter
    */
-  getCustomTargetingKeysByStatement(filterStatement: Statement): Promise<CustomTargetingKeyPage>;
+  getCustomTargetingKeysByStatement(
+    filterStatement: Statement,
+  ): Promise<CustomTargetingKeyPage>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202202/CustomTargetingService.CustomTargetingValuePage CustomTargetingValuePage}
    * of {@link https://developers.google.com/ad-manager/api/reference/v202202/CustomTargetingService.CustomTargetingValue CustomTargetingValue} objects that satisfy
@@ -77,7 +86,9 @@ export interface CustomTargetingServiceOperations {
    * @param filterStatement a Publisher Query Language statement used to filter a set of custom targeting values
    * @returns the custom targeting values that match the given filter
    */
-  getCustomTargetingValuesByStatement(filterStatement: Statement): Promise<CustomTargetingValuePage>;
+  getCustomTargetingValuesByStatement(
+    filterStatement: Statement,
+  ): Promise<CustomTargetingValuePage>;
   /**
    * Performs actions on {@link https://developers.google.com/ad-manager/api/reference/v202202/CustomTargetingService.CustomTargetingKey CustomTargetingKey}
    * objects that match the given {@link https://developers.google.com/ad-manager/api/reference/v202202/CustomTargetingService.Statement#query Statement.query}.
@@ -108,12 +119,16 @@ export interface CustomTargetingServiceOperations {
    * @param keys the custom targeting keys to update
    * @returns the updated custom targeting keys
    */
-  updateCustomTargetingKeys(keys: CustomTargetingKey[]): Promise<CustomTargetingKey[]>;
+  updateCustomTargetingKeys(
+    keys: CustomTargetingKey[],
+  ): Promise<CustomTargetingKey[]>;
   /**
    * Updates the specified {@link https://developers.google.com/ad-manager/api/reference/v202202/CustomTargetingService.CustomTargetingValue CustomTargetingValue} objects.
    *
    * @param values the custom targeting values to update
    * @returns the updated custom targeting values
    */
-  updateCustomTargetingValues(values: CustomTargetingValue[]): Promise<CustomTargetingValue[]>;
+  updateCustomTargetingValues(
+    values: CustomTargetingValue[],
+  ): Promise<CustomTargetingValue[]>;
 }

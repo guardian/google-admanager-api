@@ -1,1 +1,1 @@
-export { PublisherQueryLanguageService } from './publisherQueryLanguage.service';
+export { PublisherQueryLanguageService } from "./publisherQueryLanguage.service";

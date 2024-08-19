@@ -5,54 +5,54 @@ export enum StartDateTimeType {
   /**
    * 	Use the value in startDateTime.
    */
-  USE_START_DATE_TIME = 'USE_START_DATE_TIME',
+  USE_START_DATE_TIME = "USE_START_DATE_TIME",
 
   /**
    * 	The entity will start serving immediately. startDateTime in the request is ignored and will be set to the current time. Additionally, startDateTimeType will be set to StartDateTimeType.USE_START_DATE_TIME.
    */
-  IMMEDIATELY = 'IMMEDIATELY',
+  IMMEDIATELY = "IMMEDIATELY",
 
   /**
    * 	The entity will start serving one hour from now. startDateTime in the request is ignored and will be set to one hour from the current time. Additionally, startDateTimeType will be set to StartDateTimeType.USE_START_DATE_TIME.
    */
-  ONE_HOUR_FROM_NOW = 'ONE_HOUR_FROM_NOW',
+  ONE_HOUR_FROM_NOW = "ONE_HOUR_FROM_NOW",
 
   /**
    * 	The value returned if the actual value is not exposed by the requested API version.
    */
-  UNKNOWN = 'UNKNOWN',
+  UNKNOWN = "UNKNOWN",
 }
 
 /**
  * Represent the possible time units for frequency capping.
  */
 export enum TimeUnit {
-  MINUTE = 'MINUTE',
+  MINUTE = "MINUTE",
 
-  HOUR = 'HOUR',
+  HOUR = "HOUR",
 
-  DAY = 'DAY',
+  DAY = "DAY",
 
-  WEEK = 'WEEK',
+  WEEK = "WEEK",
 
-  MONTH = 'MONTH',
+  MONTH = "MONTH",
 
-  LIFETIME = 'LIFETIME',
+  LIFETIME = "LIFETIME",
 
   /**
    * Per pod of ads in a video stream. Only valid for entities in a EnvironmentType.VIDEO_PLAYER environment.
    */
-  POD = 'POD',
+  POD = "POD",
 
   /**
    * Per video stream. Only valid for entities in a EnvironmentType.VIDEO_PLAYER environment.
    */
-  STREAM = 'STREAM',
+  STREAM = "STREAM",
 
   /**
    * The value returned if the actual value is not exposed by the requested API version.
    */
-  UNKNOWN = 'UNKNOWN',
+  UNKNOWN = "UNKNOWN",
 }
 
 /**
@@ -62,37 +62,37 @@ export enum DayOfWeek {
   /**
    * 	The day of week named Monday.
    */
-  MONDAY = 'MONDAY',
+  MONDAY = "MONDAY",
 
   /**
    * 	The day of week named Tuesday.
    */
-  TUESDAY = 'TUESDAY',
+  TUESDAY = "TUESDAY",
 
   /**
    * 	The day of week named Wednesday.
    */
-  WEDNESDAY = 'WEDNESDAY',
+  WEDNESDAY = "WEDNESDAY",
 
   /**
    * 	The day of week named Thursday.
    */
-  THURSDAY = 'THURSDAY',
+  THURSDAY = "THURSDAY",
 
   /**
    * 	The day of week named Friday.
    */
-  FRIDAY = 'FRIDAY',
+  FRIDAY = "FRIDAY",
 
   /**
    * 	The day of week named Saturday.
    */
-  SATURDAY = 'SATURDAY',
+  SATURDAY = "SATURDAY",
 
   /**
    * 	The day of week named Sunday.
    */
-  SUNDAY = 'SUNDAY',
+  SUNDAY = "SUNDAY",
 }
 
 /**
@@ -102,20 +102,20 @@ export enum MinuteOfHour {
   /**
    * 	Zero minutes past hour.
    */
-  ZERO = 'ZERO',
+  ZERO = "ZERO",
 
   /**
    * 	Fifteen minutes past hour.
    */
-  FIFTEEN = 'FIFTEEN',
+  FIFTEEN = "FIFTEEN",
 
   /**
    * 	Thirty minutes past hour.
    */
-  THIRTY = 'THIRTY',
+  THIRTY = "THIRTY",
 
   /**
    * 	Forty-five minutes past hour.
    */
-  FORTY_FIVE = 'FORTY_FIVE',
+  FORTY_FIVE = "FORTY_FIVE",
 }

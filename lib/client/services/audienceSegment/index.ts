@@ -1,1 +1,1 @@
-export { AudienceSegmentService } from './audienceSegment.service';
+export { AudienceSegmentService } from "./audienceSegment.service";

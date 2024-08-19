@@ -1,8 +1,12 @@
-import type { Client } from 'soap';
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { CustomFieldAction } from './customField.action';
-import type { CustomField, CustomFieldOption, CustomFieldPage } from './customField.type';
-import type { CustomFieldServiceOperations } from './customFieldService.interface';
+import type { Client } from "soap";
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { CustomFieldAction } from "./customField.action";
+import type {
+  CustomField,
+  CustomFieldOption,
+  CustomFieldPage,
+} from "./customField.type";
+import type { CustomFieldServiceOperations } from "./customFieldService.interface";
 
 export class CustomFieldService implements CustomFieldServiceOperations {
   private _client: Client;
@@ -11,21 +15,29 @@ export class CustomFieldService implements CustomFieldServiceOperations {
     this._client = client;
   }
 
-  async createCustomFieldOptions(customFieldOptions: CustomFieldOption[]): Promise<CustomFieldOption[]> {
+  async createCustomFieldOptions(
+    customFieldOptions: CustomFieldOption[],
+  ): Promise<CustomFieldOption[]> {
     return this._client.createCustomFieldOptions({ customFieldOptions });
   }
 
-  async createCustomFields(customFields: CustomField[]): Promise<CustomField[]> {
+  async createCustomFields(
+    customFields: CustomField[],
+  ): Promise<CustomField[]> {
     return this._client.createCustomFields({ customFields });
   }
 
-  async getCustomFieldOption(customFieldOptionId: number): Promise<CustomFieldOption> {
+  async getCustomFieldOption(
+    customFieldOptionId: number,
+  ): Promise<CustomFieldOption> {
     return this._client.getCustomFieldsByStatement({
       customFieldOptionId,
     });
   }
 
-  async getCustomFieldsByStatement(filterStatement: Statement): Promise<CustomFieldPage> {
+  async getCustomFieldsByStatement(
+    filterStatement: Statement,
+  ): Promise<CustomFieldPage> {
     return this._client.getCustomFieldsByStatement({
       filterStatement,
     });
@@ -38,18 +50,22 @@ export class CustomFieldService implements CustomFieldServiceOperations {
     return this._client.performCustomFieldAction({
       customFieldAction: {
         attributes: {
-          'xsi:type': customFieldAction.constructor.name,
+          "xsi:type": customFieldAction.constructor.name,
         },
       },
       filterStatement,
     });
   }
 
-  async updateCustomFieldOptions(customFieldOptions: CustomFieldOption[]): Promise<CustomFieldOption[]> {
+  async updateCustomFieldOptions(
+    customFieldOptions: CustomFieldOption[],
+  ): Promise<CustomFieldOption[]> {
     return this._client.updateCustomFields({ customFieldOptions });
   }
 
-  async updateCustomFields(CustomFields: CustomField[]): Promise<CustomField[]> {
+  async updateCustomFields(
+    CustomFields: CustomField[],
+  ): Promise<CustomField[]> {
     return this._client.updateCustomFields({ CustomFields });
   }
 }

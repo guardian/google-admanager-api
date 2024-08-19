@@ -1,1 +1,1 @@
-export { ForecastService } from './forecast.service';
+export { ForecastService } from "./forecast.service";

@@ -5,11 +5,11 @@ export enum CdnConfigurationType {
   /**
    * The value returned if the actual value is not exposed by the requested API version.
    */
-  UNKNOWN = 'UNKNOWN',
+  UNKNOWN = "UNKNOWN",
   /**
    * A configuration that specifies where and how LiveStreamEvent content should be ingested and delivered.
    */
-  LIVE_STREAM_SOURCE_CONTENT = 'LIVE_STREAM_SOURCE_CONTENT',
+  LIVE_STREAM_SOURCE_CONTENT = "LIVE_STREAM_SOURCE_CONTENT",
 }
 
 /**
@@ -19,15 +19,15 @@ export enum CdnConfigurationStatus {
   /**
    * The value returned if the actual value is not exposed by the requested API version.
    */
-  UNKNOWN = 'UNKNOWN',
+  UNKNOWN = "UNKNOWN",
   /**
    * The CDN configuration is in use.
    */
-  ACTIVE = 'ACTIVE',
+  ACTIVE = "ACTIVE",
   /**
    * The CDN configuration is no longer used.
    */
-  ARCHIVED = 'ARCHIVED',
+  ARCHIVED = "ARCHIVED",
 }
 
 /**
@@ -37,15 +37,15 @@ export enum SecurityPolicyType {
   /**
    * The value returned if the actual value is not exposed by the requested API version.
    */
-  UNKNOWN = 'UNKNOWN',
+  UNKNOWN = "UNKNOWN",
   /**
    * Indicates that no authentication is necessary.
    */
-  NONE = 'NONE',
+  NONE = "NONE",
   /**
    * Security policy for accessing content on the Akamai CDN.
    */
-  AKAMAI = 'AKAMAI',
+  AKAMAI = "AKAMAI",
 }
 
 /**
@@ -56,17 +56,17 @@ export enum OriginForwardingType {
   /**
    * Indicates that origin forwarding is set up by passing an originpath query string parameter (necessary for Akamai dynamic packaging to work)
    */
-  ORIGIN_PATH = 'ORIGIN_PATH',
+  ORIGIN_PATH = "ORIGIN_PATH",
   /**
    * Indicates that conventional origin forwarding is used.
    */
-  CONVENTIONAL = 'CONVENTIONAL',
+  CONVENTIONAL = "CONVENTIONAL",
   /**
    * Indicates that origin forwarding is not being used.
    */
-  NONE = 'NONE',
+  NONE = "NONE",
   /**
    * The value returned if the actual value is not exposed by the requested API version.
    */
-  UNKNOWN = 'UNKNOWN',
+  UNKNOWN = "UNKNOWN",
 }

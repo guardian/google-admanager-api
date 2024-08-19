@@ -1,5 +1,5 @@
-import type { ThirdPartyDataDeclaration } from '../../common/types';
-import type { Network } from './network.type';
+import type { ThirdPartyDataDeclaration } from "../../common/types";
+import type { Network } from "./network.type";
 
 /**
  * Provides operations for retrieving information related to the publisher's networks.

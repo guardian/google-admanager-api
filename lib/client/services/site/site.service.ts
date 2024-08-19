@@ -1,8 +1,8 @@
-import type { Client } from 'soap';
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { SiteAction } from './site.action';
-import type { Site, SitePage } from './site.type';
-import type { SiteServiceOperations } from './siteService.interface';
+import type { Client } from "soap";
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { SiteAction } from "./site.action";
+import type { Site, SitePage } from "./site.type";
+import type { SiteServiceOperations } from "./siteService.interface";
 
 export class SiteService implements SiteServiceOperations {
   private _client: Client;
@@ -21,11 +21,14 @@ export class SiteService implements SiteServiceOperations {
     });
   }
 
-  async performSiteAction(siteAction: SiteAction, filterStatement: Statement): Promise<UpdateResult> {
+  async performSiteAction(
+    siteAction: SiteAction,
+    filterStatement: Statement,
+  ): Promise<UpdateResult> {
     return this._client.performSiteAction({
       siteAction: {
         attributes: {
-          'xsi:type': siteAction.constructor.name,
+          "xsi:type": siteAction.constructor.name,
         },
       },
       filterStatement,

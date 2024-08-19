@@ -1,7 +1,7 @@
-import type { Client } from 'soap';
-import type { Statement } from '../../../common/types';
-import type { ActivityGroup, ActivityGroupPage } from './activityGroup.type';
-import type { ActivityGroupServiceOperations } from './activityGroupService.interface';
+import type { Client } from "soap";
+import type { Statement } from "../../../common/types";
+import type { ActivityGroup, ActivityGroupPage } from "./activityGroup.type";
+import type { ActivityGroupServiceOperations } from "./activityGroupService.interface";
 
 export class ActivityGroupService implements ActivityGroupServiceOperations {
   private _client: Client;
@@ -10,17 +10,23 @@ export class ActivityGroupService implements ActivityGroupServiceOperations {
     this._client = client;
   }
 
-  async createActivityGroups(activityGroups: ActivityGroup[]): Promise<ActivityGroup[]> {
+  async createActivityGroups(
+    activityGroups: ActivityGroup[],
+  ): Promise<ActivityGroup[]> {
     return this._client.createActivityGroups({ activityGroups });
   }
 
-  async getActivityGroupsByStatement(filterStatement: Statement): Promise<ActivityGroupPage> {
+  async getActivityGroupsByStatement(
+    filterStatement: Statement,
+  ): Promise<ActivityGroupPage> {
     return this._client.getActivityGroupsByStatement({
       filterStatement,
     });
   }
 
-  async updateActivityGroups(activityGroups: ActivityGroup[]): Promise<ActivityGroup[]> {
+  async updateActivityGroups(
+    activityGroups: ActivityGroup[],
+  ): Promise<ActivityGroup[]> {
     return this._client.updateActivityGroups({ activityGroups });
   }
 }

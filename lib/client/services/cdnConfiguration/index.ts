@@ -1,1 +1,1 @@
-export { CdnConfigurationService } from './cdnConfiguration.service';
+export { CdnConfigurationService } from "./cdnConfiguration.service";

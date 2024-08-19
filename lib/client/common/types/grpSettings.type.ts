@@ -1,4 +1,9 @@
-import type { GrpProvider, GrpTargetGender, NielsenCtvPacingType, PacingDeviceCategorizationType } from '../enums';
+import type {
+  GrpProvider,
+  GrpTargetGender,
+  NielsenCtvPacingType,
+  PacingDeviceCategorizationType,
+} from "../enums";
 
 /**
  * GrpSettings contains information for a line item that will have a target demographic when serving.

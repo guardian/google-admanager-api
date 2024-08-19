@@ -1,1 +1,1 @@
-export * from './exceptions.handler';
+export * from "./exceptions.handler";

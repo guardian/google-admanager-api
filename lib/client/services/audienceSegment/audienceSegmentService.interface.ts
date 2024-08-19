@@ -1,6 +1,9 @@
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { AudienceSegmentAction } from './audienceSegment.action';
-import type { AudienceSegmentPage, FirstPartyAudienceSegment } from './audienceSegment.type';
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { AudienceSegmentAction } from "./audienceSegment.action";
+import type {
+  AudienceSegmentPage,
+  FirstPartyAudienceSegment,
+} from "./audienceSegment.type";
 
 /**
  * Provides operations for creating, updating and retrieving
@@ -14,7 +17,9 @@ export interface AudienceSegmentServiceOperations {
    * @param segments first-party audience segments to create
    * @returns created first-party audience segments
    */
-  createAudienceSegments(segments: FirstPartyAudienceSegment[]): Promise<FirstPartyAudienceSegment[]>;
+  createAudienceSegments(
+    segments: FirstPartyAudienceSegment[],
+  ): Promise<FirstPartyAudienceSegment[]>;
   /**
    * Gets an {@link https://developers.google.com/ad-manager/api/reference/v202202/AudienceSegmentService.AudienceSegmentPage AudienceSegmentPage}
    * of {@link https://developers.google.com/ad-manager/api/reference/v202202/AudienceSegmentService.AudienceSegment AudienceSegment}
@@ -38,7 +43,9 @@ export interface AudienceSegmentServiceOperations {
    * @param filterStatement a Publisher Query Language statement used to filter a set of audience segments (the only supported operator is AND)
    * @returns the audience segments that match the given filter
    */
-  getAudienceSegmentsByStatement(filterStatement: Statement): Promise<AudienceSegmentPage>;
+  getAudienceSegmentsByStatement(
+    filterStatement: Statement,
+  ): Promise<AudienceSegmentPage>;
   /**
    * Performs the given AudienceSegmentAction on the set of segments identified by the given statement.
    *
@@ -46,12 +53,17 @@ export interface AudienceSegmentServiceOperations {
    * @param filterStatement a Publisher Query Language statement used to filter a set of audience segments (the only supported operator is AND)
    * @returns UpdateResult indicating the result
    */
-  performAudienceSegmentAction(action: AudienceSegmentAction, filterStatement: Statement): Promise<UpdateResult>;
+  performAudienceSegmentAction(
+    action: AudienceSegmentAction,
+    filterStatement: Statement,
+  ): Promise<UpdateResult>;
   /**
    * Updates the given {@link https://developers.google.com/ad-manager/api/reference/v202202/AudienceSegmentService.FirstPartyAudienceSegment FirstPartyAudienceSegment} objects.
    *
    * @param segments first-party audience segments to update
    * @returns updated first-party audience segments
    */
-  updateAudienceSegments(segments: FirstPartyAudienceSegment[]): Promise<FirstPartyAudienceSegment[]>;
+  updateAudienceSegments(
+    segments: FirstPartyAudienceSegment[],
+  ): Promise<FirstPartyAudienceSegment[]>;
 }

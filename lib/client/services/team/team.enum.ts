@@ -5,15 +5,15 @@ export enum TeamStatus {
   /**
    * The status of an active team. (i.e. visible in the UI)
    */
-  ACTIVE = 'ACTIVE',
+  ACTIVE = "ACTIVE",
   /**
    * The status of an inactive team. (i.e. hidden in the UI)
    */
-  INACTIVE = 'INACTIVE',
+  INACTIVE = "INACTIVE",
   /**
    * The value returned if the actual value is not exposed by the requested API version.
    */
-  UNKNOWN = 'UNKNOWN',
+  UNKNOWN = "UNKNOWN",
 }
 
 /**
@@ -23,13 +23,13 @@ export enum TeamAccessType {
   /**
    * The level of access in which team members cannot view or edit a team's orders.
    */
-  NONE = 'NONE',
+  NONE = "NONE",
   /**
    * The level of access in which team members can only view a team's orders.
    */
-  READ_ONLY = 'READ_ONLY',
+  READ_ONLY = "READ_ONLY",
   /**
    * The level of access in which team members can view and edit a team's orders.
    */
-  READ_WRITE = 'READ_WRITE',
+  READ_WRITE = "READ_WRITE",
 }

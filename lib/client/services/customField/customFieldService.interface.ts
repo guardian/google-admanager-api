@@ -1,6 +1,10 @@
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { CustomFieldAction } from './customField.action';
-import type { CustomField, CustomFieldOption, CustomFieldPage } from './customField.type';
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { CustomFieldAction } from "./customField.action";
+import type {
+  CustomField,
+  CustomFieldOption,
+  CustomFieldPage,
+} from "./customField.type";
 
 /**
  * Provides methods for the creation and management of {@link https://developers.google.com/ad-manager/api/reference/v202202/CustomFieldService.CustomField CustomField} objects.
@@ -18,7 +22,9 @@ export interface CustomFieldServiceOperations {
    * @param customFieldOptions the custom fields to create
    * @returns the created custom field options with their IDs filled in
    */
-  createCustomFieldOptions(customFieldOptions: CustomFieldOption[]): Promise<CustomFieldOption[]>;
+  createCustomFieldOptions(
+    customFieldOptions: CustomFieldOption[],
+  ): Promise<CustomFieldOption[]>;
   /**
    * Creates new {@link https://developers.google.com/ad-manager/api/reference/v202202/CustomFieldService.CustomField CustomField} objects.
    *
@@ -58,7 +64,9 @@ export interface CustomFieldServiceOperations {
    * @param filterStatement a Publisher Query Language statement used to filter a set of custom fields.
    * @returns the custom fields that match the given filter
    */
-  getCustomFieldsByStatement(filterStatement: Statement): Promise<CustomFieldPage>;
+  getCustomFieldsByStatement(
+    filterStatement: Statement,
+  ): Promise<CustomFieldPage>;
   /**
    * Performs actions on {@link https://developers.google.com/ad-manager/api/reference/v202202/CustomFieldService.CustomField CustomField} objects that match the given
    * {@link https://developers.google.com/ad-manager/api/reference/v202202/CustomFieldService.Statement#query Statement.query}.
@@ -67,14 +75,19 @@ export interface CustomFieldServiceOperations {
    * @param filterStatement	a Publisher Query Language statement used to filter a set of custom fields
    * @returns the result of the action performed
    */
-  performCustomFieldAction(customFieldAction: CustomFieldAction, filterStatement: Statement): Promise<UpdateResult>;
+  performCustomFieldAction(
+    customFieldAction: CustomFieldAction,
+    filterStatement: Statement,
+  ): Promise<UpdateResult>;
   /**
    * Updates the specified {@link https://developers.google.com/ad-manager/api/reference/v202202/CustomFieldService.CustomFieldOption CustomFieldOption} objects.
    *
    * @param customFieldOptions the custom field options to update
    * @returns 	the updated custom field options
    */
-  updateCustomFieldOptions(customFieldOptions: CustomFieldOption[]): Promise<CustomFieldOption[]>;
+  updateCustomFieldOptions(
+    customFieldOptions: CustomFieldOption[],
+  ): Promise<CustomFieldOption[]>;
   /**
    * Updates the specified {@link https://developers.google.com/ad-manager/api/reference/v202202/CustomFieldService.CustomField CustomField} objects.
    *

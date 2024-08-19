@@ -1,12 +1,18 @@
-import type { DateTime, PageResult } from '../../../common/types';
-import type { AppliedLabel, BaseCustomFieldValue, CreativePlaceholder, Money, Targeting } from '../../common/types';
+import type { DateTime, PageResult } from "../../../common/types";
+import type {
+  AppliedLabel,
+  BaseCustomFieldValue,
+  CreativePlaceholder,
+  Money,
+  Targeting,
+} from "../../common/types";
 import type {
   AdExchangeEnvironment,
   NegotiationStatus,
   ProposalCompanyAssociationType,
   ProposalStatus,
   RfpType,
-} from './proposal.enum';
+} from "./proposal.enum";
 
 /**
  * A ProposalCompanyAssociation represents a Company associated with the Proposal and a set of Contact objects belonging to the company.

@@ -1,4 +1,4 @@
-import type { DelegationType } from '../../common/enums';
+import type { DelegationType } from "../../common/enums";
 
 /**
  * Represents the actions that can be performed on `Company` objects.
@@ -78,15 +78,16 @@ export class ReInviteAction implements CompanyAction {
     const attributes = {};
 
     if (this.proposedDelegationTypeSpecified) {
-      attributes['proposedDelegationType'] = this.proposedDelegationType;
+      attributes["proposedDelegationType"] = this.proposedDelegationType;
     }
 
     if (this.proposedRevenueShareMillipercentSpecified) {
-      attributes['proposedRevenueShareMillipercent'] = this.proposedRevenueShareMillipercent;
+      attributes["proposedRevenueShareMillipercent"] =
+        this.proposedRevenueShareMillipercent;
     }
 
     if (this.proposedEmail) {
-      attributes['proposedEmail'] = this.proposedEmail;
+      attributes["proposedEmail"] = this.proposedEmail;
     }
 
     return attributes;

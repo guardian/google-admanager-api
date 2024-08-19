@@ -1,6 +1,6 @@
-import type { AxiosRequestConfig, AxiosResponse, Method } from 'axios';
-import axios from 'axios';
-import { ArgumentNullException } from '../handlers';
+import type { AxiosRequestConfig, AxiosResponse, Method } from "axios";
+import axios from "axios";
+import { ArgumentNullException } from "../handlers";
 
 /**
  * Utility class for various HTTP tasks.
@@ -12,12 +12,12 @@ export class HttpUtilities {
     config: AxiosRequestConfig,
   ): Promise<AxiosResponse> {
     if (config == null) {
-      throw new ArgumentNullException('config');
+      throw new ArgumentNullException("config");
     }
 
     config.method = method;
     config.url = url;
-    config.responseType = 'stream';
+    config.responseType = "stream";
 
     return axios.request(config);
   }

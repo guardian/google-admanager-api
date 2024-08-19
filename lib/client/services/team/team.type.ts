@@ -1,5 +1,5 @@
-import type { PageResult } from '../../../common/types';
-import type { TeamAccessType, TeamStatus } from './team.enum';
+import type { PageResult } from "../../../common/types";
+import type { TeamAccessType, TeamStatus } from "./team.enum";
 
 /**
  * A Team defines a grouping of users and what entities they have access to.

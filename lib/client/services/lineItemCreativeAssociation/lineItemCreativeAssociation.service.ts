@@ -1,15 +1,17 @@
-import type { Client } from 'soap';
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { LineItemCreativeAssociationAction } from './lineItemCreativeAssociation.action';
+import type { Client } from "soap";
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { LineItemCreativeAssociationAction } from "./lineItemCreativeAssociation.action";
 import type {
   CreativeNativeStylePreview,
   CreativePushOptions,
   LineItemCreativeAssociation,
   LineItemCreativeAssociationPage,
-} from './lineItemCreativeAssociation.type';
-import type { LineItemCreativeAssociationServiceOperations } from './lineItemCreativeAssociationService.interface';
+} from "./lineItemCreativeAssociation.type";
+import type { LineItemCreativeAssociationServiceOperations } from "./lineItemCreativeAssociationService.interface";
 
-export class LineItemCreativeAssociationService implements LineItemCreativeAssociationServiceOperations {
+export class LineItemCreativeAssociationService
+  implements LineItemCreativeAssociationServiceOperations
+{
   private _client: Client;
 
   constructor(client: Client) {
@@ -24,7 +26,11 @@ export class LineItemCreativeAssociationService implements LineItemCreativeAssoc
     });
   }
 
-  async getPreviewUrl(lineItemId: number, creativeId: number, siteUrl: string): Promise<string> {
+  async getPreviewUrl(
+    lineItemId: number,
+    creativeId: number,
+    siteUrl: string,
+  ): Promise<string> {
     return this._client.getPreviewUrl({
       lineItemId,
       creativeId,
@@ -59,14 +65,17 @@ export class LineItemCreativeAssociationService implements LineItemCreativeAssoc
     return this._client.performLineItemCreativeAssociationAction({
       lineItemCreativeAssociationAction: {
         attributes: {
-          'xsi:type': lineItemCreativeAssociationAction.constructor.name,
+          "xsi:type": lineItemCreativeAssociationAction.constructor.name,
         },
       },
       filterStatement,
     });
   }
 
-  async pushCreativeToDevices(filterStatement: Statement, options: CreativePushOptions): Promise<UpdateResult> {
+  async pushCreativeToDevices(
+    filterStatement: Statement,
+    options: CreativePushOptions,
+  ): Promise<UpdateResult> {
     return this._client.pushCreativeToDevices({
       filterStatement,
       options,

@@ -1,5 +1,5 @@
-import type { PageResult } from '../../../common/types';
-import type { TeamAccessType } from '../team/team.enum';
+import type { PageResult } from "../../../common/types";
+import type { TeamAccessType } from "../team/team.enum";
 
 /**
  * UserRecordTeamAssociation represents the association between a {@link https://developers.google.com/ad-manager/api/reference/v202202/UserService.UserRecord UserRecord}

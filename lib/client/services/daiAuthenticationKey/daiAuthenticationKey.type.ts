@@ -1,5 +1,8 @@
-import type { DateTime, PageResult } from '../../../common/types';
-import type { DaiAuthenticationKeyStatus, DaiAuthenticationKeyType } from './daiAuthenticationKey.enum';
+import type { DateTime, PageResult } from "../../../common/types";
+import type {
+  DaiAuthenticationKeyStatus,
+  DaiAuthenticationKeyType,
+} from "./daiAuthenticationKey.enum";
 
 /**
  * A DaiAuthenticationKey is used to authenticate stream requests to the IMA SDK API.

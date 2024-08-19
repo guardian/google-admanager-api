@@ -1,2 +1,2 @@
-export * from './adsReportUtilities.util';
-export * from './reportResponse';
+export * from "./adsReportUtilities.util";
+export * from "./reportResponse";

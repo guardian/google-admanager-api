@@ -5,11 +5,11 @@ export enum AudienceSegmentStatus {
   /**
    * Active status means this audience segment is available for targeting.
    */
-  ACTIVE = 'ACTIVE',
+  ACTIVE = "ACTIVE",
   /**
    * Inactive status means this audience segment is not available for targeting.
    */
-  INACTIVE = 'INACTIVE',
+  INACTIVE = "INACTIVE",
 }
 
 /**
@@ -19,19 +19,19 @@ export enum AudienceSegmentType {
   /**
    * First party segments created and owned by the publisher.
    */
-  FIRST_PARTY = 'FIRST_PARTY',
+  FIRST_PARTY = "FIRST_PARTY",
   /**
    * First party segments shared by other clients.
    */
-  SHARED = 'SHARED',
+  SHARED = "SHARED",
   /**
    * Third party segments licensed by the publisher from data providers. This doesn't include Google-provided licensed segments.
    */
-  THIRD_PARTY = 'THIRD_PARTY',
+  THIRD_PARTY = "THIRD_PARTY",
   /**
    * The value returned if the actual value is not exposed by the requested API version.
    */
-  UNKNOWN = 'UNKNOWN',
+  UNKNOWN = "UNKNOWN",
 }
 
 /**
@@ -41,19 +41,19 @@ export enum AudienceSegmentApprovalStatus {
   /**
    * Specifies that this segment is waiting to be approved or rejected. It cannot be targeted.
    */
-  UNAPPROVED = 'UNAPPROVED',
+  UNAPPROVED = "UNAPPROVED",
   /**
    * Specifies that this segment is approved and can be targeted.
    */
-  APPROVED = 'APPROVED',
+  APPROVED = "APPROVED",
   /**
    * Specifies that this segment is rejected and cannot be targeted.
    */
-  REJECTED = 'REJECTED',
+  REJECTED = "REJECTED",
   /**
    * The value returned if the actual value is not exposed by the requested API version.
    */
-  UNKNOWN = 'UNKNOWN',
+  UNKNOWN = "UNKNOWN",
 }
 
 /**
@@ -63,13 +63,13 @@ export enum LicenseType {
   /**
    * A direct license is the result of a direct contract between the data provider and the publisher.
    */
-  DIRECT_LICENSE = 'DIRECT_LICENSE',
+  DIRECT_LICENSE = "DIRECT_LICENSE",
   /**
    * A global license is the result of an agreement between Google and the data provider, which agrees to license their audience segments to all the publishers and/or advertisers of the Google ecosystem.
    */
-  GLOBAL_LICENSE = 'GLOBAL_LICENSE',
+  GLOBAL_LICENSE = "GLOBAL_LICENSE",
   /**
    * The value returned if the actual value is not exposed by the requested API version.
    */
-  UNKNOWN = 'UNKNOWN',
+  UNKNOWN = "UNKNOWN",
 }

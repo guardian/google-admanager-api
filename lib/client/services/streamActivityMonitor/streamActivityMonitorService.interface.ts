@@ -1,5 +1,5 @@
-import type { Statement } from '../../../common/types';
-import type { SamSession } from './streamActivityMonitor.type';
+import type { Statement } from "../../../common/types";
+import type { SamSession } from "./streamActivityMonitor.type";
 
 export interface StreamActivityMonitorServiceOperations {
   /**

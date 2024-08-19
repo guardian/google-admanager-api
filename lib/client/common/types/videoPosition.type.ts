@@ -1,4 +1,4 @@
-import type { VideoBumperType, VideoPositionType } from '../enums';
+import type { VideoBumperType, VideoPositionType } from "../enums";
 
 /**
  *

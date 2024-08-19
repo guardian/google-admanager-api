@@ -1,1 +1,1 @@
-export { AdRuleService } from './adRule.service';
+export { AdRuleService } from "./adRule.service";

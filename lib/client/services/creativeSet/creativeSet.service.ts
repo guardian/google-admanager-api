@@ -1,7 +1,7 @@
-import type { Client } from 'soap';
-import type { Statement } from '../../../common/types';
-import type { CreativeSet, CreativeSetPage } from './creativeSet.type';
-import type { CreativeSetServiceOperations } from './creativeSetService.interface';
+import type { Client } from "soap";
+import type { Statement } from "../../../common/types";
+import type { CreativeSet, CreativeSetPage } from "./creativeSet.type";
+import type { CreativeSetServiceOperations } from "./creativeSetService.interface";
 
 export class CreativeSetService implements CreativeSetServiceOperations {
   private _client: Client;
@@ -14,7 +14,9 @@ export class CreativeSetService implements CreativeSetServiceOperations {
     return this._client.createCreativeSet({ creativeSet });
   }
 
-  async getCreativeSetsByStatement(filterStatement: Statement): Promise<CreativeSetPage> {
+  async getCreativeSetsByStatement(
+    filterStatement: Statement,
+  ): Promise<CreativeSetPage> {
     return this._client.getCreativeSetsByStatement({
       filterStatement,
     });

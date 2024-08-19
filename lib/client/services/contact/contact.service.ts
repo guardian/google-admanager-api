@@ -1,7 +1,7 @@
-import type { Client } from 'soap';
-import type { Statement } from '../../../common/types';
-import type { Contact, ContactPage } from './contact.type';
-import type { ContactServiceOperations } from './contactService.interface';
+import type { Client } from "soap";
+import type { Statement } from "../../../common/types";
+import type { Contact, ContactPage } from "./contact.type";
+import type { ContactServiceOperations } from "./contactService.interface";
 
 export class ContactService implements ContactServiceOperations {
   private _client: Client;

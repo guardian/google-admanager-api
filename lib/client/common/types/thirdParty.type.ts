@@ -2,7 +2,7 @@ import type {
   ThirdPartyBrandLiftIntegrationPartner,
   ThirdPartyReachIntegrationPartner,
   ThirdPartyViewabilityIntegrationPartner,
-} from '../enums';
+} from "../enums";
 
 /**
  * Contains third party auto-pixeling settings for cross-sell Partners.

@@ -76,7 +76,9 @@ export class ReserveLineItems implements LineItemAction {
   }
 
   buildAttributes(): object {
-    return this.skipInventoryCheck ? { skipInventoryCheck: true } : { skipInventoryCheck: false };
+    return this.skipInventoryCheck
+      ? { skipInventoryCheck: true }
+      : { skipInventoryCheck: false };
   }
 }
 
@@ -101,7 +103,9 @@ export class ResumeLineItems implements LineItemAction {
   }
 
   buildAttributes(): object {
-    return this.skipInventoryCheck ? { skipInventoryCheck: true } : { skipInventoryCheck: false };
+    return this.skipInventoryCheck
+      ? { skipInventoryCheck: true }
+      : { skipInventoryCheck: false };
   }
 }
 

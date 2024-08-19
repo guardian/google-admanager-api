@@ -1,5 +1,5 @@
-import type { TimeUnit } from '../../../common/enums';
-import type { Value } from '../../../common/types';
+import type { TimeUnit } from "../../../common/enums";
+import type { Value } from "../../../common/types";
 import type {
   AccountStatus,
   DeclarationType,
@@ -8,7 +8,7 @@ import type {
   GoalType,
   OnboardingTask,
   UnitType,
-} from '../enums';
+} from "../enums";
 
 /**
  * Represents a set of declarations about what (if any) third party companies are associated with a given creative.

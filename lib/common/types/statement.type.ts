@@ -1,4 +1,4 @@
-import type { Date, DateTime } from './date.type';
+import type { Date, DateTime } from "./date.type";
 
 /**
  * Captures the **`WHERE`**, **`ORDER BY`** and **`LIMIT`** clauses of a PQL query.
@@ -70,7 +70,14 @@ export type String_ValueMapEntry = {
   value: Value;
 };
 
-export type Value = string | number | object | boolean | DateTime | Date | Value[];
+export type Value =
+  | string
+  | number
+  | object
+  | boolean
+  | DateTime
+  | Date
+  | Value[];
 
 /**
  * Captures a page of any objects.

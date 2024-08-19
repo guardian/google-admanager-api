@@ -1,6 +1,10 @@
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { ProposalLineItemAction } from './proposalLineItem.action';
-import type { ProposalLineItem, ProposalLineItemMakegoodInfo, ProposalLineItemPage } from './proposalLineItem.type';
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { ProposalLineItemAction } from "./proposalLineItem.action";
+import type {
+  ProposalLineItem,
+  ProposalLineItemMakegoodInfo,
+  ProposalLineItemPage,
+} from "./proposalLineItem.type";
 
 /**
  * Provides operations for creating, updating and retrieving {@link https://developers.google.com/ad-manager/api/reference/v202202/ProposalLineItemService.ProposalLineItem ProposalLineItem} objects.
@@ -11,14 +15,18 @@ export interface ProposalLineItemServiceOperations {
    *
    * @param makegoodInfos
    */
-  createMakegoods(makegoodInfos: ProposalLineItemMakegoodInfo[]): Promise<ProposalLineItem[]>;
+  createMakegoods(
+    makegoodInfos: ProposalLineItemMakegoodInfo[],
+  ): Promise<ProposalLineItem[]>;
   /**
    * Creates new {@link https://developers.google.com/ad-manager/api/reference/v202202/ProposalLineItemService.ProposalLineItem ProposalLineItem} objects.
    *
    * @param proposalLineItems the proposal line items to create
    * @returns the created proposal line items with their IDs filled in
    */
-  createProposalLineItems(proposalLineItems: ProposalLineItem[]): Promise<ProposalLineItem[]>;
+  createProposalLineItems(
+    proposalLineItems: ProposalLineItem[],
+  ): Promise<ProposalLineItem[]>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202202/ProposalLineItemService.ProposalLineItemPage ProposalLineItemPage}
    * of {@link https://developers.google.com/ad-manager/api/reference/v202202/ProposalLineItemService.ProposalLineItem ProposalLineItem} objects that satisfy the given
@@ -39,7 +47,9 @@ export interface ProposalLineItemServiceOperations {
    * @param filterStatement a Publisher Query Language statement used to filter a set of proposal line items
    * @returns the proposal line items that match the given filter
    */
-  getProposalLineItemsByStatement(filterStatement: Statement): Promise<ProposalLineItemPage>;
+  getProposalLineItemsByStatement(
+    filterStatement: Statement,
+  ): Promise<ProposalLineItemPage>;
   /**
    * Performs actions on {@link https://developers.google.com/ad-manager/api/reference/v202202/ProposalLineItemService.ProposalLineItem ProposalLineItem} objects that match the given Statement.
    *
@@ -57,5 +67,7 @@ export interface ProposalLineItemServiceOperations {
    * @param proposalLineItems the proposal line items to update
    * @returns the updated proposal line items
    */
-  updateProposalLineItems(proposalLineItems: ProposalLineItem[]): Promise<ProposalLineItem[]>;
+  updateProposalLineItems(
+    proposalLineItems: ProposalLineItem[],
+  ): Promise<ProposalLineItem[]>;
 }

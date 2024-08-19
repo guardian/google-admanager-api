@@ -5,15 +5,15 @@ export enum ForecastAdjustmentStatus {
   /**
    * The value returned if the actual value is not exposed by the requested API version.
    */
-  UNKNOWN = 'UNKNOWN',
+  UNKNOWN = "UNKNOWN",
   /**
    * Indicates the current adjustment is active.
    */
-  ACTIVE = 'ACTIVE',
+  ACTIVE = "ACTIVE",
   /**
    * Indicates the current adjustment is inactive.
    */
-  INACTIVE = 'INACTIVE',
+  INACTIVE = "INACTIVE",
 }
 
 /**
@@ -24,17 +24,17 @@ export enum ForecastAdjustmentVolumeType {
   /**
    * The value returned if the actual value is not exposed by the requested API version.
    */
-  UNKNOWN = 'UNKNOWN',
+  UNKNOWN = "UNKNOWN",
   /**
    * Volume is defined by a series of daily ad opportunity counts.
    */
-  DAILY_VOLUME = 'DAILY_VOLUME',
+  DAILY_VOLUME = "DAILY_VOLUME",
   /**
    * Volume is defined by a single total ad opportunity count.
    */
-  TOTAL_VOLUME = 'TOTAL_VOLUME',
+  TOTAL_VOLUME = "TOTAL_VOLUME",
   /**
    * Volume is defined by historical volume data.
    */
-  HISTORICAL_BASIS_VOLUME = 'HISTORICAL_BASIS_VOLUME',
+  HISTORICAL_BASIS_VOLUME = "HISTORICAL_BASIS_VOLUME",
 }

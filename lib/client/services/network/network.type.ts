@@ -1,4 +1,4 @@
-import type { ChildPublisher } from '../../common/types';
+import type { ChildPublisher } from "../../common/types";
 
 export type Network = {
   /**

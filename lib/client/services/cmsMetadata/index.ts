@@ -1,1 +1,1 @@
-export { CmsMetadataService } from './cmsMetadata.service';
+export { CmsMetadataService } from "./cmsMetadata.service";

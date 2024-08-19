@@ -1,6 +1,9 @@
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { DaiEncodingProfileAction } from './daiEncodingProfile.action';
-import type { DaiEncodingProfile, DaiEncodingProfilePage } from './daiEncodingProfile.type';
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { DaiEncodingProfileAction } from "./daiEncodingProfile.action";
+import type {
+  DaiEncodingProfile,
+  DaiEncodingProfilePage,
+} from "./daiEncodingProfile.type";
 
 /**
  * Provides methods for creating, updating and retrieving
@@ -15,7 +18,9 @@ export interface DaiEncodingProfileServiceOperations {
    * @param daiEncodingProfiles the profiles to create
    * @returns the created profiles with their IDs filled in
    */
-  createDaiEncodingProfiles(daiEncodingProfiles: DaiEncodingProfile[]): Promise<DaiEncodingProfile[]>;
+  createDaiEncodingProfiles(
+    daiEncodingProfiles: DaiEncodingProfile[],
+  ): Promise<DaiEncodingProfile[]>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202202/DaiEncodingProfileService.DaiEncodingProfilePage DaiEncodingProfilePage}
    * of {@link https://developers.google.com/ad-manager/api/reference/v202202/DaiEncodingProfileService.DaiEncodingProfile DaiEncodingProfile} objects that satisfy the given
@@ -31,7 +36,9 @@ export interface DaiEncodingProfileServiceOperations {
    * @param filterStatement a Publisher Query Language statement to filter a list of profiles
    * @returns the profiles that match the filter
    */
-  getDaiEncodingProfilesByStatement(filterStatement: Statement): Promise<DaiEncodingProfilePage>;
+  getDaiEncodingProfilesByStatement(
+    filterStatement: Statement,
+  ): Promise<DaiEncodingProfilePage>;
   /**
    * Performs actions on {@link https://developers.google.com/ad-manager/api/reference/v202202/DaiEncodingProfileService.DaiEncodingProfile DaiEncodingProfile}
    *  objects that match the given {@link https://developers.google.com/ad-manager/api/reference/v202202/DaiEncodingProfileService.Statement#query Statement.query}.
@@ -50,5 +57,7 @@ export interface DaiEncodingProfileServiceOperations {
    * @param daiEncodingProfiles the content profiles to update
    * @returns the updated profiles
    */
-  updateDaiEncodingProfiles(daiEncodingProfiles: DaiEncodingProfile[]): Promise<DaiEncodingProfile[]>;
+  updateDaiEncodingProfiles(
+    daiEncodingProfiles: DaiEncodingProfile[],
+  ): Promise<DaiEncodingProfile[]>;
 }

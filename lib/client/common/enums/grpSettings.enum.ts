@@ -5,19 +5,19 @@ export enum GrpTargetGender {
   /**
    * The value returned if the actual value is not exposed by the requested API version.
    */
-  UNKNOWN = 'UNKNOWN',
+  UNKNOWN = "UNKNOWN",
   /**
    * Indicates that the GRP target gender is Male.
    */
-  MALE = 'MALE',
+  MALE = "MALE",
   /**
    * Indicates that the GRP target gender is Female.
    */
-  FEMALE = 'FEMALE',
+  FEMALE = "FEMALE",
   /**
    * Indicates that the GRP target gender is both male and female.
    */
-  BOTH = 'BOTH',
+  BOTH = "BOTH",
 }
 
 /**
@@ -27,13 +27,13 @@ export enum GrpProvider {
   /**
    * The value returned if the actual value is not exposed by the requested API version.
    */
-  UNKNOWN = 'UNKNOWN',
+  UNKNOWN = "UNKNOWN",
 
-  NIELSEN = 'NIELSEN',
+  NIELSEN = "NIELSEN",
   /**
    * Renamed to GOOGLE beginning in V201608.
    */
-  GOOGLE = 'GOOGLE',
+  GOOGLE = "GOOGLE",
 }
 
 /**
@@ -44,19 +44,19 @@ export enum NielsenCtvPacingType {
   /**
    * The value returned if the actual value is not exposed by the requested API version.
    */
-  UNKNOWN = 'UNKNOWN',
+  UNKNOWN = "UNKNOWN",
   /**
    * The value returned if Nielsen measurement is disabled for connected devices.
    */
-  NONE = 'NONE',
+  NONE = "NONE",
   /**
    * Indicates that Nielsen impressions on connected devices are included, and we apply coviewing in pacing.
    */
-  COVIEW = 'COVIEW',
+  COVIEW = "COVIEW",
   /**
    * Indicates that Nielsen impressions on connected devices are included, and we apply strict coviewing in pacing.
    */
-  STRICT_COVIEW = 'STRICT_COVIEW',
+  STRICT_COVIEW = "STRICT_COVIEW",
 }
 
 /**
@@ -66,13 +66,13 @@ export enum PacingDeviceCategorizationType {
   /**
    * The value returned if the actual value is not exposed by the requested API version.
    */
-  UNKNOWN = 'UNKNOWN',
+  UNKNOWN = "UNKNOWN",
   /**
    * Use Google's device categorization in auto-pacing.
    */
-  GOOGLE = 'GOOGLE',
+  GOOGLE = "GOOGLE",
   /**
    * Use Nielsen device categorization in auto-pacing
    */
-  NIELSEN = 'NIELSEN',
+  NIELSEN = "NIELSEN",
 }

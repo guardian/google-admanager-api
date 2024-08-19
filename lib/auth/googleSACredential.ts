@@ -1,8 +1,8 @@
-import type { JWTInput, RefreshOptions } from 'google-auth-library';
-import { GoogleAuth } from 'google-auth-library';
-import type { JSONClient } from 'google-auth-library/build/src/auth/googleauth';
-import { SCOPE } from '../common/constants';
-import type { SACredential } from './interfaces';
+import type { JWTInput, RefreshOptions } from "google-auth-library";
+import { GoogleAuth } from "google-auth-library";
+import type { JSONClient } from "google-auth-library/build/src/auth/googleauth";
+import { SCOPE } from "../common/constants";
+import type { SACredential } from "./interfaces";
 
 export class GoogleSACredential implements SACredential {
   private json: string | JWTInput;
@@ -26,7 +26,8 @@ export class GoogleSACredential implements SACredential {
   }
 
   private async build() {
-    const json = typeof this.json === 'string' ? JSON.parse(this.json) : this.json;
+    const json =
+      typeof this.json === "string" ? JSON.parse(this.json) : this.json;
 
     this.auth = new GoogleAuth({
       scopes: SCOPE,

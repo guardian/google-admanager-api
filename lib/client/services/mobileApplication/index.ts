@@ -1,1 +1,1 @@
-export { MobileApplicationService } from './mobileApplication.service';
+export { MobileApplicationService } from "./mobileApplication.service";

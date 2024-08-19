@@ -1,4 +1,4 @@
-import type { PageResult } from '../../../common/types';
+import type { PageResult } from "../../../common/types";
 
 /**
  * Represents targeted or excluded ad units.

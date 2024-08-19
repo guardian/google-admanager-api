@@ -1,6 +1,9 @@
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { MobileApplicationAction } from './mobileApplication.action';
-import type { MobileApplication, MobileApplicationPage } from './mobileApplication.type';
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { MobileApplicationAction } from "./mobileApplication.action";
+import type {
+  MobileApplication,
+  MobileApplicationPage,
+} from "./mobileApplication.type";
 
 /**
  * Provides operations for creating, updating and retrieving {@link https://developers.google.com/ad-manager/api/reference/v202202/MobileApplicationService.MobileApplication MobileApplication} objects.
@@ -12,7 +15,9 @@ export interface MobileApplicationServiceOperations {
    * @param mobileApplications the mobile applications to create
    * @returns the created mobile applications with their IDs filled in
    */
-  createMobileApplications(mobileApplications: MobileApplication[]): Promise<MobileApplication[]>;
+  createMobileApplications(
+    mobileApplications: MobileApplication[],
+  ): Promise<MobileApplication[]>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202202/MobileApplicationService.MobileApplicationPage MobileApplicationPage}
    * of {@link https://developers.google.com/ad-manager/api/reference/v202202/MobileApplicationService.MobileApplication MobileApplication} objects that satisfy the given
@@ -30,7 +35,9 @@ export interface MobileApplicationServiceOperations {
    * @param filterStatement a Publisher Query Language statement used to filter a set of mobile applications.
    * @returns the mobile applications that match the given filter
    */
-  getMobileApplicationsByStatement(filterStatement: Statement): Promise<MobileApplicationPage>;
+  getMobileApplicationsByStatement(
+    filterStatement: Statement,
+  ): Promise<MobileApplicationPage>;
   /**
    * Performs actions on {@link https://developers.google.com/ad-manager/api/reference/v202202/MobileApplicationService.MobileApplication MobileApplication}.
    *
@@ -48,5 +55,7 @@ export interface MobileApplicationServiceOperations {
    * @param mobileApplications the mobile applications to update
    * @returns the updated mobile applications
    */
-  updateMobileApplications(mobileApplications: MobileApplication[]): Promise<MobileApplication[]>;
+  updateMobileApplications(
+    mobileApplications: MobileApplication[],
+  ): Promise<MobileApplication[]>;
 }

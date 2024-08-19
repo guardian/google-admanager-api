@@ -7,14 +7,17 @@ export abstract class LineItemCreativeAssociationAction {}
 /**
  * The action used for activating {@link https://developers.google.com/ad-manager/api/reference/v202202/LineItemCreativeAssociationService.LineItemCreativeAssociation LineItemCreativeAssociation} objects.
  */
-export class ActivateLineItemCreativeAssociations implements LineItemCreativeAssociationAction {}
+export class ActivateLineItemCreativeAssociations
+  implements LineItemCreativeAssociationAction {}
 
 /**
  * The action used for deactivating {@link https://developers.google.com/ad-manager/api/reference/v202202/LineItemCreativeAssociationService.LineItemCreativeAssociation LineItemCreativeAssociation} objects.
  */
-export class DeactivateLineItemCreativeAssociations implements LineItemCreativeAssociationAction {}
+export class DeactivateLineItemCreativeAssociations
+  implements LineItemCreativeAssociationAction {}
 
 /**
  * The action used for deleting {@link https://developers.google.com/ad-manager/api/reference/v202202/LineItemCreativeAssociationService.LineItemCreativeAssociation LineItemCreativeAssociation} objects.
  */
-export class DeleteLineItemCreativeAssociations implements LineItemCreativeAssociationAction {}
+export class DeleteLineItemCreativeAssociations
+  implements LineItemCreativeAssociationAction {}

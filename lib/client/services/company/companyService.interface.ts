@@ -1,6 +1,6 @@
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { CompanyAction } from './company.action';
-import type { Company, CompanyPage } from './company.type';
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { CompanyAction } from "./company.action";
+import type { Company, CompanyPage } from "./company.type";
 
 /**
  * Provides operations for creating, updating and retrieving {@link https://developers.google.com/ad-manager/api/reference/v202202/CompanyService.Company Company} objects.
@@ -37,7 +37,10 @@ export interface CompanyServiceOperations {
    * @param filterStatement 	a PQL statement used to filter companies
    * @returns 	the result of the action performed
    */
-  performCompanyAction(companyAction: CompanyAction, filterStatement: Statement): Promise<UpdateResult>;
+  performCompanyAction(
+    companyAction: CompanyAction,
+    filterStatement: Statement,
+  ): Promise<UpdateResult>;
   /**
    * Updates the specified {@link https://developers.google.com/ad-manager/api/reference/v202202/CompanyService.Company Company} objects.
    *

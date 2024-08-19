@@ -1,10 +1,10 @@
-import type { AxiosResponse } from 'axios';
-import type { ReportService } from '../../client';
-import { ReportJobStatus } from '../../client/services/report/report.enum';
-import type { ReportDownloadOptions } from '../../client/services/report/report.type';
-import { AdsReportsException } from '../handlers';
-import { HttpUtilities } from './httpUtilities.util';
-import { AdsReportUtilities, ReportResponse } from './reports';
+import type { AxiosResponse } from "axios";
+import type { ReportService } from "../../client";
+import { ReportJobStatus } from "../../client/services/report/report.enum";
+import type { ReportDownloadOptions } from "../../client/services/report/report.type";
+import { AdsReportsException } from "../handlers";
+import { HttpUtilities } from "./httpUtilities.util";
+import { AdsReportUtilities, ReportResponse } from "./reports";
 
 /**
  * Utility class for DFP API report downloads.
@@ -41,7 +41,9 @@ export class ReportUtilities extends AdsReportUtilities {
    * @returns True, if the caller should wait more, false otherwise.
    */
   async shouldWaitMore(): Promise<boolean> {
-    const status: ReportJobStatus = await this.reportService.getReportJobStatus(this.reportJobId);
+    const status: ReportJobStatus = await this.reportService.getReportJobStatus(
+      this.reportJobId,
+    );
 
     if (status === ReportJobStatus.FAILED) {
       throw new AdsReportsException(`Report job ${this.reportJobId} failed.`);
@@ -56,7 +58,10 @@ export class ReportUtilities extends AdsReportUtilities {
    */
   protected async getReport(): Promise<ReportResponse> {
     const response = await this.buildRequest(
-      await this.reportService.getReportDownloadUrlWithOptions(this.reportJobId, this.reportDownloadOptions),
+      await this.reportService.getReportDownloadUrlWithOptions(
+        this.reportJobId,
+        this.reportDownloadOptions,
+      ),
     );
 
     return new ReportResponse(response);
@@ -67,7 +72,7 @@ export class ReportUtilities extends AdsReportUtilities {
    * @param downloadUrl The download url.
    */
   private buildRequest(downloadUrl: string): Promise<AxiosResponse> {
-    return HttpUtilities.buildRequest(downloadUrl, 'GET', {
+    return HttpUtilities.buildRequest(downloadUrl, "GET", {
       timeout: 0,
     });
   }

@@ -1,6 +1,6 @@
-import type { Statement, UpdateResult } from '../../../common/types';
-import type { AdUnitAction } from './adUnit.action';
-import type { AdUnit, AdUnitPage, AdUnitSize } from './adUnit.type';
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { AdUnitAction } from "./adUnit.action";
+import type { AdUnit, AdUnitPage, AdUnitSize } from "./adUnit.type";
 
 /**
  * Provides operations for creating, updating and retrieving
@@ -57,7 +57,10 @@ export interface InventoryServiceOperations {
    * @param filterStatement a Publisher Query Language statement used to filter a set of ad units
    * @returns the result of the action performed
    */
-  performAdUnitAction(adUnitAction: AdUnitAction, filterStatement: Statement): Promise<UpdateResult>;
+  performAdUnitAction(
+    adUnitAction: AdUnitAction,
+    filterStatement: Statement,
+  ): Promise<UpdateResult>;
   /**
    * Updates the specified {@link https://developers.google.com/ad-manager/api/reference/v202202/InventoryService.AdUnit AdUnit} objects.
    *

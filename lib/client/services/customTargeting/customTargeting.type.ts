@@ -1,4 +1,4 @@
-import type { PageResult } from '../../../common/types';
+import type { PageResult } from "../../../common/types";
 import type {
   CustomTargetingKeyStatus,
   CustomTargetingKeyType,
@@ -6,7 +6,7 @@ import type {
   CustomTargetingValueStatus,
   ReportableType,
   ValueDeclarationType,
-} from './customTargeting.enum';
+} from "./customTargeting.enum";
 
 /**
  * **`CustomTargetingKey`** represents a key used for custom targeting.

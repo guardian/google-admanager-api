@@ -1,1 +1,1 @@
-export { NetworkService } from './network.service';
+export { NetworkService } from "./network.service";

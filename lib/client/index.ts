@@ -1,9 +1,9 @@
 // client
-export * from './adManager.client';
+export * from "./adManager.client";
 
 // services
-export * from './services';
+export * from "./services";
 
 //  commons
-export * from './common/enums';
-export * from './common/types';
+export * from "./common/enums";
+export * from "./common/types";
