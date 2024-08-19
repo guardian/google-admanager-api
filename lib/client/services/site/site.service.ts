@@ -1,9 +1,8 @@
-import { Client } from 'soap';
-
-import { SiteServiceOperations } from './siteService.interface';
-import { Statement, UpdateResult } from '../../../common/types';
-import { Site, SitePage } from './site.type';
-import { SiteAction } from './site.action';
+import type { Client } from 'soap';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { SiteAction } from './site.action';
+import type { Site, SitePage } from './site.type';
+import type { SiteServiceOperations } from './siteService.interface';
 
 export class SiteService implements SiteServiceOperations {
   private _client: Client;

@@ -1,6 +1,6 @@
-import { UserTeamAssociation, UserTeamAssociationPage } from './userTeamAssociation.type';
-import { UserTeamAssociationAction } from './userTeamAssociation.action';
-import { Statement, UpdateResult } from '../../../common/types';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { UserTeamAssociationAction } from './userTeamAssociation.action';
+import type { UserTeamAssociation, UserTeamAssociationPage } from './userTeamAssociation.type';
 
 /**
  * Provides methods for creating, updating,

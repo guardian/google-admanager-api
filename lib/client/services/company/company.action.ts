@@ -1,4 +1,4 @@
-import { DelegationType } from '../../common/enums';
+import type { DelegationType } from '../../common/enums';
 
 /**
  * Represents the actions that can be performed on `Company` objects.

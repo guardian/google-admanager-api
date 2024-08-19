@@ -1,5 +1,5 @@
-import { PageResult } from '../../../common/types';
-import { MobileApplicationPlatform, MobileApplicationStore } from './mobileApplication.enum';
+import type { PageResult } from '../../../common/types';
+import type { MobileApplicationPlatform, MobileApplicationStore } from './mobileApplication.enum';
 
 /**
  * A mobile application that has been added to or "claimed" by the network to be used for targeting purposes. These mobile apps can come from various app stores.

@@ -1,9 +1,8 @@
-import { Client } from 'soap';
-
-import { UserTeamAssociationServiceOperations } from './userTeamAssociationService.interface';
-import { UserTeamAssociation, UserTeamAssociationPage } from './userTeamAssociation.type';
-import { UserTeamAssociationAction } from './userTeamAssociation.action';
-import { Statement, UpdateResult } from '../../../common/types';
+import type { Client } from 'soap';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { UserTeamAssociationAction } from './userTeamAssociation.action';
+import type { UserTeamAssociation, UserTeamAssociationPage } from './userTeamAssociation.type';
+import type { UserTeamAssociationServiceOperations } from './userTeamAssociationService.interface';
 
 export class UserTeamAssociationService implements UserTeamAssociationServiceOperations {
   private _client: Client;

@@ -1,6 +1,6 @@
-import { Statement, UpdateResult } from '../../../common/types';
-import { Label, LabelPage } from './label.type';
-import { LabelAction } from './label.action';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { LabelAction } from './label.action';
+import type { Label, LabelPage } from './label.type';
 
 /**
  * Provides methods for the creation and management of Labels.

@@ -1,7 +1,7 @@
-import { DateTime, PageResult } from '../../../common/types';
-import { Targeting } from '../../common/types';
-import { StartDateTimeType } from '../../../common/enums';
-import {
+import type { StartDateTimeType } from '../../../common/enums';
+import type { DateTime, PageResult } from '../../../common/types';
+import type { Targeting } from '../../common/types';
+import type {
   AdRuleSlotBehavior,
   AdRuleSlotBumper,
   AdRuleStatus,
@@ -15,9 +15,9 @@ import {
  */
 export type BaseAdRuleSlot =
   | NoPoddingAdRuleSlot
-  | OptimizedPoddingAdRuleSlot
-  | StandardPoddingAdRuleSlot
-  | UnknownAdRuleSlot;
+   
+   
+   ;
 
 /**
  * An ad rule slot with no podding. It is defined by a BaseAdRuleSlot.maxVideoAdDuration.

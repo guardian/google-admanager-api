@@ -1,6 +1,6 @@
-import { DateTime, PageResult } from '../../../common/types';
-import { Money } from '../../common/types';
-import {
+import type { DateTime, PageResult } from '../../../common/types';
+import type { Money } from '../../common/types';
+import type {
   AudienceSegmentApprovalStatus,
   AudienceSegmentStatus,
   AudienceSegmentType,

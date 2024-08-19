@@ -1,8 +1,7 @@
-import { ThirdPartyDataDeclaration } from '../../common/types';
-import { Client } from 'soap';
-
-import { Network } from './network.type';
-import { NetworkServiceOperations } from './networkService.interface';
+import type { Client } from 'soap';
+import type { ThirdPartyDataDeclaration } from '../../common/types';
+import type { Network } from './network.type';
+import type { NetworkServiceOperations } from './networkService.interface';
 
 export class NetworkService implements NetworkServiceOperations {
   private _client: Client;

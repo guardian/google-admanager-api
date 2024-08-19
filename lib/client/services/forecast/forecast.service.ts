@@ -1,15 +1,14 @@
-import { Client } from 'soap';
-
-import { ForecastServiceOperations } from './forecastService.interface';
-import {
-  ProspectiveLineItem,
-  AvailabilityForecastOptions,
+import type { Client } from 'soap';
+import type {
   AvailabilityForecast,
-  DeliveryForecastOptions,
+  AvailabilityForecastOptions,
   DeliveryForecast,
+  DeliveryForecastOptions,
+  ProspectiveLineItem,
   TrafficDataRequest,
   TrafficDataResponse,
 } from './forecast.type';
+import type { ForecastServiceOperations } from './forecastService.interface';
 
 export class ForecastService implements ForecastServiceOperations {
   private _client: Client;

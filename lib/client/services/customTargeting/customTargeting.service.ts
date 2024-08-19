@@ -1,14 +1,13 @@
-import { Client } from 'soap';
-
-import { CustomTargetingServiceOperations } from './customTargeting.interface';
-import { Statement, UpdateResult } from '../../../common/types';
-import {
+import type { Client } from 'soap';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { CustomTargetingKeyAction, CustomTargetingValueAction } from './customTargeting.action';
+import type { CustomTargetingServiceOperations } from './customTargeting.interface';
+import type {
   CustomTargetingKey,
   CustomTargetingKeyPage,
   CustomTargetingValue,
   CustomTargetingValuePage,
 } from './customTargeting.type';
-import { CustomTargetingKeyAction, CustomTargetingValueAction } from './customTargeting.action';
 
 export class CustomTargetingService implements CustomTargetingServiceOperations {
   private _client: Client;

@@ -1,8 +1,7 @@
-import { Client } from 'soap';
-
-import { PublisherQueryLanguageServiceOperations } from './publisherQueryLanguageService.interface';
-import { ResultSet } from './publisherQueryLanguage.type';
-import { Statement } from '../../../common/types';
+import type { Client } from 'soap';
+import type { Statement } from '../../../common/types';
+import type { ResultSet } from './publisherQueryLanguage.type';
+import type { PublisherQueryLanguageServiceOperations } from './publisherQueryLanguageService.interface';
 
 export class PublisherQueryLanguageService implements PublisherQueryLanguageServiceOperations {
   private _client: Client;

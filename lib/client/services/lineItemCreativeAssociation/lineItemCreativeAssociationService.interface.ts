@@ -1,6 +1,6 @@
-import { LineItemCreativeAssociationAction } from './lineItemCreativeAssociation.action';
-import { Statement, UpdateResult } from '../../../common/types';
-import {
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { LineItemCreativeAssociationAction } from './lineItemCreativeAssociation.action';
+import type {
   CreativeNativeStylePreview,
   CreativePushOptions,
   LineItemCreativeAssociation,

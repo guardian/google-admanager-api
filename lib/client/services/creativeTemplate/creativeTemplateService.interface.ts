@@ -1,5 +1,5 @@
-import { CreativeTemplatePage } from './creativeTemplate.type';
-import { Statement } from '../../../common/types';
+import type { Statement } from '../../../common/types';
+import type { CreativeTemplatePage } from './creativeTemplate.type';
 
 /**
  * Provides methods for retrieving {@link https://developers.google.com/ad-manager/api/reference/v202202/CreativeTemplateService.CreativeTemplate CreativeTemplate} objects.

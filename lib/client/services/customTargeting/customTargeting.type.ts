@@ -1,5 +1,5 @@
-import { PageResult } from '../../../common/types';
-import {
+import type { PageResult } from '../../../common/types';
+import type {
   CustomTargetingKeyStatus,
   CustomTargetingKeyType,
   CustomTargetingValueMatchType,

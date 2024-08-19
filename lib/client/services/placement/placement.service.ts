@@ -1,9 +1,8 @@
-import { Client } from 'soap';
-
-import { PlacementServiceOperations } from './placementService.interface';
-import { Statement, UpdateResult } from '../../../common/types';
-import { Placement, PlacementPage } from './placement.type';
-import { PlacementAction } from './placement.action';
+import type { Client } from 'soap';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { PlacementAction } from './placement.action';
+import type { Placement, PlacementPage } from './placement.type';
+import type { PlacementServiceOperations } from './placementService.interface';
 
 export class PlacementService implements PlacementServiceOperations {
   private _client: Client;

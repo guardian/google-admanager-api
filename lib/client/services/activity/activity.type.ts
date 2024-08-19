@@ -1,5 +1,5 @@
-import { ActivityStatus, ActivityType } from './activity.enum';
-import { PageResult } from '../../../common/types';
+import type { PageResult } from '../../../common/types';
+import type { ActivityStatus, ActivityType } from './activity.enum';
 
 /**
  * An activity is a specific user action that an advertiser wants to track, such as the completion of a purchase or a visit to a webpage.

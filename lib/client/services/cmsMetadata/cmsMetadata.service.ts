@@ -1,9 +1,8 @@
-import { Client } from 'soap';
-
-import { CmsMetadataKeyAction, CmsMetadataValueAction } from './cmsMetadata.action';
-import { CmsMetadataServiceOperations } from './cmsMetadataService.interface';
-import { CmsMetadataKeyPage, CmsMetadataValuePage } from './cmsMetadata.type';
-import { Statement, UpdateResult } from '../../../common/types';
+import type { Client } from 'soap';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { CmsMetadataKeyAction, CmsMetadataValueAction } from './cmsMetadata.action';
+import type { CmsMetadataKeyPage, CmsMetadataValuePage } from './cmsMetadata.type';
+import type { CmsMetadataServiceOperations } from './cmsMetadataService.interface';
 
 export class CmsMetadataService implements CmsMetadataServiceOperations {
   private _client: Client;

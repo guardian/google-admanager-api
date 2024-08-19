@@ -1,5 +1,5 @@
-import { PageResult } from '../../../common/types';
-import { CmsMetadataKeyStatus, CmsMetadataValueStatus } from './cmsMetadata.enum';
+import type { PageResult } from '../../../common/types';
+import type { CmsMetadataKeyStatus, CmsMetadataValueStatus } from './cmsMetadata.enum';
 
 /**
  * Key associated with a piece of content from a publisher's CMS.

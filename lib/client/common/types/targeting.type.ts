@@ -1,8 +1,8 @@
-import { VideoPositionTargeting } from './videoPosition.type';
-import { DeliveryTimeZone, RequestPlatform } from '../enums';
-import { CustomCriteriaSet } from './customCriteria.type';
-import { DateTimeRange, TimeOfDay } from '../../../common/types';
-import { DayOfWeek } from '../../../common/enums';
+import type { DayOfWeek } from '../../../common/enums';
+import type { DateTimeRange, TimeOfDay } from '../../../common/types';
+import type { DeliveryTimeZone, RequestPlatform } from '../enums';
+import type { CustomCriteriaSet } from './customCriteria.type';
+import type { VideoPositionTargeting } from './videoPosition.type';
 
 /**
  * A {@link https://developers.google.com/ad-manager/api/reference/v202202/AdjustmentService.Location Location} represents a geographical entity that can be targeted.
@@ -503,7 +503,7 @@ export type Targeting = {
   /**
    * Specifies the browsing technologies that are targeted by the LineItem. This attribute is optional.
    */
-  technologyTargeting: TechnologyTargeting;
+  technologyTargeting?: TechnologyTargeting;
 
   /**
    * Specifies the collection of custom criteria that is targeted by the LineItem.

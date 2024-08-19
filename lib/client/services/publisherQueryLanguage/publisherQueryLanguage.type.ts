@@ -1,4 +1,4 @@
-import { Value } from '../../../common/types';
+import type { Value } from '../../../common/types';
 
 /**
  * Contains information about a column in a ResultSet.

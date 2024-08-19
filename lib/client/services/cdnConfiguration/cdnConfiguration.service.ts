@@ -1,9 +1,8 @@
-import { Client } from 'soap';
-
-import { CdnConfigurationServiceOperations } from './cdnConfiguration.interface';
-import { CdnConfiguration, CdnConfigurationPage } from './cdnConfiguration.type';
-import { CdnConfigurationAction } from './cdnConfiguration.action';
-import { Statement, UpdateResult } from '../../../common/types';
+import type { Client } from 'soap';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { CdnConfigurationAction } from './cdnConfiguration.action';
+import type { CdnConfigurationServiceOperations } from './cdnConfiguration.interface';
+import type { CdnConfiguration, CdnConfigurationPage } from './cdnConfiguration.type';
 
 export class CdnConfigurationService implements CdnConfigurationServiceOperations {
   private _client: Client;

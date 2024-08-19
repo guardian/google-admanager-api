@@ -1,6 +1,6 @@
-import { DateTime, PageResult } from '../../../common/types';
-import { StartDateTimeType } from '../../../common/enums';
-import {
+import type { StartDateTimeType } from '../../../common/enums';
+import type { DateTime, PageResult } from '../../../common/types';
+import type {
   AdBreakFillType,
   AdBreakMarkupType,
   AdServingFormat,

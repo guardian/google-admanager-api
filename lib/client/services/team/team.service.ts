@@ -1,9 +1,8 @@
-import { Client } from 'soap';
-
-import { TeamServiceOperations } from './teamService.interface';
-import { Statement, UpdateResult } from '../../../common/types';
-import { Team, TeamPage } from './team.type';
-import { TeamAction } from './team.action';
+import type { Client } from 'soap';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { TeamAction } from './team.action';
+import type { Team, TeamPage } from './team.type';
+import type { TeamServiceOperations } from './teamService.interface';
 
 export class TeamService implements TeamServiceOperations {
   private _client: Client;

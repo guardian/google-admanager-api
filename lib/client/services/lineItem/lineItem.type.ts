@@ -1,6 +1,6 @@
-import { LineItemSummary } from '../../common/types/lineItemSummary.type';
-import { CreativeTargeting, Targeting } from '../../common/types';
-import { PageResult } from '../../../common/types';
+import type { PageResult } from '../../../common/types';
+import type { CreativeTargeting, Targeting } from '../../common/types';
+import type { LineItemSummary } from '../../common/types/lineItemSummary.type';
 
 /**
  * {@link https://developers.google.com/ad-manager/api/reference/v202202/LineItemService.LineItem LineItem}

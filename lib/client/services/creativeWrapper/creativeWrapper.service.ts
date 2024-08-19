@@ -1,9 +1,8 @@
-import { Client } from 'soap';
-
-import { CreativeWrapperServiceOperations } from './creativeWrapperService.interface';
-import { CreativeWrapper, CreativeWrapperPage } from './creativeWrapper.type';
-import { CreativeWrapperAction } from './creativeWrapper.action';
-import { Statement, UpdateResult } from '../../../common/types';
+import type { Client } from 'soap';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { CreativeWrapperAction } from './creativeWrapper.action';
+import type { CreativeWrapper, CreativeWrapperPage } from './creativeWrapper.type';
+import type { CreativeWrapperServiceOperations } from './creativeWrapperService.interface';
 
 export class CreativeWrapperService implements CreativeWrapperServiceOperations {
   private _client: Client;

@@ -1,5 +1,5 @@
-import { PageResult, Statement, Date } from '../../../common/types';
-import {
+import type { Date, PageResult, Statement } from '../../../common/types';
+import type {
   Column,
   DateRangeType,
   Dimension,

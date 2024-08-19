@@ -1,8 +1,7 @@
-import { Client } from 'soap';
-
-import { ActivityServiceOperations } from './activityService.interface';
-import { Activity, ActivityPage } from './activity.type';
-import { Statement } from '../../../common/types';
+import type { Client } from 'soap';
+import type { Statement } from '../../../common/types';
+import type { Activity, ActivityPage } from './activity.type';
+import type { ActivityServiceOperations } from './activityService.interface';
 
 export class ActivityService implements ActivityServiceOperations {
   private _client: Client;

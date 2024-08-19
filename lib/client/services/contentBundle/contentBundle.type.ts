@@ -1,5 +1,5 @@
-import { DateTime, PageResult } from '../../../common/types';
-import { ContentBundleStatus } from './contentBundle.enum';
+import type { DateTime, PageResult } from '../../../common/types';
+import type { ContentBundleStatus } from './contentBundle.enum';
 
 /**
  * A ContentBundle is a grouping of individual {@link https://developers.google.com/ad-manager/api/reference/v202202/ContentService.Content?hl=pt Content}.

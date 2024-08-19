@@ -1,9 +1,8 @@
-import { Client } from 'soap';
-
-import { ProposalLineItem, ProposalLineItemMakegoodInfo, ProposalLineItemPage } from './proposalLineItem.type';
-import { ProposalLineItemServiceOperations } from './proposalLineItemService.interface';
-import { ProposalLineItemAction } from './proposalLineItem.action';
-import { Statement, UpdateResult } from '../../../common/types';
+import type { Client } from 'soap';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { ProposalLineItemAction } from './proposalLineItem.action';
+import type { ProposalLineItem, ProposalLineItemMakegoodInfo, ProposalLineItemPage } from './proposalLineItem.type';
+import type { ProposalLineItemServiceOperations } from './proposalLineItemService.interface';
 
 export class ProposalLineItemService implements ProposalLineItemServiceOperations {
   private _client: Client;

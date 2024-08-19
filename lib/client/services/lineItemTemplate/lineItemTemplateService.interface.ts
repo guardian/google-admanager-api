@@ -1,5 +1,5 @@
-import { LineItemTemplatePage } from './lineItemTemplate.type';
-import { Statement } from '../../../common/types';
+import type { Statement } from '../../../common/types';
+import type { LineItemTemplatePage } from './lineItemTemplate.type';
 
 /**
  * Provides operations for creating, updating and retrieving {@link https://developers.google.com/ad-manager/api/reference/v202202/LineItemTemplateService.LineItemTemplate LineItemTemplate} objects.

@@ -1,9 +1,8 @@
-import { Client } from 'soap';
-
-import { LineItemServiceOperations } from './lineItemService.interface';
-import { Statement, UpdateResult } from '../../../common/types';
-import { LineItem, LineItemPage } from './lineItem.type';
-import { LineItemAction } from './lineItem.action';
+import type { Client } from 'soap';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { LineItemAction } from './lineItem.action';
+import type { LineItem, LineItemPage } from './lineItem.type';
+import type { LineItemServiceOperations } from './lineItemService.interface';
 
 export class LineItemService implements LineItemServiceOperations {
   private _client: Client;

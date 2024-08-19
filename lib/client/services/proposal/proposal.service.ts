@@ -1,9 +1,8 @@
-import { Client } from 'soap';
-
-import { MarketplaceCommentPage, Proposal, ProposalPage } from './proposal.type';
-import { ProposalServiceOperations } from './proposalService.interface';
-import { Statement, UpdateResult } from '../../../common/types';
-import { ProposalAction } from './proposal.action';
+import type { Client } from 'soap';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { ProposalAction } from './proposal.action';
+import type { MarketplaceCommentPage, Proposal, ProposalPage } from './proposal.type';
+import type { ProposalServiceOperations } from './proposalService.interface';
 
 export class ProposalService implements ProposalServiceOperations {
   private _client: Client;

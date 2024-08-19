@@ -1,5 +1,5 @@
-import { TargetingPresetPage } from './targetingPresent.type';
-import { Statement } from '../../../common/types';
+import type { Statement } from '../../../common/types';
+import type { TargetingPresetPage } from './targetingPresent.type';
 
 /**
  * Service for interacting with Targeting Presets.

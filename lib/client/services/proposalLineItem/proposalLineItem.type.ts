@@ -1,5 +1,5 @@
-import { DateTime, PageResult } from '../../../common/types';
-import {
+import type { DateTime, PageResult } from "../../../common/types";
+import type {
   AllowedFormats,
   CompanionDeliveryOption,
   ComputedStatus,
@@ -9,8 +9,8 @@ import {
   ProgrammaticCreativeSource,
   RoadblockingType,
   SkippableAdType,
-} from '../../common/enums';
-import {
+} from "../../common/enums";
+import type {
   AppliedLabel,
   BaseCustomFieldValue,
   CreativePlaceholder,
@@ -22,13 +22,17 @@ import {
   Money,
   Targeting,
   ThirdPartyMeasurementSettings,
-} from '../../common/types';
-import { NegotiationRole, RateType, ReservationStatus } from './proposalLineItem.enum';
+} from "../../common/types";
+import type {
+  NegotiationRole,
+  RateType,
+  ReservationStatus,
+} from "./proposalLineItem.enum";
 
 /**
  * Marketplace info for ProposalLineItem with a corresponding deal in Marketplace.
  */
-export type ProposalLineItemMarketplaceInfo = {};
+export type ProposalLineItemMarketplaceInfo = object;
 
 /**
  * Makegood info for a ProposalLineItemDto.

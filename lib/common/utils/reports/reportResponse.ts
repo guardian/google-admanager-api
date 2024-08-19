@@ -1,17 +1,16 @@
-import { AxiosResponse } from 'axios';
+import * as fs from 'fs';
 import * as stream from 'stream';
 import { promisify } from 'util';
-import * as fs from 'fs';
-
+import type { AxiosResponse } from 'axios';
 import { AdsReportsException, ArgumentNullException } from '../../handlers';
 
 /**
  * Represents a report response from the server.
  */
 export class ReportResponse {
-  private response: AxiosResponse<any, any>;
+  private response: AxiosResponse;
 
-  constructor(response: AxiosResponse<any, any>) {
+  constructor(response: AxiosResponse) {
     if (response == null) {
       throw new ArgumentNullException('Response cannot be null.');
     }

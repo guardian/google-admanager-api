@@ -1,6 +1,6 @@
-import { Company, CompanyPage } from './company.type';
-import { Statement, UpdateResult } from '../../../common/types';
-import { CompanyAction } from './company.action';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { CompanyAction } from './company.action';
+import type { Company, CompanyPage } from './company.type';
 
 /**
  * Provides operations for creating, updating and retrieving {@link https://developers.google.com/ad-manager/api/reference/v202202/CompanyService.Company Company} objects.

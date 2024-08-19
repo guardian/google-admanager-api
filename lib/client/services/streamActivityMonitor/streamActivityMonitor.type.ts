@@ -1,5 +1,5 @@
-import { DateTime } from '../../../common/types';
-import { CreativeTranscodeIdType, ReportingType, SamErrorType } from './streamActivityMonitor.enum';
+import type { DateTime } from '../../../common/types';
+import type { CreativeTranscodeIdType, ReportingType, SamErrorType } from './streamActivityMonitor.enum';
 
 export type StreamCreateRequest = {
   url: string;

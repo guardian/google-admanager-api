@@ -1,8 +1,7 @@
-import { Client } from 'soap';
-
-import { CreativeSetServiceOperations } from './creativeSetService.interface';
-import { CreativeSet, CreativeSetPage } from './creativeSet.type';
-import { Statement } from '../../../common/types';
+import type { Client } from 'soap';
+import type { Statement } from '../../../common/types';
+import type { CreativeSet, CreativeSetPage } from './creativeSet.type';
+import type { CreativeSetServiceOperations } from './creativeSetService.interface';
 
 export class CreativeSetService implements CreativeSetServiceOperations {
   private _client: Client;

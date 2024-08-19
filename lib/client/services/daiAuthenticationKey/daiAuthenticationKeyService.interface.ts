@@ -1,6 +1,6 @@
-import { DaiAuthenticationKey, DaiAuthenticationKeyPage } from './daiAuthenticationKey.type';
-import { DaiAuthenticationKeyAction } from './daiAuthenticationKey.action';
-import { Statement, UpdateResult } from '../../../common/types';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { DaiAuthenticationKeyAction } from './daiAuthenticationKey.action';
+import type { DaiAuthenticationKey, DaiAuthenticationKeyPage } from './daiAuthenticationKey.type';
 
 /**
  * Provides methods for creating, updating and retrieving

@@ -1,12 +1,10 @@
-import { JSONClient } from 'google-auth-library/build/src/auth/googleauth';
-import { GoogleAuth } from 'google-auth-library';
-
-import { SACredential } from './interfaces';
-import { SCOPE } from '../common/constants';
+import { GoogleAuth } from "google-auth-library";
+import { SCOPE } from "../common/constants";
+import type { SACredential } from "./interfaces";
 
 export class GoogleSAFileCredential implements SACredential {
   private _keyFile: string;
-  protected auth: GoogleAuth<JSONClient>;
+  protected auth: GoogleAuth;
 
   /**
    *

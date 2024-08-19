@@ -1,6 +1,6 @@
-import { MarketplaceCommentPage, Proposal, ProposalPage } from './proposal.type';
-import { Statement, UpdateResult } from '../../../common/types';
-import { ProposalAction } from './proposal.action';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { ProposalAction } from './proposal.action';
+import type { MarketplaceCommentPage, Proposal, ProposalPage } from './proposal.type';
 
 /**
  * Provides operations for creating, updating and retrieving {@link https://developers.google.com/ad-manager/api/reference/v202202/ProposalService.Proposal Proposal} objects.

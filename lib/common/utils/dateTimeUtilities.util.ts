@@ -1,4 +1,4 @@
-import { DateTime } from '../types';
+import type { DateTime } from '../types';
 
 /**
  * A utility class that allows you to build Datetime objects from strings.

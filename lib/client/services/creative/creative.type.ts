@@ -1,13 +1,19 @@
-import { ConversionEvent_TrackingUrlsMapEntry } from '../creativeWrapper/creativeWrapper.type';
-import { AppliedLabel, BaseCustomFieldValue, Size, ThirdPartyDataDeclaration } from '../../common/types';
-import { DateTime, PageResult } from '../../../common/types';
-import { SkippableAdType } from '../../common/enums';
-import {
+import type { DateTime, PageResult } from "../../../common/types";
+import type { SkippableAdType } from "../../common/enums";
+import type {
+  AppliedLabel,
+  BaseCustomFieldValue,
+  Size,
+  ThirdPartyDataDeclaration,
+} from "../../common/types";
+import type { ConversionEvent_TrackingUrlsMapEntry } from "../creativeWrapper/creativeWrapper.type";
+import type {
   AdIdType,
   CreativePolicyViolation,
   DestinationUrlType,
   ImageDensity,
   LockedOrientation,
+  MimeType,
   RichMediaStudioChildAssetPropertyType,
   RichMediaStudioCreativeArtworkType,
   RichMediaStudioCreativeBillingAttribute,
@@ -15,10 +21,9 @@ import {
   ScalableType,
   SslManualOverride,
   SslScanResult,
-  VideoDeliveryType,
-  MimeType,
   VastRedirectType,
-} from './creative.enum';
+  VideoDeliveryType,
+} from "./creative.enum";
 
 /**
  * An Ad Exchange dynamic allocation creative.
@@ -43,7 +48,7 @@ export type AdExchangeCreative = {
 /**
  * An AdSense dynamic allocation creative.
  */
-export type AdSenseCreative = {};
+export type AdSenseCreative = object;
 
 /**
  * Dynamic allocation creative with a backfill code snippet.
@@ -60,7 +65,7 @@ export type HasHtmlSnippetDynamicAllocationCreative = {
 /**
  * A base class for dynamic allocation creatives.
  */
-export type BaseDynamicAllocationCreative = {};
+export type BaseDynamicAllocationCreative = object;
 
 /**
  * Represents a child asset in RichMediaStudioCreative.
@@ -919,12 +924,12 @@ export type InternalRedirectCreative = {
 /**
  * A Creative that isn't supported by Google DFP, but was migrated from DART. Creatives of this type cannot be created or modified.
  */
-export type LegacyDfpCreative = {};
+export type LegacyDfpCreative = object;
 
 /**
  * A Creative used for programmatic trafficking. This creative will be auto-created with the right approval from the buyer. This creative cannot be created through the API. This creative can be updated.
  */
-export type ProgrammaticCreative = {};
+export type ProgrammaticCreative = object;
 
 /**
  * Stores values of CreativeTemplateVariable of VariableType.ASSET.

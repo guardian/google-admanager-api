@@ -1,5 +1,5 @@
-import { Contact, ContactPage } from './contact.type';
-import { Statement } from '../../../common/types';
+import type { Statement } from '../../../common/types';
+import type { Contact, ContactPage } from './contact.type';
 
 /**
  *

@@ -1,10 +1,10 @@
-import { ContactStatus } from './contact.enum';
-import { PageResult } from '../../../common/types';
+import type { PageResult } from "../../../common/types";
+import type { ContactStatus } from "./contact.enum";
 
 /**
  *
  */
-type BaseContact = {};
+type BaseContact = object;
 
 /**
  * A Contact represents a person who is affiliated with a single {@link https://developers.google.com/ad-manager/api/reference/v202202/CompanyService.Company?hl=pt Company}.

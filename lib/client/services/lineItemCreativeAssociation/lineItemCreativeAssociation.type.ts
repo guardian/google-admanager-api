@@ -1,7 +1,7 @@
-import { LineItemCreativeAssociationStatus } from './lineItemCreativeAssociation.enum';
-import { DateTime, PageResult } from '../../../common/types';
-import { StartDateTimeType } from '../../../common/enums';
-import { Money, Size, Stats } from '../../common/types';
+import type { StartDateTimeType } from '../../../common/enums';
+import type { DateTime, PageResult } from '../../../common/types';
+import type { Money, Size, Stats } from '../../common/types';
+import type { LineItemCreativeAssociationStatus } from './lineItemCreativeAssociation.enum';
 
 /**
  * This represents an entry in a map with a key of type Long and value of type Stats.

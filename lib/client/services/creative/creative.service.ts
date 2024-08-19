@@ -1,9 +1,8 @@
-import { Client } from 'soap';
-
-import { CreativeServiceOperations } from './creativeService.interface';
-import { Statement, UpdateResult } from '../../../common/types';
-import { Creative, CreativePage } from './creative.type';
-import { CreativeAction } from './creative.action';
+import type { Client } from 'soap';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { CreativeAction } from './creative.action';
+import type { Creative, CreativePage } from './creative.type';
+import type { CreativeServiceOperations } from './creativeService.interface';
 
 export class CreativeService implements CreativeServiceOperations {
   private _client: Client;

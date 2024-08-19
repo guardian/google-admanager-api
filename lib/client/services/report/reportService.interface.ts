@@ -1,6 +1,6 @@
-import { ReportDownloadOptions, ReportJob, SavedQueryPage } from './report.type';
-import { Statement } from '../../../common/types';
-import { ExportFormat, ReportJobStatus } from './report.enum';
+import type { Statement } from '../../../common/types';
+import type { ExportFormat, ReportJobStatus } from './report.enum';
+import type { ReportDownloadOptions, ReportJob, SavedQueryPage } from './report.type';
 
 /**
  * Provides methods for executing a {@link https://developers.google.com/ad-manager/api/reference/v202202/ReportService.ReportJob ReportJob}

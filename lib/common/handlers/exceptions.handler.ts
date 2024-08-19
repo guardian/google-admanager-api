@@ -1,7 +1,7 @@
 export abstract class BaseException extends Error {
   abstract statusCode: number;
   innerException: Error;
-  beforeSealing: Function;
+  beforeSealing: () => unknown;
 
   constructor(message) {
     super(message);
@@ -13,7 +13,11 @@ export abstract class BaseException extends Error {
 export class InvalidOperationException extends BaseException {
   statusCode = 500;
 
-  constructor(message?: string, innerException?: Error, beforeSealing?: Function) {
+  constructor(
+    message?: string,
+    innerException?: Error,
+    beforeSealing?: () => unknown,
+  ) {
     super(message);
     this.name = this.constructor.name;
     this.innerException = innerException;
@@ -26,7 +30,11 @@ export class InvalidOperationException extends BaseException {
 export class ArgumentNullException extends BaseException {
   statusCode: 400;
 
-  constructor(message?: string, innerException?: Error, beforeSealing?: Function) {
+  constructor(
+    message?: string,
+    innerException?: Error,
+    beforeSealing?: () => unknown,
+  ) {
     super(message);
     this.name = this.constructor.name;
     this.innerException = innerException;
@@ -39,7 +47,11 @@ export class ArgumentNullException extends BaseException {
 export class AdsReportsException extends BaseException {
   statusCode: 400;
 
-  constructor(message?: string, innerException?: Error, beforeSealing?: Function) {
+  constructor(
+    message?: string,
+    innerException?: Error,
+    beforeSealing?: () => unknown,
+  ) {
     super(message);
     this.name = this.constructor.name;
     this.innerException = innerException;

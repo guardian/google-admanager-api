@@ -1,9 +1,8 @@
-import { Client } from 'soap';
-
-import { MobileApplicationServiceOperations } from './mobileApplicationService.interface';
-import { MobileApplication, MobileApplicationPage } from './mobileApplication.type';
-import { MobileApplicationAction } from './mobileApplication.action';
-import { Statement, UpdateResult } from '../../../common/types';
+import type { Client } from 'soap';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { MobileApplicationAction } from './mobileApplication.action';
+import type { MobileApplication, MobileApplicationPage } from './mobileApplication.type';
+import type { MobileApplicationServiceOperations } from './mobileApplicationService.interface';
 
 export class MobileApplicationService implements MobileApplicationServiceOperations {
   private _client: Client;

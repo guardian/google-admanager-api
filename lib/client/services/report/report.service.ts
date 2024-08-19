@@ -1,9 +1,8 @@
-import { Client } from 'soap';
-
-import { ReportServiceOperations } from './reportService.interface';
-import { ExportFormat, ReportJobStatus } from './report.enum';
-import { Statement } from '../../../common/types';
-import { ReportDownloadOptions, ReportJob, SavedQueryPage } from './report.type';
+import type { Client } from 'soap';
+import type { Statement } from '../../../common/types';
+import type { ExportFormat, ReportJobStatus } from './report.enum';
+import type { ReportDownloadOptions, ReportJob, SavedQueryPage } from './report.type';
+import type { ReportServiceOperations } from './reportService.interface';
 
 export class ReportService implements ReportServiceOperations {
   private _client: Client;

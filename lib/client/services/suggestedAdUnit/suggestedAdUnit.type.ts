@@ -1,7 +1,7 @@
-import { AdUnitParent, AdUnitSize } from '../inventory/adUnit.type';
-import { AdUnitTargetWindow } from '../inventory/adUnit.enum';
-import { TargetPlatform } from './suggestedAdUnit.enum';
-import { PageResult } from '../../../common/types';
+import type { PageResult } from '../../../common/types';
+import type { AdUnitTargetWindow } from '../inventory/adUnit.enum';
+import type { AdUnitParent, AdUnitSize } from '../inventory/adUnit.type';
+import type { TargetPlatform } from './suggestedAdUnit.enum';
 
 /**
  * A SuggestedAdUnit represents a suggestion for a new ad unit, based on an ad tag that has been served at least ten times in the past week,

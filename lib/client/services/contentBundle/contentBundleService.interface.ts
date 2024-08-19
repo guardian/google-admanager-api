@@ -1,6 +1,6 @@
-import { ContentBundle, ContentBundlePage } from './contentBundle.type';
-import { Statement, UpdateResult } from '../../../common/types';
-import { ContentBundleAction } from './contentBundle.action';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { ContentBundleAction } from './contentBundle.action';
+import type { ContentBundle, ContentBundlePage } from './contentBundle.type';
 
 /**
  * Provides methods for creating, updating and retrieving

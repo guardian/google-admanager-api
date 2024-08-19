@@ -1,9 +1,8 @@
-import { Client } from 'soap';
-
-import { ContentBundleServiceOperations } from './contentBundleService.interface';
-import { ContentBundle, ContentBundlePage } from './contentBundle.type';
-import { Statement, UpdateResult } from '../../../common/types';
-import { ContentBundleAction } from './contentBundle.action';
+import type { Client } from 'soap';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { ContentBundleAction } from './contentBundle.action';
+import type { ContentBundle, ContentBundlePage } from './contentBundle.type';
+import type { ContentBundleServiceOperations } from './contentBundleService.interface';
 
 export class ContentBundleService implements ContentBundleServiceOperations {
   private _client: Client;

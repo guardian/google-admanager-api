@@ -1,9 +1,8 @@
-import { Client } from 'soap';
-
-import { LiveStreamEvent, LiveStreamEventPage, Slate, SlateAction, SlatePage } from './liveStreamEvent.type';
-import { LiveStreamEventServiceOperations } from './liveStreamEventService.interface';
-import { LiveStreamEventAction } from './liveStreamEvent.action';
-import { Statement, UpdateResult } from '../../../common/types';
+import type { Client } from 'soap';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { LiveStreamEventAction } from './liveStreamEvent.action';
+import type { LiveStreamEvent, LiveStreamEventPage, Slate, SlateAction, SlatePage } from './liveStreamEvent.type';
+import type { LiveStreamEventServiceOperations } from './liveStreamEventService.interface';
 
 export class LiveStreamEventService implements LiveStreamEventServiceOperations {
   private _client: Client;

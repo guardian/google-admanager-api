@@ -1,6 +1,6 @@
-import { Statement, UpdateResult } from '../../../common/types';
-import { CreativeReviewAction } from './creativeReview.action';
-import { CreativeReviewPage } from './creativeReview.type';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { CreativeReviewAction } from './creativeReview.action';
+import type { CreativeReviewPage } from './creativeReview.type';
 
 export interface CreativeReviewServiceOperations {
   /**

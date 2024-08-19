@@ -1,9 +1,8 @@
-import { Client } from 'soap';
-
-import { AudienceSegmentServiceOperations } from './audienceSegmentService.interface';
-import { Statement, UpdateResult } from '../../../common/types';
-import { AudienceSegmentPage, FirstPartyAudienceSegment } from './audienceSegment.type';
-import { AudienceSegmentAction } from './audienceSegment.action';
+import type { Client } from 'soap';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { AudienceSegmentAction } from './audienceSegment.action';
+import type { AudienceSegmentPage, FirstPartyAudienceSegment } from './audienceSegment.type';
+import type { AudienceSegmentServiceOperations } from './audienceSegmentService.interface';
 
 export class AudienceSegmentService implements AudienceSegmentServiceOperations {
   private _client: Client;

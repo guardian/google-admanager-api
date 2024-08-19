@@ -1,8 +1,7 @@
-import { Client } from 'soap';
-
-import { TargetingPresetServiceOperations } from './targetingPresentService.interface';
-import { TargetingPresetPage } from './targetingPresent.type';
-import { Statement } from '../../../common/types';
+import type { Client } from 'soap';
+import type { Statement } from '../../../common/types';
+import type { TargetingPresetPage } from './targetingPresent.type';
+import type { TargetingPresetServiceOperations } from './targetingPresentService.interface';
 
 export class TargetingPresetService implements TargetingPresetServiceOperations {
   private _client: Client;

@@ -1,5 +1,5 @@
-import { ActivityGroup, ActivityGroupPage } from './activityGroup.type';
-import { Statement } from '../../../common/types';
+import type { Statement } from '../../../common/types';
+import type { ActivityGroup, ActivityGroupPage } from './activityGroup.type';
 
 /**
  * Provides methods for creating, updating and retrieving

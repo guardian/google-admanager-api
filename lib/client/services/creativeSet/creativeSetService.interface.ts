@@ -1,5 +1,5 @@
-import { CreativeSet, CreativeSetPage } from './creativeSet.type';
-import { Statement } from '../../../common/types';
+import type { Statement } from '../../../common/types';
+import type { CreativeSet, CreativeSetPage } from './creativeSet.type';
 
 /**
  * Provides operations for creating, updating and retrieving {@link https://developers.google.com/ad-manager/api/reference/v202202/CreativeSetService.CreativeSet CreativeSet} objects.

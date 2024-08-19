@@ -6,16 +6,16 @@ export function promiseFromCallback(fn: (callback: (err: Error, result: any) => 
   return new Promise((resolve, reject) => {
     fn((err, result) => {
       if (err) {
-        const error = err?.message.split(': ');
+        const error = err.message.split(': ');
 
-        if (err?.message.startsWith('soap:Client:')) {
+        if (err.message.startsWith('soap:Client:')) {
           reject({
             code: err['response'].status,
             name: error[1],
             message: error[3],
           });
         }
-        if (err?.message.startsWith('soap:Server:')) {
+        if (err.message.startsWith('soap:Server:')) {
           reject({
             code: err['response'].status,
             name: error[2]?.match(/"xsi:type":"(.*)"},/)[1] || '',

@@ -1,7 +1,7 @@
-import { BearerSecurity, Client, createClientAsync } from 'soap';
-
-import { GoogleSoapServiceOptions, ImportClass } from '../common/types';
+import type { Client} from 'soap';
+import { BearerSecurity, createClientAsync } from 'soap';
 import { API_VERSION, SERVICE_MAP } from '../common/constants';
+import type { GoogleSoapServiceOptions, ImportClass } from '../common/types';
 import { promiseFromCallback } from '../common/utils';
 
 export class GoogleSoapService<T extends keyof typeof SERVICE_MAP> {
@@ -38,9 +38,9 @@ export class GoogleSoapService<T extends keyof typeof SERVICE_MAP> {
 
             return res?.rval || null;
           };
-        } else {
+        } 
           return target[method];
-        }
+        
       },
     });
 

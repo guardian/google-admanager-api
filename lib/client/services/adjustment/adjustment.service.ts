@@ -1,14 +1,13 @@
-import { Client } from 'soap';
-
-import { AdjustmentServiceOperations } from './adjustmentService.interface';
-import { Statement, UpdateResult } from '../../../common/types';
-import {
+import type { Client } from 'soap';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { ForecastAdjustmentAction } from './adjustment.action';
+import type {
   ForecastAdjustment,
   ForecastAdjustmentPage,
   TrafficForecastSegment,
   TrafficForecastSegmentPage,
 } from './adjustment.type';
-import { ForecastAdjustmentAction } from './adjustment.action';
+import type { AdjustmentServiceOperations } from './adjustmentService.interface';
 
 export class AdjustmentService implements AdjustmentServiceOperations {
   private _client: Client;

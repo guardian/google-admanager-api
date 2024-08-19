@@ -1,8 +1,7 @@
-import { Client } from 'soap';
-
-import { LineItemTemplateServiceOperations } from './lineItemTemplateService.interface';
-import { LineItemTemplatePage } from './lineItemTemplate.type';
-import { Statement } from '../../../common/types';
+import type { Client } from 'soap';
+import type { Statement } from '../../../common/types';
+import type { LineItemTemplatePage } from './lineItemTemplate.type';
+import type { LineItemTemplateServiceOperations } from './lineItemTemplateService.interface';
 
 export class LineItemTemplateService implements LineItemTemplateServiceOperations {
   private _client: Client;

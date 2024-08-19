@@ -1,9 +1,8 @@
-import { Client } from 'soap';
-
-import { CustomField, CustomFieldOption, CustomFieldPage } from './customField.type';
-import { CustomFieldServiceOperations } from './customFieldService.interface';
-import { Statement, UpdateResult } from '../../../common/types';
-import { CustomFieldAction } from './customField.action';
+import type { Client } from 'soap';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { CustomFieldAction } from './customField.action';
+import type { CustomField, CustomFieldOption, CustomFieldPage } from './customField.type';
+import type { CustomFieldServiceOperations } from './customFieldService.interface';
 
 export class CustomFieldService implements CustomFieldServiceOperations {
   private _client: Client;

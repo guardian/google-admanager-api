@@ -1,6 +1,6 @@
-import { DaiEncodingProfile, DaiEncodingProfilePage } from './daiEncodingProfile.type';
-import { DaiEncodingProfileAction } from './daiEncodingProfile.action';
-import { Statement, UpdateResult } from '../../../common/types';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { DaiEncodingProfileAction } from './daiEncodingProfile.action';
+import type { DaiEncodingProfile, DaiEncodingProfilePage } from './daiEncodingProfile.type';
 
 /**
  * Provides methods for creating, updating and retrieving

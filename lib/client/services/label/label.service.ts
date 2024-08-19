@@ -1,9 +1,8 @@
-import { Client } from 'soap';
-
-import { Statement, UpdateResult } from '../../../common/types';
-import { LabelServiceOperations } from './label.interface';
-import { Label, LabelPage } from './label.type';
-import { LabelAction } from './label.action';
+import type { Client } from 'soap';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { LabelAction } from './label.action';
+import type { LabelServiceOperations } from './label.interface';
+import type { Label, LabelPage } from './label.type';
 
 export class LabelService implements LabelServiceOperations {
   private _client: Client;

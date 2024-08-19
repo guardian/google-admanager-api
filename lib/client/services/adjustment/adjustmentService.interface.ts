@@ -1,6 +1,6 @@
-import { Statement, UpdateResult } from '../../../common/types';
-import { ForecastAdjustmentAction } from './adjustment.action';
-import {
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { ForecastAdjustmentAction } from './adjustment.action';
+import type {
   ForecastAdjustment,
   ForecastAdjustmentPage,
   TrafficForecastSegment,

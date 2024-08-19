@@ -1,6 +1,6 @@
-import { Statement, UpdateResult } from '../../../common/types';
-import { Placement, PlacementPage } from './placement.type';
-import { PlacementAction } from './placement.action';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { PlacementAction } from './placement.action';
+import type { Placement, PlacementPage } from './placement.type';
 
 /**
  * Provides operations for creating, updating and retrieving {@link https://developers.google.com/ad-manager/api/reference/v202202/PlacementService.Placement Placement} objects.

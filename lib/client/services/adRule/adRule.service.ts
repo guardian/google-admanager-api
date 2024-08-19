@@ -1,10 +1,9 @@
-import { Client } from 'soap';
-
-import { AdRuleServiceOperations } from './adRuleService.interface';
-import { Statement, UpdateResult } from '../../../common/types';
-import { AdSpot, AdSpotPage } from './adSpot.type';
-import { AdRule, AdRulePage, BreakTemplate, BreakTemplatePage } from './adRule.type';
-import { AdRuleAction } from './adRule.action';
+import type { Client } from 'soap';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { AdRuleAction } from './adRule.action';
+import type { AdRule, AdRulePage, BreakTemplate, BreakTemplatePage } from './adRule.type';
+import type { AdRuleServiceOperations } from './adRuleService.interface';
+import type { AdSpot, AdSpotPage } from './adSpot.type';
 
 export class AdRuleService implements AdRuleServiceOperations {
   private _client: Client;

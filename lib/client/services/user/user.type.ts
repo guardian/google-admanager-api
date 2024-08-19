@@ -1,5 +1,5 @@
-import { PageResult } from '../../../common/types';
-import { RoleStatus } from './user.enum';
+import type { PageResult } from '../../../common/types';
+import type { RoleStatus } from './user.enum';
 
 /**
  * The **`UserRecord`** represents the base class from which a **`User`** is derived.

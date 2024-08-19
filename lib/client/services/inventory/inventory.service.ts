@@ -1,9 +1,8 @@
-import { Client } from 'soap';
-
-import { InventoryServiceOperations } from './inventoryService.interface';
-import { Statement, UpdateResult } from '../../../common/types';
-import { AdUnit, AdUnitPage, AdUnitSize } from './adUnit.type';
-import { AdUnitAction } from './adUnit.action';
+import type { Client } from 'soap';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { AdUnitAction } from './adUnit.action';
+import type { AdUnit, AdUnitPage, AdUnitSize } from './adUnit.type';
+import type { InventoryServiceOperations } from './inventoryService.interface';
 
 export class InventoryService implements InventoryServiceOperations {
   private _client: Client;

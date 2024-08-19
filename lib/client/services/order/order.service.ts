@@ -1,9 +1,8 @@
-import { Client } from 'soap';
-
-import { OrderServiceOperations } from './orderService.interface';
-import { Order, OrderPage } from './order.type';
-import { Statement, UpdateResult } from '../../../common/types';
-import { OrderAction } from './order.action';
+import type { Client } from 'soap';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { OrderAction } from './order.action';
+import type { Order, OrderPage } from './order.type';
+import type { OrderServiceOperations } from './orderService.interface';
 
 export class OrderService implements OrderServiceOperations {
   private _client: Client;

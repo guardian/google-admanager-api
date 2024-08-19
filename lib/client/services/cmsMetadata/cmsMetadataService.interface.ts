@@ -1,6 +1,6 @@
-import { CmsMetadataKeyAction, CmsMetadataValueAction } from './cmsMetadata.action';
-import { CmsMetadataKeyPage, CmsMetadataValuePage } from './cmsMetadata.type';
-import { Statement, UpdateResult } from '../../../common/types';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { CmsMetadataKeyAction, CmsMetadataValueAction } from './cmsMetadata.action';
+import type { CmsMetadataKeyPage, CmsMetadataValuePage } from './cmsMetadata.type';
 
 /**
  * Provides methods for querying CMS metadata keys and values.

@@ -1,6 +1,6 @@
-import { CreativeWrapper, CreativeWrapperPage } from './creativeWrapper.type';
-import { CreativeWrapperAction } from './creativeWrapper.action';
-import { Statement, UpdateResult } from '../../../common/types';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { CreativeWrapperAction } from './creativeWrapper.action';
+import type { CreativeWrapper, CreativeWrapperPage } from './creativeWrapper.type';
 
 /**
  * Provides methods for the creation and management of creative wrappers.

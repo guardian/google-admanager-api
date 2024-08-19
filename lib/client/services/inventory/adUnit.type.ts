@@ -1,7 +1,7 @@
-import { AppliedLabel, FrequencyCap, Size } from '../../common/types';
-import { DateTime, PageResult } from '../../../common/types';
-import { EnvironmentType } from '../../common/enums';
-import {
+import type { DateTime, PageResult } from '../../../common/types';
+import type { EnvironmentType } from '../../common/enums';
+import type { AppliedLabel, FrequencyCap, Size } from '../../common/types';
+import type {
   AdSenseSettingsAdType,
   AdSenseSettingsBorderStyle,
   AdSenseSettingsFontFamily,

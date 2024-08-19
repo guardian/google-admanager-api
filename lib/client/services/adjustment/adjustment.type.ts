@@ -1,6 +1,6 @@
-import { ForecastAdjustmentStatus, ForecastAdjustmentVolumeType } from './adjustment.enum';
-import { DateRange, DateTime, PageResult } from '../../../common/types';
-import { Targeting } from '../../common/types';
+import type { DateRange, DateTime, PageResult } from '../../../common/types';
+import type { Targeting } from '../../common/types';
+import type { ForecastAdjustmentStatus, ForecastAdjustmentVolumeType } from './adjustment.enum';
 
 /**
  * Settings to specify daily ad opportunity counts that will be used as the expected future traffic volume for a forecast adjustment.

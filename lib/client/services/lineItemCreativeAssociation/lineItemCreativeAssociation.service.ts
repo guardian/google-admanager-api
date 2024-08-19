@@ -1,14 +1,13 @@
-import { Client } from 'soap';
-
-import { LineItemCreativeAssociationServiceOperations } from './lineItemCreativeAssociationService.interface';
-import { LineItemCreativeAssociationAction } from './lineItemCreativeAssociation.action';
-import { Statement, UpdateResult } from '../../../common/types';
-import {
+import type { Client } from 'soap';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { LineItemCreativeAssociationAction } from './lineItemCreativeAssociation.action';
+import type {
   CreativeNativeStylePreview,
   CreativePushOptions,
   LineItemCreativeAssociation,
   LineItemCreativeAssociationPage,
 } from './lineItemCreativeAssociation.type';
+import type { LineItemCreativeAssociationServiceOperations } from './lineItemCreativeAssociationService.interface';
 
 export class LineItemCreativeAssociationService implements LineItemCreativeAssociationServiceOperations {
   private _client: Client;

@@ -1,7 +1,7 @@
-import { Statement, UpdateResult } from '../../../common/types';
-import { AdSpot, AdSpotPage } from './adSpot.type';
-import { AdRule, BreakTemplate, AdRulePage, BreakTemplatePage } from './adRule.type';
-import { AdRuleAction } from './adRule.action';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { AdRuleAction } from './adRule.action';
+import type { AdRule, AdRulePage, BreakTemplate, BreakTemplatePage } from './adRule.type';
+import type { AdSpot, AdSpotPage } from './adSpot.type';
 
 /**
  * Provides methods for creating, updating and retrieving AdRule objects.

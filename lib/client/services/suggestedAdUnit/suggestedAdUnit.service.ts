@@ -1,9 +1,8 @@
-import { Client } from 'soap';
-
-import { SuggestedAdUnitPage, SuggestedAdUnitUpdateResult } from './suggestedAdUnit.type';
-import { SuggestedAdUnitServiceOperations } from './suggestedAdUnitService.interface';
-import { SuggestedAdUnitAction } from './suggestedAdUnit.action';
-import { Statement } from '../../../common/types';
+import type { Client } from 'soap';
+import type { Statement } from '../../../common/types';
+import type { SuggestedAdUnitAction } from './suggestedAdUnit.action';
+import type { SuggestedAdUnitPage, SuggestedAdUnitUpdateResult } from './suggestedAdUnit.type';
+import type { SuggestedAdUnitServiceOperations } from './suggestedAdUnitService.interface';
 
 export class SuggestedAdUnitService implements SuggestedAdUnitServiceOperations {
   private _client: Client;

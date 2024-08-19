@@ -1,19 +1,6 @@
-import { StartDateTimeType } from '../../../common/enums';
-import { DateTime } from '../../../common/types';
-import {
-  AppliedLabel,
-  BaseCustomFieldValue,
-  CreativePlaceholder,
-  DeliveryData,
-  DeliveryIndicator,
-  FrequencyCap,
-  Goal,
-  GrpSettings,
-  Money,
-  Stats,
-  ThirdPartyMeasurementSettings,
-} from '.';
-import {
+import type { StartDateTimeType } from '../../../common/enums';
+import type { DateTime } from '../../../common/types';
+import type {
   AllowedFormats,
   ChildContentEligibility,
   CompanionDeliveryOption,
@@ -32,6 +19,19 @@ import {
   RoadblockingType,
   SkippableAdType,
 } from '../enums';
+import type {
+  AppliedLabel,
+  BaseCustomFieldValue,
+  CreativePlaceholder,
+  DeliveryData,
+  DeliveryIndicator,
+  FrequencyCap,
+  Goal,
+  GrpSettings,
+  Money,
+  Stats,
+  ThirdPartyMeasurementSettings,
+} from '.';
 
 /**
  * An interval of a {@link https://developers.google.com/ad-manager/api/reference/v202202/ForecastService.CustomPacingCurve CustomPacingCurve}.

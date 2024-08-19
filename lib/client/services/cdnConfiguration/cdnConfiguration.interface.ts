@@ -1,6 +1,6 @@
-import { CdnConfiguration, CdnConfigurationPage } from './cdnConfiguration.type';
-import { CdnConfigurationAction } from './cdnConfiguration.action';
-import { Statement, UpdateResult } from '../../../common/types';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { CdnConfigurationAction } from './cdnConfiguration.action';
+import type { CdnConfiguration, CdnConfigurationPage } from './cdnConfiguration.type';
 
 /**
  * Provides methods for creating, updating and retrieving

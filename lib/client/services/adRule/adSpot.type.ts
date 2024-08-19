@@ -1,6 +1,6 @@
-import { AdSpotTargetingType } from './adRule.enum';
-import { PageResult } from '../../../common/types';
-import { LineItemType } from '../../common/enums';
+import type { PageResult } from '../../../common/types';
+import type { LineItemType } from '../../common/enums';
+import type { AdSpotTargetingType } from './adRule.enum';
 
 /**
  * A AdSpot is a targetable entity used in the creation of AdRule objects.

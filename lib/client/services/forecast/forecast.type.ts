@@ -1,9 +1,9 @@
-import { DateRange, DateTime } from '../../../common/types';
-import { UnitType } from '../../common/enums';
-import { CreativePlaceholder, Targeting } from '../../common/types';
-import { LineItem } from '../lineItem/lineItem.type';
-import { ProposalLineItem } from '../proposalLineItem/proposalLineItem.type';
-import { GrpAge, GrpGender, GrpUnitType, TargetingDimension } from './forecast.enum';
+import type { DateRange, DateTime } from '../../../common/types';
+import type { UnitType } from '../../common/enums';
+import type { CreativePlaceholder, Targeting } from '../../common/types';
+import type { LineItem } from '../lineItem/lineItem.type';
+import type { ProposalLineItem } from '../proposalLineItem/proposalLineItem.type';
+import type { GrpAge, GrpGender, GrpUnitType, TargetingDimension } from './forecast.enum';
 
 /**
  * Represents a prospective line item to be forecasted.

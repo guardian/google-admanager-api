@@ -1,5 +1,5 @@
-import { ActivityGroupStatus } from './activityGroup.enum';
-import { PageResult } from '../../../common/types';
+import type { PageResult } from '../../../common/types';
+import type { ActivityGroupStatus } from './activityGroup.enum';
 
 /**
  * Activities are organized within activity groups, which are sets of activities that share the same configuration.

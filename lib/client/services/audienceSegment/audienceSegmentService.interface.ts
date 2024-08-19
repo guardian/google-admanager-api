@@ -1,6 +1,6 @@
-import { Statement, UpdateResult } from '../../../common/types';
-import { AudienceSegmentAction } from './audienceSegment.action';
-import { AudienceSegmentPage, FirstPartyAudienceSegment } from './audienceSegment.type';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { AudienceSegmentAction } from './audienceSegment.action';
+import type { AudienceSegmentPage, FirstPartyAudienceSegment } from './audienceSegment.type';
 
 /**
  * Provides operations for creating, updating and retrieving

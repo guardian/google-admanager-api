@@ -1,8 +1,8 @@
-import { JSONClient } from 'google-auth-library/build/src/auth/googleauth';
-import { GoogleAuth, JWTInput, RefreshOptions } from 'google-auth-library';
-
-import { SACredential } from './interfaces';
+import type { JWTInput, RefreshOptions } from 'google-auth-library';
+import { GoogleAuth } from 'google-auth-library';
+import type { JSONClient } from 'google-auth-library/build/src/auth/googleauth';
 import { SCOPE } from '../common/constants';
+import type { SACredential } from './interfaces';
 
 export class GoogleSACredential implements SACredential {
   private json: string | JWTInput;

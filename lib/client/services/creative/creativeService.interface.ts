@@ -1,6 +1,6 @@
-import { Statement, UpdateResult } from '../../../common/types';
-import { Creative, CreativePage } from './creative.type';
-import { CreativeAction } from './creative.action';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { CreativeAction } from './creative.action';
+import type { Creative, CreativePage } from './creative.type';
 
 /**
  * Provides operations for creating, updating and retrieving {@link https://developers.google.com/ad-manager/api/reference/v202202/CreativeService.Creative Creative} objects.

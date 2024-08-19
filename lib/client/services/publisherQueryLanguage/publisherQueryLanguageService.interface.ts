@@ -1,5 +1,5 @@
-import { ResultSet } from './publisherQueryLanguage.type';
-import { Statement } from '../../../common/types';
+import type { Statement } from '../../../common/types';
+import type { ResultSet } from './publisherQueryLanguage.type';
 
 /**
  * Provides methods for executing a PQL {@link https://developers.google.com/ad-manager/api/reference/v202202/PublisherQueryLanguageService.Statement Statement}

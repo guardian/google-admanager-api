@@ -1,8 +1,7 @@
-import { Client } from 'soap';
-
-import { StreamActivityMonitorServiceOperations } from './streamActivityMonitorService.interface';
-import { SamSession } from './streamActivityMonitor.type';
-import { Statement } from '../../../common/types';
+import type { Client } from 'soap';
+import type { Statement } from '../../../common/types';
+import type { SamSession } from './streamActivityMonitor.type';
+import type { StreamActivityMonitorServiceOperations } from './streamActivityMonitorService.interface';
 
 export class StreamActivityMonitorService implements StreamActivityMonitorServiceOperations {
   private _client: Client;

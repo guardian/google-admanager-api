@@ -1,6 +1,6 @@
-import { Statement, UpdateResult } from '../../../common/types';
-import { Role, User, UserPage } from './user.type';
-import { UserAction } from './user.action';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { UserAction } from './user.action';
+import type { Role, User, UserPage } from './user.type';
 
 /**
  * Provides operations for creating, updating and retrieving {@link https://developers.google.com/ad-manager/api/reference/v202202/UserService.User User} objects.

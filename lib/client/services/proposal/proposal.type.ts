@@ -1,6 +1,6 @@
-import { AppliedLabel, BaseCustomFieldValue, CreativePlaceholder, Money, Targeting } from '../../common/types';
-import { DateTime, PageResult } from '../../../common/types';
-import {
+import type { DateTime, PageResult } from '../../../common/types';
+import type { AppliedLabel, BaseCustomFieldValue, CreativePlaceholder, Money, Targeting } from '../../common/types';
+import type {
   AdExchangeEnvironment,
   NegotiationStatus,
   ProposalCompanyAssociationType,

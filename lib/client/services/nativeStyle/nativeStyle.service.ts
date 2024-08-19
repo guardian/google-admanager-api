@@ -1,9 +1,8 @@
-import { Client } from 'soap';
-
-import { NativeStyleServiceOperations } from './nativeStyleService.interface';
-import { NativeStyle, NativeStylePage } from './nativeStyle.type';
-import { Statement, UpdateResult } from '../../../common/types';
-import { NativeStyleAction } from './nativeStyle.action';
+import type { Client } from 'soap';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { NativeStyleAction } from './nativeStyle.action';
+import type { NativeStyle, NativeStylePage } from './nativeStyle.type';
+import type { NativeStyleServiceOperations } from './nativeStyleService.interface';
 
 export class NativeStyleService implements NativeStyleServiceOperations {
   private _client: Client;

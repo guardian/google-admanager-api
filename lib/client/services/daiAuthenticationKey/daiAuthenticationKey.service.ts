@@ -1,9 +1,8 @@
-import { Client } from 'soap';
-
-import { DaiAuthenticationKeyServiceOperations } from './daiAuthenticationKeyService.interface';
-import { DaiAuthenticationKey, DaiAuthenticationKeyPage } from './daiAuthenticationKey.type';
-import { DaiAuthenticationKeyAction } from './daiAuthenticationKey.action';
-import { Statement, UpdateResult } from '../../../common/types';
+import type { Client } from 'soap';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { DaiAuthenticationKeyAction } from './daiAuthenticationKey.action';
+import type { DaiAuthenticationKey, DaiAuthenticationKeyPage } from './daiAuthenticationKey.type';
+import type { DaiAuthenticationKeyServiceOperations } from './daiAuthenticationKeyService.interface';
 
 export class DaiAuthenticationKeyService implements DaiAuthenticationKeyServiceOperations {
   private _client: Client;

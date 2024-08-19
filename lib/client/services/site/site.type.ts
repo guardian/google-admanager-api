@@ -1,5 +1,5 @@
-import { ApprovalStatus, DisapprovalReasonType } from './site.enum';
-import { PageResult } from '../../../common/types';
+import type { PageResult } from '../../../common/types';
+import type { ApprovalStatus, DisapprovalReasonType } from './site.enum';
 
 export type DisapprovalReason = {
   type: DisapprovalReasonType;

@@ -1,6 +1,6 @@
-import { NativeStyle, NativeStylePage } from './nativeStyle.type';
-import { Statement, UpdateResult } from '../../../common/types';
-import { NativeStyleAction } from './nativeStyle.action';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { NativeStyleAction } from './nativeStyle.action';
+import type { NativeStyle, NativeStylePage } from './nativeStyle.type';
 
 /**
  * Provides operations for creating, updating and retrieving {@link https://developers.google.com/ad-manager/api/reference/v202202/NativeStyleService.NativeStyle NativeStyle} objects.

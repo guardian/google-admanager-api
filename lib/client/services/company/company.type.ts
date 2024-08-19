@@ -1,11 +1,11 @@
-import { AppliedLabel, ChildPublisher } from '../../common/types';
-import { CompanyCreditStatus, CompanyType } from './company.enum';
-import { DateTime, PageResult } from '../../../common/types';
+import type { DateTime, PageResult } from "../../../common/types";
+import type { AppliedLabel, ChildPublisher } from "../../common/types";
+import type { CompanyCreditStatus, CompanyType } from "./company.enum";
 
 /**
  * Settings for a {@link https://developers.google.com/ad-manager/api/reference/v202202/CompanyService.Company Company}.
  */
-export type CompanySettings = {};
+export type CompanySettings = object;
 
 /**
  * Information required for {@link https://developers.google.com/ad-manager/api/reference/v202202/CompanyService.Company Company} of Type VIEWABILITY_PROVIDER.

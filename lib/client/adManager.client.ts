@@ -1,7 +1,8 @@
-import { DEFAULT_APPLICATION_NAME, SERVICE_MAP } from '../common/constants';
+import type { SACredential } from '../auth';
+import type { SERVICE_MAP } from '../common/constants';
+import { DEFAULT_APPLICATION_NAME } from '../common/constants';
+import type { ImportClass } from '../common/types';
 import { GoogleSoapService } from './googleSoap.service';
-import { ImportClass } from '../common/types';
-import { SACredential } from '../auth';
 
 export class AdManagerClient {
   private networkCode: number;
@@ -20,7 +21,7 @@ export class AdManagerClient {
 
       return await new GoogleSoapService<T>(serviceName, {
         networkCode: this.networkCode,
-        token: token as string,
+        token: token,
         applicationName: this.applicationName,
       }).createClient();
     } catch (err: any) {

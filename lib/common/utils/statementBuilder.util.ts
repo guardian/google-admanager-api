@@ -1,28 +1,36 @@
-import { DateTime, Date, Statement, String_ValueMapEntry, Value } from '../../common/types';
-import { InvalidOperationException } from '../handlers/exceptions.handler';
+import type {
+  Date,
+  DateTime,
+  Statement,
+  String_ValueMapEntry,
+  Value,
+} from "../../common/types";
+import { InvalidOperationException } from "../handlers/exceptions.handler";
 
 export class StatementBuilder {
   static SUGGESTED_PAGE_LIMIT = 500;
-  private SELECT = 'SELECT';
-  private FROM = 'FROM';
-  private WHERE = 'WHERE';
-  private LIMIT = 'LIMIT';
-  private OFFSET = 'OFFSET';
-  private ORDER_BY = 'ORDER BY';
+  private SELECT = "SELECT";
+  private FROM = "FROM";
+  private WHERE = "WHERE";
+  private LIMIT = "LIMIT";
+  private OFFSET = "OFFSET";
+  private ORDER_BY = "ORDER BY";
 
-  private _select: string;
-  private _from: string;
-  private _where: string;
+  private _select?: string;
+  private _from?: string;
+  private _where?: string;
   private _limit?: number | undefined;
   private _offset?: number | undefined;
-  private _orderBy: string;
+  private _orderBy?: string;
 
   private valueEntries: String_ValueMapEntry[] = [];
 
   private removeKeyword(clause: string, keyword: string): string {
-    const formattedKeyword: string = keyword.trim() + ' ';
+    const formattedKeyword: string = keyword.trim() + " ";
 
-    return clause.toUpperCase().startsWith(formattedKeyword) ? clause.substring(formattedKeyword.length) : clause;
+    return clause.toUpperCase().startsWith(formattedKeyword)
+      ? clause.substring(formattedKeyword.length)
+      : clause;
   }
 
   public select(columns: string): StatementBuilder {
@@ -80,33 +88,33 @@ export class StatementBuilder {
 
   private getValue(value: Value): Record<string, any> {
     switch (typeof value) {
-      case 'string':
+      case "string":
         return {
           value,
           attributes: {
-            'xsi:type': 'TextValue',
+            "xsi:type": "TextValue",
           },
         };
-      case 'number':
+      case "number":
         return {
           value: value,
           attributes: {
-            'xsi:type': 'NumberValue',
+            "xsi:type": "NumberValue",
           },
         };
-      case 'boolean':
+      case "boolean":
         return {
           value: value,
           attributes: {
-            'xsi:type': 'BooleanValue',
+            "xsi:type": "BooleanValue",
           },
         };
-      case 'object':
+      case "object":
         if (Array.isArray(value)) {
           return {
             values: value.map((v) => this.getValue(v)),
             attributes: {
-              'xsi:type': 'SetValue',
+              "xsi:type": "SetValue",
             },
           };
         }
@@ -114,7 +122,7 @@ export class StatementBuilder {
           return {
             value: value,
             attributes: {
-              'xsi:type': 'DateTimeValue',
+              "xsi:type": "DateTimeValue",
             },
           };
         }
@@ -122,14 +130,14 @@ export class StatementBuilder {
           return {
             value: value,
             attributes: {
-              'xsi:type': 'DateValue',
+              "xsi:type": "DateValue",
             },
           };
         }
         return {
           value: value,
           attributes: {
-            'xsi:type': 'ObjectValue',
+            "xsi:type": "ObjectValue",
           },
         };
       default:
@@ -156,32 +164,34 @@ export class StatementBuilder {
 
   private validateQuery(): void {
     if (!this._limit && this._offset) {
-      throw new InvalidOperationException('OFFSET cannot be set if LIMIT is not set.');
+      throw new InvalidOperationException(
+        "OFFSET cannot be set if LIMIT is not set.",
+      );
     }
   }
 
   private buildQuery(): string {
     const stringBuilder = [];
     this.validateQuery();
-    if (typeof this.select !== 'undefined' && this._select) {
+    if (typeof this.select !== "undefined" && this._select) {
       stringBuilder.push(`${this.SELECT} ${this._select}`);
     }
-    if (typeof this.from !== 'undefined' && this._from) {
+    if (typeof this.from !== "undefined" && this._from) {
       stringBuilder.push(`${this.FROM} ${this._from}`);
     }
-    if (typeof this.where !== 'undefined' && this._where) {
+    if (typeof this.where !== "undefined" && this._where) {
       stringBuilder.push(`${this.WHERE} ${this._where}`);
     }
-    if (typeof this.orderBy !== 'undefined' && this._orderBy) {
+    if (typeof this.orderBy !== "undefined" && this._orderBy) {
       stringBuilder.push(`${this.ORDER_BY} ${this._orderBy}`);
     }
-    if (typeof this.limit !== 'undefined' && this._limit) {
+    if (typeof this.limit !== "undefined" && this._limit) {
       stringBuilder.push(`${this.LIMIT} ${this._limit}`);
     }
-    if (typeof this.offset !== 'undefined' && this._offset) {
+    if (typeof this.offset !== "undefined" && this._offset) {
       stringBuilder.push(`${this.OFFSET} ${this._offset}`);
     }
-    return stringBuilder.join(' ');
+    return stringBuilder.join(" ");
   }
 
   public toStatement(): Statement {

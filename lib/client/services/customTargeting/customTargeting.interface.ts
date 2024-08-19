@@ -1,6 +1,6 @@
-import { CustomTargetingKeyAction, CustomTargetingValueAction } from './customTargeting.action';
-import { Statement, UpdateResult } from '../../../common/types';
-import {
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { CustomTargetingKeyAction, CustomTargetingValueAction } from './customTargeting.action';
+import type {
   CustomTargetingKey,
   CustomTargetingKeyPage,
   CustomTargetingValue,

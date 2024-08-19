@@ -1,6 +1,6 @@
-import { CustomField, CustomFieldOption, CustomFieldPage } from './customField.type';
-import { Statement, UpdateResult } from '../../../common/types';
-import { CustomFieldAction } from './customField.action';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { CustomFieldAction } from './customField.action';
+import type { CustomField, CustomFieldOption, CustomFieldPage } from './customField.type';
 
 /**
  * Provides methods for the creation and management of {@link https://developers.google.com/ad-manager/api/reference/v202202/CustomFieldService.CustomField CustomField} objects.

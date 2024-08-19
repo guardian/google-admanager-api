@@ -1,4 +1,4 @@
-import { DateTime, Date } from './date.type';
+import type { Date, DateTime } from './date.type';
 
 /**
  * Captures the **`WHERE`**, **`ORDER BY`** and **`LIMIT`** clauses of a PQL query.

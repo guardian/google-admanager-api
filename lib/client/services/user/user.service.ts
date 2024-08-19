@@ -1,9 +1,8 @@
-import { Client } from 'soap';
-
-import { UserServiceOperations } from './userService.interface';
-import { Statement, UpdateResult } from '../../../common/types';
-import { User, Role, UserPage } from './user.type';
-import { UserAction } from './user.action';
+import type { Client } from 'soap';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { UserAction } from './user.action';
+import type { Role, User, UserPage } from './user.type';
+import type { UserServiceOperations } from './userService.interface';
 
 export class UserService implements UserServiceOperations {
   private _client: Client;

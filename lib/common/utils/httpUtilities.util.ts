@@ -1,4 +1,5 @@
-import axios, { AxiosRequestConfig, AxiosResponse, Method } from 'axios';
+import type { AxiosRequestConfig, AxiosResponse, Method } from 'axios';
+import axios from 'axios';
 import { ArgumentNullException } from '../handlers';
 
 /**
@@ -9,7 +10,7 @@ export class HttpUtilities {
     url: string,
     method: Method | string,
     config: AxiosRequestConfig,
-  ): Promise<AxiosResponse<any, any>> {
+  ): Promise<AxiosResponse> {
     if (config == null) {
       throw new ArgumentNullException('config');
     }

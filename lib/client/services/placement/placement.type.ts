@@ -1,10 +1,10 @@
-import { DateTime, PageResult } from '../../../common/types';
-import { InventoryStatus } from './placement.enum';
+import type { DateTime, PageResult } from "../../../common/types";
+import type { InventoryStatus } from "./placement.enum";
 
 /**
  * Deprecated container for information required for AdWords advertisers to place their ads.
  */
-type SiteTargetingInfo = {};
+type SiteTargetingInfo = object;
 
 /**
  * A Placement groups related AdUnit objects.

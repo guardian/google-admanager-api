@@ -1,6 +1,6 @@
-import { TimeUnit } from '../../../common/enums';
-import { Value } from '../../../common/types';
-import {
+import type { TimeUnit } from '../../../common/enums';
+import type { Value } from '../../../common/types';
+import type {
   AccountStatus,
   DeclarationType,
   DelegationStatus,

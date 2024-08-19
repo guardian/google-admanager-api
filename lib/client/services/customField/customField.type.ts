@@ -1,5 +1,5 @@
-import { CustomFieldDataType, CustomFieldEntityType, CustomFieldVisibility } from './customField.enum';
-import { PageResult } from '../../../common/types';
+import type { PageResult } from '../../../common/types';
+import type { CustomFieldDataType, CustomFieldEntityType, CustomFieldVisibility } from './customField.enum';
 
 /**
  * An option represents a permitted value for a custom field that has a

@@ -1,9 +1,8 @@
-import { Client } from 'soap';
-
-import { CompanyServiceOperations } from './companyService.interface';
-import { Statement, UpdateResult } from '../../../common/types';
-import { Company, CompanyPage } from './company.type';
-import { CompanyAction } from './company.action';
+import type { Client } from 'soap';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { CompanyAction } from './company.action';
+import type { Company, CompanyPage } from './company.type';
+import type { CompanyServiceOperations } from './companyService.interface';
 
 export class CompanyService implements CompanyServiceOperations {
   private _client: Client;

@@ -1,9 +1,8 @@
-import { Client } from 'soap';
-
-import { DaiEncodingProfileServiceOperations } from './daiEncodingProfileService.interface';
-import { DaiEncodingProfile, DaiEncodingProfilePage } from './daiEncodingProfile.type';
-import { DaiEncodingProfileAction } from './daiEncodingProfile.action';
-import { Statement, UpdateResult } from '../../../common/types';
+import type { Client } from 'soap';
+import type { Statement, UpdateResult } from '../../../common/types';
+import type { DaiEncodingProfileAction } from './daiEncodingProfile.action';
+import type { DaiEncodingProfile, DaiEncodingProfilePage } from './daiEncodingProfile.type';
+import type { DaiEncodingProfileServiceOperations } from './daiEncodingProfileService.interface';
 
 export class DaiEncodingProfileService implements DaiEncodingProfileServiceOperations {
   private _client: Client;

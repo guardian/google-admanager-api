@@ -1,11 +1,10 @@
-import { AxiosResponse } from 'axios';
-
-import { ReportDownloadOptions } from '../../client/services/report/report.type';
+import type { AxiosResponse } from 'axios';
+import type { ReportService } from '../../client';
 import { ReportJobStatus } from '../../client/services/report/report.enum';
+import type { ReportDownloadOptions } from '../../client/services/report/report.type';
+import { AdsReportsException } from '../handlers';
 import { HttpUtilities } from './httpUtilities.util';
 import { AdsReportUtilities, ReportResponse } from './reports';
-import { ReportService } from '../../client';
-import { AdsReportsException } from '../handlers';
 
 /**
  * Utility class for DFP API report downloads.
@@ -67,7 +66,7 @@ export class ReportUtilities extends AdsReportUtilities {
    * Builds an HTTP request for downloading reports.
    * @param downloadUrl The download url.
    */
-  private buildRequest(downloadUrl: string): Promise<AxiosResponse<any, any>> {
+  private buildRequest(downloadUrl: string): Promise<AxiosResponse> {
     return HttpUtilities.buildRequest(downloadUrl, 'GET', {
       timeout: 0,
     });

@@ -1,6 +1,6 @@
-import { ThirdPartyDataDeclaration } from '../../common/types';
-import { PageResult } from '../../../common/types';
-import {
+import type { PageResult } from '../../../common/types';
+import type { ThirdPartyDataDeclaration } from '../../common/types';
+import type {
   ConversionEvent,
   CreativeWrapperOrdering,
   CreativeWrapperStatus,
