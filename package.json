@@ -11,10 +11,7 @@
     "lint": "eslint 'lib/**/*.ts'",
     "prettier:check": "prettier . --check --cache",
     "prettier:fix": "prettier . --write --cache",
-    "prepublish:npm": "pnpm build",
-    "publish:npm": "npm publish --access public",
-    "test": "jest --config jestconfig.json",
-    "prerelease": "pnpm build"
+    "test": "jest --config jestconfig.json"
   },
   "repository": {
     "type": "git",
