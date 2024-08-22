@@ -80,7 +80,7 @@ export type LabelFrequencyCap = {
 };
 
 /**
- * The summary of a parent {@link https://developers.google.com/ad-manager/api/reference/v202202/InventoryService.AdUnit AdUnit}.
+ * The summary of a parent {@link https://developers.google.com/ad-manager/api/reference/v202405/InventoryService.AdUnit AdUnit}.
  */
 export type AdUnitParent = {
   /**
@@ -227,12 +227,12 @@ export type AdUnit = {
   /**
    * The set of labels applied directly to this ad unit.
    */
-  appliedLabels: AppliedLabel[];
+  appliedLabels?: AppliedLabel[];
 
   /**
    * Contains the set of labels applied directly to the ad unit as well as those inherited from the parent ad units. If a label has been negated, only the negated label is returned. This field is readonly and is assigned by Google.
    */
-  effectiveAppliedLabels: AppliedLabel[];
+  effectiveAppliedLabels?: AppliedLabel[];
 
   /**
    * The IDs of all teams that this ad unit is on as well as those inherited from parent ad units. This value is read-only and is set by Google.
@@ -275,6 +275,6 @@ export type AdUnit = {
 };
 
 /**
- * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202202/InventoryService.AdUnit AdUnit} objects.
+ * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202405/InventoryService.AdUnit AdUnit} objects.
  */
 export type AdUnitPage = PageResult<AdUnit>;

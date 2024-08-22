@@ -7,11 +7,11 @@ import type {
 
 /**
  * Provides methods for creating, updating and retrieving
- * {@link https://developers.google.com/ad-manager/api/reference/v202202/CdnConfigurationService.CdnConfiguration CdnConfiguration} objects.
+ * {@link https://developers.google.com/ad-manager/api/reference/v202405/CdnConfigurationService.CdnConfiguration CdnConfiguration} objects.
  */
 export interface CdnConfigurationServiceOperations {
   /**
-   * Creates new {@link https://developers.google.com/ad-manager/api/reference/v202202/CdnConfigurationService.CdnConfiguration CdnConfiguration} objects.
+   * Creates new {@link https://developers.google.com/ad-manager/api/reference/v202405/CdnConfigurationService.CdnConfiguration CdnConfiguration} objects.
    *
    * @param cdnConfigurations
    */
@@ -19,17 +19,17 @@ export interface CdnConfigurationServiceOperations {
     cdnConfigurations: CdnConfiguration[],
   ): Promise<CdnConfiguration[]>;
   /**
-   * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202202/CdnConfigurationService.CdnConfigurationPage CdnConfigurationPage}
-   * of {@link https://developers.google.com/ad-manager/api/reference/v202202/CdnConfigurationService.CdnConfiguration CdnConfiguration} objects that satisfy
-   * the given {@link https://developers.google.com/ad-manager/api/reference/v202202/CdnConfigurationService.Statement#query Statement.query}.
+   * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202405/CdnConfigurationService.CdnConfigurationPage CdnConfigurationPage}
+   * of {@link https://developers.google.com/ad-manager/api/reference/v202405/CdnConfigurationService.CdnConfiguration CdnConfiguration} objects that satisfy
+   * the given {@link https://developers.google.com/ad-manager/api/reference/v202405/CdnConfigurationService.Statement#query Statement.query}.
    * Currently only CDN Configurations of type
-   * {@link https://developers.google.com/ad-manager/api/reference/v202202/CdnConfigurationService.CdnConfigurationType#LIVE_STREAM_SOURCE_CONTENT CdnConfigurationType.LIVE_STREAM_SOURCE_CONTENT}
+   * {@link https://developers.google.com/ad-manager/api/reference/v202405/CdnConfigurationService.CdnConfigurationType#LIVE_STREAM_SOURCE_CONTENT CdnConfigurationType.LIVE_STREAM_SOURCE_CONTENT}
    * will be returned. The following fields are supported for filtering:
    *
    * | PQL Property | PQL Property                                                                                                                               |
    * | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-   * | id           | {@link https://developers.google.com/ad-manager/api/reference/v202202/CdnConfigurationService.CdnConfiguration#id CdnConfiguration.id}     |
-   * | name         | {@link https://developers.google.com/ad-manager/api/reference/v202202/CdnConfigurationService.CdnConfiguration#name CdnConfiguration.name} |
+   * | id           | {@link https://developers.google.com/ad-manager/api/reference/v202405/CdnConfigurationService.CdnConfiguration#id CdnConfiguration.id}     |
+   * | name         | {@link https://developers.google.com/ad-manager/api/reference/v202405/CdnConfigurationService.CdnConfiguration#name CdnConfiguration.name} |
    *
    * @param statement
    */
@@ -37,8 +37,8 @@ export interface CdnConfigurationServiceOperations {
     statement: Statement,
   ): Promise<CdnConfigurationPage>;
   /**
-   * Performs actions on {@link https://developers.google.com/ad-manager/api/reference/v202202/CdnConfigurationService.CdnConfiguration CdnConfiguration}
-   * objects that match the given {@link https://developers.google.com/ad-manager/api/reference/v202202/CdnConfigurationService.Statement#query Statement.query}.
+   * Performs actions on {@link https://developers.google.com/ad-manager/api/reference/v202405/CdnConfigurationService.CdnConfiguration CdnConfiguration}
+   * objects that match the given {@link https://developers.google.com/ad-manager/api/reference/v202405/CdnConfigurationService.Statement#query Statement.query}.
    *
    * @param cdnConfigurationAction the action to perform
    * @param filterStatement a Publisher Query Language statement used to filter a set of live stream events
@@ -49,7 +49,7 @@ export interface CdnConfigurationServiceOperations {
     filterStatement: Statement,
   ): Promise<UpdateResult>;
   /**
-   * Updates the specified {@link https://developers.google.com/ad-manager/api/reference/v202202/CdnConfigurationService.CdnConfiguration CdnConfiguration} objects.
+   * Updates the specified {@link https://developers.google.com/ad-manager/api/reference/v202405/CdnConfigurationService.CdnConfiguration CdnConfiguration} objects.
    *
    * @param cdnConfigurations
    */

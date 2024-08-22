@@ -69,7 +69,7 @@ export enum ReportableType {
 
 /**
  * Represents the ways in which
- * {@link https://developers.google.com/ad-manager/api/reference/v202202/CustomTargetingService.CustomTargetingValue#name CustomTargetingValue.name} strings will be matched with ad requests.
+ * {@link https://developers.google.com/ad-manager/api/reference/v202405/CustomTargetingService.CustomTargetingValue#name CustomTargetingValue.name} strings will be matched with ad requests.
  */
 export enum CustomTargetingValueMatchType {
   /**

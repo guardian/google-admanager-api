@@ -247,12 +247,12 @@ export type Proposal = {
   /**
    * The set of labels applied directly to the Proposal. This attribute is optional.
    */
-  appliedLabels: AppliedLabel[];
+  appliedLabels?: AppliedLabel[];
   /**
    * Contains the set of labels applied directly to the proposal as well as those inherited ones.
    * If a label has been negated, only the negated label is returned. This attribute is read-only.
    */
-  effectiveAppliedLabels: AppliedLabel[];
+  effectiveAppliedLabels?: AppliedLabel[];
   /**
    * The currency code of this Proposal. This attribute is optional and defaults to network's currency code.
    */
@@ -285,12 +285,12 @@ export type Proposal = {
 };
 
 /**
- * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202202/ProposalService.Proposal Proposal} objects.
+ * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202405/ProposalService.Proposal Proposal} objects.
  */
 export type ProposalPage = PageResult<Proposal>;
 
 /**
- * A comment associated with a programmatic {@link https://developers.google.com/ad-manager/api/reference/v202202/ProposalService.Proposal Proposal}
+ * A comment associated with a programmatic {@link https://developers.google.com/ad-manager/api/reference/v202405/ProposalService.Proposal Proposal}
  * that has been sent to Marketplace.
  */
 export type MarketplaceComment = {
@@ -313,7 +313,7 @@ export type MarketplaceComment = {
 };
 
 /**
- * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202202/ProposalService.MarketplaceComment MarketplaceComment} objects.
+ * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202405/ProposalService.MarketplaceComment MarketplaceComment} objects.
  */
 export type MarketplaceCommentPage = {
   /**

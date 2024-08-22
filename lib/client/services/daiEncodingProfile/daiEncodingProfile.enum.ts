@@ -1,5 +1,5 @@
 /**
- * Describes the status of a {@link https://developers.google.com/ad-manager/api/reference/v202202/DaiEncodingProfileService.DaiEncodingProfile DaiEncodingProfile} object.
+ * Describes the status of a {@link https://developers.google.com/ad-manager/api/reference/v202405/DaiEncodingProfileService.DaiEncodingProfile DaiEncodingProfile} object.
  */
 export enum DaiEncodingProfileStatus {
   /**

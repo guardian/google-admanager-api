@@ -18,7 +18,7 @@ export enum ForecastAdjustmentStatus {
 
 /**
  * Options for how the volume settings of a
- * {@link https://developers.google.com/ad-manager/api/reference/v202202/AdjustmentService.ForecastAdjustment ForecastAdjustment} are defined.
+ * {@link https://developers.google.com/ad-manager/api/reference/v202405/AdjustmentService.ForecastAdjustment ForecastAdjustment} are defined.
  */
 export enum ForecastAdjustmentVolumeType {
   /**

@@ -39,6 +39,6 @@ export type DaiAuthenticationKey = {
 };
 
 /**
- * Captures a page of https://developers.google.com/ad-manager/api/reference/v202202/DaiAuthenticationKeyService.DaiAuthenticationKey DaiAuthenticationKey} objects.
+ * Captures a page of https://developers.google.com/ad-manager/api/reference/v202405/DaiAuthenticationKeyService.DaiAuthenticationKey DaiAuthenticationKey} objects.
  */
 export type DaiAuthenticationKeyPage = PageResult<DaiAuthenticationKey>;

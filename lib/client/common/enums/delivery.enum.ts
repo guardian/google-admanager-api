@@ -85,7 +85,7 @@ export enum DeliveryForecastSource {
 
 /**
  * The delivery option for companions.
- * Used for line items whose environmentType is {@link https://developers.google.com/ad-manager/api/reference/v202202/ProposalLineItemService.EnvironmentType#VIDEO_PLAYER EnvironmentType.VIDEO_PLAYER}.
+ * Used for line items whose environmentType is {@link https://developers.google.com/ad-manager/api/reference/v202405/ProposalLineItemService.EnvironmentType#VIDEO_PLAYER EnvironmentType.VIDEO_PLAYER}.
  */
 export enum CompanionDeliveryOption {
   /**

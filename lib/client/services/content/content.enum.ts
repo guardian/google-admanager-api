@@ -1,5 +1,5 @@
 /**
- * Describes the status of a {@link https://developers.google.com/ad-manager/api/reference/v202202/ContentService.Content?hl=pt Content} object.
+ * Describes the status of a {@link https://developers.google.com/ad-manager/api/reference/v202405/ContentService.Content?hl=pt Content} object.
  */
 export enum ContentStatus {
   /**
@@ -35,7 +35,7 @@ export enum ContentStatusDefinedBy {
 }
 
 /**
- * The status of the DAI ingestion process. Only content with a status of {@link https://developers.google.com/ad-manager/api/reference/v202202/ContentService.DaiIngestStatus#SUCCESS SUCCESS} will be available for dynamic ad insertion.
+ * The status of the DAI ingestion process. Only content with a status of {@link https://developers.google.com/ad-manager/api/reference/v202405/ContentService.DaiIngestStatus#SUCCESS SUCCESS} will be available for dynamic ad insertion.
  */
 export enum DaiIngestStatus {
   /**

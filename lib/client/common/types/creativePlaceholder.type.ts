@@ -25,11 +25,11 @@ export type CreativePlaceholder = {
   /**
    * The set of label frequency caps applied directly to this creative placeholder.
    */
-  appliedLabels: AppliedLabel[];
+  appliedLabels?: AppliedLabel[];
   /**
    * Contains the set of labels applied directly to this creative placeholder as well as those inherited from the creative template from which this creative placeholder was instantiated. This field is readonly and is assigned by Google.
    */
-  effectiveAppliedLabels: AppliedLabel[];
+  effectiveAppliedLabels?: AppliedLabel[];
   /**
    * Expected number of creatives that will be uploaded corresponding to this creative placeholder. This estimate is used to improve the accuracy of forecasting; for example, if label frequency capping limits the number of times a creative may be served.
    */
