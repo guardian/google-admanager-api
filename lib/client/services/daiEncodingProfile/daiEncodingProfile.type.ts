@@ -51,7 +51,7 @@ export type AudioSettings = {
 };
 
 /**
- * A {@link https://developers.google.com/ad-manager/api/reference/v202202/DaiEncodingProfileService.DaiEncodingProfile DaiEncodingProfile}
+ * A {@link https://developers.google.com/ad-manager/api/reference/v202405/DaiEncodingProfileService.DaiEncodingProfile DaiEncodingProfile}
  * contains data about a publisher's encoding profiles. Ad Manager Dynamic Ad Insertion (DAI) uses the profile information about the content
  * to select an appropriate ad transcode to play for the particular video.
  */
@@ -97,6 +97,6 @@ export type DaiEncodingProfile = {
 };
 
 /**
- * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202202/DaiEncodingProfileService.DaiEncodingProfile DaiEncodingProfile} objects.
+ * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202405/DaiEncodingProfileService.DaiEncodingProfile DaiEncodingProfile} objects.
  */
 export type DaiEncodingProfilePage = PageResult<DaiEncodingProfile>;

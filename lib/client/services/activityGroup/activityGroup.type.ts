@@ -20,9 +20,9 @@ export type ActivityGroup = {
    * The company ids whose ads will be included for conversion tracking on the activities in this group.
    * Only clicks and impressions of ads from these companies will lead to conversions on the containing activities.
    * This attribute is required when creating an activity group. The company types allowed are:
-   * {@link https://developers.google.com/ad-manager/api/reference/v202202/CompanyService.Company.Type#ADVERTISER Company.Type.ADVERTISER}, and
-   * {@link https://developers.google.com/ad-manager/api/reference/v202202/CompanyService.Company.Type#AD_NETWORK Company.Type.AD_NETWORK}, and
-   * {@link https://developers.google.com/ad-manager/api/reference/v202202/CompanyService.Company.Type#HOUSE_ADVERTISER Company.Type.HOUSE_ADVERTISER}
+   * {@link https://developers.google.com/ad-manager/api/reference/v202405/CompanyService.Company.Type#ADVERTISER Company.Type.ADVERTISER}, and
+   * {@link https://developers.google.com/ad-manager/api/reference/v202405/CompanyService.Company.Type#AD_NETWORK Company.Type.AD_NETWORK}, and
+   * {@link https://developers.google.com/ad-manager/api/reference/v202405/CompanyService.Company.Type#HOUSE_ADVERTISER Company.Type.HOUSE_ADVERTISER}
    */
   companyIds: number[];
 
@@ -49,6 +49,6 @@ export type ActivityGroup = {
 };
 
 /**
- * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202202/ActivityGroupService.ActivityGroup ActivityGroup} objects.
+ * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202405/ActivityGroupService.ActivityGroup ActivityGroup} objects.
  */
 export type ActivityGroupPage = PageResult<ActivityGroup>;

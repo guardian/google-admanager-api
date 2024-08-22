@@ -1184,7 +1184,7 @@ export type Creative = {
   /**
    * The set of labels applied to this creative.
    */
-  appliedLabels: AppliedLabel[];
+  appliedLabels?: AppliedLabel[];
 
   /**
    * The date and time this creative was last modified.
@@ -1216,6 +1216,6 @@ export type Creative = {
   VastRedirectCreative;
 
 /**
- * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202202/CreativeService.Creative Creative} objects.
+ * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202405/CreativeService.Creative Creative} objects.
  */
 export type CreativePage = PageResult<Creative>;

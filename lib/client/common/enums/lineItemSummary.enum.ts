@@ -1,6 +1,6 @@
 /**
- * The strategy to use for displaying multiple {@link https://developers.google.com/ad-manager/api/reference/v202202/CreativeService.Creative Creative} \
- * objects that are associated with a {@link https://developers.google.com/ad-manager/api/reference/v202202/LineItemService.LineItem LineItem}.
+ * The strategy to use for displaying multiple {@link https://developers.google.com/ad-manager/api/reference/v202405/CreativeService.Creative Creative} \
+ * objects that are associated with a {@link https://developers.google.com/ad-manager/api/reference/v202405/LineItemService.LineItem LineItem}.
  */
 export enum CreativeRotationType {
   /**
@@ -40,7 +40,7 @@ export enum CustomPacingGoalUnit {
 }
 
 /**
- * Describes the {@link https://developers.google.com/ad-manager/api/reference/v202202/LineItemService.LineItem LineItem} actions that are billable.
+ * Describes the {@link https://developers.google.com/ad-manager/api/reference/v202405/LineItemService.LineItem LineItem} actions that are billable.
  */
 export enum CostType {
   /**
@@ -97,7 +97,7 @@ export enum CostType {
 }
 
 /**
- * Describes the possible discount types on the cost of booking a {@link https://developers.google.com/ad-manager/api/reference/v202202/LineItemService.LineItem LineItem}.
+ * Describes the possible discount types on the cost of booking a {@link https://developers.google.com/ad-manager/api/reference/v202405/LineItemService.LineItem LineItem}.
  */
 export enum LineItemDiscountType {
   /**

@@ -3,7 +3,7 @@ import type { CreativeTargeting, Targeting } from "../../common/types";
 import type { LineItemSummary } from "../../common/types/lineItemSummary.type";
 
 /**
- * {@link https://developers.google.com/ad-manager/api/reference/v202202/LineItemService.LineItem LineItem}
+ * {@link https://developers.google.com/ad-manager/api/reference/v202405/LineItemService.LineItem LineItem}
  * is an advertiser's commitment to purchase a specific number of ad impressions, clicks, or time.
  */
 export type LineItem = LineItemSummary & {
@@ -21,6 +21,6 @@ export type LineItem = LineItemSummary & {
 };
 
 /**
- * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202202/LineItemService.LineItem LineItem} objects.
+ * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202405/LineItemService.LineItem LineItem} objects.
  */
 export type LineItemPage = PageResult<LineItem>;

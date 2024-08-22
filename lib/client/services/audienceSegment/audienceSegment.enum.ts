@@ -1,5 +1,5 @@
 /**
- * Specifies the statuses for {@link https://developers.google.com/ad-manager/api/reference/v202202/AudienceSegmentService.AudienceSegment AudienceSegment} objects.
+ * Specifies the statuses for {@link https://developers.google.com/ad-manager/api/reference/v202405/AudienceSegmentService.AudienceSegment AudienceSegment} objects.
  */
 export enum AudienceSegmentStatus {
   /**
@@ -13,7 +13,7 @@ export enum AudienceSegmentStatus {
 }
 
 /**
- * Specifies types for {@link https://developers.google.com/ad-manager/api/reference/v202202/AudienceSegmentService.AudienceSegment AudienceSegment} objects.
+ * Specifies types for {@link https://developers.google.com/ad-manager/api/reference/v202405/AudienceSegmentService.AudienceSegment AudienceSegment} objects.
  */
 export enum AudienceSegmentType {
   /**
@@ -35,7 +35,7 @@ export enum AudienceSegmentType {
 }
 
 /**
- * Approval status values for {@link https://developers.google.com/ad-manager/api/reference/v202202/AudienceSegmentService.ThirdPartyAudienceSegment ThirdPartyAudienceSegment} objects.
+ * Approval status values for {@link https://developers.google.com/ad-manager/api/reference/v202405/AudienceSegmentService.ThirdPartyAudienceSegment ThirdPartyAudienceSegment} objects.
  */
 export enum AudienceSegmentApprovalStatus {
   /**
@@ -57,7 +57,7 @@ export enum AudienceSegmentApprovalStatus {
 }
 
 /**
- * Specifies the license type of a {@link https://developers.google.com/ad-manager/api/reference/v202202/AudienceSegmentService.ThirdPartyAudienceSegment ThirdPartyAudienceSegment}.
+ * Specifies the license type of a {@link https://developers.google.com/ad-manager/api/reference/v202405/AudienceSegmentService.ThirdPartyAudienceSegment ThirdPartyAudienceSegment}.
  */
 export enum LicenseType {
   /**

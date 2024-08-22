@@ -31,7 +31,7 @@ export enum InventoryStatus {
 }
 
 /**
- * Specifies the type of ads that can be served through this {@link https://developers.google.com/ad-manager/api/reference/v202202/InventoryService.AdUnit AdUnit}.
+ * Specifies the type of ads that can be served through this {@link https://developers.google.com/ad-manager/api/reference/v202405/InventoryService.AdUnit AdUnit}.
  */
 export enum AdSenseSettingsAdType {
   /**
@@ -49,7 +49,7 @@ export enum AdSenseSettingsAdType {
 }
 
 /**
- * Describes the border of the HTML elements used to surround an ad displayed by the {@link https://developers.google.com/ad-manager/api/reference/v202202/InventoryService.AdUnit AdUnit}.
+ * Describes the border of the HTML elements used to surround an ad displayed by the {@link https://developers.google.com/ad-manager/api/reference/v202405/InventoryService.AdUnit AdUnit}.
  */
 export enum AdSenseSettingsBorderStyle {
   /**

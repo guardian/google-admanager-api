@@ -50,8 +50,8 @@ export type ProposalLineItemMakegoodInfo = {
 };
 
 /**
- * A ProposalLineItem is added to a programmatic {@link https://developers.google.com/ad-manager/api/reference/v202202/ProposalService.Proposal Proposal}
- * and is similar to a delivery {@link https://developers.google.com/ad-manager/api/reference/v202202/ForecastService.LineItem LineItem}.
+ * A ProposalLineItem is added to a programmatic {@link https://developers.google.com/ad-manager/api/reference/v202405/ProposalService.Proposal Proposal}
+ * and is similar to a delivery {@link https://developers.google.com/ad-manager/api/reference/v202405/ForecastService.LineItem LineItem}.
  * It contains delivery details including information like impression goal or quantity, start and end times, and targeting.
  */
 export type ProposalLineItem = {
@@ -180,7 +180,7 @@ export type ProposalLineItem = {
   /**
    * The set of labels applied directly to the ProposalLineItem. This attribute is optional.
    */
-  appliedLabels: AppliedLabel[];
+  appliedLabels?: AppliedLabel[];
   /**
    * Contains the set of labels applied directly to the proposal as well as those inherited ones. If a label has been negated, only the negated label is returned. This attribute is read-only.
    *
@@ -190,7 +190,7 @@ export type ProposalLineItem = {
    *
    * This attribute is optional and defaults to false.
    */
-  effectiveAppliedLabels: AppliedLabel[];
+  effectiveAppliedLabels?: AppliedLabel[];
   /**
    * Indicates whether this ProposalLineItem has been sold. This attribute is read-only.
    */
@@ -323,6 +323,6 @@ export type ProposalLineItem = {
 };
 
 /**
- * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202202/ProposalLineItemService.ProposalLineItem ProposalLineItem} objects.
+ * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202405/ProposalLineItemService.ProposalLineItem ProposalLineItem} objects.
  */
 export type ProposalLineItemPage = PageResult<ProposalLineItem>;

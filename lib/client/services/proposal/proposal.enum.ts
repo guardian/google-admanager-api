@@ -1,5 +1,5 @@
 /**
- * Describes the {@link https://developers.google.com/ad-manager/api/reference/v202202/ProposalService.Proposal Proposal} status.
+ * Describes the {@link https://developers.google.com/ad-manager/api/reference/v202405/ProposalService.Proposal Proposal} status.
  */
 export enum ProposalStatus {
   /**

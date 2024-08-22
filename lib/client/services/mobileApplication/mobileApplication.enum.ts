@@ -1,5 +1,5 @@
 /**
- * A store a {@link https://developers.google.com/ad-manager/api/reference/v202202/MobileApplicationService.MobileApplication MobileApplication} is available on.
+ * A store a {@link https://developers.google.com/ad-manager/api/reference/v202405/MobileApplicationService.MobileApplication MobileApplication} is available on.
  */
 export enum MobileApplicationStore {
   /**
@@ -21,7 +21,7 @@ export enum MobileApplicationStore {
 }
 
 /**
- * A platform a {@link https://developers.google.com/ad-manager/api/reference/v202202/MobileApplicationService.MobileApplication MobileApplication} can run on.
+ * A platform a {@link https://developers.google.com/ad-manager/api/reference/v202405/MobileApplicationService.MobileApplication MobileApplication} can run on.
  */
 export enum MobileApplicationPlatform {
   /**

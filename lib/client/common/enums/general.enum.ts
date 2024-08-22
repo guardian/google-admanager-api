@@ -237,8 +237,8 @@ export enum LineItemType {
 
 /**
  * The formats that a publisher allows on their programmatic
- * {@link https://developers.google.com/ad-manager/api/reference/v202202/LineItemService.LineItem LineItem} or
- * {@link https://developers.google.com/ad-manager/api/reference/v202202/ForecastService.ProposalLineItem ProposalLineItem}.
+ * {@link https://developers.google.com/ad-manager/api/reference/v202405/LineItemService.LineItem LineItem} or
+ * {@link https://developers.google.com/ad-manager/api/reference/v202405/ForecastService.ProposalLineItem ProposalLineItem}.
  */
 export enum AllowedFormats {
   /**
@@ -320,7 +320,7 @@ export enum ProgrammaticCreativeSource {
 }
 
 /**
- * Specifies the type of the goal for a {@link https://developers.google.com/ad-manager/api/reference/v202202/LineItemService.LineItem LineItem}.
+ * Specifies the type of the goal for a {@link https://developers.google.com/ad-manager/api/reference/v202405/LineItemService.LineItem LineItem}.
  */
 export enum GoalType {
   /**
@@ -364,10 +364,10 @@ export enum GoalType {
 
 /**
  * Indicates the type of unit used for defining a reservation.
- * The {@link https://developers.google.com/ad-manager/api/reference/v202202/LineItemService.CostType CostType} can differ from the
- * {@link https://developers.google.com/ad-manager/api/reference/v202202/LineItemService.UnitType UnitType} - an ad can have an impression goal, but be billed by its click.
- * Usually {@link https://developers.google.com/ad-manager/api/reference/v202202/LineItemService.CostType CostType} and
- * {@link https://developers.google.com/ad-manager/api/reference/v202202/LineItemService.UnitType UnitType} will refer to the same unit.
+ * The {@link https://developers.google.com/ad-manager/api/reference/v202405/LineItemService.CostType CostType} can differ from the
+ * {@link https://developers.google.com/ad-manager/api/reference/v202405/LineItemService.UnitType UnitType} - an ad can have an impression goal, but be billed by its click.
+ * Usually {@link https://developers.google.com/ad-manager/api/reference/v202405/LineItemService.CostType CostType} and
+ * {@link https://developers.google.com/ad-manager/api/reference/v202405/LineItemService.UnitType UnitType} will refer to the same unit.
  */
 export enum UnitType {
   /**
