@@ -59,8 +59,6 @@ It uses the [refresh token generation example](/examples/authentication/generate
 
 There is also an option to use an [access token](/examples/authentication/access-token.ts) directly. As access tokens are short-lived, you will need to refresh them yourself.
 
-```typescript
-
 ##### Use a client library
 
 ```typescript
