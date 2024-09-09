@@ -24,7 +24,7 @@ export interface LineItemServiceOperations {
    * @param lineItems the line items to create
    * @returns the created line items with their IDs filled in
    */
-  createLineItems(lineItems: LineItem[]): Promise<LineItem[]>;
+  createLineItems(lineItems: Partial<LineItem>[]): Promise<LineItem[]>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202405/LineItemService.LineItemPage LineItemPage}
    * of {@link https://developers.google.com/ad-manager/api/reference/v202405/LineItemService.LineItem LineItem} objects that satisfy the given

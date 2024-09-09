@@ -9,7 +9,7 @@ export interface SiteServiceOperations {
    * @param sites the sites to create
    * @returns the created sites with their IDs filled in
    */
-  createSites(sites: Site[]): Promise<Site[]>;
+  createSites(sites: Partial<Site>[]): Promise<Site[]>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202405/SiteService.SitePage SitePage}
    * of {@link https://developers.google.com/ad-manager/api/reference/v202405/SiteService.Site Site} objects that satisfy the given

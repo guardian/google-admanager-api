@@ -11,7 +11,7 @@ export interface CreativeSetServiceOperations {
    * @param creativeSet the creative set to create
    * @returns the created creative set with their IDs filled in
    */
-  createCreativeSet(creativeSet: CreativeSet): Promise<CreativeSet>;
+  createCreativeSet(creativeSet: Partial<CreativeSet>): Promise<CreativeSet>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202405/CreativeSetService.CreativeSetPage CreativeSetPage}
    * of {@link https://developers.google.com/ad-manager/api/reference/v202405/CreativeSetService.CreativeSet CreativeSet} objects that satisfy the given

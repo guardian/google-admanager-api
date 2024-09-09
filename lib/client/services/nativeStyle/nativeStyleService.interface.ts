@@ -12,7 +12,9 @@ export interface NativeStyleServiceOperations {
    * @param nativeStyles the native styles to create
    * @returns the created native styles with their IDs filled in
    */
-  createNativeStyles(nativeStyles: NativeStyle[]): Promise<NativeStyle[]>;
+  createNativeStyles(
+    nativeStyles: Partial<NativeStyle>[],
+  ): Promise<NativeStyle[]>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202405/NativeStyleService.NativeStylePage NativeStylePage}
    * of {@link https://developers.google.com/ad-manager/api/reference/v202405/NativeStyleService.NativeStyle NativeStyle} objects that satisfy the given
