@@ -38,7 +38,9 @@ export interface CustomFieldServiceOperations {
    * @param customFields the custom fields to create
    * @returns the created custom fields with their IDs filled in
    */
-  createCustomFields(customFields: CustomField[]): Promise<CustomField[]>;
+  createCustomFields(
+    customFields: Partial<CustomField>[],
+  ): Promise<CustomField[]>;
   /**
    * Returns the {@link https://developers.google.com/ad-manager/api/reference/v202405/CustomFieldService.CustomFieldOption CustomFieldOption}
    * uniquely identified by the given ID.

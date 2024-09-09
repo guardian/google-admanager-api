@@ -12,7 +12,7 @@ export interface CompanyServiceOperations {
    * @param companies the companies to create
    * @returns the created companies with their IDs filled in
    */
-  createCompanies(companies: Company[]): Promise<Company[]>;
+  createCompanies(companies: Partial<Company>[]): Promise<Company[]>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202405/CompanyService.CompanyPage CompanyPage}
    * of {@link https://developers.google.com/ad-manager/api/reference/v202405/CompanyService.Company Company} objects that satisfy the given

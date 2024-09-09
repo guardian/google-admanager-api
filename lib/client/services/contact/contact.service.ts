@@ -10,7 +10,7 @@ export class ContactService implements ContactServiceOperations {
     this._client = client;
   }
 
-  async createContacts(contacts: Contact[]): Promise<Contact[]> {
+  async createContacts(contacts: Partial<Contact>[]): Promise<Contact[]> {
     return this._client.createContacts({ contacts });
   }
 

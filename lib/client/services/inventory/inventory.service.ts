@@ -11,7 +11,7 @@ export class InventoryService implements InventoryServiceOperations {
     this._client = client;
   }
 
-  async createAdUnits(adUnits: AdUnit[]): Promise<AdUnit[]> {
+  async createAdUnits(adUnits: Partial<AdUnit>[]): Promise<AdUnit[]> {
     return this._client.createAdUnits({ adUnits });
   }
 

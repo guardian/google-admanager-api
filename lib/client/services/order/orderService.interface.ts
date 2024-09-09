@@ -16,7 +16,7 @@ export interface OrderServiceOperations {
    * @param orders the orders to create
    * @returns the created orders with their IDs filled in
    */
-  createOrders(orders: Order[]): Promise<Order[]>;
+  createOrders(orders: Partial<Order>[]): Promise<Order[]>;
   /**
    * Gets an {@link https://developers.google.com/ad-manager/api/reference/v202405/OrderService.OrderPage OrderPage} of
    * {@link https://developers.google.com/ad-manager/api/reference/v202405/OrderService.Order Order}

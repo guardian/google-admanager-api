@@ -11,7 +11,9 @@ export class PlacementService implements PlacementServiceOperations {
     this._client = client;
   }
 
-  async createPlacements(placements: Placement[]): Promise<Placement[]> {
+  async createPlacements(
+    placements: Partial<Placement>[],
+  ): Promise<Placement[]> {
     return this._client.createPlacements({ placements });
   }
 
