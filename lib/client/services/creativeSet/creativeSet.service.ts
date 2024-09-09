@@ -10,7 +10,9 @@ export class CreativeSetService implements CreativeSetServiceOperations {
     this._client = client;
   }
 
-  async createCreativeSet(creativeSet: CreativeSet): Promise<CreativeSet> {
+  async createCreativeSet(
+    creativeSet: Partial<CreativeSet>,
+  ): Promise<CreativeSet> {
     return this._client.createCreativeSet({ creativeSet });
   }
 

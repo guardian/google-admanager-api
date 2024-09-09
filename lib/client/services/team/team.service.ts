@@ -11,7 +11,7 @@ export class TeamService implements TeamServiceOperations {
     this._client = client;
   }
 
-  async createTeams(teams: Team[]): Promise<Team[]> {
+  async createTeams(teams: Partial<Team>[]): Promise<Team[]> {
     return this._client.createTeams({ teams });
   }
 

@@ -17,11 +17,11 @@ export class AdRuleService implements AdRuleServiceOperations {
     this._client = client;
   }
 
-  createAdRules(adRules: AdRule[]): Promise<AdRule[]> {
+  createAdRules(adRules: Partial<AdRule>[]): Promise<AdRule[]> {
     return this._client.createAdRules({ adRules });
   }
 
-  createAdSpots(adSports: AdSpot[]): Promise<AdSpot[]> {
+  createAdSpots(adSports: Partial<AdSpot>[]): Promise<AdSpot[]> {
     return this._client.createAdSpots({ adSports });
   }
 

@@ -24,7 +24,7 @@ export class LiveStreamEventService
     return this._client.createLiveStreamEvents({ liveStreamEvents });
   }
 
-  createSlates(slates: Slate[]): Promise<Slate[]> {
+  createSlates(slates: Partial<Slate>[]): Promise<Slate[]> {
     return this._client.createSlates({ slates });
   }
 
