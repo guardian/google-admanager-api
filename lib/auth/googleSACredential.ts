@@ -2,9 +2,9 @@ import type { JWTInput, RefreshOptions } from "google-auth-library";
 import { GoogleAuth } from "google-auth-library";
 import type { JSONClient } from "google-auth-library/build/src/auth/googleauth";
 import { SCOPE } from "../common/constants";
-import type { SACredential } from "./interfaces";
+import type { Credential } from "./interfaces";
 
-export class GoogleSACredential implements SACredential {
+export class GoogleSACredential implements Credential {
   private json: string | JWTInput;
   private options: RefreshOptions | undefined;
   protected auth: JSONClient;

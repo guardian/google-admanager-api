@@ -27,7 +27,7 @@ $ pnpm add @guardian/google-admanager-api
 
 All Google Ad Manager API calls must be authorized through OAuth2 an open standard that allows users to grant permissions to third-party applications, so the application can interact with web services on the user's behalf. OAuth2 enables your Ad Manager API client application to access a user's Ad Manager account without having to handle or store the user's username or password.
 
-##### Generate OAuth2 credentials
+##### Generate service account credentials
 
 ```typescript
 
@@ -48,6 +48,16 @@ const credential = new GoogleSACredential({
 const credential = new GoogleSAFileCredential('./credentials.json');
 
 ```
+
+##### Generate user account credentials
+
+Using the API on behalf of a real user is slightly more complicated than using a service account. The user must grant your application access to their Ad Manager account. This is done by redirecting the user to Google's OAuth2 consent screen, where they will be asked to grant your application access to their Ad Manager account.
+
+There is an [example](/examples/authentication/refresh-token.ts) of how to generate user account credentials in the example folder.
+
+It uses the [refresh token generation example](/examples/authentication/generate-refresh-token.ts) to generate the refresh token.
+
+There is also an option to use an [access token](/examples/authentication/access-token.ts) directly. As access tokens are short-lived, you will need to refresh them yourself.
 
 ##### Use a client library
 

@@ -1,8 +1,8 @@
 import { GoogleAuth } from "google-auth-library";
 import { SCOPE } from "../common/constants";
-import type { SACredential } from "./interfaces";
+import type { Credential } from "./interfaces";
 
-export class GoogleSAFileCredential implements SACredential {
+export class GoogleSAFileCredential implements Credential {
   private _keyFile: string;
   protected auth: GoogleAuth;
 
