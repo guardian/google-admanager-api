@@ -8,6 +8,9 @@ import type {
  * A CustomCriteria object is used to perform custom criteria targeting on custom targeting keys of type CustomTargetingKey.Type.PREDEFINED or CustomTargetingKey.Type.FREEFORM.
  */
 export type CustomCriteria = {
+  attributes: {
+    "xsi:type": "CustomCriteria";
+  };
   /**
    * The CustomTargetingKey.id of the CustomTargetingKey object that was created using CustomTargetingService. This attribute is required.
    */
@@ -28,6 +31,9 @@ export type CustomCriteria = {
  * A CmsMetadataCriteria object is used to target CmsMetadataValue objects.
  */
 export type CmsMetadataCriteria = {
+  attributes: {
+    "xsi:type": "CmsMetadataCriteria";
+  };
   /**
    * The comparison operator. This attribute is required.
    */
@@ -43,6 +49,9 @@ export type CmsMetadataCriteria = {
  * An AudienceSegmentCriteria object is used to target AudienceSegment objects.
  */
 export type AudienceSegmentCriteria = {
+  attributes: {
+    "xsi:type": "AudienceSegmentCriteria";
+  };
   /**
    * The comparison operator. This attribute is required.
    */
@@ -58,6 +67,10 @@ export type AudienceSegmentCriteria = {
  * A CustomCriteriaSet comprises of a set of CustomCriteriaNode objects combined by the CustomCriteriaSet.LogicalOperator.logicalOperator. The custom criteria targeting tree is subject to the rules defined on Targeting.customTargeting.
  */
 export type CustomCriteriaSet = {
+  attributes: {
+    "xsi:type": "CustomCriteriaSet";
+  };
+
   /**
    * The logical operator to be applied to CustomCriteriaSet.children. This attribute is required.
    */
