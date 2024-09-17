@@ -17,7 +17,7 @@ export class CreativeWrapperService
   }
 
   async createCreativeWrappers(
-    creativeWrappers: CreativeWrapper[],
+    creativeWrappers: Partial<CreativeWrapper>[],
   ): Promise<CreativeWrapper[]> {
     return this._client.createCreativeWrappers({ creativeWrappers });
   }

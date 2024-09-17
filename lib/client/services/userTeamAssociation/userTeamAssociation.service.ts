@@ -17,7 +17,7 @@ export class UserTeamAssociationService
   }
 
   async createUserTeamAssociations(
-    userTeamAssociations: UserTeamAssociation[],
+    userTeamAssociations: Partial<UserTeamAssociation>[],
   ): Promise<UserTeamAssociation[]> {
     return this._client.createUserTeamAssociations({ userTeamAssociations });
   }

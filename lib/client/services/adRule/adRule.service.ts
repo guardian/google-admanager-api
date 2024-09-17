@@ -26,7 +26,7 @@ export class AdRuleService implements AdRuleServiceOperations {
   }
 
   createBreakTemplates(
-    breakTemplate: BreakTemplate[],
+    breakTemplate: Partial<BreakTemplate>[],
   ): Promise<BreakTemplate[]> {
     return this._client.createBreakTemplates({ breakTemplate });
   }

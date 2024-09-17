@@ -18,7 +18,7 @@ export interface AudienceSegmentServiceOperations {
    * @returns created first-party audience segments
    */
   createAudienceSegments(
-    segments: FirstPartyAudienceSegment[],
+    segments: Partial<FirstPartyAudienceSegment>[],
   ): Promise<FirstPartyAudienceSegment[]>;
   /**
    * Gets an {@link https://developers.google.com/ad-manager/api/reference/v202405/AudienceSegmentService.AudienceSegmentPage AudienceSegmentPage}

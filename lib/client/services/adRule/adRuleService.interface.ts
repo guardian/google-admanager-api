@@ -37,7 +37,7 @@ export interface AdRuleServiceOperations {
    * @returns the created break template with their IDs filled in
    */
   createBreakTemplates(
-    breakTemplate: BreakTemplate[],
+    breakTemplate: Partial<BreakTemplate>[],
   ): Promise<BreakTemplate[]>;
 
   /**

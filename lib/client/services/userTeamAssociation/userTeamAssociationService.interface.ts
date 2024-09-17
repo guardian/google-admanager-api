@@ -20,7 +20,7 @@ export interface UserTeamAssociationServiceOperations {
    * @returns the created user team associations with their IDs filled in
    */
   createUserTeamAssociations(
-    userTeamAssociations: UserTeamAssociation[],
+    userTeamAssociations: Partial<UserTeamAssociation>[],
   ): Promise<UserTeamAssociation[]>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202405/UserTeamAssociationService.UserTeamAssociationPage UserTeamAssociationPage}

@@ -16,7 +16,7 @@ export interface CdnConfigurationServiceOperations {
    * @param cdnConfigurations
    */
   createCdnConfigurations(
-    cdnConfigurations: CdnConfiguration[],
+    cdnConfigurations: Partial<CdnConfiguration>[],
   ): Promise<CdnConfiguration[]>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202405/CdnConfigurationService.CdnConfigurationPage CdnConfigurationPage}

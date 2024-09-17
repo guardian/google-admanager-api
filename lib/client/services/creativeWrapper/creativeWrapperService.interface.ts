@@ -26,7 +26,7 @@ export interface CreativeWrapperServiceOperations {
    * @returns the creative wrappers with their IDs filled in
    */
   createCreativeWrappers(
-    creativeWrappers: CreativeWrapper[],
+    creativeWrappers: Partial<CreativeWrapper>[],
   ): Promise<CreativeWrapper[]>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202405/CreativeWrapperService.CreativeWrapperPage CreativeWrapperPage}

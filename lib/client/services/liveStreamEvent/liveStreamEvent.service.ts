@@ -19,7 +19,7 @@ export class LiveStreamEventService
     this._client = client;
   }
   createLiveStreamEvents(
-    liveStreamEvents: LiveStreamEvent[],
+    liveStreamEvents: Partial<LiveStreamEvent>[],
   ): Promise<LiveStreamEvent[]> {
     return this._client.createLiveStreamEvents({ liveStreamEvents });
   }
