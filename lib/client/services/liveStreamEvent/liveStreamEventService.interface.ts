@@ -29,7 +29,7 @@ export interface LiveStreamEventServiceOperations {
    * @returns the created live stream events with their IDs filled in
    */
   createLiveStreamEvents(
-    liveStreamEvents: LiveStreamEvent[],
+    liveStreamEvents: Partial<LiveStreamEvent>[],
   ): Promise<LiveStreamEvent[]>;
   /**
    * Create new slates.

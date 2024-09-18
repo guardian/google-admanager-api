@@ -19,7 +19,7 @@ export class LineItemCreativeAssociationService
   }
 
   async createLineItemCreativeAssociations(
-    lineItemCreativeAssociations: LineItemCreativeAssociation[],
+    lineItemCreativeAssociations: Partial<LineItemCreativeAssociation>[],
   ): Promise<LineItemCreativeAssociation[]> {
     return this._client.createLineItemCreativeAssociations({
       lineItemCreativeAssociations,

@@ -18,13 +18,13 @@ export class ProposalLineItemService
   }
 
   async createMakegoods(
-    makegoodInfos: ProposalLineItemMakegoodInfo[],
+    makegoodInfos: Partial<ProposalLineItemMakegoodInfo>[],
   ): Promise<ProposalLineItem[]> {
     return this._client.createMakegoods({ makegoodInfos });
   }
 
   async createProposalLineItems(
-    proposalLineItems: ProposalLineItem[],
+    proposalLineItems: Partial<ProposalLineItem>[],
   ): Promise<ProposalLineItem[]> {
     return this._client.createProposalLineItems({ proposalLineItems });
   }

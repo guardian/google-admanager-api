@@ -12,7 +12,7 @@ export class NativeStyleService implements NativeStyleServiceOperations {
   }
 
   async createNativeStyles(
-    nativeStyles: NativeStyle[],
+    nativeStyles: Partial<NativeStyle>[],
   ): Promise<NativeStyle[]> {
     return this._client.createNativeStyles({ nativeStyles });
   }

@@ -17,7 +17,7 @@ export class CdnConfigurationService
   }
 
   async createCdnConfigurations(
-    cdnConfigurations: CdnConfiguration[],
+    cdnConfigurations: Partial<CdnConfiguration>[],
   ): Promise<CdnConfiguration[]> {
     return this._client.createCdnConfigurations({ cdnConfigurations });
   }

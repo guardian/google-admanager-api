@@ -26,14 +26,14 @@ export class AdjustmentService implements AdjustmentServiceOperations {
   }
 
   createForecastAdjustments(
-    forecastAdjustments: ForecastAdjustment[],
+    forecastAdjustments: Partial<ForecastAdjustment>[],
   ): Promise<ForecastAdjustment[]> {
     const res = this._client.createForecastAdjustments({ forecastAdjustments });
     return res;
   }
 
   createTrafficForecastSegments(
-    trafficForecastSegments: TrafficForecastSegment[],
+    trafficForecastSegments: Partial<TrafficForecastSegment>[],
   ): Promise<TrafficForecastSegment[]> {
     const res = this._client.createTrafficForecastSegments({
       trafficForecastSegments,

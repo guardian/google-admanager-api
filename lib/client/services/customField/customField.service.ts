@@ -16,13 +16,13 @@ export class CustomFieldService implements CustomFieldServiceOperations {
   }
 
   async createCustomFieldOptions(
-    customFieldOptions: CustomFieldOption[],
+    customFieldOptions: Partial<CustomFieldOption>[],
   ): Promise<CustomFieldOption[]> {
     return this._client.createCustomFieldOptions({ customFieldOptions });
   }
 
   async createCustomFields(
-    customFields: CustomField[],
+    customFields: Partial<CustomField>[],
   ): Promise<CustomField[]> {
     return this._client.createCustomFields({ customFields });
   }

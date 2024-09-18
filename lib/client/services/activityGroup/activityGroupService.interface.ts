@@ -17,7 +17,7 @@ export interface ActivityGroupServiceOperations {
    * @returns the created activity groups with their IDs filled in.
    */
   createActivityGroups(
-    activityGroups: ActivityGroup[],
+    activityGroups: Partial<ActivityGroup>[],
   ): Promise<ActivityGroup[]>;
   /**
    * Gets an {@link https://developers.google.com/ad-manager/api/reference/v202405/ActivityGroupService.ActivityGroupPage ActivityGroupPage}

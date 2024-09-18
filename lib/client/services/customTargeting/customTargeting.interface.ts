@@ -28,7 +28,7 @@ export interface CustomTargetingServiceOperations {
    * @returns the updated custom targeting keys
    */
   createCustomTargetingKeys(
-    keys: CustomTargetingKey[],
+    keys: Partial<CustomTargetingKey>[],
   ): Promise<CustomTargetingKey[]>;
   /**
    * Creates new {@link https://developers.google.com/ad-manager/api/reference/v202405/CustomTargetingService.CustomTargetingValue CustomTargetingValue} objects.
@@ -41,7 +41,7 @@ export interface CustomTargetingServiceOperations {
    * @returns the updated custom targeting values
    */
   createCustomTargetingValues(
-    values: CustomTargetingValue[],
+    values: Partial<CustomTargetingValue>[],
   ): Promise<CustomTargetingValue[]>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202405/CustomTargetingService.CustomTargetingKeyPage CustomTargetingKeyPage}
