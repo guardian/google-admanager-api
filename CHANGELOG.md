@@ -1,5 +1,11 @@
 # @guardian/google-admanager-api
 
+## 2.1.0
+
+### Minor Changes
+
+- c833f29: Finish making all create functions accept partial types
+
 ## 2.0.0
 
 ### Major Changes
