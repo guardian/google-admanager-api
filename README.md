@@ -97,3 +97,13 @@ const orderPage = await orderService.getOrdersByStatement(statement.toStatement(
     <td>An arbitrary string name identifying your application. This will be shown in Google's log files. For example: "My Inventory Application" or "App_1" (<b>optional</b>).</td>
   </tr>
 </table>
+
+### Debugging
+
+Enable request and response logging by setting `logRequests` and/or `logResponses` to `true` on the service object.
+
+```typescript
+const orderService = await adManagerClient.getService("OrderService");
+orderService.logRequests = true;
+orderService.logResponses = true;
+```
