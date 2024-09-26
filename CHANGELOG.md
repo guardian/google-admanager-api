@@ -1,5 +1,11 @@
 # @guardian/google-admanager-api
 
+## 2.2.0
+
+### Minor Changes
+
+- b2a9daa: Add ability to log XML requests and responses
+
 ## 2.1.0
 
 ### Minor Changes
