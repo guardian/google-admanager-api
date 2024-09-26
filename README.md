@@ -134,7 +134,7 @@ lineItemService.createLineitem({
 In some cases where multiple shapes of objects are accepted, the type need to be speficied under a special `attributes` property.
 
 For example for custom targeting the objects need to have their type specified whether they are a `CustomCriteriaSet` or `CustomTargeting` like so:
-```
+```ts
 const customTargeting: CustomCriteriaSet = {
   attributes: {
     "xsi:type": "CustomCriteriaSet",
@@ -166,7 +166,7 @@ lineItemService.createLineitem({
 ```
 
 This also applies to creatives, [as there are many types of creatives](https://github.com/guardian/google-admanager-api/blob/main/lib/client/services/creative/creative.type.ts#L1205):
-```
+```ts
 const creative: Creative = {
   attributes: {
     "xsi:type": "ThirdPartyCreative",
