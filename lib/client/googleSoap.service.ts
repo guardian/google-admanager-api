@@ -18,7 +18,10 @@ export class GoogleSoapService<T extends keyof typeof SERVICE_MAP> {
     this.token = options.token;
   }
 
-  public async createClient(): Promise<ImportClass<typeof SERVICE_MAP, T>> {
+  public async createClient(
+    logRequests = false,
+    logResponses = false,
+  ): Promise<ImportClass<typeof SERVICE_MAP, T>> {
     const serviceUrl = `https://ads.google.com/apis/ads/publisher/${API_VERSION}/${this.service}?wsdl`;
     const client = await createClientAsync(serviceUrl);
     client.addSoapHeader(this.getSoapHeaders());
@@ -27,6 +30,18 @@ export class GoogleSoapService<T extends keyof typeof SERVICE_MAP> {
     };
 
     if (this.token) client.setToken(this.token);
+
+    if (logRequests) {
+      client.addListener("request", (req: unknown) => {
+        console.info("SOAP Request:", req);
+      });
+    }
+
+    if (logResponses) {
+      client.addListener("response", (res: unknown) => {
+        console.info("SOAP Response:", res);
+      });
+    }
 
     this._client = new Proxy(client, {
       get: function get(target, propertyKey) {

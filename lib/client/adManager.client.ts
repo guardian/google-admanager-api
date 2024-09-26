@@ -8,6 +8,8 @@ export class AdManagerClient {
   private networkCode: number;
   private credential: SACredential;
   protected applicationName: string;
+  logRequests = false;
+  logResponses = false;
 
   constructor(
     networkCode: number,
@@ -29,7 +31,7 @@ export class AdManagerClient {
         networkCode: this.networkCode,
         token: token,
         applicationName: this.applicationName,
-      }).createClient();
+      }).createClient(this.logRequests, this.logResponses);
     } catch (err: any) {
       throw new Error(err);
     }
