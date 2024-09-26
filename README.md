@@ -107,3 +107,74 @@ const orderService = await adManagerClient.getService("OrderService");
 orderService.logRequests = true;
 orderService.logResponses = true;
 ```
+
+### Known issues/gotchas
+
+#### SOAP requires object properties to be in the correct order
+The properties of objects sent using this library need to be in the correct order (the same order as the type definitions) or you may encounter an `Unmarshalling Error` response.
+
+For example for a [line item](lib/client/common/types/lineItemSummary.type.ts) the `orderName` must be before the `startDateTime`.
+```ts
+// will not work
+lineItemService.createLineitem({
+  priority: 12,
+  orderId: 123,
+  ...
+})
+
+//must be
+lineItemService.createLineitem({
+  orderId: 123,
+  priority: 12,
+  ...
+})
+```
+
+#### Some objects need additional attributes
+In some cases where multiple shapes of objects are accepted, the type need to be speficied under a special `attributes` property.
+
+For example for custom targeting the objects need to have their type specified whether they are a `CustomCriteriaSet` or `CustomTargeting` like so:
+```ts
+const customTargeting: CustomCriteriaSet = {
+  attributes: {
+    "xsi:type": "CustomCriteriaSet",
+  },
+  logicalOperator: LogicalOperator.OR,
+  children: [{
+    attributes: {
+      "xsi:type": "CustomCriteriaSet",
+    },
+    logicalOperator: LogicalOperator.AND,
+    children: [{
+      attributes: {
+        "xsi:type": "CustomCriteria",
+      },
+      keyId: 123,
+      valueIds: [123],
+      operator: ComparisonOperator.IS,
+    }],
+  }],
+};
+
+lineItemService.createLineitem({
+  ...
+  targeting: {
+    customTargeting
+  }
+  ...
+})
+```
+
+This also applies to creatives, [as there are many types of creatives](https://github.com/guardian/google-admanager-api/blob/main/lib/client/services/creative/creative.type.ts#L1205):
+```ts
+const creative: Creative = {
+  attributes: {
+    "xsi:type": "ThirdPartyCreative",
+  },
+  advertiserId,
+  name: creativeName,
+  size,
+  snippet,
+  isSafeFrameCompatible: false,
+};
+```
