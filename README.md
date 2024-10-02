@@ -99,7 +99,7 @@ const orderPage = await orderService.getOrdersByStatement(statement.toStatement(
     <tr>
     <td><code><b>apiVersion</b></code></td>
     <td><code>String</code></td>
-    <td>Ad Mananger API version, if you want to define a different version than the default one (<b>optional</b>).</td>
+    <td>Ad Mananger API version, if you want to define a different version than the default version, i.e. v202405 (<b>optional</b>).</td>
   </tr>
 </table>
 
