@@ -10,6 +10,10 @@ export type GoogleSoapServiceOptions = {
    */
   applicationName: string;
   /**
+   * Ad Mananger API version
+   */
+  apiVersion: string;
+  /**
    *  OAuth2 access token
    */
   token: string;

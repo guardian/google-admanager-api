@@ -1,12 +1,13 @@
 import type { Client } from "soap";
 import { BearerSecurity, createClientAsync } from "soap";
-import { API_VERSION, SERVICE_MAP } from "../common/constants";
+import { SERVICE_MAP } from "../common/constants";
 import type { GoogleSoapServiceOptions, ImportClass } from "../common/types";
 import { promiseFromCallback } from "../common/utils";
 
 export class GoogleSoapService<T extends keyof typeof SERVICE_MAP> {
   private networkCode: number;
   private applicationName: string;
+  private apiVersion: string;
   private service: T;
   private token: string;
   private _client: Client;
@@ -16,13 +17,14 @@ export class GoogleSoapService<T extends keyof typeof SERVICE_MAP> {
     this.applicationName = options.applicationName;
     this.networkCode = options.networkCode;
     this.token = options.token;
+    this.apiVersion = options.apiVersion;
   }
 
   public async createClient(
     logRequests = false,
     logResponses = false,
   ): Promise<ImportClass<typeof SERVICE_MAP, T>> {
-    const serviceUrl = `https://ads.google.com/apis/ads/publisher/${API_VERSION}/${this.service}?wsdl`;
+    const serviceUrl = `https://ads.google.com/apis/ads/publisher/${this.apiVersion}/${this.service}?wsdl`;
     const client = await createClientAsync(serviceUrl);
     client.addSoapHeader(this.getSoapHeaders());
     client.setToken = function setToken(token: string) {
@@ -73,7 +75,7 @@ export class GoogleSoapService<T extends keyof typeof SERVICE_MAP> {
           "soapenv:mustUnderstand": 0,
           "xsi:type": "ns1:SoapRequestHeader",
           "xmlns:ns1":
-            "https://www.google.com/apis/ads/publisher/" + API_VERSION,
+            "https://www.google.com/apis/ads/publisher/" + this.apiVersion,
           "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
           "xmlns:soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
         },
