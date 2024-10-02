@@ -25,7 +25,6 @@ export class GoogleSoapService<T extends keyof typeof SERVICE_MAP> {
     logResponses = false,
   ): Promise<ImportClass<typeof SERVICE_MAP, T>> {
     const serviceUrl = `https://ads.google.com/apis/ads/publisher/${this.apiVersion}/${this.service}?wsdl`;
-    console.log("MENDEL", serviceUrl);
     const client = await createClientAsync(serviceUrl);
     client.addSoapHeader(this.getSoapHeaders());
     client.setToken = function setToken(token: string) {
