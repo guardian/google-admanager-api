@@ -27,7 +27,7 @@ export class GoogleSoapService<T extends keyof typeof SERVICE_MAP> {
     const serviceUrl = `https://ads.google.com/apis/ads/publisher/${this.apiVersion}/${this.service}?wsdl`;
     console.log("MENDEL", serviceUrl);
     const client = await createClientAsync(serviceUrl);
-    client.addSoapHeader(this.getSoapHeaders(this.apiVersion));
+    client.addSoapHeader(this.getSoapHeaders());
     client.setToken = function setToken(token: string) {
       client.setSecurity(new BearerSecurity(token));
     };
@@ -68,7 +68,7 @@ export class GoogleSoapService<T extends keyof typeof SERVICE_MAP> {
     return new services[this.service](this._client);
   }
 
-  private getSoapHeaders(apiVersion: string): any {
+  private getSoapHeaders(): any {
     return {
       RequestHeader: {
         attributes: {
@@ -76,7 +76,7 @@ export class GoogleSoapService<T extends keyof typeof SERVICE_MAP> {
           "soapenv:mustUnderstand": 0,
           "xsi:type": "ns1:SoapRequestHeader",
           "xmlns:ns1":
-            "https://www.google.com/apis/ads/publisher/" + apiVersion,
+            "https://www.google.com/apis/ads/publisher/" + this.apiVersion,
           "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
           "xmlns:soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
         },
