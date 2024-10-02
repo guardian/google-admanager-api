@@ -96,6 +96,11 @@ const orderPage = await orderService.getOrdersByStatement(statement.toStatement(
     <td><code>String</code></td>
     <td>An arbitrary string name identifying your application. This will be shown in Google's log files. For example: "My Inventory Application" or "App_1" (<b>optional</b>).</td>
   </tr>
+    <tr>
+    <td><code><b>apiVersion</b></code></td>
+    <td><code>String</code></td>
+    <td>Ad Mananger API version, if you want to define a different version than the default one (<b>optional</b>).</td>
+  </tr>
 </table>
 
 ### Debugging
