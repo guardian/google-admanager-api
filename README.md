@@ -32,14 +32,14 @@ All Google Ad Manager API calls must be authorized through OAuth2 an open standa
 ```typescript
 
 const credential = new GoogleSACredential({
-    "type": "service_account",
-    "project_id": "...",
-    "private_key_id": "...",
-    "private_key": "...",
-    "client_email": "...",
-    "client_id": "...",
-    "auth_uri": "...",
-    "token_uri": "...",
+    type: "service_account",
+    project_id: "...",
+    private_key_id: "...",
+    private_key: "...",
+    client_email: "...",
+    client_id: "...",
+    auth_uri: "...",
+    token_uri: "...",
     ...
 });
 
@@ -96,6 +96,11 @@ const orderPage = await orderService.getOrdersByStatement(statement.toStatement(
     <td><code>String</code></td>
     <td>An arbitrary string name identifying your application. This will be shown in Google's log files. For example: "My Inventory Application" or "App_1" (<b>optional</b>).</td>
   </tr>
+    <tr>
+    <td><code><b>apiVersion</b></code></td>
+    <td><code>String</code></td>
+    <td>Ad Mananger API version, if you want to define a different version than the default version, i.e. v202405 (<b>optional</b>).</td>
+  </tr>
 </table>
 
 ### Debugging
@@ -122,7 +127,7 @@ lineItemService.createLineitem({
   ...
 })
 
-//must be
+// must be
 lineItemService.createLineitem({
   orderId: 123,
   priority: 12,
@@ -131,9 +136,9 @@ lineItemService.createLineitem({
 ```
 
 #### Some objects need additional attributes
-In some cases where multiple shapes of objects are accepted, the type need to be speficied under a special `attributes` property.
+In some cases where multiple shapes of objects are accepted, the type need to be specified under a special `attributes` property.
 
-For example for custom targeting the objects need to have their type specified whether they are a `CustomCriteriaSet` or `CustomTargeting` like so:
+For example, for custom targeting, the objects need to have their type specified whether they are a `CustomCriteriaSet` or `CustomTargeting` like so:
 ```ts
 const customTargeting: CustomCriteriaSet = {
   attributes: {
