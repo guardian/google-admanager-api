@@ -1,5 +1,11 @@
 # @guardian/google-admanager-api
 
+## 2.3.0
+
+### Minor Changes
+
+- 57855e3: feat: Support defining Google Ad Manager API version
+
 ## 2.2.0
 
 ### Minor Changes
