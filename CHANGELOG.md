@@ -1,5 +1,11 @@
 # @guardian/google-admanager-api
 
+## 2.4.0
+
+### Minor Changes
+
+- 622bd84: endDateTime, customTargeting, deviceCategoryTargeting and geoTargeting to be optional as they are sometime not present in responses.
+
 ## 2.3.0
 
 ### Minor Changes
