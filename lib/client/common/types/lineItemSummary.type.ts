@@ -141,7 +141,7 @@ export type LineItemSummary = {
    * The date and time on which the LineItem will stop serving. This attribute is required unless LineItem.unlimitedEndDateTime is set to true.
    * If specified, it must be after the LineItem.startDateTime. This end date and time does not include auto extension days.
    */
-  endDateTime: DateTime;
+  endDateTime?: DateTime;
 
   /**
    * The number of days to allow a line item to deliver past its endDateTime. A maximum of 7 days is allowed. This is feature is only available for Ad Manager 360 accounts.

@@ -49,12 +49,12 @@ export type GeoTargeting = {
   /**
    * The geographical locations being targeted by the LineItem.
    */
-  targetedLocations: Location[];
+  targetedLocations?: Location[];
 
   /**
    * The geographical locations being excluded by the LineItem.
    */
-  excludedLocations: Location[];
+  excludedLocations?: Location[];
 };
 
 /**
@@ -216,12 +216,12 @@ export type DeviceCategoryTargeting = {
   /**
    * Device categories that are being targeted by the LineItem.
    */
-  targetedDeviceCategories: Technology[];
+  targetedDeviceCategories?: Technology[];
 
   /**
    * Device categories that are being excluded by the LineItem.
    */
-  excludedDeviceCategories: Technology[];
+  excludedDeviceCategories?: Technology[];
 };
 
 /**
@@ -341,7 +341,7 @@ export type TechnologyTargeting = {
   /**
    * The device categories being targeted by the LineItem.
    */
-  deviceCategoryTargeting: DeviceCategoryTargeting;
+  deviceCategoryTargeting?: DeviceCategoryTargeting;
 
   /**
    * The device manufacturers being targeted by the LineItem.
@@ -518,7 +518,7 @@ export type Targeting = {
    *
    * The third level can only comprise of CustomCriteria objects.
    */
-  customTargeting: CustomCriteriaSet;
+  customTargeting?: CustomCriteriaSet;
 
   /**
    * Specifies the domains or subdomains that are targeted or excluded by the LineItem. Users visiting from an IP address associated with those domains will be targeted or excluded. This attribute is optional.
