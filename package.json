@@ -51,7 +51,7 @@
     "open": "^10.1.0",
     "prettier": "^3.3.3",
     "server-destroy": "^1.0.1",
-    "supertest": "^6.2.2",
+    "supertest": "^7.0.0",
     "ts-jest": "^29.0.5",
     "ts-node": "^10.7.0",
     "tsconfig-paths": "^3.14.0",
