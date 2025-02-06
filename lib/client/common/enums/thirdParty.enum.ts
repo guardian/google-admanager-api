@@ -1,3 +1,5 @@
+import { enums, type Describe } from "superstruct";
+
 /**
  * Possible options for third-party viewabitility integration.
  */
@@ -37,6 +39,20 @@ export enum ThirdPartyViewabilityIntegrationPartner {
 }
 
 /**
+ * Represents a ThirdPartyViewabilityIntegrationPartner enum in superstruct format.
+ */
+export const ThirdPartyViewabilityIntegrationPartnerEnum = enums([
+  "NONE",
+  "MOAT",
+  "DOUBLE_VERIFY",
+  "INTEGRAL_AD_SCIENCE",
+  "COMSCORE",
+  "TELEMETRY",
+  "MEETRICS",
+  "UNKNOWN",
+]) as Describe<ThirdPartyViewabilityIntegrationPartner>;
+
+/**
  * Possible options for third-party brand lift integration.
  */
 export enum ThirdPartyBrandLiftIntegrationPartner {
@@ -57,6 +73,16 @@ export enum ThirdPartyBrandLiftIntegrationPartner {
    */
   DYNATA = "DYNATA",
 }
+
+/**
+ * Represents a ThirdPartyBrandLiftIntegrationPartner enum in superstruct format.
+ */
+export const ThirdPartyBrandLiftIntegrationPartnerEnum = enums([
+  "UNKNOWN",
+  "NONE",
+  "KANTAR_MILLWARD_BROWN",
+  "DYNATA",
+]) as Describe<ThirdPartyBrandLiftIntegrationPartner>;
 
 /**
  * Possible options for third-party reach integration.
@@ -83,3 +109,14 @@ export enum ThirdPartyReachIntegrationPartner {
    */
   UNKNOWN = "UNKNOWN",
 }
+
+/**
+ * Represents a ThirdPartyReachIntegrationPartner enum in superstruct format.
+ */
+export const ThirdPartyReachIntegrationPartnerEnum = enums([
+  "NONE",
+  "COMSCORE",
+  "NIELSEN",
+  "KANTAR_MILLWARD_BROWN",
+  "UNKNOWN",
+]) as Describe<ThirdPartyReachIntegrationPartner>;

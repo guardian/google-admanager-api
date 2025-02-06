@@ -1,5 +1,20 @@
-import type { CreativeSizeType } from "../enums";
-import type { AppliedLabel, Size } from ".";
+import { CreativeSizeTypeEnum, type CreativeSizeType } from "../enums";
+import {
+  AppliedLabelStruct,
+  SizeStruct,
+  type AppliedLabel,
+  type Size,
+} from ".";
+import {
+  array,
+  boolean,
+  lazy,
+  number,
+  object,
+  optional,
+  string,
+  type Describe,
+} from "superstruct";
 
 /**
  * A CreativePlaceholder describes a slot that a creative is expected to fill.
@@ -51,3 +66,18 @@ export type CreativePlaceholder = {
    */
   isAmpOnly: boolean;
 };
+
+/**
+ * Represents a CreativePlaceholder struct.
+ */
+export const CreativePlaceholderStruct = object({
+  size: SizeStruct,
+  creativeTemplateId: number(),
+  companions: lazy(() => array(CreativePlaceholderStruct)),
+  appliedLabels: optional(array(AppliedLabelStruct)),
+  effectiveAppliedLabels: optional(array(AppliedLabelStruct)),
+  expectedCreativeCount: number(),
+  creativeSizeType: CreativeSizeTypeEnum,
+  targetingName: string(),
+  isAmpOnly: boolean(),
+}) as Describe<CreativePlaceholder>;

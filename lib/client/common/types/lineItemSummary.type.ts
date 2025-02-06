@@ -1,37 +1,40 @@
 import type { StartDateTimeType } from "../../../common/enums";
-import type { DateTime } from "../../../common/types";
-import type {
-  AllowedFormats,
-  ChildContentEligibility,
-  CompanionDeliveryOption,
-  CompetitiveConstraintScope,
-  ComputedStatus,
-  CostType,
-  CreativeRotationType,
-  CustomPacingGoalUnit,
-  DeliveryForecastSource,
-  DeliveryRateType,
-  EnvironmentType,
-  LineItemDiscountType,
-  LineItemSummaryReservationStatus,
-  LineItemType,
-  ProgrammaticCreativeSource,
-  RoadblockingType,
-  SkippableAdType,
+import { DateTimeStruct, type DateTime } from "../../../common/types";
+import {
+  CustomPacingGoalUnitEnum,
+  type AllowedFormats,
+  type ChildContentEligibility,
+  type CompanionDeliveryOption,
+  type CompetitiveConstraintScope,
+  type ComputedStatus,
+  type CostType,
+  type CreativeRotationType,
+  type CustomPacingGoalUnit,
+  type DeliveryForecastSource,
+  type DeliveryRateType,
+  type EnvironmentType,
+  type LineItemDiscountType,
+  type LineItemSummaryReservationStatus,
+  type LineItemType,
+  type ProgrammaticCreativeSource,
+  type RoadblockingType,
+  type SkippableAdType,
 } from "../enums";
-import type {
-  AppliedLabel,
-  BaseCustomFieldValue,
-  CreativePlaceholder,
-  DeliveryData,
-  DeliveryIndicator,
-  FrequencyCap,
-  Goal,
-  GrpSettings,
-  Money,
-  Stats,
-  ThirdPartyMeasurementSettings,
+import {
+  MoneyStruct,
+  type AppliedLabel,
+  type BaseCustomFieldValue,
+  type CreativePlaceholder,
+  type DeliveryData,
+  type DeliveryIndicator,
+  type FrequencyCap,
+  type Goal,
+  type GrpSettings,
+  type Money,
+  type Stats,
+  type ThirdPartyMeasurementSettings,
 } from ".";
+import { array, boolean, number, object, type Describe } from "superstruct";
 
 /**
  * An interval of a {@link https://developers.google.com/ad-manager/api/reference/v202405/ForecastService.CustomPacingCurve CustomPacingCurve}.
@@ -51,6 +54,15 @@ export type CustomPacingGoal = {
 
   amount: number;
 };
+
+/**
+ * Represents a CustomPacingGoal struct
+ */
+export const CustomPacingGoalsStruct: Describe<CustomPacingGoal> = object({
+  startDateTime: DateTimeStruct,
+  useLineItemStartDateTime: boolean(),
+  amount: number(),
+});
 
 /**
  * A LineItemActivityAssociation associates a {@link https://developers.google.com/ad-manager/api/reference/v202405/LineItemService.LineItem LineItem}
@@ -76,6 +88,16 @@ export type LineItemActivityAssociation = {
 };
 
 /**
+ * Represents a LineItemActivityAssociation struct.
+ */
+export const LineItemActivityAssociationStruct: Describe<LineItemActivityAssociation> =
+  object({
+    activityId: number(),
+    clickThroughConversionCost: MoneyStruct,
+    viewThroughConversionCost: MoneyStruct,
+  });
+
+/**
  * A curve consisting of {@link https://developers.google.com/ad-manager/api/reference/v202405/ForecastService.CustomPacingGoal CustomPacingGoal} objects that is used to pace line item delivery.
  */
 export type CustomPacingCurve = {
@@ -90,6 +112,14 @@ export type CustomPacingCurve = {
 };
 
 /**
+ * Represents a CustomPacingCurve struct
+ */
+export const CustomPacingCurveStruct: Describe<CustomPacingCurve> = object({
+  customPacingGoalUnit: CustomPacingGoalUnitEnum,
+  customPacingGoals: array(CustomPacingGoalsStruct),
+});
+
+/**
  * Data transfer object for the exchange deal info of a line item.
  */
 export type LineItemDealInfoDto = {
@@ -98,6 +128,13 @@ export type LineItemDealInfoDto = {
    */
   externalDealId: number;
 };
+
+/**
+ * Represents a LineItemDealInfoDto struct.
+ */
+export const LineItemDealInfoDtoStruct: Describe<LineItemDealInfoDto> = object({
+  externalDealId: number(),
+});
 
 /**
  * The LineItemSummary represents the base class from which a LineItem is derived.

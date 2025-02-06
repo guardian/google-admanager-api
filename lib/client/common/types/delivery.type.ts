@@ -1,3 +1,5 @@
+import { array, number, object, type Describe } from "superstruct";
+
 /**
  * Indicates the delivery performance of the LineItem.
  */
@@ -13,6 +15,14 @@ export type DeliveryIndicator = {
 };
 
 /**
+ * Represents a DeliveryIndicator struct.
+ */
+export const DeliveryIndicatorStruct: Describe<DeliveryIndicator> = object({
+  expectedDeliveryPercentage: number(),
+  actualDeliveryPercentage: number(),
+});
+
+/**
  * Holds the number of clicks or impressions, determined by LineItem.costType, delivered for a single line item for the last 7 days
  */
 export type DeliveryData = {
@@ -21,3 +31,10 @@ export type DeliveryData = {
    */
   units: number[];
 };
+
+/**
+ * Represents a DeliveryData struct.
+ */
+export const DeliveryDataStruct: Describe<DeliveryData> = object({
+  units: array(number()),
+});
