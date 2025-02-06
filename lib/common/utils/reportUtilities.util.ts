@@ -23,7 +23,7 @@ export class ReportUtilities extends AdsReportUtilities {
   /**
    * The options to use when downloading the completed report.
    */
-  public reportDownloadOptions: ReportDownloadOptions;
+  public reportDownloadOptions?: ReportDownloadOptions;
 
   /**
    * @param reportService ReportService to be used

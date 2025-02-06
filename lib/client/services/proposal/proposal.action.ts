@@ -43,9 +43,9 @@ export class EditProposalsForNegotiation implements ProposalAction {
  * The action used for pausing programmatic {@link https://developers.google.com/ad-manager/api/reference/v202405/ProposalService.Proposal Proposal} objects.
  */
 export class PauseProposals implements ProposalAction {
-  private reasonField: string;
+  private reasonField?: string;
 
-  get reason() {
+  get reason(): string | undefined {
     return this.reasonField;
   }
   set reason(value: string) {

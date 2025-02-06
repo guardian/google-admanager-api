@@ -4,7 +4,7 @@ import type { Credential } from "./interfaces";
 
 export class GoogleSAFileCredential implements Credential {
   private _keyFile: string;
-  protected auth: GoogleAuth;
+  protected auth?: GoogleAuth;
 
   /**
    *
@@ -28,6 +28,6 @@ export class GoogleSAFileCredential implements Credential {
   }
 
   async getToken() {
-    return await this.auth.getAccessToken();
+    return await this.auth?.getAccessToken();
   }
 }

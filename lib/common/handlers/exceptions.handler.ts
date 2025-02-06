@@ -1,9 +1,9 @@
 export abstract class BaseException extends Error {
   abstract statusCode: number;
-  innerException: Error;
-  beforeSealing: () => unknown;
+  innerException?: Error;
+  beforeSealing?: () => unknown;
 
-  constructor(message) {
+  constructor(message?: string) {
     super(message);
     this.name = this.constructor.name;
     Object.setPrototypeOf(this, BaseException.prototype);
@@ -36,6 +36,7 @@ export class ArgumentNullException extends BaseException {
     beforeSealing?: () => unknown,
   ) {
     super(message);
+    this.statusCode = 400;
     this.name = this.constructor.name;
     this.innerException = innerException;
     this.beforeSealing = beforeSealing;
@@ -53,6 +54,7 @@ export class AdsReportsException extends BaseException {
     beforeSealing?: () => unknown,
   ) {
     super(message);
+    this.statusCode = 400;
     this.name = this.constructor.name;
     this.innerException = innerException;
     this.beforeSealing = beforeSealing;
