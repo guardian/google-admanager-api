@@ -38,7 +38,7 @@ export function promiseFromCallback(
             code: err["response"].status,
             name: error[2]?.match(/"xsi:type":"(.*)"},/)?.[1] ?? "",
             message: error[1],
-            details: JSON.parse(error[2]),
+            details: JSON.parse(error[2] ?? "{}"),
           });
         }
 
