@@ -122,6 +122,6 @@ export const LineItemStruct = object({
   creativeTargetings: array(CreativeTargetingStruct),
 }) as Describe<LineItem>;
 
-type LineItemJobs = Infer<typeof LineItemStruct>;
+type LineItemValidation = Infer<typeof LineItemStruct>;
 
-export type { LineItemJobs };
+export type { LineItemValidation };
