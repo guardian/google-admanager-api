@@ -35,8 +35,6 @@ export class GoogleSACredential implements Credential {
   }
 
   async getToken(): Promise<string | null | undefined> {
-    return (
-      await this.auth?.getAccessToken()
-    )?.token;
+    return (await this.auth?.getAccessToken())?.token;
   }
 }

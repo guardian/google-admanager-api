@@ -14,9 +14,11 @@ interface ServerError extends Error {
   };
 }
 
-const isClientError = (err: Error): err is  ClientError =>  err.message.startsWith("soap:Client:");
+const isClientError = (err: Error): err is ClientError =>
+  err.message.startsWith("soap:Client:");
 
-const isServerError = (err: Error): err is ServerError => err.message.startsWith("soap:Server:");
+const isServerError = (err: Error): err is ServerError =>
+  err.message.startsWith("soap:Server:");
 
 export function promiseFromCallback(
   fn: (callback: (err: Error, result: any) => void) => void,
