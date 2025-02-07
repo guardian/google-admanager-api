@@ -10,7 +10,7 @@ export class GoogleSoapService<T extends keyof typeof SERVICE_MAP> {
   private apiVersion: string;
   private service: T;
   private token: string;
-  private _client: Client;
+  private _client?: Client;
 
   constructor(service: T, options: GoogleSoapServiceOptions) {
     this.service = service;

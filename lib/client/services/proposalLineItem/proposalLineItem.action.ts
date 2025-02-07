@@ -21,12 +21,12 @@ export class ArchiveProposalLineItems implements ProposalLineItemAction {
  * The action used for pausing {@link https://developers.google.com/ad-manager/api/reference/v202405/ProposalLineItemService.ProposalLineItem ProposalLineItem} objects.
  */
 export class PauseProposalLineItems implements ProposalLineItemAction {
-  private reasonField: string;
+  private reasonField?: string;
 
   /**
    * Reason to describe why the {@link https://developers.google.com/ad-manager/api/reference/v202405/ProposalLineItemService.ProposalLineItem ProposalLineItem} is being paused.
    */
-  get reason() {
+  get reason(): string | undefined {
     return this.reasonField;
   }
 
