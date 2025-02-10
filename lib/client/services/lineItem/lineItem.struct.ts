@@ -6,15 +6,14 @@ import {
   optional,
   string,
   type Describe,
-  type Infer,
 } from "superstruct";
-import type { LineItem } from "../../client/services/lineItem/lineItem.type";
-import { DateTimeStruct } from "../types";
+import type { LineItem } from "./lineItem.type";
+import { DateTimeStruct } from "../../../common/types";
 import {
   CustomPacingCurveStruct,
   LineItemActivityAssociationStruct,
   LineItemDealInfoDtoStruct,
-} from "../../client/common/types/lineItemSummary.type";
+} from "../../common/types/lineItemSummary.type";
 import {
   StatsStruct,
   MoneyStruct,
@@ -29,7 +28,7 @@ import {
   DeliveryIndicatorStruct,
   DeliveryDataStruct,
   BaseCustomFieldValueStruct,
-} from "../../client/common/types";
+} from "../../common/types";
 import {
   AllowedFormatsEnum,
   ChildContentEligibilityEnum,
@@ -47,15 +46,14 @@ import {
   RoadblockingTypeEnum,
   SkippableAdTypeEnum,
   StatusEnum,
-} from "../../client/common/enums";
-import { StartDateTimeTypeEnum } from "../enums";
+} from "../../common/enums";
+import { StartDateTimeTypeEnum } from "../../../common/enums";
 
 /**
  * Represents a LineItem struct
- * we would be able to reuse this struct in other repositories for type safety checks
- * check https://github.com/guardian/ad-manager-line-items-jobs/pull/13#discussion_r1926802813 for more details
+ * Can be used to validate and parse LineItem objects
  */
-export const LineItemStruct = object({
+export const LineItemStruct: Describe<LineItem> = object({
   orderId: number(),
   id: number(),
   name: string(),
@@ -120,8 +118,4 @@ export const LineItemStruct = object({
   customVastExtension: string(),
   targeting: TargetingStruct,
   creativeTargetings: array(CreativeTargetingStruct),
-}) as Describe<LineItem>;
-
-type LineItemValidation = Infer<typeof LineItemStruct>;
-
-export type { LineItemValidation };
+});

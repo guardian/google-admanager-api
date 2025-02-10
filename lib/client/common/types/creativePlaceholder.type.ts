@@ -70,7 +70,7 @@ export type CreativePlaceholder = {
 /**
  * Represents a CreativePlaceholder struct.
  */
-export const CreativePlaceholderStruct = object({
+export const CreativePlaceholderStruct: Describe<CreativePlaceholder> = object({
   size: SizeStruct,
   creativeTemplateId: number(),
   companions: optional(lazy(() => array(CreativePlaceholderStruct))),
@@ -80,4 +80,4 @@ export const CreativePlaceholderStruct = object({
   creativeSizeType: CreativeSizeTypeEnum,
   targetingName: string(),
   isAmpOnly: boolean(),
-}) as Describe<CreativePlaceholder>;
+});
