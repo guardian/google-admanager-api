@@ -36,7 +36,7 @@ export type CreativePlaceholder = {
   /**
    * The companions that the creative is expected to have. This attribute can only be set if the line item it belongs to has a LineItem.environmentType of EnvironmentType.VIDEO_PLAYER or LineItem.roadblockingType of RoadblockingType.CREATIVE_SET.
    */
-  companions: CreativePlaceholder[];
+  companions?: CreativePlaceholder[];
   /**
    * The set of label frequency caps applied directly to this creative placeholder.
    */
@@ -73,7 +73,7 @@ export type CreativePlaceholder = {
 export const CreativePlaceholderStruct = object({
   size: SizeStruct,
   creativeTemplateId: number(),
-  companions: lazy(() => array(CreativePlaceholderStruct)),
+  companions: optional(lazy(() => array(CreativePlaceholderStruct))),
   appliedLabels: optional(array(AppliedLabelStruct)),
   effectiveAppliedLabels: optional(array(AppliedLabelStruct)),
   expectedCreativeCount: number(),
