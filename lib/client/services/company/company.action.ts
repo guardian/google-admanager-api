@@ -22,17 +22,17 @@ export class EndAgreementAction implements CompanyAction {
  * The action used by the parent network to send a new invitation with a potentially updated proposal to a rejected or withdrawn child publisher.
  */
 export class ReInviteAction implements CompanyAction {
-  private proposedDelegationTypeField: DelegationType;
+  private proposedDelegationTypeField?: DelegationType;
 
-  private proposedDelegationTypeFieldSpecified: boolean;
+  private proposedDelegationTypeFieldSpecified?: boolean;
 
-  private proposedRevenueShareMillipercentField: number;
+  private proposedRevenueShareMillipercentField?: number;
 
-  private proposedRevenueShareMillipercentFieldSpecified: boolean;
+  private proposedRevenueShareMillipercentFieldSpecified?: boolean;
 
-  private proposedEmailField: string;
+  private proposedEmailField?: string;
 
-  get proposedDelegationType(): DelegationType {
+  get proposedDelegationType(): undefined | DelegationType {
     return this.proposedDelegationTypeField;
   }
 
@@ -41,7 +41,7 @@ export class ReInviteAction implements CompanyAction {
     this.proposedDelegationTypeSpecified = true;
   }
 
-  get proposedDelegationTypeSpecified(): boolean {
+  get proposedDelegationTypeSpecified(): undefined | boolean {
     return this.proposedDelegationTypeFieldSpecified;
   }
 
@@ -49,7 +49,7 @@ export class ReInviteAction implements CompanyAction {
     this.proposedDelegationTypeFieldSpecified = value;
   }
 
-  get proposedRevenueShareMillipercent(): number {
+  get proposedRevenueShareMillipercent(): undefined | number {
     return this.proposedRevenueShareMillipercentField;
   }
 
@@ -58,7 +58,7 @@ export class ReInviteAction implements CompanyAction {
     this.proposedRevenueShareMillipercentSpecified = true;
   }
 
-  get proposedRevenueShareMillipercentSpecified(): boolean {
+  get proposedRevenueShareMillipercentSpecified(): undefined | boolean {
     return this.proposedRevenueShareMillipercentFieldSpecified;
   }
 
@@ -66,7 +66,7 @@ export class ReInviteAction implements CompanyAction {
     this.proposedRevenueShareMillipercentFieldSpecified = value;
   }
 
-  get proposedEmail(): string {
+  get proposedEmail(): undefined | string {
     return this.proposedEmailField;
   }
 
@@ -75,7 +75,11 @@ export class ReInviteAction implements CompanyAction {
   }
 
   buildAttributes(): object {
-    const attributes = {};
+    const attributes: {
+      proposedDelegationType?: DelegationType;
+      proposedRevenueShareMillipercent?: number;
+      proposedEmail?: string;
+    } = {};
 
     if (this.proposedDelegationTypeSpecified) {
       attributes["proposedDelegationType"] = this.proposedDelegationType;

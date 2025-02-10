@@ -33,6 +33,10 @@ export class AdManagerClient {
     try {
       const token = await this.credential.getToken();
 
+      if (!token) {
+        throw new Error("Token is not available");
+      }
+
       return await new GoogleSoapService<T>(serviceName, {
         networkCode: this.networkCode,
         token: token,

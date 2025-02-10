@@ -24,7 +24,7 @@ export class ReportService implements ReportServiceOperations {
 
   getReportDownloadUrlWithOptions(
     reportJobId: number,
-    reportDownloadOptions: ReportDownloadOptions,
+    reportDownloadOptions?: ReportDownloadOptions,
   ): Promise<string> {
     return this._client.getReportDownloadUrlWithOptions({
       reportJobId,

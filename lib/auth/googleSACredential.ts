@@ -7,7 +7,7 @@ import type { Credential } from "./interfaces";
 export class GoogleSACredential implements Credential {
   private json: string | JWTInput;
   private options: RefreshOptions | undefined;
-  protected auth: JSONClient;
+  protected auth?: JSONClient;
 
   /**
    *
@@ -35,8 +35,6 @@ export class GoogleSACredential implements Credential {
   }
 
   async getToken(): Promise<string | null | undefined> {
-    return await (
-      await this.auth.getAccessToken()
-    ).token;
+    return (await this.auth?.getAccessToken())?.token;
   }
 }
