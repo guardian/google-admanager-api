@@ -1,4 +1,19 @@
-import type { Date, DateTime } from "./date.type";
+import {
+  array,
+  boolean,
+  lazy,
+  number,
+  object,
+  string,
+  union,
+  type Describe,
+} from "superstruct";
+import {
+  DateStruct,
+  DateTimeStruct,
+  type Date,
+  type DateTime,
+} from "./date.type";
 
 /**
  * Captures the **`WHERE`**, **`ORDER BY`** and **`LIMIT`** clauses of a PQL query.
@@ -78,6 +93,19 @@ export type Value =
   | DateTime
   | Date
   | Value[];
+
+/**
+ * Represents a Value struct.
+ */
+export const ValueStruct = union([
+  string(),
+  number(),
+  object(),
+  boolean(),
+  DateTimeStruct,
+  DateStruct,
+  array(lazy(() => ValueStruct)),
+]) as Describe<Value>;
 
 /**
  * Captures a page of any objects.

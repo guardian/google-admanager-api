@@ -1,13 +1,16 @@
-import type { TimeUnit } from "../../../common/enums";
-import type { Value } from "../../../common/types";
-import type {
-  AccountStatus,
-  DeclarationType,
-  DelegationStatus,
-  DelegationType,
-  GoalType,
-  OnboardingTask,
-  UnitType,
+import { boolean, number, object, string, type Describe } from "superstruct";
+import { TimeUnitEnum, type TimeUnit } from "../../../common/enums";
+import { ValueStruct, type Value } from "../../../common/types";
+import {
+  GoalTypeEnum,
+  UnitTypeEnum,
+  type AccountStatus,
+  type DeclarationType,
+  type DelegationStatus,
+  type DelegationType,
+  type GoalType,
+  type OnboardingTask,
+  type UnitType,
 } from "../enums";
 
 /**
@@ -47,6 +50,14 @@ export type Money = {
 };
 
 /**
+ * Represents a Money struct.
+ */
+export const MoneyStruct: Describe<Money> = object({
+  currencyCode: string(),
+  microAmount: number(),
+});
+
+/**
  * Represents the dimensions of an {@link https://developers.google.com/ad-manager/api/reference/v202405/InventoryService.AdUnit AdUnit},
  * {@link https://developers.google.com/ad-manager/api/reference/v202405/ForecastService.LineItem LineItem} or
  * {@link https://developers.google.com/ad-manager/api/reference/v202405/CreativeService.Creative Creative}.
@@ -68,6 +79,15 @@ export type Size = {
    */
   isAspectRatio: boolean;
 };
+
+/**
+ * Represents a Size struct.
+ */
+export const SizeStruct: Describe<Size> = object({
+  width: number(),
+  height: number(),
+  isAspectRatio: boolean(),
+});
 
 /**
  * The value of a {@link https://developers.google.com/ad-manager/api/reference/v202405/CustomFieldService.CustomField CustomField} for a particular entity.
@@ -135,6 +155,15 @@ export type FrequencyCap = {
 };
 
 /**
+ * Represents a FrequencyCap struct.
+ */
+export const FrequencyCapStruct: Describe<FrequencyCap> = object({
+  maxImpressions: number(),
+  numTimeUnits: number(),
+  timeUnit: TimeUnitEnum,
+});
+
+/**
  * Defines the criteria a {@link https://developers.google.com/ad-manager/api/reference/v202405/LineItemService.LineItem LineItem} needs to satisfy to meet its delivery goal.
  */
 export type Goal = {
@@ -153,3 +182,22 @@ export type Goal = {
    */
   units: number;
 };
+
+/**
+ * Represents a Goal struct.
+ */
+export const GoalStruct: Describe<Goal> = object({
+  goalType: GoalTypeEnum,
+  unitType: UnitTypeEnum,
+  units: number(),
+});
+
+/**
+ * Represents a BaseCustomFieldValue struct.
+ */
+export const BaseCustomFieldValueStruct: Describe<BaseCustomFieldValue> =
+  object({
+    customFieldId: number(),
+    value: ValueStruct,
+    customFieldOptionId: number(),
+  });
