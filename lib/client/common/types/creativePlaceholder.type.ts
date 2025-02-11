@@ -1,10 +1,5 @@
 import { CreativeSizeTypeEnum, type CreativeSizeType } from "../enums";
-import {
-  AppliedLabelStruct,
-  SizeStruct,
-  type AppliedLabel,
-  type Size,
-} from ".";
+import { SizeStruct, type Size } from "./general.type";
 import {
   array,
   boolean,
@@ -15,6 +10,7 @@ import {
   string,
   type Describe,
 } from "superstruct";
+import { AppliedLabel, AppliedLabelStruct } from "./label.type";
 
 /**
  * A CreativePlaceholder describes a slot that a creative is expected to fill.
@@ -32,7 +28,7 @@ export type CreativePlaceholder = {
    *
    * This value is only required if creativeSizeType is CreativeSizeType.NATIVE.
    */
-  creativeTemplateId: number;
+  creativeTemplateId?: number;
   /**
    * The companions that the creative is expected to have. This attribute can only be set if the line item it belongs to has a LineItem.environmentType of EnvironmentType.VIDEO_PLAYER or LineItem.roadblockingType of RoadblockingType.CREATIVE_SET.
    */
@@ -58,13 +54,13 @@ export type CreativePlaceholder = {
    *
    * This attribute is optional. Specifying creative targeting here is for forecasting purposes only and has no effect on serving. The same creative targeting should be specified on a LineItemCreativeAssociation when associating a Creative with the LineItem.
    */
-  targetingName: string;
+  targetingName?: string;
   /**
    * Indicate if the expected creative of this placeholder has an AMP only variant.
    *
    * This attribute is optional. It is for forecasting purposes only and has no effect on serving.
    */
-  isAmpOnly: boolean;
+  isAmpOnly?: boolean;
 };
 
 /**
@@ -72,12 +68,17 @@ export type CreativePlaceholder = {
  */
 export const CreativePlaceholderStruct: Describe<CreativePlaceholder> = object({
   size: SizeStruct,
-  creativeTemplateId: number(),
+  // size: object({
+  //   width: number(),
+  //   height: number(),
+  //   isAspectRatio: boolean(),
+  // }),
+  creativeTemplateId: optional(number()),
   companions: optional(lazy(() => array(CreativePlaceholderStruct))),
   appliedLabels: optional(array(AppliedLabelStruct)),
   effectiveAppliedLabels: optional(array(AppliedLabelStruct)),
   expectedCreativeCount: number(),
   creativeSizeType: CreativeSizeTypeEnum,
-  targetingName: string(),
-  isAmpOnly: boolean(),
+  targetingName: optional(string()),
+  isAmpOnly: optional(boolean()),
 });

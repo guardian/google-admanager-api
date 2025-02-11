@@ -158,7 +158,7 @@ export type LineItemSummary = {
   /**
    * An identifier for the LineItem that is meaningful to the publisher. This attribute is optional and has a maximum length of 255 characters.
    */
-  externalId: string;
+  externalId?: string;
 
   /**
    * The name of the Order. This value is read-only.
@@ -207,7 +207,7 @@ export type LineItemSummary = {
   /**
    * The curve that is used to pace the line item's delivery. This field is required if and only if the delivery forecast source is DeliveryForecastSource.CUSTOM_PACING_CURVE.
    */
-  customPacingCurve: CustomPacingCurve;
+  customPacingCurve?: CustomPacingCurve;
 
   /**
    * The strategy for serving roadblocked creatives, i.e. instances where multiple creatives must be served together on a single web page. This attribute is optional and defaults to RoadblockingType.ONE_OR_MORE.
@@ -221,7 +221,7 @@ export type LineItemSummary = {
   /**
    * The set of frequency capping units for this LineItem. This attribute is optional.
    */
-  frequencyCaps: FrequencyCap[];
+  frequencyCaps?: FrequencyCap[];
 
   /**
    * Indicates the line item type of a LineItem. This attribute is required. The line item type determines the default priority of the line item. More information can be found on the Ad Manager Help Center.
@@ -269,7 +269,7 @@ export type LineItemSummary = {
   /**
    * This attribute is required and meaningful only if the LineItem.costType is CostType.CPA.
    */
-  activityAssociations: LineItemActivityAssociation[];
+  activityAssociations?: LineItemActivityAssociation[];
   /**
    * The environment that the LineItem is targeting. The default value is EnvironmentType.BROWSER. If this value is EnvironmentType.VIDEO_PLAYER, then this line item can only target AdUnits that have AdUnitSizes whose environmentType is also VIDEO_PLAYER.
    */
@@ -277,7 +277,7 @@ export type LineItemSummary = {
   /**
    * The set of allowedFormats that this programmatic line item can have. If the set is empty, this line item allows all formats.
    */
-  allowedFormats: AllowedFormats[];
+  allowedFormats?: AllowedFormats[];
 
   /**
    * The delivery option for companions. Setting this field is only meaningful if the following conditions are met:
@@ -331,7 +331,7 @@ export type LineItemSummary = {
    * - The line item has an unlimited goal or cap.
    * - The line item has a percentage based goal or cap.
    */
-  deliveryIndicator: DeliveryIndicator;
+  deliveryIndicator?: DeliveryIndicator;
 
   /**
    * Delivery data provides the number of clicks or impressions delivered for a LineItem in the last 7 days. This attribute is readonly and is populated by Google. This will be null if the delivery data cannot be computed due to one of the following reasons:
@@ -393,7 +393,7 @@ export type LineItemSummary = {
   /**
    * Provides any additional notes that may annotate the LineItem. This attribute is optional and has a maximum length of 65,535 characters.
    */
-  notes: string;
+  notes?: string;
 
   /**
    * The CompetitiveConstraintScope for the competitive exclusion labels assigned to this line item.
@@ -414,7 +414,7 @@ export type LineItemSummary = {
   /**
    * The values of the custom fields associated with this line item.
    */
-  customFieldValues: BaseCustomFieldValue[];
+  customFieldValues?: BaseCustomFieldValue[];
 
   /**
    * Indicates if a LineItem is missing any creatives for the creativePlaceholders specified.
@@ -428,11 +428,16 @@ export type LineItemSummary = {
   isMissingCreatives: boolean;
 
   /**
+   * Designates this line item as intended for YT Kids app. If true, all creatives associated with this line item must be reviewed and approved. See the Ad Manager Help Center for more information.
+   */
+  youtubeKidsRestricted?: boolean;
+
+  /**
    * Indicates the ProgrammaticCreativeSource of the programmatic line item. This is a read-only field. Any changes must be made on the ProposalLineItem.
    */
-  programmaticCreativeSource: ProgrammaticCreativeSource;
+  programmaticCreativeSource?: ProgrammaticCreativeSource;
 
-  thirdPartyMeasurementSettings: ThirdPartyMeasurementSettings;
+  thirdPartyMeasurementSettings?: ThirdPartyMeasurementSettings;
   /**
    * The max duration of a video creative associated with this LineItem in milliseconds.
    *
@@ -451,32 +456,32 @@ export type LineItemSummary = {
    * It is required and meaningful only if the LineItem.costType is CostType.CPA or if the LineItem.lineItemType is
    * LineItemType.SPONSORSHIP and LineItem.costType is CostType.CPM.
    */
-  secondaryGoals: Goal[];
+  secondaryGoals?: Goal[];
 
   /**
    * Contains the information for a line item which has a target GRP demographic.
    */
-  grpSettings: GrpSettings;
+  grpSettings?: GrpSettings;
 
   /**
    * The deal information associated with this line item, if it is programmatic.
    */
-  dealInfo: LineItemDealInfoDto;
+  dealInfo?: LineItemDealInfoDto;
 
   /**
    * Optional IDs of the Company that provide ad verification for this line item. Company.Type.VIEWABILITY_PROVIDER.
    */
-  viewabilityProviderCompanyIds: number[];
+  viewabilityProviderCompanyIds?: number[];
 
   /**
    * Child content eligibility designation for this line item.
    *
    * This field is optional and defaults to ChildContentEligibility.DISALLOWED.
    */
-  childContentEligibility: ChildContentEligibility;
+  childContentEligibility?: ChildContentEligibility;
 
   /**
    * Custom XML to be rendered in a custom VAST response at serving time.
    */
-  customVastExtension: string;
+  customVastExtension?: string;
 };

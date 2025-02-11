@@ -95,10 +95,10 @@ export type GeoTargeting = {
 /**
  * Represents a GeoTargeting struct.
  */
-export const GeoTargetingStruct = object({
+export const GeoTargetingStruct: Describe<GeoTargeting> = object({
   targetedLocations: optional(array(LocationStruct)),
   excludedLocations: optional(array(LocationStruct)),
-}) as Describe<GeoTargeting>;
+});
 
 /**
  * Represents targeted or excluded ad units.
@@ -130,26 +130,26 @@ export type InventoryTargeting = {
   /**
    * A list of targeted {@link https://developers.google.com/ad-manager/api/reference/v202405/AdjustmentService.AdUnitTargeting AdUnitTargeting}.
    */
-  targetedAdUnits: AdUnitTargeting[];
+  targetedAdUnits?: AdUnitTargeting[];
 
   /**
    * A list of excluded {@link https://developers.google.com/ad-manager/api/reference/v202405/AdjustmentService.AdUnitTargeting AdUnitTargeting}.
    */
-  excludedAdUnits: AdUnitTargeting[];
+  excludedAdUnits?: AdUnitTargeting[];
 
   /**
    * A list of targeted {@link https://developers.google.com/ad-manager/api/reference/v202405/PlacementService.Placement Placement} ids.
    */
-  targetedPlacementIds: number[];
+  targetedPlacementIds?: number[];
 };
 
 /**
  * Represents an InventoryTargeting struct.
  */
 export const InventoryTargetingStruct: Describe<InventoryTargeting> = object({
-  targetedAdUnits: array(AdUnitTargetingStruct),
-  excludedAdUnits: array(AdUnitTargetingStruct),
-  targetedPlacementIds: array(number()),
+  targetedAdUnits: optional(array(AdUnitTargetingStruct)),
+  excludedAdUnits: optional(array(AdUnitTargetingStruct)),
+  targetedPlacementIds: optional(array(number())),
 });
 
 /**
@@ -347,10 +347,11 @@ export type DeviceCategoryTargeting = {
 /**
  * Represents a DeviceCategoryTargeting struct.
  */
-export const DeviceCategoryTargetingStruct = object({
-  targetedDeviceCategories: optional(array(TechnologyStruct)),
-  excludedDeviceCategories: optional(array(TechnologyStruct)),
-}) as Describe<DeviceCategoryTargeting>;
+export const DeviceCategoryTargetingStruct: Describe<DeviceCategoryTargeting> =
+  object({
+    targetedDeviceCategories: optional(array(TechnologyStruct)),
+    excludedDeviceCategories: optional(array(TechnologyStruct)),
+  });
 
 /**
  * Represents device manufacturer that are being targeted or excluded by the LineItem.
@@ -559,7 +560,7 @@ export type TechnologyTargeting = {
 /**
  * Represents a TechnologyTargeting struct.
  */
-export const TechnologyTargetingStruct = object({
+export const TechnologyTargetingStruct: Describe<TechnologyTargeting> = object({
   bandwidthGroupTargeting: BandwidthGroupTargetingStruct,
   browserTargeting: BrowserTargetingStruct,
   browserLanguageTargeting: BrowserLanguageTargetingStruct,
@@ -571,7 +572,7 @@ export const TechnologyTargetingStruct = object({
   mobileDeviceSubmodelTargeting: MobileDeviceSubmodelTargetingStruct,
   operatingSystemTargeting: OperatingSystemTargetingStruct,
   operatingSystemVersionTargeting: OperatingSystemVersionTargetingStruct,
-}) as Describe<TechnologyTargeting>;
+});
 
 /**
  * The date time ranges that the line item is eligible to serve.
@@ -757,12 +758,12 @@ export type Targeting = {
   /**
    * Specifies the days of the week and times that are targeted by the LineItem. This attribute is optional.
    */
-  dayPartTargeting: DayPartTargeting;
+  dayPartTargeting?: DayPartTargeting;
 
   /**
    * Specifies the dates and time ranges that are targeted by the LineItem. This attribute is optional.
    */
-  dateTimeRangeTargeting: DateTimeRangeTargeting;
+  dateTimeRangeTargeting?: DateTimeRangeTargeting;
 
   /**
    * Specifies the browsing technologies that are targeted by the LineItem. This attribute is optional.
@@ -787,33 +788,33 @@ export type Targeting = {
   /**
    * Specifies the domains or subdomains that are targeted or excluded by the LineItem. Users visiting from an IP address associated with those domains will be targeted or excluded. This attribute is optional.
    */
-  userDomainTargeting: UserDomainTargeting;
+  userDomainTargeting?: UserDomainTargeting;
 
   /**
    * Specifies the video categories and individual videos targeted by the LineItem.
    */
-  contentTargeting: ContentTargeting;
+  contentTargeting?: ContentTargeting;
 
   /**
    * Specifies targeting against video position types.
    */
-  videoPositionTargeting: VideoPositionTargeting;
+  videoPositionTargeting?: VideoPositionTargeting;
 
   /**
    * Specifies targeting against mobile applications.
    */
-  mobileApplicationTargeting: MobileApplicationTargeting;
+  mobileApplicationTargeting?: MobileApplicationTargeting;
 
   /**
    * Specifies whether buyer user lists are targeted on a programmatic LineItem or ProposalLineItem. This attribute is readonly and is populated by Google.
    */
-  buyerUserListTargeting: BuyerUserListTargeting;
+  buyerUserListTargeting?: BuyerUserListTargeting;
 
   /**
    * Specifies the URLs that are targeted by the entity.
    * This is currently only supported by {@link https://developers.google.com/ad-manager/api/reference/v202405/YieldGroupService.YieldGroup YieldGroup}.
    */
-  inventoryUrlTargeting: InventoryUrlTargeting;
+  inventoryUrlTargeting?: InventoryUrlTargeting;
 
   /**
    * Specifies the request platforms that are targeted by the LineItem. This attribute is required for video line items.
@@ -822,27 +823,27 @@ export type Targeting = {
    *
    * This value is read-only for video line items generated from proposal line items.
    */
-  requestPlatformTargeting: RequestPlatformTargeting;
+  requestPlatformTargeting?: RequestPlatformTargeting;
 };
 
 /**
  * Represents a Targeting struct.
  */
-export const TargetingStruct = object({
+export const TargetingStruct: Describe<Targeting> = object({
   geoTargeting: optional(GeoTargetingStruct),
   inventoryTargeting: InventoryTargetingStruct,
-  dayPartTargeting: DayPartTargetingStruct,
-  dateTimeRangeTargeting: DateTimeRangeTargetingStruct,
+  dayPartTargeting: optional(DayPartTargetingStruct),
+  dateTimeRangeTargeting: optional(DateTimeRangeTargetingStruct),
   technologyTargeting: optional(TechnologyTargetingStruct),
-  customTargeting: CustomCriteriaSetStruct,
-  userDomainTargeting: UserDomainTargetingStruct,
-  contentTargeting: ContentTargetingStruct,
-  videoPositionTargeting: VideoPositionTargetingStruct,
-  mobileApplicationTargeting: MobileApplicationTargetingStruct,
-  buyerUserListTargeting: BuyerUserListTargetingStruct,
-  inventoryUrlTargeting: InventoryUrlTargetingStruct,
-  requestPlatformTargeting: RequestPlatformTargetingStruct,
-}) as Describe<Targeting>;
+  customTargeting: optional(CustomCriteriaSetStruct),
+  userDomainTargeting: optional(UserDomainTargetingStruct),
+  contentTargeting: optional(ContentTargetingStruct),
+  videoPositionTargeting: optional(VideoPositionTargetingStruct),
+  mobileApplicationTargeting: optional(MobileApplicationTargetingStruct),
+  buyerUserListTargeting: optional(BuyerUserListTargetingStruct),
+  inventoryUrlTargeting: optional(InventoryUrlTargetingStruct),
+  requestPlatformTargeting: optional(RequestPlatformTargetingStruct),
+});
 
 /**
  * Represents the creative targeting criteria for a LineItem.
