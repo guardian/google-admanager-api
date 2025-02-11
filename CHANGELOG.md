@@ -1,5 +1,11 @@
 # @guardian/google-admanager-api
 
+## 2.4.1
+
+### Patch Changes
+
+- a39e56a: Enable stricter ts options
+
 ## 2.4.0
 
 ### Minor Changes
