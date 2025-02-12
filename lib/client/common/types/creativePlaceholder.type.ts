@@ -44,7 +44,7 @@ export type CreativePlaceholder = {
   /**
    * Expected number of creatives that will be uploaded corresponding to this creative placeholder. This estimate is used to improve the accuracy of forecasting; for example, if label frequency capping limits the number of times a creative may be served.
    */
-  expectedCreativeCount: number;
+  expectedCreativeCount?: number;
   /**
    * Describes the types of sizes a creative can be. By default, the creative's size is CreativeSizeType.PIXEL, which is a dimension based size (width-height pair).
    */
@@ -77,7 +77,7 @@ export const CreativePlaceholderStruct: Describe<CreativePlaceholder> = object({
   companions: optional(lazy(() => array(CreativePlaceholderStruct))),
   appliedLabels: optional(array(AppliedLabelStruct)),
   effectiveAppliedLabels: optional(array(AppliedLabelStruct)),
-  expectedCreativeCount: number(),
+  expectedCreativeCount: optional(number()),
   creativeSizeType: CreativeSizeTypeEnum,
   targetingName: optional(string()),
   isAmpOnly: optional(boolean()),

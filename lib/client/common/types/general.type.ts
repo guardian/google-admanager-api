@@ -1,4 +1,11 @@
-import { boolean, number, object, string, type Describe } from "superstruct";
+import {
+  boolean,
+  number,
+  object,
+  optional,
+  string,
+  type Describe,
+} from "superstruct";
 import { TimeUnitEnum, type TimeUnit } from "../../../common/enums";
 import { ValueStruct, type Value } from "../../../common/types";
 import {
@@ -118,7 +125,7 @@ type CustomFieldValue = {
    * | {@link https://developers.google.com/ad-manager/api/reference/v202405/CustomFieldService.CustomFieldDataType#TOGGLE TOGGLE}       | 	{@link https://developers.google.com/ad-manager/api/reference/v202405/OrderService.BooleanValue BooleanValue}  |
    *
    */
-  value: Value;
+  value?: Value;
 };
 
 /**
@@ -132,7 +139,7 @@ type DropDownCustomFieldValue = {
    * The {@link https://developers.google.com/ad-manager/api/reference/v202405/CustomFieldService.CustomFieldOption#id ID}
    * of the {@link https://developers.google.com/ad-manager/api/reference/v202405/CustomFieldService.CustomFieldOption CustomFieldOption} for this value.
    */
-  customFieldOptionId: number;
+  customFieldOptionId?: number;
 };
 
 /**
@@ -198,6 +205,6 @@ export const GoalStruct: Describe<Goal> = object({
 export const BaseCustomFieldValueStruct: Describe<BaseCustomFieldValue> =
   object({
     customFieldId: number(),
-    value: ValueStruct,
-    customFieldOptionId: number(),
+    value: optional(ValueStruct),
+    customFieldOptionId: optional(number()),
   });

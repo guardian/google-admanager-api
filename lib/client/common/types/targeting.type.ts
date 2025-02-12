@@ -46,7 +46,7 @@ type Location = {
   /**
    * The nearest location parent's ID for this geographical entity.
    */
-  canonicalParentId: number;
+  canonicalParentId?: number;
   /**
    * The localized name of the geographical entity.
    */
@@ -59,7 +59,7 @@ type Location = {
 export const LocationStruct: Describe<Location> = object({
   id: number(),
   type: string(),
-  canonicalParentId: number(),
+  canonicalParentId: optional(number()),
   displayName: string(),
 });
 
