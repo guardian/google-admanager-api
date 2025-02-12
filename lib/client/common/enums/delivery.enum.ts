@@ -1,3 +1,5 @@
+import { enums, type Describe } from "superstruct";
+
 /**
  * Represents the time zone to be used for DayPartTargeting.
  */
@@ -12,6 +14,14 @@ export enum DeliveryTimeZone {
    */
   BROWSER = "BROWSER",
 }
+
+/**
+ * Represents a DeliveryTimeZone enum in superstruct format.
+ */
+export const DeliveryTimeZoneEnum = enums([
+  "PUBLISHER",
+  "BROWSER",
+]) as Describe<DeliveryTimeZone>;
 
 /**
  * Represents the platform which requests and renders the ad.
@@ -39,6 +49,16 @@ export enum RequestPlatform {
 }
 
 /**
+ * Represents a RequestPlatform enum in superstruct format.
+ */
+export const RequestPlatformEnum = enums([
+  "UNKNOWN",
+  "BROWSER",
+  "MOBILE_APP",
+  "VIDEO_PLAYER",
+]) as Describe<RequestPlatform>;
+
+/**
  * Possible delivery rates for a LineItem, which dictate the manner in which they are served.
  */
 export enum DeliveryRateType {
@@ -57,6 +77,15 @@ export enum DeliveryRateType {
    */
   AS_FAST_AS_POSSIBLE = "AS_FAST_AS_POSSIBLE",
 }
+
+/**
+ * Represents a DeliveryRateType enum in superstruct format.
+ */
+export const DeliveryRateTypeEnum = enums([
+  "EVENLY",
+  "FRONTLOADED",
+  "AS_FAST_AS_POSSIBLE",
+]) as Describe<DeliveryRateType>;
 
 /**
  * Strategies for choosing forecasted traffic shapes to pace line items.
@@ -84,6 +113,16 @@ export enum DeliveryForecastSource {
 }
 
 /**
+ * Represents a DeliveryForecastSource enum in superstruct format.
+ */
+export const DeliveryForecastSourceEnum = enums([
+  "HISTORICAL",
+  "FORECASTING",
+  "CUSTOM_PACING_CURVE",
+  "UNKNOWN",
+]) as Describe<DeliveryForecastSource>;
+
+/**
  * The delivery option for companions.
  * Used for line items whose environmentType is {@link https://developers.google.com/ad-manager/api/reference/v202405/ProposalLineItemService.EnvironmentType#VIDEO_PLAYER EnvironmentType.VIDEO_PLAYER}.
  */
@@ -105,3 +144,13 @@ export enum CompanionDeliveryOption {
    */
   UNKNOWN = "UNKNOWN",
 }
+
+/**
+ * Represents a CompanionDeliveryOption enum in superstruct format.
+ */
+export const CompanionDeliveryOptionEnum = enums([
+  "OPTIONAL",
+  "AT_LEAST_ONE",
+  "ALL",
+  "UNKNOWN",
+]) as Describe<CompanionDeliveryOption>;

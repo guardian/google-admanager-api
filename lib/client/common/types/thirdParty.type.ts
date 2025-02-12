@@ -1,7 +1,11 @@
-import type {
-  ThirdPartyBrandLiftIntegrationPartner,
-  ThirdPartyReachIntegrationPartner,
-  ThirdPartyViewabilityIntegrationPartner,
+import { object, string, type Describe } from "superstruct";
+import {
+  ThirdPartyBrandLiftIntegrationPartnerEnum,
+  ThirdPartyReachIntegrationPartnerEnum,
+  ThirdPartyViewabilityIntegrationPartnerEnum,
+  type ThirdPartyBrandLiftIntegrationPartner,
+  type ThirdPartyReachIntegrationPartner,
+  type ThirdPartyViewabilityIntegrationPartner,
 } from "../enums";
 
 /**
@@ -69,3 +73,25 @@ export type ThirdPartyMeasurementSettings = {
    */
   publisherReachReportingId: string;
 };
+
+/**
+ * Represents a ThirdPartyMeasurementSettings struct.
+ */
+export const ThirdPartyMeasurementSettingsStruct: Describe<ThirdPartyMeasurementSettings> =
+  object({
+    viewabilityPartner: ThirdPartyViewabilityIntegrationPartnerEnum,
+    viewabilityClientId: string(),
+    viewabilityReportingId: string(),
+    publisherViewabilityPartner: ThirdPartyViewabilityIntegrationPartnerEnum,
+    publisherViewabilityClientId: string(),
+    publisherViewabilityReportingId: string(),
+    brandLiftPartner: ThirdPartyBrandLiftIntegrationPartnerEnum,
+    brandLiftClientId: string(),
+    brandLiftReportingId: string(),
+    reachPartner: ThirdPartyReachIntegrationPartnerEnum,
+    reachClientId: string(),
+    reachReportingId: string(),
+    publisherReachPartner: ThirdPartyReachIntegrationPartnerEnum,
+    publisherReachClientId: string(),
+    publisherReachReportingId: string(),
+  });
