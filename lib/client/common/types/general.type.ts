@@ -1,13 +1,24 @@
-import type { TimeUnit } from "../../../common/enums";
-import type { Value } from "../../../common/types";
-import type {
-  AccountStatus,
-  DeclarationType,
-  DelegationStatus,
-  DelegationType,
-  GoalType,
-  OnboardingTask,
-  UnitType,
+import {
+  boolean,
+  literal,
+  number,
+  object,
+  string,
+  union,
+  type Describe,
+} from "superstruct";
+import { TimeUnitEnum, type TimeUnit } from "../../../common/enums";
+import { ValueStruct, type Value } from "../../../common/types";
+import {
+  GoalTypeEnum,
+  UnitTypeEnum,
+  type AccountStatus,
+  type DeclarationType,
+  type DelegationStatus,
+  type DelegationType,
+  type GoalType,
+  type OnboardingTask,
+  type UnitType,
 } from "../enums";
 
 /**
@@ -47,6 +58,14 @@ export type Money = {
 };
 
 /**
+ * Represents a Money struct.
+ */
+export const MoneyStruct: Describe<Money> = object({
+  currencyCode: string(),
+  microAmount: number(),
+});
+
+/**
  * Represents the dimensions of an {@link https://developers.google.com/ad-manager/api/reference/v202405/InventoryService.AdUnit AdUnit},
  * {@link https://developers.google.com/ad-manager/api/reference/v202405/ForecastService.LineItem LineItem} or
  * {@link https://developers.google.com/ad-manager/api/reference/v202405/CreativeService.Creative Creative}.
@@ -70,15 +89,18 @@ export type Size = {
 };
 
 /**
+ * Represents a Size struct.
+ */
+export const SizeStruct: Describe<Size> = object({
+  width: number(),
+  height: number(),
+  isAspectRatio: boolean(),
+});
+
+/**
  * The value of a {@link https://developers.google.com/ad-manager/api/reference/v202405/CustomFieldService.CustomField CustomField} for a particular entity.
  */
-export type BaseCustomFieldValue = {
-  /**
-   * Id of the **CustomField** to which this value belongs. This attribute is required.
-   */
-  customFieldId: number;
-} & CustomFieldValue &
-  DropDownCustomFieldValue;
+export type BaseCustomFieldValue = CustomFieldValue | DropDownCustomFieldValue;
 
 /**
  * The value of a {@link https://developers.google.com/ad-manager/api/reference/v202405/CustomFieldService.CustomField CustomField}
@@ -86,6 +108,14 @@ export type BaseCustomFieldValue = {
  * of {@link https://developers.google.com/ad-manager/api/reference/v202405/CustomFieldService.CustomFieldDataType#DROP_DOWN CustomFieldDataType.DROP_DOWN}.
  */
 type CustomFieldValue = {
+  /**
+   * Id of the **CustomField** to which this value belongs. This attribute is required.
+   */
+  customFieldId: number;
+
+  attributes: {
+    "xsi:type": "CustomFieldValue";
+  };
   /**
    * The value for this field. The appropriate type of **Value** is determined by the
    * {@link https://developers.google.com/ad-manager/api/reference/v202405/CustomFieldService.CustomField#dataType CustomField.dataType}
@@ -102,6 +132,15 @@ type CustomFieldValue = {
 };
 
 /**
+ * Represents a CustomFieldValue struct.
+ */
+export const CustomFieldValueStruct: Describe<CustomFieldValue> = object({
+  customFieldId: number(),
+  attributes: object({ "xsi:type": literal("CustomFieldValue") }),
+  value: ValueStruct,
+});
+
+/**
  * A {@link https://developers.google.com/ad-manager/api/reference/v202405/OrderService.CustomFieldValue CustomFieldValue} for a
  * {@link https://developers.google.com/ad-manager/api/reference/v202405/CustomFieldService.CustomField CustomField} that has a
  * {@link https://developers.google.com/ad-manager/api/reference/v202405/CustomFieldService.CustomField#dataType CustomField.dataType} of
@@ -109,11 +148,29 @@ type CustomFieldValue = {
  */
 type DropDownCustomFieldValue = {
   /**
+   * Id of the **CustomField** to which this value belongs. This attribute is required.
+   */
+  customFieldId: number;
+
+  attributes: {
+    "xsi:type": "DropDownCustomFieldValue";
+  };
+  /**
    * The {@link https://developers.google.com/ad-manager/api/reference/v202405/CustomFieldService.CustomFieldOption#id ID}
    * of the {@link https://developers.google.com/ad-manager/api/reference/v202405/CustomFieldService.CustomFieldOption CustomFieldOption} for this value.
    */
   customFieldOptionId: number;
 };
+
+/**
+ * Represents a DropDownCustomFieldValue struct.
+ */
+export const DropDownCustomFieldValueStruct: Describe<DropDownCustomFieldValue> =
+  object({
+    customFieldId: number(),
+    attributes: object({ "xsi:type": literal("DropDownCustomFieldValue") }),
+    customFieldOptionId: number(),
+  });
 
 /**
  * Represents a limit on the number of times a single viewer can be exposed to the same
@@ -135,6 +192,15 @@ export type FrequencyCap = {
 };
 
 /**
+ * Represents a FrequencyCap struct.
+ */
+export const FrequencyCapStruct: Describe<FrequencyCap> = object({
+  maxImpressions: number(),
+  numTimeUnits: number(),
+  timeUnit: TimeUnitEnum,
+});
+
+/**
  * Defines the criteria a {@link https://developers.google.com/ad-manager/api/reference/v202405/LineItemService.LineItem LineItem} needs to satisfy to meet its delivery goal.
  */
 export type Goal = {
@@ -153,3 +219,18 @@ export type Goal = {
    */
   units: number;
 };
+
+/**
+ * Represents a Goal struct.
+ */
+export const GoalStruct: Describe<Goal> = object({
+  goalType: GoalTypeEnum,
+  unitType: UnitTypeEnum,
+  units: number(),
+});
+
+//Superstruct weirdness means we can't use the Describe utility in here.
+export const BaseCustomFieldValueStruct = union([
+  CustomFieldValueStruct,
+  DropDownCustomFieldValueStruct,
+]);

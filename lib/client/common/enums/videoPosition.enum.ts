@@ -1,3 +1,5 @@
+import { enums, type Describe } from "superstruct";
+
 /**
  * Represents a targetable position within a video.
  */
@@ -29,6 +31,17 @@ export enum VideoPositionType {
 }
 
 /**
+ * Represents a VideoPositionType enum in superstruct format.
+ */
+export const VideoPositionTypeEnum = enums([
+  "UNKNOWN",
+  "ALL",
+  "PREROLL",
+  "MIDROLL",
+  "POSTROLL",
+]) as Describe<VideoPositionType>;
+
+/**
  * Represents the options for targetable bumper positions, surrounding an ad pod, within a video stream. This includes before and after the supported ad pod positions, VideoPositionType.PREROLL, VideoPositionType.MIDROLL, and VideoPositionType.POSTROLL.
  */
 export enum VideoBumperType {
@@ -42,3 +55,11 @@ export enum VideoBumperType {
    */
   AFTER = "AFTER",
 }
+
+/**
+ * Represents a VideoBumperType enum in superstruct format.
+ */
+export const VideoBumperTypeEnum = enums([
+  "BEFORE",
+  "AFTER",
+]) as Describe<VideoBumperType>;
