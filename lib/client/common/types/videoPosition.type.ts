@@ -1,4 +1,10 @@
-import type { VideoBumperType, VideoPositionType } from "../enums";
+import { array, number, object, type Describe } from "superstruct";
+import {
+  VideoBumperTypeEnum,
+  VideoPositionTypeEnum,
+  type VideoBumperType,
+  type VideoPositionType,
+} from "../enums";
 
 /**
  *
@@ -14,6 +20,14 @@ export type VideoPosition = {
    */
   midrollIndex: number;
 };
+
+/**
+ * Represents a VideoPosition struct.
+ */
+export const VideoPositionStruct: Describe<VideoPosition> = object({
+  positionType: VideoPositionTypeEnum,
+  midrollIndex: number(),
+});
 
 /**
  * Represents a targetable position within a pod within a video stream. A video ad can be targeted to any position in the pod (first, second, third ... last). If there is only 1 ad in a pod, either first or last will target that position.
@@ -37,6 +51,9 @@ export type VideoPositionWithinPod = {
    */
   index: number;
 };
+
+export const VideoPositionWithinPodStruct: Describe<VideoPositionWithinPod> =
+  object({ index: number() });
 
 /**
  * Represents the options for targetable positions within a video.
@@ -64,6 +81,16 @@ export type VideoPositionTarget = {
 };
 
 /**
+ * Represents a VideoPositionTarget struct.
+ */
+export const VideoPositionTargetStruct: Describe<VideoPositionTarget> = object({
+  videoPosition: VideoPositionStruct,
+  videoBumperType: VideoBumperTypeEnum,
+  videoPositionWithinPod: VideoPositionWithinPodStruct,
+  adSpotId: array(number()),
+});
+
+/**
  * Represents positions within and around a video where ads can be targeted to.
  *
  * Example positions could be pre-roll (before the video plays), post-roll (after a video has completed playback) and mid-roll (during video playback).
@@ -76,3 +103,11 @@ export type VideoPositionTargeting = {
    */
   targetedPositions: VideoPositionTarget[];
 };
+
+/**
+ * Represents a VideoPositionTargeting struct.
+ */
+export const VideoPositionTargetingStruct: Describe<VideoPositionTargeting> =
+  object({
+    targetedPositions: array(VideoPositionTargetStruct),
+  });

@@ -1,3 +1,5 @@
+import { enums, type Describe } from "superstruct";
+
 /**
  * The declaration about third party data usage on the associated entity.
  */
@@ -109,6 +111,14 @@ export enum EnvironmentType {
 }
 
 /**
+ * Represents an EnvironmentType enum in superstruct format.
+ */
+export const EnvironmentTypeEnum = enums([
+  "BROWSER",
+  "VIDEO_PLAYER",
+]) as Describe<EnvironmentType>;
+
+/**
  * Describes the roadblocking types.
  */
 export enum RoadblockingType {
@@ -135,6 +145,17 @@ export enum RoadblockingType {
 }
 
 /**
+ * Represents a RoadblockingType enum in superstruct format.
+ */
+export const RoadblockingTypeEnum = enums([
+  "ONLY_ONE",
+  "ONE_OR_MORE",
+  "AS_MANY_AS_POSSIBLE",
+  "ALL_ROADBLOCK",
+  "CREATIVE_SET",
+]) as Describe<RoadblockingType>;
+
+/**
  * The different types of skippable ads.
  */
 export enum SkippableAdType {
@@ -159,6 +180,17 @@ export enum SkippableAdType {
    */
   ANY = "ANY",
 }
+
+/**
+ * Represents a SkippableAdType enum in superstruct format.
+ */
+export const SkippableAdTypeEnum = enums([
+  "UNKNOWN",
+  "DISABLED",
+  "ENABLED",
+  "INSTREAM_SELECT",
+  "ANY",
+]) as Describe<SkippableAdType>;
 
 /**
  * LineItemType indicates the priority of a LineItem, determined by the way in which impressions are reserved to be served for it.
@@ -236,6 +268,26 @@ export enum LineItemType {
 }
 
 /**
+ * Represents a LineItemType enum in superstruct format.
+ */
+export const LineItemTypeEnum = enums([
+  "STANDARD",
+  "SPONSORSHIP",
+  "NETWORK",
+  "BULK",
+  "PRICE_PRIORITY",
+  "HOUSE",
+  "LEGACY_DFP",
+  "CLICK_TRACKING",
+  "ADSENSE",
+  "AD_EXCHANGE",
+  "BUMPER",
+  "ADMOB",
+  "PREFERRED_DEAL",
+  "UNKNOWN",
+]) as Describe<LineItemType>;
+
+/**
  * The formats that a publisher allows on their programmatic
  * {@link https://developers.google.com/ad-manager/api/reference/v202405/LineItemService.LineItem LineItem} or
  * {@link https://developers.google.com/ad-manager/api/reference/v202405/ForecastService.ProposalLineItem ProposalLineItem}.
@@ -250,6 +302,14 @@ export enum AllowedFormats {
    */
   UNKNOWN = "UNKNOWN",
 }
+
+/**
+ * Represents an AllowedFormats enum in superstruct format.
+ */
+export const AllowedFormatsEnum = enums([
+  "AUDIO",
+  "UNKNOWN",
+]) as Describe<AllowedFormats>;
 
 /**
  * Describes the computed LineItem status that is derived from the current state of the line item.
@@ -302,6 +362,23 @@ export enum ComputedStatus {
 }
 
 /**
+ * Represents a ComputedStatus enum in superstruct format.
+ */
+export const StatusEnum = enums([
+  "DELIVERY_EXTENDED",
+  "DELIVERING",
+  "READY",
+  "PAUSED",
+  "INACTIVE",
+  "PAUSED_INVENTORY_RELEASED",
+  "PENDING_APPROVAL",
+  "COMPLETED",
+  "DISAPPROVED",
+  "DRAFT",
+  "CANCELED",
+]) as Describe<ComputedStatus>;
+
+/**
  * Types of programmatic creative sources.
  */
 export enum ProgrammaticCreativeSource {
@@ -318,6 +395,14 @@ export enum ProgrammaticCreativeSource {
    */
   UNKNOWN = "UNKNOWN",
 }
+/**
+ * Represents a ProgrammaticCreativeSource enum in superstruct format.
+ */
+export const ProgrammaticCreativeSourceEnum = enums([
+  "PUBLISHER",
+  "ADVERTISER",
+  "UNKNOWN",
+]) as Describe<ProgrammaticCreativeSource>;
 
 /**
  * Specifies the type of the goal for a {@link https://developers.google.com/ad-manager/api/reference/v202405/LineItemService.LineItem LineItem}.
@@ -363,6 +448,16 @@ export enum GoalType {
 }
 
 /**
+ * Represents a GoalType enum in superstruct format.
+ */
+export const GoalTypeEnum = enums([
+  "NONE",
+  "LIFETIME",
+  "DAILY",
+  "UNKNOWN",
+]) as Describe<GoalType>;
+
+/**
  * Indicates the type of unit used for defining a reservation.
  * The {@link https://developers.google.com/ad-manager/api/reference/v202405/LineItemService.CostType CostType} can differ from the
  * {@link https://developers.google.com/ad-manager/api/reference/v202405/LineItemService.UnitType UnitType} - an ad can have an impression goal, but be billed by its click.
@@ -403,3 +498,17 @@ export enum UnitType {
    */
   UNKNOWN = "UNKNOWN",
 }
+
+/**
+ * Represents a UnitType enum in superstruct format.
+ */
+export const UnitTypeEnum = enums([
+  "IMPRESSIONS",
+  "CLICKS",
+  "CLICK_THROUGH_CPA_CONVERSIONS",
+  "VIEW_THROUGH_CPA_CONVERSIONS",
+  "TOTAL_CPA_CONVERSIONS",
+  "VIEWABLE_IMPRESSIONS",
+  "IN_TARGET_IMPRESSIONS",
+  "UNKNOWN",
+]) as Describe<UnitType>;
