@@ -1,8 +1,13 @@
-import type {
-  GrpProvider,
-  GrpTargetGender,
-  NielsenCtvPacingType,
-  PacingDeviceCategorizationType,
+import { boolean, number, object, type Describe } from "superstruct";
+import {
+  GrpProviderEnum,
+  GrpTargetGenderEnum,
+  NielsenCtvPacingTypeEnum,
+  PacingDeviceCategorizationTypeEnum,
+  type GrpProvider,
+  type GrpTargetGender,
+  type NielsenCtvPacingType,
+  type PacingDeviceCategorizationType,
 } from "../enums";
 
 /**
@@ -45,3 +50,18 @@ export type GrpSettings = {
   pacingDeviceCategorizationType: PacingDeviceCategorizationType;
   applyTrueCoview: boolean;
 };
+
+/**
+ * Represents a GrpSettings struct.
+ */
+export const GrpSettingsStruct: Describe<GrpSettings> = object({
+  minTargetAge: number(),
+  maxTargetAge: number(),
+  targetGender: GrpTargetGenderEnum,
+  provider: GrpProviderEnum,
+  targetImpressionGoal: number(),
+  inTargetRatioEstimateMilliPercent: number(),
+  nielsenCtvPacingType: NielsenCtvPacingTypeEnum,
+  pacingDeviceCategorizationType: PacingDeviceCategorizationTypeEnum,
+  applyTrueCoview: boolean(),
+});

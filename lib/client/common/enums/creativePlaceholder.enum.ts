@@ -1,3 +1,5 @@
+import { enums, type Describe } from "superstruct";
+
 /**
  * Descriptions of the types of sizes a creative can be. Not all creatives can be described by a height-width pair, this provides additional context.
  */
@@ -29,3 +31,15 @@ export enum CreativeSizeType {
    */
   AUDIO = "AUDIO",
 }
+
+/**
+ * Represents a CreativeSizeType enum in superstruct format.
+ */
+export const CreativeSizeTypeEnum = enums([
+  "PIXEL",
+  "ASPECT_RATIO",
+  "INTERSTITIAL",
+  "IGNORED",
+  "NATIVE",
+  "AUDIO",
+]) as Describe<CreativeSizeType>;
