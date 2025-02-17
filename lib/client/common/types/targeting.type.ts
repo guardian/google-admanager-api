@@ -1,6 +1,7 @@
 import {
   array,
   boolean,
+  enums,
   number,
   object,
   optional,
@@ -215,6 +216,20 @@ export const DayPartTargetingStruct: Describe<DayPartTargeting> = object({
  * Represents a technology entity that can be targeted.
  */
 export type Technology = {
+  attributes: {
+    "xsi:type":
+      | "DeviceCapability"
+      | "BandwidthGroup"
+      | "Browser"
+      | "BrowserLanguage"
+      | "DeviceCategory"
+      | "DeviceManufacturer"
+      | "MobileCarrier"
+      | "MobileDevice"
+      | "MobileDeviceSubmodel"
+      | "OperatingSystem"
+      | "OperatingSystemVersion";
+  };
   /**
    * The unique ID of the Technology. This value is required for all forms of TechnologyTargeting.
    */
@@ -227,9 +242,30 @@ export type Technology = {
 };
 
 /**
+ * Represents an TechnologyAttributesValues enum.
+ */
+
+export const TechnologyAttributesValuesEnum = enums([
+  "DeviceCapability",
+  "BandwidthGroup",
+  "Browser",
+  "BrowserLanguage",
+  "DeviceCategory",
+  "DeviceManufacturer",
+  "MobileCarrier",
+  "MobileDevice",
+  "MobileDeviceSubmodel",
+  "OperatingSystem",
+  "OperatingSystemVersion",
+]);
+
+/**
  * Represents a Technology struct.
  */
 export const TechnologyStruct: Describe<Technology> = object({
+  attributes: object({
+    "xsi:type": TechnologyAttributesValuesEnum,
+  }),
   id: number(),
   name: string(),
 });
@@ -312,12 +348,12 @@ export type DeviceCapabilityTargeting = {
   /**
    * Device capabilities that are being targeted by the LineItem.
    */
-  targetedDeviceCapabilities: Technology[];
+  targetedDeviceCapabilities?: Technology[];
 
   /**
    * Device capabilities that are being excluded by the LineItem.
    */
-  excludedDeviceCapabilities: Technology[];
+  excludedDeviceCapabilities?: Technology[];
 };
 
 /**
@@ -325,8 +361,8 @@ export type DeviceCapabilityTargeting = {
  */
 export const DeviceCapabilityTargetingStruct: Describe<DeviceCapabilityTargeting> =
   object({
-    targetedDeviceCapabilities: array(TechnologyStruct),
-    excludedDeviceCapabilities: array(TechnologyStruct),
+    targetedDeviceCapabilities: optional(array(TechnologyStruct)),
+    excludedDeviceCapabilities: optional(array(TechnologyStruct)),
   });
 
 /**
