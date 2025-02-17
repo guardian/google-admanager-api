@@ -17,7 +17,7 @@ export type LineItem = LineItemSummary & {
    * Creative level targeting is specified in a creative placeholder's CreativePlaceholder.targetingName field by referencing the creative targeting's name.
    * It also needs to be re-specified in the LineItemCreativeAssociation.targetingName field when associating a line item with a creative that fits into that placeholder.
    */
-  creativeTargetings: CreativeTargeting[];
+  creativeTargetings?: CreativeTargeting[];
 };
 
 /**

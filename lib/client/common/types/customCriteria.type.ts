@@ -1,14 +1,27 @@
-import type {
-  CmsMetadataCriteriaComparisonOperator,
-  ComparisonOperator,
-  LogicalOperator,
+import {
+  array,
+  lazy,
+  literal,
+  number,
+  object,
+  optional,
+  union,
+  type Describe,
+} from "superstruct";
+import {
+  CmsMetadataCriteriaComparisonOperatorEnum,
+  ComparisonOperatorEnum,
+  LogicalOperatorEnum,
+  type CmsMetadataCriteriaComparisonOperator,
+  type ComparisonOperator,
+  type LogicalOperator,
 } from "../enums";
 
 /**
  * A CustomCriteria object is used to perform custom criteria targeting on custom targeting keys of type CustomTargetingKey.Type.PREDEFINED or CustomTargetingKey.Type.FREEFORM.
  */
 export type CustomCriteria = {
-  attributes: {
+  attributes?: {
     "xsi:type": "CustomCriteria";
   };
   /**
@@ -28,10 +41,21 @@ export type CustomCriteria = {
 };
 
 /**
+ * Represents a CustomCriteria struct.
+ */
+export const CustomCriteriaStruct: Describe<CustomCriteria> = object({
+  //Need to double check the type for attributes
+  attributes: optional(object({ "xsi:type": literal("CustomCriteria") })),
+  keyId: number(),
+  valueIds: array(number()),
+  operator: ComparisonOperatorEnum,
+});
+
+/**
  * A CmsMetadataCriteria object is used to target CmsMetadataValue objects.
  */
 export type CmsMetadataCriteria = {
-  attributes: {
+  attributes?: {
     "xsi:type": "CmsMetadataCriteria";
   };
   /**
@@ -46,10 +70,19 @@ export type CmsMetadataCriteria = {
 };
 
 /**
+ * Represents a CmsMetadataCriteria struct.
+ */
+export const CmsMetadataCriteriaStruct: Describe<CmsMetadataCriteria> = object({
+  attributes: optional(object({ "xsi:type": literal("CmsMetadataCriteria") })),
+  operator: CmsMetadataCriteriaComparisonOperatorEnum,
+  cmsMetadataValueIds: array(number()),
+});
+
+/**
  * An AudienceSegmentCriteria object is used to target AudienceSegment objects.
  */
 export type AudienceSegmentCriteria = {
-  attributes: {
+  attributes?: {
     "xsi:type": "AudienceSegmentCriteria";
   };
   /**
@@ -64,10 +97,22 @@ export type AudienceSegmentCriteria = {
 };
 
 /**
+ * Represents an AudienceSegmentCriteria struct.
+ */
+export const AudienceSegmentCriteria: Describe<AudienceSegmentCriteria> =
+  object({
+    attributes: optional(
+      object({ "xsi:type": literal("AudienceSegmentCriteria") }),
+    ),
+    operator: ComparisonOperatorEnum,
+    audienceSegmentIds: array(number()),
+  });
+
+/**
  * A CustomCriteriaSet comprises of a set of CustomCriteriaNode objects combined by the CustomCriteriaSet.LogicalOperator.logicalOperator. The custom criteria targeting tree is subject to the rules defined on Targeting.customTargeting.
  */
 export type CustomCriteriaSet = {
-  attributes: {
+  attributes?: {
     "xsi:type": "CustomCriteriaSet";
   };
 
@@ -86,3 +131,19 @@ export type CustomCriteriaSet = {
     | AudienceSegmentCriteria
   >;
 };
+
+/**
+ * Represents a CustomCriteriaSet struct.
+ */
+export const CustomCriteriaSetStruct: Describe<CustomCriteriaSet> = object({
+  attributes: optional(object({ "xsi:type": literal("CustomCriteriaSet") })),
+  logicalOperator: LogicalOperatorEnum,
+  children: array(
+    union([
+      CustomCriteriaStruct,
+      lazy(() => CustomCriteriaSetStruct),
+      CmsMetadataCriteriaStruct,
+      AudienceSegmentCriteria,
+    ]),
+  ),
+});
