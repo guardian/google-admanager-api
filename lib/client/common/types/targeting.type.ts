@@ -2,6 +2,7 @@ import {
   array,
   boolean,
   enums,
+  literal,
   number,
   object,
   optional,
@@ -220,15 +221,11 @@ export type Technology = {
     "xsi:type":
       | "DeviceCapability"
       | "BandwidthGroup"
-      | "Browser"
       | "BrowserLanguage"
       | "DeviceCategory"
       | "DeviceManufacturer"
       | "MobileCarrier"
-      | "MobileDevice"
-      | "MobileDeviceSubmodel"
-      | "OperatingSystem"
-      | "OperatingSystemVersion";
+      | "OperatingSystem";
   };
   /**
    * The unique ID of the Technology. This value is required for all forms of TechnologyTargeting.
@@ -248,15 +245,11 @@ export type Technology = {
 export const TechnologyAttributesValuesEnum = enums([
   "DeviceCapability",
   "BandwidthGroup",
-  "Browser",
   "BrowserLanguage",
   "DeviceCategory",
   "DeviceManufacturer",
   "MobileCarrier",
-  "MobileDevice",
-  "MobileDeviceSubmodel",
   "OperatingSystem",
-  "OperatingSystemVersion",
 ]);
 
 /**
@@ -295,6 +288,32 @@ export const BandwidthGroupTargetingStruct: Describe<BandwidthGroupTargeting> =
   });
 
 /**
+ * Represents an internet browser. The id and name are suppose to be inherited from the Technology type.
+ */
+export type Browser = {
+  attributes: {
+    "xsi:type": "Browser";
+  };
+  id: number;
+  name: string;
+  majorVersion: string;
+  minorVersion: string;
+};
+
+/**
+ * Represents a Browser struct.
+ */
+export const BrowserStruct: Describe<Browser> = object({
+  attributes: object({
+    "xsi:type": literal("Browser"),
+  }),
+  id: number(),
+  name: string(),
+  majorVersion: string(),
+  minorVersion: string(),
+});
+
+/**
  * Represents browsers that are being targeted or excluded by the LineItem.
  */
 export type BrowserTargeting = {
@@ -306,7 +325,7 @@ export type BrowserTargeting = {
   /**
    * Browsers that are being targeted or excluded by the LineItem.
    */
-  browsers: Technology[];
+  browsers: Browser[];
 };
 
 /**
@@ -314,7 +333,7 @@ export type BrowserTargeting = {
  */
 export const BrowserTargetingStruct: Describe<BrowserTargeting> = object({
   isTargeted: boolean(),
-  browsers: array(TechnologyStruct),
+  browsers: array(BrowserStruct),
 });
 
 /**
@@ -438,18 +457,42 @@ export const MobileCarrierTargetingStruct: Describe<MobileCarrierTargeting> =
   });
 
 /**
+ * Represents a mobile device. The id and name are suppose to be inherited from the Technology type.
+ */
+export type MobileDevice = {
+  attributes: {
+    "xsi:type": "MobileDevice";
+  };
+  id: number;
+  name: string;
+  manufacturerCriterionId: number;
+};
+
+/**
+ * Represents a MobileDevice struct.
+ */
+export const MobileDeviceStruct: Describe<MobileDevice> = object({
+  attributes: object({
+    "xsi:type": literal("MobileDevice"),
+  }),
+  id: number(),
+  name: string(),
+  manufacturerCriterionId: number(),
+});
+
+/**
  * Represents mobile devices that are being targeted or excluded by the LineItem.
  */
 export type MobileDeviceTargeting = {
   /**
    * Mobile devices that are being targeted by the LineItem.
    */
-  targetedMobileDevices: Technology[];
+  targetedMobileDevices: MobileDevice[];
 
   /**
    * Mobile devices that are being excluded by the LineItem.
    */
-  excludedMobileDevices: Technology[];
+  excludedMobileDevices: MobileDevice[];
 };
 
 /**
@@ -457,8 +500,35 @@ export type MobileDeviceTargeting = {
  */
 export const MobileDeviceTargetingStruct: Describe<MobileDeviceTargeting> =
   object({
-    targetedMobileDevices: array(TechnologyStruct),
-    excludedMobileDevices: array(TechnologyStruct),
+    targetedMobileDevices: array(MobileDeviceStruct),
+    excludedMobileDevices: array(MobileDeviceStruct),
+  });
+
+/**
+ * Represents a mobile device submodel. The id and name are suppose to be inherited from the Technology type.
+ */
+export type MobileDeviceSubmodel = {
+  attributes: {
+    "xsi:type": "MobileDeviceSubmodel";
+  };
+  id: number;
+  name: string;
+  mobileDeviceCriterionId: number;
+  deviceManufacturerCriterionId: number;
+};
+
+/**
+ * Represents a MobileDeviceSubmodel struct.
+ */
+export const MobileDeviceSubmodelStruct: Describe<MobileDeviceSubmodel> =
+  object({
+    attributes: object({
+      "xsi:type": literal("MobileDeviceSubmodel"),
+    }),
+    id: number(),
+    name: string(),
+    mobileDeviceCriterionId: number(),
+    deviceManufacturerCriterionId: number(),
   });
 
 /**
@@ -468,12 +538,12 @@ export type MobileDeviceSubmodelTargeting = {
   /**
    * Mobile device submodels that are being targeted by the LineItem.
    */
-  targetedMobileDeviceSubmodels: Technology[];
+  targetedMobileDeviceSubmodels: MobileDeviceSubmodel[];
 
   /**
    * Mobile device submodels that are being excluded by the LineItem.
    */
-  excludedMobileDeviceSubmodels: Technology[];
+  excludedMobileDeviceSubmodels: MobileDeviceSubmodel[];
 };
 
 /**
@@ -481,8 +551,8 @@ export type MobileDeviceSubmodelTargeting = {
  */
 export const MobileDeviceSubmodelTargetingStruct: Describe<MobileDeviceSubmodelTargeting> =
   object({
-    targetedMobileDeviceSubmodels: array(TechnologyStruct),
-    excludedMobileDeviceSubmodels: array(TechnologyStruct),
+    targetedMobileDeviceSubmodels: array(MobileDeviceSubmodelStruct),
+    excludedMobileDeviceSubmodels: array(MobileDeviceSubmodelStruct),
   });
 
 /**
@@ -510,18 +580,47 @@ export const OperatingSystemTargetingStruct: Describe<OperatingSystemTargeting> 
   });
 
 /**
+ * Represents a specific version of an operating system. The id and name are suppose to be inherited from the Technology type.
+ */
+export type OperatingSystemVersion = {
+  attributes: {
+    "xsi:type": "OperatingSystemVersion";
+  };
+  id: number;
+  name: string;
+  majorVersion: string;
+  minorVersion: string;
+  microVersion: string;
+};
+
+/**
+ * Represents an OperatingSystemVersion struct.
+ */
+export const OperatingSystemVersionStruct: Describe<OperatingSystemVersion> =
+  object({
+    attributes: object({
+      "xsi:type": literal("OperatingSystemVersion"),
+    }),
+    id: number(),
+    name: string(),
+    majorVersion: string(),
+    minorVersion: string(),
+    microVersion: string(),
+  });
+
+/**
  * Represents operating system versions that are being targeted or excluded by the LineItem.
  */
 export type OperatingSystemVersionTargeting = {
   /**
    * Operating system versions that are being targeted by the LineItem.
    */
-  targetedOperatingSystemVersions: Technology[];
+  targetedOperatingSystemVersions: OperatingSystemVersion[];
 
   /**
    * Operating system versions that are being excluded by the LineItem.
    */
-  excludedOperatingSystemVersions: Technology[];
+  excludedOperatingSystemVersions: OperatingSystemVersion[];
 };
 
 /**
@@ -529,8 +628,8 @@ export type OperatingSystemVersionTargeting = {
  */
 export const OperatingSystemVersionTargetingStruct: Describe<OperatingSystemVersionTargeting> =
   object({
-    targetedOperatingSystemVersions: array(TechnologyStruct),
-    excludedOperatingSystemVersions: array(TechnologyStruct),
+    targetedOperatingSystemVersions: array(OperatingSystemVersionStruct),
+    excludedOperatingSystemVersions: array(OperatingSystemVersionStruct),
   });
 
 /**
