@@ -240,7 +240,7 @@ export type Technology = {
 };
 
 /**
- * Represents an TechnologyAttributesValues enum.
+ * Represents an TechnologyAttributesValues enum in superstruct format.
  */
 
 export const TechnologyAttributesValuesEnum = enums([

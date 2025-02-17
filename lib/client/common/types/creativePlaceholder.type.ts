@@ -68,11 +68,6 @@ export type CreativePlaceholder = {
  */
 export const CreativePlaceholderStruct: Describe<CreativePlaceholder> = object({
   size: SizeStruct,
-  // size: object({
-  //   width: number(),
-  //   height: number(),
-  //   isAspectRatio: boolean(),
-  // }),
   creativeTemplateId: optional(number()),
   companions: optional(lazy(() => array(CreativePlaceholderStruct))),
   appliedLabels: optional(array(AppliedLabelStruct)),
