@@ -1,4 +1,10 @@
-import type { VideoBumperType, VideoPositionType } from "../enums";
+import { array, number, object, optional, type Describe } from "superstruct";
+import {
+  VideoBumperTypeEnum,
+  VideoPositionTypeEnum,
+  type VideoBumperType,
+  type VideoPositionType,
+} from "../enums";
 
 /**
  *
@@ -14,6 +20,14 @@ export type VideoPosition = {
    */
   midrollIndex: number;
 };
+
+/**
+ * Represents a VideoPosition struct.
+ */
+export const VideoPositionStruct: Describe<VideoPosition> = object({
+  positionType: VideoPositionTypeEnum,
+  midrollIndex: number(),
+});
 
 /**
  * Represents a targetable position within a pod within a video stream. A video ad can be targeted to any position in the pod (first, second, third ... last). If there is only 1 ad in a pod, either first or last will target that position.
@@ -38,6 +52,9 @@ export type VideoPositionWithinPod = {
   index: number;
 };
 
+export const VideoPositionWithinPodStruct: Describe<VideoPositionWithinPod> =
+  object({ index: number() });
+
 /**
  * Represents the options for targetable positions within a video.
  */
@@ -50,18 +67,28 @@ export type VideoPositionTarget = {
   /**
    * The video bumper type to target. To target a video position or a pod position, this value must be null. To target a bumper position this value must be populated and the line item must have a bumper type. To target a custom ad spot, this value must be null.
    */
-  videoBumperType: VideoBumperType;
+  videoBumperType?: VideoBumperType;
 
   /**
    * The video position within a pod to target. To target a video position or a bumper position, this value must be null. To target a position within a pod this value must be populated. To target a custom ad spot, this value must be null.
    */
-  videoPositionWithinPod: VideoPositionWithinPod;
+  videoPositionWithinPod?: VideoPositionWithinPod;
 
   /**
    * A custom spot AdSpot to target. To target a video position, a bumper type or a video position within a pod this value must be null.
    */
-  adSpotId: number[];
+  adSpotId?: number[];
 };
+
+/**
+ * Represents a VideoPositionTarget struct.
+ */
+export const VideoPositionTargetStruct: Describe<VideoPositionTarget> = object({
+  videoPosition: VideoPositionStruct,
+  videoBumperType: optional(VideoBumperTypeEnum),
+  videoPositionWithinPod: optional(VideoPositionWithinPodStruct),
+  adSpotId: optional(array(number())),
+});
 
 /**
  * Represents positions within and around a video where ads can be targeted to.
@@ -76,3 +103,11 @@ export type VideoPositionTargeting = {
    */
   targetedPositions: VideoPositionTarget[];
 };
+
+/**
+ * Represents a VideoPositionTargeting struct.
+ */
+export const VideoPositionTargetingStruct: Describe<VideoPositionTargeting> =
+  object({
+    targetedPositions: array(VideoPositionTargetStruct),
+  });

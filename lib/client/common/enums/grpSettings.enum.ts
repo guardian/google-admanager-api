@@ -1,3 +1,5 @@
+import { enums, type Describe } from "superstruct";
+
 /**
  * Represents the target gender for a GRP demographic targeted line item.
  */
@@ -21,6 +23,16 @@ export enum GrpTargetGender {
 }
 
 /**
+ * Represents a GrpTargetGender enum in superstruct format.
+ */
+export const GrpTargetGenderEnum = enums([
+  "UNKNOWN",
+  "MALE",
+  "FEMALE",
+  "BOTH",
+]) as Describe<GrpTargetGender>;
+
+/**
  * Represents available GRP providers that a line item will have its target demographic measured by.
  */
 export enum GrpProvider {
@@ -35,6 +47,15 @@ export enum GrpProvider {
    */
   GOOGLE = "GOOGLE",
 }
+
+/**
+ * Represents a GrpProvider enum in superstruct format.
+ */
+export const GrpProviderEnum = enums([
+  "UNKNOWN",
+  "NIELSEN",
+  "GOOGLE",
+]) as Describe<GrpProvider>;
 
 /**
  * Represents the pacing computation method for impressions on connected devices for a Nielsen measured line item.
@@ -60,6 +81,16 @@ export enum NielsenCtvPacingType {
 }
 
 /**
+ * Represents a NielsenCtvPacingType enum in superstruct format.
+ */
+export const NielsenCtvPacingTypeEnum = enums([
+  "UNKNOWN",
+  "NONE",
+  "COVIEW",
+  "STRICT_COVIEW",
+]) as Describe<NielsenCtvPacingType>;
+
+/**
  * Represents whose device categorization to use on Nielsen measured line item with auto-pacing enabled.
  */
 export enum PacingDeviceCategorizationType {
@@ -76,3 +107,12 @@ export enum PacingDeviceCategorizationType {
    */
   NIELSEN = "NIELSEN",
 }
+
+/**
+ * Represents a PacingDeviceCategorizationType enum in superstruct format.
+ */
+export const PacingDeviceCategorizationTypeEnum = enums([
+  "UNKNOWN",
+  "GOOGLE",
+  "NIELSEN",
+]) as Describe<PacingDeviceCategorizationType>;
