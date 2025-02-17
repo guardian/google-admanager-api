@@ -753,9 +753,9 @@ export type Targeting = {
   geoTargeting?: GeoTargeting;
 
   /**
-   * Specifies what inventory is targeted by the LineItem. This attribute is required. The line item must target at least one ad unit or placement.
+   * Specifies what inventory is targeted by the LineItem. This attribute is optional.
    */
-  inventoryTargeting: InventoryTargeting;
+  inventoryTargeting?: InventoryTargeting;
 
   /**
    * Specifies the days of the week and times that are targeted by the LineItem. This attribute is optional.
@@ -833,7 +833,7 @@ export type Targeting = {
  */
 export const TargetingStruct: Describe<Targeting> = object({
   geoTargeting: optional(GeoTargetingStruct),
-  inventoryTargeting: InventoryTargetingStruct,
+  inventoryTargeting: optional(InventoryTargetingStruct),
   dayPartTargeting: optional(DayPartTargetingStruct),
   dateTimeRangeTargeting: optional(DateTimeRangeTargetingStruct),
   technologyTargeting: optional(TechnologyTargetingStruct),
