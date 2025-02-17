@@ -322,7 +322,7 @@ export type LineItemSummary = {
    * Contains trafficking statistics for the line item. This attribute is readonly and is populated by Google.
    * This will be null in case there are no statistics for a line item yet.
    */
-  stats: Stats;
+  stats?: Stats;
 
   /**
    * Indicates how well the line item has been performing. This attribute is readonly and is populated by Google. This will be null if the delivery indicator information is not available due to one of the following reasons:

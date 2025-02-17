@@ -88,7 +88,7 @@ export const LineItemStruct: Describe<LineItem> = object({
   skipInventoryCheck: boolean(),
   skipCrossSellingRuleWarningChecks: boolean(),
   reserveAtCreation: boolean(),
-  stats: StatsStruct,
+  stats: optional(StatsStruct),
   deliveryIndicator: optional(DeliveryIndicatorStruct),
   deliveryData: optional(DeliveryDataStruct),
   budget: MoneyStruct,
