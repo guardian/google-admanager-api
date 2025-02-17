@@ -1,3 +1,5 @@
+import { number, object, type Describe } from "superstruct";
+
 /**
  * Stats contains trafficking statistics for LineItem and LineItemCreativeAssociation objects
  */
@@ -23,3 +25,14 @@ export type Stats = {
    */
   viewableImpressionsDelivered: number;
 };
+
+/**
+ * Represents a Stats struct.
+ */
+export const StatsStruct: Describe<Stats> = object({
+  impressionsDelivered: number(),
+  clicksDelivered: number(),
+  videoCompletionsDelivered: number(),
+  videoStartsDelivered: number(),
+  viewableImpressionsDelivered: number(),
+});
