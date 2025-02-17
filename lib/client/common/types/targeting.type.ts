@@ -504,22 +504,22 @@ export type TechnologyTargeting = {
   /**
    * The bandwidth groups being targeted by the LineItem.
    */
-  bandwidthGroupTargeting: BandwidthGroupTargeting;
+  bandwidthGroupTargeting?: BandwidthGroupTargeting;
 
   /**
    * The browsers being targeted by the LineItem.
    */
-  browserTargeting: BrowserTargeting;
+  browserTargeting?: BrowserTargeting;
 
   /**
    * The languages of browsers being targeted by the LineItem.
    */
-  browserLanguageTargeting: BrowserLanguageTargeting;
+  browserLanguageTargeting?: BrowserLanguageTargeting;
 
   /**
    * The device capabilities being targeted by the LineItem.
    */
-  deviceCapabilityTargeting: DeviceCapabilityTargeting;
+  deviceCapabilityTargeting?: DeviceCapabilityTargeting;
 
   /**
    * The device categories being targeted by the LineItem.
@@ -529,49 +529,51 @@ export type TechnologyTargeting = {
   /**
    * The device manufacturers being targeted by the LineItem.
    */
-  deviceManufacturerTargeting: DeviceManufacturerTargeting;
+  deviceManufacturerTargeting?: DeviceManufacturerTargeting;
 
   /**
    * The mobile carriers being targeted by the LineItem.
    */
-  mobileCarrierTargeting: MobileCarrierTargeting;
+  mobileCarrierTargeting?: MobileCarrierTargeting;
 
   /**
    * The mobile devices being targeted by the LineItem.
    */
-  mobileDeviceTargeting: MobileDeviceTargeting;
+  mobileDeviceTargeting?: MobileDeviceTargeting;
 
   /**
    * The mobile device submodels being targeted by the LineItem.
    */
-  mobileDeviceSubmodelTargeting: MobileDeviceSubmodelTargeting;
+  mobileDeviceSubmodelTargeting?: MobileDeviceSubmodelTargeting;
 
   /**
    * The operating systems being targeted by the LineItem.
    */
-  operatingSystemTargeting: OperatingSystemTargeting;
+  operatingSystemTargeting?: OperatingSystemTargeting;
 
   /**
    * The operating system versions being targeted by the LineItem.
    */
-  operatingSystemVersionTargeting: OperatingSystemVersionTargeting;
+  operatingSystemVersionTargeting?: OperatingSystemVersionTargeting;
 };
 
 /**
  * Represents a TechnologyTargeting struct.
  */
 export const TechnologyTargetingStruct: Describe<TechnologyTargeting> = object({
-  bandwidthGroupTargeting: BandwidthGroupTargetingStruct,
-  browserTargeting: BrowserTargetingStruct,
-  browserLanguageTargeting: BrowserLanguageTargetingStruct,
-  deviceCapabilityTargeting: DeviceCapabilityTargetingStruct,
+  bandwidthGroupTargeting: optional(BandwidthGroupTargetingStruct),
+  browserTargeting: optional(BrowserTargetingStruct),
+  browserLanguageTargeting: optional(BrowserLanguageTargetingStruct),
+  deviceCapabilityTargeting: optional(DeviceCapabilityTargetingStruct),
   deviceCategoryTargeting: optional(DeviceCategoryTargetingStruct),
-  deviceManufacturerTargeting: DeviceManufacturerTargetingStruct,
-  mobileCarrierTargeting: MobileCarrierTargetingStruct,
-  mobileDeviceTargeting: MobileDeviceTargetingStruct,
-  mobileDeviceSubmodelTargeting: MobileDeviceSubmodelTargetingStruct,
-  operatingSystemTargeting: OperatingSystemTargetingStruct,
-  operatingSystemVersionTargeting: OperatingSystemVersionTargetingStruct,
+  deviceManufacturerTargeting: optional(DeviceManufacturerTargetingStruct),
+  mobileCarrierTargeting: optional(MobileCarrierTargetingStruct),
+  mobileDeviceTargeting: optional(MobileDeviceTargetingStruct),
+  mobileDeviceSubmodelTargeting: optional(MobileDeviceSubmodelTargetingStruct),
+  operatingSystemTargeting: optional(OperatingSystemTargetingStruct),
+  operatingSystemVersionTargeting: optional(
+    OperatingSystemVersionTargetingStruct,
+  ),
 });
 
 /**
