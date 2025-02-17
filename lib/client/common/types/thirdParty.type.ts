@@ -1,7 +1,11 @@
-import type {
-  ThirdPartyBrandLiftIntegrationPartner,
-  ThirdPartyReachIntegrationPartner,
-  ThirdPartyViewabilityIntegrationPartner,
+import { object, optional, string, type Describe } from "superstruct";
+import {
+  ThirdPartyBrandLiftIntegrationPartnerEnum,
+  ThirdPartyReachIntegrationPartnerEnum,
+  ThirdPartyViewabilityIntegrationPartnerEnum,
+  type ThirdPartyBrandLiftIntegrationPartner,
+  type ThirdPartyReachIntegrationPartner,
+  type ThirdPartyViewabilityIntegrationPartner,
 } from "../enums";
 
 /**
@@ -15,11 +19,11 @@ export type ThirdPartyMeasurementSettings = {
   /**
    * The third party partner id for YouTube viewability verification.
    */
-  viewabilityClientId: string;
+  viewabilityClientId?: string;
   /**
    * The reporting id that maps viewability partner data with a campaign (or a group of related campaigns) specific data.
    */
-  viewabilityReportingId: string;
+  viewabilityReportingId?: string;
   /**
    * A field to determine the type of publisher's viewability partner. This field default is NONE.
    */
@@ -27,11 +31,11 @@ export type ThirdPartyMeasurementSettings = {
   /**
    * The third party partner id for YouTube viewability verification for publisher.
    */
-  publisherViewabilityClientId: string;
+  publisherViewabilityClientId?: string;
   /**
    * The reporting id that maps viewability partner data with a campaign (or a group of related campaigns) specific data for publisher.
    */
-  publisherViewabilityReportingId: string;
+  publisherViewabilityReportingId?: string;
   /**
    * A field to determine the type of ThirdPartyBrandLiftIntegrationPartner. This field default is NONE.
    */
@@ -39,11 +43,11 @@ export type ThirdPartyMeasurementSettings = {
   /**
    * The third party partner id for YouTube brand lift verification.
    */
-  brandLiftClientId: string;
+  brandLiftClientId?: string;
   /**
    * The reporting id that maps brand lift partner data with a campaign (or a group of related campaigns) specific data.
    */
-  brandLiftReportingId: string;
+  brandLiftReportingId?: string;
   /**
    * A field to determine the type of advertiser's ThirdPartyReachIntegrationPartner. This field default is UNKNOWN.
    */
@@ -51,11 +55,11 @@ export type ThirdPartyMeasurementSettings = {
   /**
    * The third party partner id for YouTube reach verification for advertiser.
    */
-  reachClientId: string;
+  reachClientId?: string;
   /**
    * The reporting id that maps reach partner data with a campaign (or a group of related campaigns) specific data for advertiser.
    */
-  reachReportingId: string;
+  reachReportingId?: string;
   /**
    * A field to determine the type of publisher's ThirdPartyReachIntegrationPartner. This field default is UNKNOWN.
    */
@@ -63,9 +67,31 @@ export type ThirdPartyMeasurementSettings = {
   /**
    * The third party partner id for YouTube reach verification for publisher.
    */
-  publisherReachClientId: string;
+  publisherReachClientId?: string;
   /**
    * The reporting id that maps reach partner data with a campaign (or a group of related campaigns) specific data for publisher.
    */
-  publisherReachReportingId: string;
+  publisherReachReportingId?: string;
 };
+
+/**
+ * Represents a ThirdPartyMeasurementSettings struct.
+ */
+export const ThirdPartyMeasurementSettingsStruct: Describe<ThirdPartyMeasurementSettings> =
+  object({
+    viewabilityPartner: ThirdPartyViewabilityIntegrationPartnerEnum,
+    viewabilityClientId: optional(string()),
+    viewabilityReportingId: optional(string()),
+    publisherViewabilityPartner: ThirdPartyViewabilityIntegrationPartnerEnum,
+    publisherViewabilityClientId: optional(string()),
+    publisherViewabilityReportingId: optional(string()),
+    brandLiftPartner: ThirdPartyBrandLiftIntegrationPartnerEnum,
+    brandLiftClientId: optional(string()),
+    brandLiftReportingId: optional(string()),
+    reachPartner: ThirdPartyReachIntegrationPartnerEnum,
+    reachClientId: optional(string()),
+    reachReportingId: optional(string()),
+    publisherReachPartner: ThirdPartyReachIntegrationPartnerEnum,
+    publisherReachClientId: optional(string()),
+    publisherReachReportingId: optional(string()),
+  });

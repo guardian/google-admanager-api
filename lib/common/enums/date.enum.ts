@@ -1,3 +1,5 @@
+import { enums, type Describe } from "superstruct";
+
 /**
  * Specifies the start type to use for an entity with a start date time field. For example, a LineItem or LineItemCreativeAssociation.
  */
@@ -22,6 +24,16 @@ export enum StartDateTimeType {
    */
   UNKNOWN = "UNKNOWN",
 }
+
+/**
+ * Represents a StartDateTimeType enum in superstruct format.
+ */
+export const StartDateTimeTypeEnum = enums([
+  "USE_START_DATE_TIME",
+  "IMMEDIATELY",
+  "ONE_HOUR_FROM_NOW",
+  "UNKNOWN",
+]) as Describe<StartDateTimeType>;
 
 /**
  * Represent the possible time units for frequency capping.
@@ -54,6 +66,21 @@ export enum TimeUnit {
    */
   UNKNOWN = "UNKNOWN",
 }
+
+/**
+ * Represents a TimeUnit enum in superstruct format.
+ */
+export const TimeUnitEnum = enums([
+  "MINUTE",
+  "HOUR",
+  "DAY",
+  "WEEK",
+  "MONTH",
+  "LIFETIME",
+  "POD",
+  "STREAM",
+  "UNKNOWN",
+]) as Describe<TimeUnit>;
 
 /**
  * Days of the week.
@@ -96,6 +123,19 @@ export enum DayOfWeek {
 }
 
 /**
+ * Represents a DayOfWeek enum in superstruct format.
+ */
+export const DayOfWeekEnum = enums([
+  "MONDAY",
+  "TUESDAY",
+  "WEDNESDAY",
+  "THURSDAY",
+  "FRIDAY",
+  "SATURDAY",
+  "SUNDAY",
+]) as Describe<DayOfWeek>;
+
+/**
  * Minutes in an hour. Currently, only 0, 15, 30, and 45 are supported. This field is required.
  */
 export enum MinuteOfHour {
@@ -119,3 +159,13 @@ export enum MinuteOfHour {
    */
   FORTY_FIVE = "FORTY_FIVE",
 }
+
+/**
+ * Represents a MinuteOfHour enum in superstruct format.
+ */
+export const MinuteOfHourEnum = enums([
+  "ZERO",
+  "FIFTEEN",
+  "THIRTY",
+  "FORTY_FIVE",
+]) as Describe<MinuteOfHour>;

@@ -1,4 +1,5 @@
-import type { MinuteOfHour } from "../enums";
+import { number, object, string, type Describe } from "superstruct";
+import { MinuteOfHourEnum, type MinuteOfHour } from "../enums";
 
 /**
  * Represents a date.
@@ -10,6 +11,15 @@ export type Date = {
 };
 
 /**
+ * Represents a date struct.
+ */
+export const DateStruct: Describe<Date> = object({
+  year: number(),
+  month: number(),
+  day: number(),
+});
+
+/**
  * Represents a date combined with the time of day.
  */
 export type DateTime = {
@@ -19,6 +29,17 @@ export type DateTime = {
   second: number;
   timeZoneId: string;
 };
+
+/**
+ * Represents a DateTime struct.
+ */
+export const DateTimeStruct: Describe<DateTime> = object({
+  date: DateStruct,
+  hour: number(),
+  minute: number(),
+  second: number(),
+  timeZoneId: string(),
+});
 
 /**
  * Represents a range of dates (combined with time of day) that has an upper and/or lower bound.
@@ -34,6 +55,14 @@ export type DateTimeRange = {
    */
   endDateTime: DateTime;
 };
+
+/**
+ * Represents a DateTimeRange struct.
+ */
+export const DateTimeRangeStruct: Describe<DateTimeRange> = object({
+  startDateTime: DateTimeStruct,
+  endDateTime: DateTimeStruct,
+});
 
 /**
  * Represents a range of dates that has an upper and a lower bound.
@@ -71,3 +100,11 @@ export type TimeOfDay = {
    */
   minute: MinuteOfHour;
 };
+
+/**
+ * Represents a TimeOfDay struct.
+ */
+export const TimeOfDayStruct: Describe<TimeOfDay> = object({
+  hour: number(),
+  minute: MinuteOfHourEnum,
+});

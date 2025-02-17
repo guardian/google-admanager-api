@@ -1,3 +1,5 @@
+import { enums, type Describe } from "superstruct";
+
 /**
  * The strategy to use for displaying multiple {@link https://developers.google.com/ad-manager/api/reference/v202405/CreativeService.Creative Creative} \
  * objects that are associated with a {@link https://developers.google.com/ad-manager/api/reference/v202405/LineItemService.LineItem LineItem}.
@@ -22,6 +24,16 @@ export enum CreativeRotationType {
 }
 
 /**
+ * Represents a CreativeRotationType enum in superstruct format.
+ */
+export const CreativeRotationTypeEnum = enums([
+  "EVEN",
+  "OPTIMIZED",
+  "MANUAL",
+  "SEQUENTIAL",
+]) as Describe<CreativeRotationType>;
+
+/**
  * Options for the unit of the custom pacing goal amounts.
  */
 export enum CustomPacingGoalUnit {
@@ -38,6 +50,15 @@ export enum CustomPacingGoalUnit {
    */
   UNKNOWN = "UNKNOWN",
 }
+
+/**
+ * Represents a CustomPacingGoalUnit enum in superstruct format.
+ */
+export const CustomPacingGoalUnitEnum = enums([
+  "ABSOLUTE",
+  "MILLI_PERCENT",
+  "UNKNOWN",
+]) as Describe<CustomPacingGoalUnit>;
 
 /**
  * Describes the {@link https://developers.google.com/ad-manager/api/reference/v202405/LineItemService.LineItem LineItem} actions that are billable.
@@ -97,6 +118,19 @@ export enum CostType {
 }
 
 /**
+ * Represents a CostType enum in superstruct format.
+ */
+export const CostTypeEnum = enums([
+  "CPA",
+  "CPC",
+  "CPD",
+  "CPM",
+  "VCPM",
+  "CPM_IN_TARGET",
+  "UNKNOWN",
+]) as Describe<CostType>;
+
+/**
  * Describes the possible discount types on the cost of booking a {@link https://developers.google.com/ad-manager/api/reference/v202405/LineItemService.LineItem LineItem}.
  */
 export enum LineItemDiscountType {
@@ -111,6 +145,14 @@ export enum LineItemDiscountType {
 }
 
 /**
+ * Represents a LineItemDiscountType enum in superstruct format.
+ */
+export const LineItemDiscountTypeEnum = enums([
+  "ABSOLUTE_VALUE",
+  "PERCENTAGE",
+]) as Describe<LineItemDiscountType>;
+
+/**
  * Specifies the reservation status of the LineItem.
  */
 export enum LineItemSummaryReservationStatus {
@@ -123,6 +165,14 @@ export enum LineItemSummaryReservationStatus {
    */
   UNRESERVED = "UNRESERVED",
 }
+
+/**
+ * Represents a LineItemSummaryReservationStatus enum in superstruct format.
+ */
+export const LineItemSummaryReservationStatusEnum = enums([
+  "RESERVED",
+  "UNRESERVED",
+]) as Describe<LineItemSummaryReservationStatus>;
 
 /**
  * The scope to which the assignment of any competitive exclusion labels for a video line item is limited.
@@ -143,6 +193,15 @@ export enum CompetitiveConstraintScope {
 }
 
 /**
+ * Represents a CompetitiveConstraintScope enum in superstruct format.
+ */
+export const CompetitiveConstraintScopeEnum = enums([
+  "POD",
+  "STREAM",
+  "UNKNOWN",
+]) as Describe<CompetitiveConstraintScope>;
+
+/**
  * Child content eligibility designation.
  *
  * This field is optional and defaults to ChildContentEligibility.DISALLOWED. This field has no effect on serving enforcement unless you opt to "Child content enforcement" in the network's Child Content settings.
@@ -158,3 +217,12 @@ export enum ChildContentEligibility {
    */
   ALLOWED = "ALLOWED",
 }
+
+/**
+ * Represents a ChildContentEligibility enum in superstruct format.
+ */
+export const ChildContentEligibilityEnum = enums([
+  "UNKNOWN",
+  "DISALLOWED",
+  "ALLOWED",
+]) as Describe<ChildContentEligibility>;
