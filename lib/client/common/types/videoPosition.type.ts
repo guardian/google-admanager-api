@@ -1,4 +1,4 @@
-import { array, number, object, type Describe } from "superstruct";
+import { array, number, object, optional, type Describe } from "superstruct";
 import {
   VideoBumperTypeEnum,
   VideoPositionTypeEnum,
@@ -67,17 +67,17 @@ export type VideoPositionTarget = {
   /**
    * The video bumper type to target. To target a video position or a pod position, this value must be null. To target a bumper position this value must be populated and the line item must have a bumper type. To target a custom ad spot, this value must be null.
    */
-  videoBumperType: VideoBumperType;
+  videoBumperType?: VideoBumperType;
 
   /**
    * The video position within a pod to target. To target a video position or a bumper position, this value must be null. To target a position within a pod this value must be populated. To target a custom ad spot, this value must be null.
    */
-  videoPositionWithinPod: VideoPositionWithinPod;
+  videoPositionWithinPod?: VideoPositionWithinPod;
 
   /**
    * A custom spot AdSpot to target. To target a video position, a bumper type or a video position within a pod this value must be null.
    */
-  adSpotId: number[];
+  adSpotId?: number[];
 };
 
 /**
@@ -85,9 +85,9 @@ export type VideoPositionTarget = {
  */
 export const VideoPositionTargetStruct: Describe<VideoPositionTarget> = object({
   videoPosition: VideoPositionStruct,
-  videoBumperType: VideoBumperTypeEnum,
-  videoPositionWithinPod: VideoPositionWithinPodStruct,
-  adSpotId: array(number()),
+  videoBumperType: optional(VideoBumperTypeEnum),
+  videoPositionWithinPod: optional(VideoPositionWithinPodStruct),
+  adSpotId: optional(array(number())),
 });
 
 /**

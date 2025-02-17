@@ -756,32 +756,32 @@ export type ContentTargeting = {
   /**
    * The IDs of content being targeted by the LineItem.
    */
-  targetedContentIds: number[];
+  targetedContentIds?: number[];
 
   /**
    * The IDs of content being excluded by the LineItem.
    */
-  excludedContentIds: number[];
+  excludedContentIds?: number[];
 
   /**
    * A list of video content bundles, represented by ContentBundle IDs, that are being targeted by the LineItem.
    */
-  targetedVideoContentBundleIds: number[];
+  targetedVideoContentBundleIds?: number[];
 
   /**
    * A list of video content bundles, represented by ContentBundle IDs, that are being excluded by the LineItem.
    */
-  excludedVideoContentBundleIds: number[];
+  excludedVideoContentBundleIds?: number[];
 };
 
 /**
  * Represents a ContentTargeting struct.
  */
 export const ContentTargetingStruct: Describe<ContentTargeting> = object({
-  targetedContentIds: array(number()),
-  excludedContentIds: array(number()),
-  targetedVideoContentBundleIds: array(number()),
-  excludedVideoContentBundleIds: array(number()),
+  targetedContentIds: optional(array(number())),
+  excludedContentIds: optional(array(number())),
+  targetedVideoContentBundleIds: optional(array(number())),
+  excludedVideoContentBundleIds: optional(array(number())),
 });
 
 /**
