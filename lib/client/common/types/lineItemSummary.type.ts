@@ -340,7 +340,7 @@ export type LineItemSummary = {
    * - The line item has completed delivering more than 7 days ago.
    * - The line item has an absolute-based goal. LineItem.deliveryIndicator should be used to track its progress in this case.
    */
-  deliveryData: DeliveryData;
+  deliveryData?: DeliveryData;
 
   /**
    * The amount of money allocated to the LineItem. This attribute is readonly and is populated by Google. The currency code is readonly.

@@ -90,7 +90,7 @@ export const LineItemStruct: Describe<LineItem> = object({
   reserveAtCreation: boolean(),
   stats: StatsStruct,
   deliveryIndicator: optional(DeliveryIndicatorStruct),
-  deliveryData: DeliveryDataStruct,
+  deliveryData: optional(DeliveryDataStruct),
   budget: MoneyStruct,
   status: StatusEnum,
   reservationStatus: LineItemSummaryReservationStatusEnum,

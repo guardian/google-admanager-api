@@ -3,6 +3,7 @@ import {
   boolean,
   enums,
   literal,
+  nullable,
   number,
   object,
   optional,
@@ -960,7 +961,7 @@ export type Targeting = {
    *
    * This value is read-only for video line items generated from proposal line items.
    */
-  requestPlatformTargeting?: RequestPlatformTargeting;
+  requestPlatformTargeting?: RequestPlatformTargeting | null;
 };
 
 /**
@@ -979,7 +980,7 @@ export const TargetingStruct: Describe<Targeting> = object({
   mobileApplicationTargeting: optional(MobileApplicationTargetingStruct),
   buyerUserListTargeting: optional(BuyerUserListTargetingStruct),
   inventoryUrlTargeting: optional(InventoryUrlTargetingStruct),
-  requestPlatformTargeting: optional(RequestPlatformTargetingStruct),
+  requestPlatformTargeting: optional(nullable(RequestPlatformTargetingStruct)),
 });
 
 /**
