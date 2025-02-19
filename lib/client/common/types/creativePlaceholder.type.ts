@@ -1,5 +1,16 @@
-import type { CreativeSizeType } from "../enums";
-import type { AppliedLabel, Size } from ".";
+import { CreativeSizeTypeEnum, type CreativeSizeType } from "../enums";
+import { SizeStruct, type Size } from "./general.type";
+import {
+  array,
+  boolean,
+  lazy,
+  number,
+  object,
+  optional,
+  string,
+  type Describe,
+} from "superstruct";
+import { AppliedLabel, AppliedLabelStruct } from "./label.type";
 
 /**
  * A CreativePlaceholder describes a slot that a creative is expected to fill.
@@ -17,11 +28,11 @@ export type CreativePlaceholder = {
    *
    * This value is only required if creativeSizeType is CreativeSizeType.NATIVE.
    */
-  creativeTemplateId: number;
+  creativeTemplateId?: number;
   /**
    * The companions that the creative is expected to have. This attribute can only be set if the line item it belongs to has a LineItem.environmentType of EnvironmentType.VIDEO_PLAYER or LineItem.roadblockingType of RoadblockingType.CREATIVE_SET.
    */
-  companions: CreativePlaceholder[];
+  companions?: CreativePlaceholder[];
   /**
    * The set of label frequency caps applied directly to this creative placeholder.
    */
@@ -33,7 +44,7 @@ export type CreativePlaceholder = {
   /**
    * Expected number of creatives that will be uploaded corresponding to this creative placeholder. This estimate is used to improve the accuracy of forecasting; for example, if label frequency capping limits the number of times a creative may be served.
    */
-  expectedCreativeCount: number;
+  expectedCreativeCount?: number;
   /**
    * Describes the types of sizes a creative can be. By default, the creative's size is CreativeSizeType.PIXEL, which is a dimension based size (width-height pair).
    */
@@ -43,11 +54,26 @@ export type CreativePlaceholder = {
    *
    * This attribute is optional. Specifying creative targeting here is for forecasting purposes only and has no effect on serving. The same creative targeting should be specified on a LineItemCreativeAssociation when associating a Creative with the LineItem.
    */
-  targetingName: string;
+  targetingName?: string;
   /**
    * Indicate if the expected creative of this placeholder has an AMP only variant.
    *
    * This attribute is optional. It is for forecasting purposes only and has no effect on serving.
    */
-  isAmpOnly: boolean;
+  isAmpOnly?: boolean;
 };
+
+/**
+ * Represents a CreativePlaceholder struct.
+ */
+export const CreativePlaceholderStruct: Describe<CreativePlaceholder> = object({
+  size: SizeStruct,
+  creativeTemplateId: optional(number()),
+  companions: optional(lazy(() => array(CreativePlaceholderStruct))),
+  appliedLabels: optional(array(AppliedLabelStruct)),
+  effectiveAppliedLabels: optional(array(AppliedLabelStruct)),
+  expectedCreativeCount: optional(number()),
+  creativeSizeType: CreativeSizeTypeEnum,
+  targetingName: optional(string()),
+  isAmpOnly: optional(boolean()),
+});

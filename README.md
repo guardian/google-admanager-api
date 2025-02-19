@@ -103,6 +103,14 @@ const orderPage = await orderService.getOrdersByStatement(statement.toStatement(
   </tr>
 </table>
 
+### Validation 
+
+Using [Superstruct](https://docs.superstructjs.org/) for type validation so it could be used to parse the line items data we get back from the API in different Guardian projects.
+
+ Each type will have its own Struct which should be found in the same file as the type and then they will be used in the [lineItem.struct.ts](https://github.com/guardian/google-admanager-api/blob/main/lib/client/services/lineItem/lineItem.struct.ts).
+
+ Having a type safety check in an early stage reduces bugs that we might encounter later and there is no better place than this repository to add it. 
+
 ### Debugging
 
 Enable request and response logging by setting `logRequests` and/or `logResponses` to `true` on the service object.
@@ -170,16 +178,17 @@ lineItemService.createLineitem({
 })
 ```
 
-This also applies to creatives, [as there are many types of creatives](https://github.com/guardian/google-admanager-api/blob/main/lib/client/services/creative/creative.type.ts#L1205):
+It also applies to technology targeting, [as there are many types of technologies](https://github.com/guardian/google-admanager-api/blob/main/lib/client/common/types/targeting.type.ts#L294)
 ```ts
-const creative: Creative = {
+type Browser = {
   attributes: {
-    "xsi:type": "ThirdPartyCreative",
-  },
-  advertiserId,
-  name: creativeName,
-  size,
-  snippet,
-  isSafeFrameCompatible: false,
+    "xsi:type": "Browser";
+  };
+  id: number;
+  name: string;
+  majorVersion: string;
+  minorVersion: string;
 };
 ```
+
+
