@@ -1,5 +1,15 @@
 # @guardian/google-admanager-api
 
+## 3.0.0
+
+### Major Changes
+
+- f5380b7: Add superstruct for type safety checks for lineItems and align properties with what we receive from the api
+
+### Patch Changes
+
+- a39e56a: Enable stricter ts options
+
 ## 2.4.0
 
 ### Minor Changes
