@@ -36,7 +36,7 @@ export { LiveStreamEventService } from "./liveStreamEvent";
 export { MobileApplicationService } from "./mobileApplication";
 export { NativeStyleService } from "./nativeStyle";
 export { NetworkService } from "./network";
-export { OrderService, type Order } from "./order";
+export { OrderService, ApproveOrders, type Order } from "./order";
 export { PlacementService } from "./placement";
 export { ProposalLineItemService } from "./proposalLineItem";
 export { ProposalService } from "./proposal";
