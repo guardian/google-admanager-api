@@ -1,5 +1,11 @@
 # @guardian/google-admanager-api
 
+## 3.0.1
+
+### Patch Changes
+
+- cb1cd70: Upgrades `soap` dependency definition
+
 ## 3.0.0
 
 ### Major Changes
