@@ -1,5 +1,11 @@
 # @guardian/google-admanager-api
 
+## 3.1.1
+
+### Patch Changes
+
+- 490788d: Export ApproveOrders from order.action
+
 ## 3.1.0
 
 ### Minor Changes
