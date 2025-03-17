@@ -1,5 +1,11 @@
 # @guardian/google-admanager-api
 
+## 3.1.0
+
+### Minor Changes
+
+- 510fe85: Export additional types and actions used by ad-manager-tools
+
 ## 3.0.1
 
 ### Patch Changes
