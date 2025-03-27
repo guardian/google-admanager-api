@@ -6,7 +6,7 @@ settings:
 
 dependencies:
   axios:
-    specifier: ^1.7.4
+    specifier: ^1.8.4
     version: 1.8.4(debug@4.4.0)
   google-auth-library:
     specifier: ^9.13.0
