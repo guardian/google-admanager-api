@@ -12,6 +12,27 @@ updates:
       time: "09:00"
       day: "tuesday"
     groups:
+      typescript:
+        patterns:
+          - "typescript"
+        update-types:
+            - "minor"
+            - "patch"
+      jest:
+        patterns:
+          - '@types/jest'
+          - jest
+          - ts-jest
+        update-types:
+          - 'minor'
+          - 'patch'
+      linters-and-formatters:
+        patterns:
+          - '*eslint*'
+          - '*prettier*'
+        update-types:
+          - 'minor'
+          - 'patch'
       dependencies:
         dependency-type: "production"
         update-types:
