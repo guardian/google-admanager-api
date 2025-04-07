@@ -19,7 +19,7 @@ export type ProspectiveLineItem = {
    * predicting what would happen if it were added to the network. If a line item already exists with LineItem.id,
    * the forecast is computed for the subject, predicting what would happen if the existing line item's settings were modified to match the subject.
    */
-  lineItem: LineItem;
+  lineItem?: LineItem;
 
   /**
    * The target of the forecast if this prospective line item is a proposal line item.
@@ -34,12 +34,12 @@ export type ProspectiveLineItem = {
    *
    * Either lineItem or proposalLineItem should be specified but not both.
    */
-  proposalLineItem: ProposalLineItem;
+  proposalLineItem?: ProposalLineItem;
 
   /**
    * When set, the line item is assumed to be from this advertiser, and unified blocking rules will apply accordingly. If absent, line items without an existing order won't be subject to unified blocking rules.
    */
-  advertiserId: number;
+  advertiserId?: number;
 };
 
 /**
