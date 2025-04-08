@@ -31,6 +31,7 @@ import {
   VideoPositionTargetingStruct,
   type VideoPositionTargeting,
 } from "./videoPosition.type";
+import { Size } from "./general.type";
 
 /**
  * A {@link https://developers.google.com/ad-manager/api/reference/v202405/AdjustmentService.Location Location} represents a geographical entity that can be targeted.
@@ -848,6 +849,25 @@ export type InventoryUrlTargeting = {
 };
 
 /**
+ * A collection of targeted inventory urls.
+ */
+export type InventorySizeTargeting = {
+  /**
+   * Whether the inventory sizes should be targeted or excluded.
+   */
+  isTargeted: boolean;
+
+  /**
+   * A list of TargetedSizeDtos.
+   */
+  targetedSizes: TargetedSize[];
+};
+
+export type TargetedSize = {
+  size: Size;
+};
+
+/**
  * Represents an InventoryUrlTargeting struct.
  */
 export const InventoryUrlTargetingStruct: Describe<InventoryUrlTargeting> =
@@ -962,6 +982,13 @@ export type Targeting = {
    * This value is read-only for video line items generated from proposal line items.
    */
   requestPlatformTargeting?: RequestPlatformTargeting | null;
+
+  /**
+   * Specifies the sizes that are targeted by the entity.
+   *
+   * This is currently only supported on YieldGroup and TrafficDataRequest.
+   */
+  inventorySizeTargeting?: InventorySizeTargeting;
 };
 
 /**
