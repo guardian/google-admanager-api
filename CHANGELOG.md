@@ -1,5 +1,11 @@
 # @guardian/google-admanager-api
 
+## 3.1.3
+
+### Patch Changes
+
+- 65fd491: Added missing inventorySizeTargeting property to the Targeting object.
+
 ## 3.1.2
 
 ### Patch Changes
