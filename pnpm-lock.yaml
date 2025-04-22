@@ -12,8 +12,8 @@ dependencies:
     specifier: ^9.13.0
     version: 9.15.1
   soap:
-    specifier: 1.1.10
-    version: 1.1.10
+    specifier: 1.1.11
+    version: 1.1.11
   superstruct:
     specifier: ^2.0.2
     version: 2.0.2
@@ -638,7 +638,7 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dependencies:
       ajv: 6.12.6
-      debug: 4.4.0
+      debug: 4.3.6
       espree: 9.6.1
       globals: 13.24.0
       ignore: 5.3.2
@@ -701,7 +701,7 @@ packages:
     deprecated: Use @eslint/config-array instead
     dependencies:
       '@humanwhocodes/object-schema': 2.0.3
-      debug: 4.4.0
+      debug: 4.3.6
       minimatch: 3.1.2
     transitivePeerDependencies:
       - supports-color
@@ -1004,6 +1004,11 @@ packages:
       read-yaml-file: 1.1.0
     dev: true
 
+  /@noble/hashes@1.8.0:
+    resolution: {integrity: sha512-jCs9ldd7NwzpgXDIf6P3+NrHh9/sD6CQdxHyjQI+h/6rDNo88ypBxxz45UDuZHz9r3tNz7N/VInSVoVdtXEI4A==}
+    engines: {node: ^14.21.3 || >=16}
+    dev: false
+
   /@nodelib/fs.scandir@2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
     engines: {node: '>= 8'}
@@ -1024,6 +1029,12 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.1
     dev: true
+
+  /@paralleldrive/cuid2@2.2.2:
+    resolution: {integrity: sha512-ZOBkgDwEdoYVlSeRbYYXs0S9MejQofiVYoTbKzy/6GQa39/q5tQU2IX46+shYnUkpEl3wc+J6wRlar7r2EK2xA==}
+    dependencies:
+      '@noble/hashes': 1.8.0
+    dev: false
 
   /@pkgr/core@0.2.4:
     resolution: {integrity: sha512-ROFF39F6ZrnzSUEmQQZUar0Jt4xVoP9WnDRdWwF4NNcXs3xBTLgBUDoOwW141y1jP+S8nahIbdxbFC7IShw9Iw==}
@@ -1648,8 +1659,8 @@ packages:
       possible-typed-array-names: 1.1.0
     dev: true
 
-  /axios-ntlm@1.4.3(debug@4.4.0):
-    resolution: {integrity: sha512-CS6WE8chZpEDKxv4IFwr5zcG7InMC6Ek0aj2n2tHauBh+8KiYVC4qMn3N2arjR5tnyILQuTGlI0mc83hgWxS4Q==}
+  /axios-ntlm@1.4.4(debug@4.4.0):
+    resolution: {integrity: sha512-kpCRdzMfL8gi0Z0o96P3QPAK4XuC8iciGgxGXe+PeQ4oyjI2LZN8WSOKbu0Y9Jo3T/A7pB81n6jYVPIpglEuRA==}
     dependencies:
       axios: 1.8.4(debug@4.4.0)
       des.js: 1.1.0
@@ -2906,11 +2917,11 @@ packages:
       mime-types: 2.1.35
     dev: false
 
-  /formidable@3.5.2:
-    resolution: {integrity: sha512-Jqc1btCy3QzRbJaICGwKcBfGWuLADRerLzDqi2NwSt/UkXLsHJw2TVResiaoBufHVHy9aSgClOHCeJsSsFLTbg==}
+  /formidable@3.5.3:
+    resolution: {integrity: sha512-pQEHGLZjLRyfLCe6r6n8IQGqHEceKfYR5tIf/iUDn5SabaitfVR/pIskxnyvSSl122J63rFY17i68hrfK0BVOA==}
     dependencies:
+      '@paralleldrive/cuid2': 2.2.2
       dezalgo: 1.0.4
-      hexoid: 2.0.0
       once: 1.4.0
     dev: false
 
@@ -3184,11 +3195,6 @@ packages:
     engines: {node: '>= 0.4'}
     dependencies:
       function-bind: 1.1.2
-
-  /hexoid@2.0.0:
-    resolution: {integrity: sha512-qlspKUK7IlSQv2o+5I7yhUd7TxlOG2Vr5LTa3ve2XSNVKAL/n/u/7KLvKmFNimomDIKvZFXWHv0T12mv7rT8Aw==}
-    engines: {node: '>=8'}
-    dev: false
 
   /html-escaper@2.0.2:
     resolution: {integrity: sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==}
@@ -4844,20 +4850,20 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /soap@1.1.10:
-    resolution: {integrity: sha512-dqfX9qHhXup3ZLWsI5of6xJIJKeBCPnn3tTu9sKtASm2A53Zk6/u3drygLiUy+H1mmjRBptXfVkjY6pt8nhOjA==}
+  /soap@1.1.11:
+    resolution: {integrity: sha512-wxpKktgEZZvxHIKisFPB4VgURNhSuSJU3mX/1kP11GxlENNzYe0gWk3w/+vLhpx68mMSMjeMR/8sahaPXVBj+Q==}
     engines: {node: '>=14.17.0'}
     dependencies:
       axios: 1.8.4(debug@4.4.0)
-      axios-ntlm: 1.4.3(debug@4.4.0)
+      axios-ntlm: 1.4.4(debug@4.4.0)
       debug: 4.4.0
-      formidable: 3.5.2
+      formidable: 3.5.3
       get-stream: 6.0.1
       lodash: 4.17.21
       sax: 1.4.1
       strip-bom: 3.0.0
       whatwg-mimetype: 4.0.0
-      xml-crypto: 6.0.1
+      xml-crypto: 6.1.1
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -5399,8 +5405,8 @@ packages:
       signal-exit: 3.0.7
     dev: true
 
-  /xml-crypto@6.0.1:
-    resolution: {integrity: sha512-v05aU7NS03z4jlZ0iZGRFeZsuKO1UfEbbYiaeRMiATBFs6Jq9+wqKquEMTn4UTrYZ9iGD8yz3KT4L9o2iF682w==}
+  /xml-crypto@6.1.1:
+    resolution: {integrity: sha512-ni6H4Xnd5zvpDKvevmFmmKNojF2cAoTcioeSasICsDTkF0pjqS/PlHsMCLjiruH0N6iVa3OCBMHRLwRfcUPo2g==}
     engines: {node: '>=16'}
     dependencies:
       '@xmldom/is-dom-node': 1.0.1

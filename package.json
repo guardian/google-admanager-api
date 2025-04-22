@@ -59,7 +59,7 @@
   "dependencies": {
     "axios": "^1.8.4",
     "google-auth-library": "^9.13.0",
-    "soap": "1.1.10",
+    "soap": "1.1.11",
     "superstruct": "^2.0.2"
   },
   "keywords": [
