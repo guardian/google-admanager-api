@@ -11,7 +11,7 @@ export class CompanyService implements CompanyServiceOperations {
     this._client = client;
   }
 
-  async createCompanies(companies: Partial<Company>[]): Promise<Company[]> {
+  async createCompanies(companies: Array<Partial<Company>>): Promise<Company[]> {
     return this._client.createCompanies({ companies });
   }
 

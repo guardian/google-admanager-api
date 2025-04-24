@@ -31,7 +31,7 @@ export class GoogleSoapService<T extends keyof typeof SERVICE_MAP> {
       client.setSecurity(new BearerSecurity(token));
     };
 
-    if (this.token) client.setToken(this.token);
+    if (this.token) {client.setToken(this.token);}
 
     if (logRequests) {
       client.addListener("request", (req: unknown) => {

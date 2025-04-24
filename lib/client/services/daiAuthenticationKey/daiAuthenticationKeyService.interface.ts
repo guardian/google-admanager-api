@@ -21,7 +21,7 @@ export interface DaiAuthenticationKeyServiceOperations {
    * @returns the created DAI authentication keys with their IDs filled in
    */
   createDaiAuthenticationKeys(
-    daiAuthenticationKeys: Partial<DaiAuthenticationKey>[],
+    daiAuthenticationKeys: Array<Partial<DaiAuthenticationKey>>,
   ): Promise<DaiAuthenticationKey[]>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202405/DaiAuthenticationKeyService.DaiAuthenticationKeyPage DaiAuthenticationKeyPage}

@@ -1,4 +1,4 @@
-import { enums, type Describe } from "superstruct";
+import { type Describe, enums } from "superstruct";
 
 /**
  * Specifies the start type to use for an entity with a start date time field. For example, a LineItem or LineItemCreativeAssociation.

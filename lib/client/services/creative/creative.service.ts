@@ -11,7 +11,7 @@ export class CreativeService implements CreativeServiceOperations {
     this._client = client;
   }
 
-  async createCreatives(creatives: Partial<Creative>[]): Promise<Creative[]> {
+  async createCreatives(creatives: Array<Partial<Creative>>): Promise<Creative[]> {
     return this._client.createCreatives({ creatives });
   }
 

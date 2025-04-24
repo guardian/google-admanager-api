@@ -11,7 +11,7 @@ export class OrderService implements OrderServiceOperations {
     this._client = client;
   }
 
-  async createOrders(orders: Partial<Order>[]): Promise<Order[]> {
+  async createOrders(orders: Array<Partial<Order>>): Promise<Order[]> {
     return this._client.createOrders({ orders });
   }
 

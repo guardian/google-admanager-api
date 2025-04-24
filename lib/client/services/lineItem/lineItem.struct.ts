@@ -1,34 +1,14 @@
 import {
   array,
   boolean,
+  type Describe,
   number,
   object,
   optional,
   string,
-  type Describe,
 } from "superstruct";
-import type { LineItem } from "./lineItem.type";
+import { StartDateTimeTypeEnum } from "../../../common/enums";
 import { DateTimeStruct } from "../../../common/types";
-import {
-  CustomPacingCurveStruct,
-  LineItemActivityAssociationStruct,
-  LineItemDealInfoDtoStruct,
-} from "../../common/types/lineItemSummary.type";
-import {
-  StatsStruct,
-  MoneyStruct,
-  AppliedLabelStruct,
-  ThirdPartyMeasurementSettingsStruct,
-  GoalStruct,
-  GrpSettingsStruct,
-  CreativePlaceholderStruct,
-  TargetingStruct,
-  CreativeTargetingStruct,
-  FrequencyCapStruct,
-  DeliveryIndicatorStruct,
-  DeliveryDataStruct,
-  BaseCustomFieldValueStruct,
-} from "../../common/types";
 import {
   AllowedFormatsEnum,
   ChildContentEligibilityEnum,
@@ -47,7 +27,27 @@ import {
   SkippableAdTypeEnum,
   StatusEnum,
 } from "../../common/enums";
-import { StartDateTimeTypeEnum } from "../../../common/enums";
+import {
+  AppliedLabelStruct,
+  BaseCustomFieldValueStruct,
+  CreativePlaceholderStruct,
+  CreativeTargetingStruct,
+  DeliveryDataStruct,
+  DeliveryIndicatorStruct,
+  FrequencyCapStruct,
+  GoalStruct,
+  GrpSettingsStruct,
+  MoneyStruct,
+  StatsStruct,
+  TargetingStruct,
+  ThirdPartyMeasurementSettingsStruct,
+} from "../../common/types";
+import {
+  CustomPacingCurveStruct,
+  LineItemActivityAssociationStruct,
+  LineItemDealInfoDtoStruct,
+} from "../../common/types/lineItemSummary.type";
+import type { LineItem } from "./lineItem.type";
 
 /**
  * Represents a LineItem struct

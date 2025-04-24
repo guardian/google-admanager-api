@@ -1,18 +1,18 @@
 import {
   array,
   boolean,
+  type Describe,
   lazy,
   number,
   object,
   string,
   union,
-  type Describe,
 } from "superstruct";
 import {
-  DateStruct,
-  DateTimeStruct,
   type Date,
+  DateStruct,
   type DateTime,
+  DateTimeStruct,
 } from "./date.type";
 
 /**

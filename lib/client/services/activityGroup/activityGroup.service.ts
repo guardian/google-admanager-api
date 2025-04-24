@@ -11,7 +11,7 @@ export class ActivityGroupService implements ActivityGroupServiceOperations {
   }
 
   async createActivityGroups(
-    activityGroups: Partial<ActivityGroup>[],
+    activityGroups: Array<Partial<ActivityGroup>>,
   ): Promise<ActivityGroup[]> {
     return this._client.createActivityGroups({ activityGroups });
   }

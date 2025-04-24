@@ -1,4 +1,4 @@
-import { enums, type Describe } from "superstruct";
+import { type Describe, enums } from "superstruct";
 
 /**
  * Represents the time zone to be used for DayPartTargeting.

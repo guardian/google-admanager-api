@@ -1,13 +1,13 @@
-import { boolean, number, object, type Describe } from "superstruct";
+import { boolean, type Describe, number, object } from "superstruct";
 import {
-  GrpProviderEnum,
-  GrpTargetGenderEnum,
-  NielsenCtvPacingTypeEnum,
-  PacingDeviceCategorizationTypeEnum,
   type GrpProvider,
+  GrpProviderEnum,
   type GrpTargetGender,
+  GrpTargetGenderEnum,
   type NielsenCtvPacingType,
+  NielsenCtvPacingTypeEnum,
   type PacingDeviceCategorizationType,
+  PacingDeviceCategorizationTypeEnum,
 } from "../enums";
 
 /**

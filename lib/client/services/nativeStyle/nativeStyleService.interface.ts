@@ -13,7 +13,7 @@ export interface NativeStyleServiceOperations {
    * @returns the created native styles with their IDs filled in
    */
   createNativeStyles(
-    nativeStyles: Partial<NativeStyle>[],
+    nativeStyles: Array<Partial<NativeStyle>>,
   ): Promise<NativeStyle[]>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202405/NativeStyleService.NativeStylePage NativeStylePage}

@@ -19,7 +19,7 @@ export interface InventoryServiceOperations {
    * @param adUnits the ad units to create
    * @returns the created ad units, with their IDs filled in
    */
-  createAdUnits(adUnits: Partial<AdUnit>[]): Promise<AdUnit[]>;
+  createAdUnits(adUnits: Array<Partial<AdUnit>>): Promise<AdUnit[]>;
   /**
    * Returns a set of all relevant {@link https://developers.google.com/ad-manager/api/reference/v202405/InventoryService.AdUnitSize AdUnitSize} objects.
    *

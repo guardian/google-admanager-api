@@ -19,7 +19,7 @@ export interface ProposalServiceOperations {
    * @param proposals the proposals to create
    * @returns the created proposals with their IDs filled in
    */
-  createProposals(proposals: Partial<Proposal>[]): Promise<Proposal[]>;
+  createProposals(proposals: Array<Partial<Proposal>>): Promise<Proposal[]>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202405/ProposalService.MarketplaceCommentPage MarketplaceCommentPage}
    * of {@link https://developers.google.com/ad-manager/api/reference/v202405/ProposalService.MarketplaceComment MarketplaceComment} objects that satisfy the given

@@ -10,7 +10,7 @@ export class ActivityService implements ActivityServiceOperations {
     this._client = client;
   }
 
-  async createActivities(activities: Partial<Activity>[]): Promise<Activity[]> {
+  async createActivities(activities: Array<Partial<Activity>>): Promise<Activity[]> {
     return this._client.createActivities({ activities });
   }
 

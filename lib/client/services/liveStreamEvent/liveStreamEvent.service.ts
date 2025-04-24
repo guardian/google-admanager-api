@@ -19,12 +19,12 @@ export class LiveStreamEventService
     this._client = client;
   }
   createLiveStreamEvents(
-    liveStreamEvents: Partial<LiveStreamEvent>[],
+    liveStreamEvents: Array<Partial<LiveStreamEvent>>,
   ): Promise<LiveStreamEvent[]> {
     return this._client.createLiveStreamEvents({ liveStreamEvents });
   }
 
-  createSlates(slates: Partial<Slate>[]): Promise<Slate[]> {
+  createSlates(slates: Array<Partial<Slate>>): Promise<Slate[]> {
     return this._client.createSlates({ slates });
   }
 

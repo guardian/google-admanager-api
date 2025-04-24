@@ -1,20 +1,20 @@
 import {
   array,
+  type Describe,
   lazy,
   literal,
   number,
   object,
   optional,
   union,
-  type Describe,
 } from "superstruct";
 import {
-  CmsMetadataCriteriaComparisonOperatorEnum,
-  ComparisonOperatorEnum,
-  LogicalOperatorEnum,
   type CmsMetadataCriteriaComparisonOperator,
+  CmsMetadataCriteriaComparisonOperatorEnum,
   type ComparisonOperator,
+  ComparisonOperatorEnum,
   type LogicalOperator,
+  LogicalOperatorEnum,
 } from "../enums";
 
 /**

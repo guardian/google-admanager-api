@@ -23,7 +23,7 @@ export interface CustomFieldServiceOperations {
    * @returns the created custom field options with their IDs filled in
    */
   createCustomFieldOptions(
-    customFieldOptions: Partial<CustomFieldOption>[],
+    customFieldOptions: Array<Partial<CustomFieldOption>>,
   ): Promise<CustomFieldOption[]>;
   /**
    * Creates new {@link https://developers.google.com/ad-manager/api/reference/v202405/CustomFieldService.CustomField CustomField} objects.
@@ -39,7 +39,7 @@ export interface CustomFieldServiceOperations {
    * @returns the created custom fields with their IDs filled in
    */
   createCustomFields(
-    customFields: Partial<CustomField>[],
+    customFields: Array<Partial<CustomField>>,
   ): Promise<CustomField[]>;
   /**
    * Returns the {@link https://developers.google.com/ad-manager/api/reference/v202405/CustomFieldService.CustomFieldOption CustomFieldOption}

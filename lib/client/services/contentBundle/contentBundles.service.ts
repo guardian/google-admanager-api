@@ -12,7 +12,7 @@ export class ContentBundleService implements ContentBundleServiceOperations {
   }
 
   async createContentBundles(
-    contentBundles: Partial<ContentBundle>[],
+    contentBundles: Array<Partial<ContentBundle>>,
   ): Promise<ContentBundle[]> {
     return this._client.createContentBundles({ contentBundles });
   }

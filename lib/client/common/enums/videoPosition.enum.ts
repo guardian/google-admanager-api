@@ -1,4 +1,4 @@
-import { enums, type Describe } from "superstruct";
+import { type Describe, enums } from "superstruct";
 
 /**
  * Represents a targetable position within a video.

@@ -1,4 +1,4 @@
-import { array, number, object, type Describe } from "superstruct";
+import { array, type Describe, number, object } from "superstruct";
 
 /**
  * Indicates the delivery performance of the LineItem.

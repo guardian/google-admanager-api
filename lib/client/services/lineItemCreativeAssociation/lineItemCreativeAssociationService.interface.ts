@@ -28,7 +28,7 @@ export interface LineItemCreativeAssociationServiceOperations {
    * @returns the created line item creative associations with their IDs filled in
    */
   createLineItemCreativeAssociations(
-    lineItemCreativeAssociations: Partial<LineItemCreativeAssociation>[],
+    lineItemCreativeAssociations: Array<Partial<LineItemCreativeAssociation>>,
   ): Promise<LineItemCreativeAssociation[]>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202405/LineItemCreativeAssociationService.LineItemCreativeAssociationPage LineItemCreativeAssociationPage}

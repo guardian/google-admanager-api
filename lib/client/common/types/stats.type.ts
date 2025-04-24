@@ -1,4 +1,4 @@
-import { number, object, type Describe } from "superstruct";
+import { type Describe, number, object } from "superstruct";
 
 /**
  * Stats contains trafficking statistics for LineItem and LineItemCreativeAssociation objects

@@ -1,6 +1,7 @@
 import {
   array,
   boolean,
+  type Describe,
   enums,
   literal,
   nullable,
@@ -8,30 +9,29 @@ import {
   object,
   optional,
   string,
-  type Describe,
 } from "superstruct";
-import { DayOfWeekEnum, type DayOfWeek } from "../../../common/enums";
+import { type DayOfWeek, DayOfWeekEnum } from "../../../common/enums";
 import {
-  DateTimeRangeStruct,
-  TimeOfDayStruct,
   type DateTimeRange,
+  DateTimeRangeStruct,
   type TimeOfDay,
+  TimeOfDayStruct,
 } from "../../../common/types";
 import {
-  DeliveryTimeZoneEnum,
-  RequestPlatformEnum,
   type DeliveryTimeZone,
+  DeliveryTimeZoneEnum,
   type RequestPlatform,
+  RequestPlatformEnum,
 } from "../enums";
 import {
-  CustomCriteriaSetStruct,
   type CustomCriteriaSet,
+  CustomCriteriaSetStruct,
 } from "./customCriteria.type";
+import type { Size } from "./general.type";
 import {
-  VideoPositionTargetingStruct,
   type VideoPositionTargeting,
+  VideoPositionTargetingStruct,
 } from "./videoPosition.type";
-import { Size } from "./general.type";
 
 /**
  * A {@link https://developers.google.com/ad-manager/api/reference/v202405/AdjustmentService.Location Location} represents a geographical entity that can be targeted.

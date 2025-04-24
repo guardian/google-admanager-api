@@ -58,7 +58,7 @@ export class StatementBuilder {
   }
 
   public increaseOffsetBy(amount: number): StatementBuilder {
-    if (this._offset === undefined) this._offset = 0;
+    if (this._offset === undefined) {this._offset = 0;}
     this._offset += amount;
     return this;
   }
@@ -147,18 +147,18 @@ export class StatementBuilder {
 
   private isDateTime(arg: any): arg is DateTime {
     arg = arg as DateTime;
-    if (!arg.date || !this.isDate(arg.date)) return false;
-    if (!arg.hour || arg.hour === null) return false;
-    if (!arg.minute || arg.minute === null) return false;
-    if (!arg.second || arg.second === null) return false;
+    if (!arg.date || !this.isDate(arg.date)) {return false;}
+    if (!arg.hour || arg.hour === null) {return false;}
+    if (!arg.minute || arg.minute === null) {return false;}
+    if (!arg.second || arg.second === null) {return false;}
     return true;
   }
 
   private isDate(arg: any): arg is Date {
     arg = arg as Date;
-    if (!arg.year || arg.year === null) return false;
-    if (!arg.month || arg.month === null) return false;
-    if (!arg.day || arg.day === null) return false;
+    if (!arg.year || arg.year === null) {return false;}
+    if (!arg.month || arg.month === null) {return false;}
+    if (!arg.day || arg.day === null) {return false;}
     return true;
   }
 

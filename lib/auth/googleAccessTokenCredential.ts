@@ -1,4 +1,4 @@
-import { Credential } from "./interfaces";
+import type { Credential } from "./interfaces";
 
 export class GoogleAccessTokenCredential implements Credential {
   private token: string;

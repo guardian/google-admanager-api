@@ -1,11 +1,11 @@
-import { object, optional, string, type Describe } from "superstruct";
+import { type Describe, object, optional, string } from "superstruct";
 import {
-  ThirdPartyBrandLiftIntegrationPartnerEnum,
-  ThirdPartyReachIntegrationPartnerEnum,
-  ThirdPartyViewabilityIntegrationPartnerEnum,
   type ThirdPartyBrandLiftIntegrationPartner,
+  ThirdPartyBrandLiftIntegrationPartnerEnum,
   type ThirdPartyReachIntegrationPartner,
+  ThirdPartyReachIntegrationPartnerEnum,
   type ThirdPartyViewabilityIntegrationPartner,
+  ThirdPartyViewabilityIntegrationPartnerEnum,
 } from "../enums";
 
 /**

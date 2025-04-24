@@ -16,7 +16,7 @@ export interface ContentBundleServiceOperations {
    * @returns the created content bundles with their IDs filled in
    */
   createContentBundles(
-    contentBundles: Partial<ContentBundle>[],
+    contentBundles: Array<Partial<ContentBundle>>,
   ): Promise<ContentBundle[]>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202405/ContentBundleService.ContentBundlePage ContentBundlePage}

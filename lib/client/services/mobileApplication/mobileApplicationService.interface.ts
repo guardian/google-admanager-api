@@ -16,7 +16,7 @@ export interface MobileApplicationServiceOperations {
    * @returns the created mobile applications with their IDs filled in
    */
   createMobileApplications(
-    mobileApplications: Partial<MobileApplication>[],
+    mobileApplications: Array<Partial<MobileApplication>>,
   ): Promise<MobileApplication[]>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202405/MobileApplicationService.MobileApplicationPage MobileApplicationPage}

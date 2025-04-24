@@ -1207,9 +1207,9 @@ export type Creative = {
   ClickTrackingCreative &
   HasDestinationUrlCreative &
   Html5Creative &
-  InternalRedirectCreative &
-  LegacyDfpCreative &
-  ProgrammaticCreative &
+  InternalRedirectCreative 
+   
+   &
   TemplateCreative &
   ThirdPartyCreative &
   UnsupportedCreative &

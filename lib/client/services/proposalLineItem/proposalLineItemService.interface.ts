@@ -16,7 +16,7 @@ export interface ProposalLineItemServiceOperations {
    * @param makegoodInfos
    */
   createMakegoods(
-    makegoodInfos: Partial<ProposalLineItemMakegoodInfo>[],
+    makegoodInfos: Array<Partial<ProposalLineItemMakegoodInfo>>,
   ): Promise<ProposalLineItem[]>;
   /**
    * Creates new {@link https://developers.google.com/ad-manager/api/reference/v202405/ProposalLineItemService.ProposalLineItem ProposalLineItem} objects.
@@ -25,7 +25,7 @@ export interface ProposalLineItemServiceOperations {
    * @returns the created proposal line items with their IDs filled in
    */
   createProposalLineItems(
-    proposalLineItems: Partial<ProposalLineItem>[],
+    proposalLineItems: Array<Partial<ProposalLineItem>>,
   ): Promise<ProposalLineItem[]>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202405/ProposalLineItemService.ProposalLineItemPage ProposalLineItemPage}

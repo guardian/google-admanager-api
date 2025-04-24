@@ -32,7 +32,7 @@ export interface AdjustmentServiceOperations {
    * @returns the persisted forecast adjustments with their IDs populated
    */
   createForecastAdjustments(
-    forecastAdjustments: Partial<ForecastAdjustment>[],
+    forecastAdjustments: Array<Partial<ForecastAdjustment>>,
   ): Promise<ForecastAdjustment[]>;
   /**
    * Creates new {@link https://developers.google.com/ad-manager/api/reference/v202405/AdjustmentService.TrafficForecastSegment TrafficForecastSegment} objects.
@@ -41,7 +41,7 @@ export interface AdjustmentServiceOperations {
    * @returns the persisted traffic forecast segments with their IDs populated
    */
   createTrafficForecastSegments(
-    trafficForecastSegments: Partial<TrafficForecastSegment>[],
+    trafficForecastSegments: Array<Partial<TrafficForecastSegment>>,
   ): Promise<TrafficForecastSegment[]>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202405/AdjustmentService.ForecastAdjustmentPage ForecastAdjustmentPage}

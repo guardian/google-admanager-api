@@ -17,7 +17,7 @@ export class AudienceSegmentService
   }
 
   async createAudienceSegments(
-    segments: Partial<FirstPartyAudienceSegment>[],
+    segments: Array<Partial<FirstPartyAudienceSegment>>,
   ): Promise<FirstPartyAudienceSegment[]> {
     return this._client.createAudienceSegments({ segments });
   }

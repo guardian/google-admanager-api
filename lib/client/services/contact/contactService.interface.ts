@@ -11,7 +11,7 @@ export interface ContactServiceOperations {
    * @param contacts the contacts to create
    * @returns the created contacts with their IDs filled in
    */
-  createContacts(contacts: Partial<Contact>[]): Promise<Contact[]>;
+  createContacts(contacts: Array<Partial<Contact>>): Promise<Contact[]>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202405/ContactService.ContactPage ContactPage}
    * of {@link https://developers.google.com/ad-manager/api/reference/v202405/ContactService.Contact Contact} objects that satisfy the given
