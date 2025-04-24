@@ -8,10 +8,19 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
       time: "09:00"
-      day: "tuesday"
     groups:
+      linters:
+        patterns:
+          - '*eslint*'
+          - '*prettier*'
+        update-types:
+          - 'minor'
+          - 'patch'
+      typescript:
+        patterns:
+          - 'typescript'
       dependencies:
         dependency-type: "production"
         update-types:
@@ -22,3 +31,11 @@ updates:
         update-types:
           - "minor"
           - "patch"
+        exclude-patterns:
+          - "typescript"
+          - '*eslint*'
+          - '*prettier*'
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'daily'
