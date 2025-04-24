@@ -1,4 +1,4 @@
-import { type Describe, enums } from "superstruct";
+import { enums, type Describe } from "superstruct";
 
 /**
  * The declaration about third party data usage on the associated entity.

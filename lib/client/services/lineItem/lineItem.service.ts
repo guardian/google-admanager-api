@@ -11,7 +11,7 @@ export class LineItemService implements LineItemServiceOperations {
     this._client = client;
   }
 
-  async createLineItems(lineItems: Array<Partial<LineItem>>): Promise<LineItem[]> {
+  async createLineItems(lineItems: Partial<LineItem>[]): Promise<LineItem[]> {
     return this._client.createLineItems({ lineItems });
   }
 

@@ -1,9 +1,9 @@
-import { array, type Describe, number, object, optional } from "superstruct";
+import { array, number, object, optional, type Describe } from "superstruct";
 import {
-  type VideoBumperType,
   VideoBumperTypeEnum,
-  type VideoPositionType,
   VideoPositionTypeEnum,
+  type VideoBumperType,
+  type VideoPositionType,
 } from "../enums";
 
 /**

@@ -1,4 +1,4 @@
-import { type Describe, enums } from "superstruct";
+import { enums, type Describe } from "superstruct";
 
 /**
  * Specifies the available comparison operators.

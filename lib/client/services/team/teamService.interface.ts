@@ -19,7 +19,7 @@ export interface TeamServiceOperations {
    * @param teams the teams to create
    * @returns the created teams with their IDs filled in
    */
-  createTeams(teams: Array<Partial<Team>>): Promise<Team[]>;
+  createTeams(teams: Partial<Team>[]): Promise<Team[]>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202405/TeamService.TeamPage TeamPage}
    * of {@link https://developers.google.com/ad-manager/api/reference/v202405/TeamService.Team Team} objects that satisfy the given

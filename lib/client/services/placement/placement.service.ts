@@ -12,7 +12,7 @@ export class PlacementService implements PlacementServiceOperations {
   }
 
   async createPlacements(
-    placements: Array<Partial<Placement>>,
+    placements: Partial<Placement>[],
   ): Promise<Placement[]> {
     return this._client.createPlacements({ placements });
   }

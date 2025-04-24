@@ -20,7 +20,7 @@ export interface AdRuleServiceOperations {
    * @param adRules the ad rules to create
    * @returns the created ad rules with their IDs filled in
    */
-  createAdRules(adRules: Array<Partial<AdRule>>): Promise<AdRule[]>;
+  createAdRules(adRules: Partial<AdRule>[]): Promise<AdRule[]>;
 
   /**
    * Creates new AdSpot objects.
@@ -28,7 +28,7 @@ export interface AdRuleServiceOperations {
    * @param adSports the ad spots to create
    * @returns the created ad spots with their IDs filled in
    */
-  createAdSpots(adSports: Array<Partial<AdSpot>>): Promise<AdSpot[]>;
+  createAdSpots(adSports: Partial<AdSpot>[]): Promise<AdSpot[]>;
 
   /**
    * Creates new breakTemplate objects.
@@ -37,7 +37,7 @@ export interface AdRuleServiceOperations {
    * @returns the created break template with their IDs filled in
    */
   createBreakTemplates(
-    breakTemplate: Array<Partial<BreakTemplate>>,
+    breakTemplate: Partial<BreakTemplate>[],
   ): Promise<BreakTemplate[]>;
 
   /**

@@ -1,4 +1,4 @@
-import { type Describe, enums } from "superstruct";
+import { enums, type Describe } from "superstruct";
 
 /**
  * The strategy to use for displaying multiple {@link https://developers.google.com/ad-manager/api/reference/v202405/CreativeService.Creative Creative} \

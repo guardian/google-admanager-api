@@ -1,4 +1,4 @@
-import { type Describe, enums } from "superstruct";
+import { enums, type Describe } from "superstruct";
 
 /**
  * Descriptions of the types of sizes a creative can be. Not all creatives can be described by a height-width pair, this provides additional context.

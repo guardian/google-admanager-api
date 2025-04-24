@@ -16,7 +16,7 @@ export interface ActivityServiceOperations {
    * @param activities the activity to be created.
    * @returns the created activities with its IDs filled in.
    */
-  createActivities(activities: Array<Partial<Activity>>): Promise<Activity[]>;
+  createActivities(activities: Partial<Activity>[]): Promise<Activity[]>;
   /**
    * Gets an {@link https://developers.google.com/ad-manager/api/reference/v202405/ActivityService.ActivityPage ActivityPage}
    * of {@link https://developers.google.com/ad-manager/api/reference/v202405/ActivityService.Activity Activity} objects that satisfy the given

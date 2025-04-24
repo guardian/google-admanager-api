@@ -1,7 +1,7 @@
-import { array, boolean, type Describe, number, object } from "superstruct";
 import type { StartDateTimeType } from "../../../common/enums";
-import { type DateTime, DateTimeStruct } from "../../../common/types";
+import { DateTimeStruct, type DateTime } from "../../../common/types";
 import {
+  CustomPacingGoalUnitEnum,
   type AllowedFormats,
   type ChildContentEligibility,
   type CompanionDeliveryOption,
@@ -10,7 +10,6 @@ import {
   type CostType,
   type CreativeRotationType,
   type CustomPacingGoalUnit,
-  CustomPacingGoalUnitEnum,
   type DeliveryForecastSource,
   type DeliveryRateType,
   type EnvironmentType,
@@ -22,6 +21,7 @@ import {
   type SkippableAdType,
 } from "../enums";
 import {
+  MoneyStruct,
   type AppliedLabel,
   type BaseCustomFieldValue,
   type CreativePlaceholder,
@@ -31,10 +31,10 @@ import {
   type Goal,
   type GrpSettings,
   type Money,
-  MoneyStruct,
   type Stats,
   type ThirdPartyMeasurementSettings,
 } from ".";
+import { array, boolean, number, object, type Describe } from "superstruct";
 
 /**
  * An interval of a {@link https://developers.google.com/ad-manager/api/reference/v202405/ForecastService.CustomPacingCurve CustomPacingCurve}.

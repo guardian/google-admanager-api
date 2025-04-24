@@ -1,24 +1,24 @@
 import {
   boolean,
-  type Describe,
   literal,
   number,
   object,
   string,
   union,
+  type Describe,
 } from "superstruct";
-import { type TimeUnit, TimeUnitEnum } from "../../../common/enums";
-import { type Value, ValueStruct } from "../../../common/types";
+import { TimeUnitEnum, type TimeUnit } from "../../../common/enums";
+import { ValueStruct, type Value } from "../../../common/types";
 import {
+  GoalTypeEnum,
+  UnitTypeEnum,
   type AccountStatus,
   type DeclarationType,
   type DelegationStatus,
   type DelegationType,
   type GoalType,
-  GoalTypeEnum,
   type OnboardingTask,
   type UnitType,
-  UnitTypeEnum,
 } from "../enums";
 
 /**

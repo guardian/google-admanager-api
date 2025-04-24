@@ -11,7 +11,7 @@ export class LabelService implements LabelServiceOperations {
     this._client = client;
   }
 
-  async createLabels(labels: Array<Partial<Label>>): Promise<Label[]> {
+  async createLabels(labels: Partial<Label>[]): Promise<Label[]> {
     return this._client.createLabels({ labels });
   }
 

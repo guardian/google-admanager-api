@@ -17,7 +17,7 @@ export class MobileApplicationService
   }
 
   async createMobileApplications(
-    mobileApplications: Array<Partial<MobileApplication>>,
+    mobileApplications: Partial<MobileApplication>[],
   ): Promise<MobileApplication[]> {
     return this._client.createMobileApplications({ mobileApplications });
   }

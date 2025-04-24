@@ -17,7 +17,7 @@ export class DaiEncodingProfileService
   }
 
   async createDaiEncodingProfiles(
-    daiEncodingProfiles: Array<Partial<DaiEncodingProfile>>,
+    daiEncodingProfiles: Partial<DaiEncodingProfile>[],
   ): Promise<DaiEncodingProfile[]> {
     return this._client.createDaiEncodingProfiles({ daiEncodingProfiles });
   }

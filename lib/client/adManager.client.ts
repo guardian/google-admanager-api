@@ -1,8 +1,8 @@
 import type { SACredential } from "../auth";
 import type { SERVICE_MAP } from "../common/constants";
 import {
-  DEFAULT_API_VERSION,
   DEFAULT_APPLICATION_NAME,
+  DEFAULT_API_VERSION,
 } from "../common/constants";
 import type { ImportClass } from "../common/types";
 import { GoogleSoapService } from "./googleSoap.service";

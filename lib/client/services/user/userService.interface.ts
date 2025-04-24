@@ -16,7 +16,7 @@ export interface UserServiceOperations {
    * @param users the users to create
    * @returns the created users with their IDs filled in
    */
-  createUsers(users: Array<Partial<User>>): Promise<User[]>;
+  createUsers(users: Partial<User>[]): Promise<User[]>;
   /**
    * Returns the {@link https://developers.google.com/ad-manager/api/reference/v202405/UserService.Role Role} objects that are defined for the users of the network.
    *

@@ -19,7 +19,7 @@ export interface DaiEncodingProfileServiceOperations {
    * @returns the created profiles with their IDs filled in
    */
   createDaiEncodingProfiles(
-    daiEncodingProfiles: Array<Partial<DaiEncodingProfile>>,
+    daiEncodingProfiles: Partial<DaiEncodingProfile>[],
   ): Promise<DaiEncodingProfile[]>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202405/DaiEncodingProfileService.DaiEncodingProfilePage DaiEncodingProfilePage}

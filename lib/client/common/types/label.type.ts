@@ -1,4 +1,4 @@
-import { boolean, type Describe, number, object } from "superstruct";
+import { boolean, number, object, type Describe } from "superstruct";
 
 /**
  * Represents a {@link https://developers.google.com/ad-manager/api/reference/v202405/LabelService.Label Label} that can be applied to an entity.

@@ -1,5 +1,5 @@
-import { lineItems } from "../../../fixtures/line-items";
 import { LineItemStruct } from "./lineItem.struct";
+import { lineItems } from "../../../fixtures/line-items";
 
 describe("LineItemStruct", () => {
   it.each(lineItems)("should validate a valid object", (lineItem) => {

@@ -11,7 +11,7 @@ export class SiteService implements SiteServiceOperations {
     this._client = client;
   }
 
-  async createSites(sites: Array<Partial<Site>>): Promise<Site[]> {
+  async createSites(sites: Partial<Site>[]): Promise<Site[]> {
     return this._client.createSites({ sites });
   }
 

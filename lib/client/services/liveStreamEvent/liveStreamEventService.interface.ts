@@ -29,7 +29,7 @@ export interface LiveStreamEventServiceOperations {
    * @returns the created live stream events with their IDs filled in
    */
   createLiveStreamEvents(
-    liveStreamEvents: Array<Partial<LiveStreamEvent>>,
+    liveStreamEvents: Partial<LiveStreamEvent>[],
   ): Promise<LiveStreamEvent[]>;
   /**
    * Create new slates.
@@ -38,7 +38,7 @@ export interface LiveStreamEventServiceOperations {
    *
    * @param slates 	list of slate objects to create.
    */
-  createSlates(slates: Array<Partial<Slate>>): Promise<Slate[]>;
+  createSlates(slates: Partial<Slate>[]): Promise<Slate[]>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202405/LiveStreamEventService.LiveStreamEventPage LiveStreamEventPage}
    * of {@link https://developers.google.com/ad-manager/api/reference/v202405/LiveStreamEventService.LiveStreamEvent LiveStreamEvent} objects that satisfy the given

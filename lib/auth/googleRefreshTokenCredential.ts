@@ -1,5 +1,5 @@
 import { OAuth2Client } from "google-auth-library";
-import type { Credential } from "./interfaces";
+import { Credential } from "./interfaces";
 
 export class GoogleRefreshTokenCredential implements Credential {
   private client: OAuth2Client;

@@ -1,5 +1,5 @@
-import { type Describe, number, object, string } from "superstruct";
-import { type MinuteOfHour, MinuteOfHourEnum } from "../enums";
+import { number, object, string, type Describe } from "superstruct";
+import { MinuteOfHourEnum, type MinuteOfHour } from "../enums";
 
 /**
  * Represents a date.

@@ -15,7 +15,7 @@ export interface CreativeServiceOperations {
    * @param creatives the creatives to create
    * @returns the created creatives with their IDs filled in
    */
-  createCreatives(creatives: Array<Partial<Creative>>): Promise<Creative[]>;
+  createCreatives(creatives: Partial<Creative>[]): Promise<Creative[]>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202405/CreativeService.CreativePage CreativePage}
    * of {@link https://developers.google.com/ad-manager/api/reference/v202405/CreativeService.Creative Creative} objects that satisfy the given

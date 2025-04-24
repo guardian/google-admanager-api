@@ -15,7 +15,7 @@ export class ProposalService implements ProposalServiceOperations {
     this._client = client;
   }
 
-  async createProposals(proposals: Array<Partial<Proposal>>): Promise<Proposal[]> {
+  async createProposals(proposals: Partial<Proposal>[]): Promise<Proposal[]> {
     return this._client.createProposals({ proposals });
   }
 

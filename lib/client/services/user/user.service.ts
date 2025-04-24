@@ -11,7 +11,7 @@ export class UserService implements UserServiceOperations {
     this._client = client;
   }
 
-  async createUsers(users: Array<Partial<User>>): Promise<User[]> {
+  async createUsers(users: Partial<User>[]): Promise<User[]> {
     return this._client.createUsers({ users });
   }
 

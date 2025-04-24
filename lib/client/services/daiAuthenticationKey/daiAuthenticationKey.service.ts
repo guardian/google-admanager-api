@@ -17,7 +17,7 @@ export class DaiAuthenticationKeyService
   }
 
   async createDaiAuthenticationKeys(
-    daiAuthenticationKeys: Array<Partial<DaiAuthenticationKey>>,
+    daiAuthenticationKeys: Partial<DaiAuthenticationKey>[],
   ): Promise<DaiAuthenticationKey[]> {
     return this._client.createDaiAuthenticationKeys({ daiAuthenticationKeys });
   }

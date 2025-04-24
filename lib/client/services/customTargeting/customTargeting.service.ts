@@ -22,13 +22,13 @@ export class CustomTargetingService
   }
 
   async createCustomTargetingKeys(
-    keys: Array<Partial<CustomTargetingKey>>,
+    keys: Partial<CustomTargetingKey>[],
   ): Promise<CustomTargetingKey[]> {
     return this._client.createCustomTargetingKeys({ keys });
   }
 
   async createCustomTargetingValues(
-    values: Array<Partial<CustomTargetingValue>>,
+    values: Partial<CustomTargetingValue>[],
   ): Promise<CustomTargetingValue[]> {
     return this._client.createCustomTargetingValues({ values });
   }

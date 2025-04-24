@@ -15,7 +15,7 @@ export interface PlacementServiceOperations {
    * @param placements the placements to create
    * @returns the created placements with their IDs filled in
    */
-  createPlacements(placements: Array<Partial<Placement>>): Promise<Placement[]>;
+  createPlacements(placements: Partial<Placement>[]): Promise<Placement[]>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202405/PlacementService.PlacementPage PlacementPage}
    * of {@link https://developers.google.com/ad-manager/api/reference/v202405/PlacementService.Placement Placement} objects that satisfy the given

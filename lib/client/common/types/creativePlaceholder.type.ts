@@ -1,17 +1,16 @@
+import { CreativeSizeTypeEnum, type CreativeSizeType } from "../enums";
+import { SizeStruct, type Size } from "./general.type";
 import {
   array,
   boolean,
-  type Describe,
   lazy,
   number,
   object,
   optional,
   string,
+  type Describe,
 } from "superstruct";
-import { type CreativeSizeType, CreativeSizeTypeEnum } from "../enums";
-import { type Size, SizeStruct } from "./general.type";
-import type { AppliedLabel} from "./label.type";
-import { AppliedLabelStruct } from "./label.type";
+import { AppliedLabel, AppliedLabelStruct } from "./label.type";
 
 /**
  * A CreativePlaceholder describes a slot that a creative is expected to fill.

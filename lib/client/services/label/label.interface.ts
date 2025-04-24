@@ -12,7 +12,7 @@ export interface LabelServiceOperations {
    * @param labels the labels to create
    * @returns the created labels with their IDs filled in
    */
-  createLabels(labels: Array<Partial<Label>>): Promise<Label[]>;
+  createLabels(labels: Partial<Label>[]): Promise<Label[]>;
   /**
    * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202405/LabelService.LabelPage LabelPage}
    * of {@link https://developers.google.com/ad-manager/api/reference/v202405/LabelService.Label Label} objects that satisfy the given
