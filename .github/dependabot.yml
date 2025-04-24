@@ -13,14 +13,14 @@ updates:
     groups:
       linters:
         patterns:
-          - '*eslint*'
-          - '*prettier*'
+          - "*eslint*"
+          - "*prettier*"
         update-types:
-          - 'minor'
-          - 'patch'
+          - "minor"
+          - "patch"
       typescript:
         patterns:
-          - 'typescript'
+          - "typescript"
       dependencies:
         dependency-type: "production"
         update-types:
@@ -33,9 +33,9 @@ updates:
           - "patch"
         exclude-patterns:
           - "typescript"
-          - '*eslint*'
-          - '*prettier*'
-  - package-ecosystem: 'github-actions'
-    directory: '/'
+          - "*eslint*"
+          - "*prettier*"
+  - package-ecosystem: "github-actions"
+    directory: "/"
     schedule:
-      interval: 'daily'
+      interval: "daily"
