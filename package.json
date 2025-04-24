@@ -1,6 +1,6 @@
 {
   "name": "@guardian/google-admanager-api",
-  "version": "3.1.3",
+  "version": "3.1.4",
   "description": "Google Ad Manager API Client Library for NodeJs",
   "main": "dist/index",
   "types": "dist/index",

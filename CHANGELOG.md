@@ -1,5 +1,11 @@
 # @guardian/google-admanager-api
 
+## 3.1.4
+
+### Patch Changes
+
+- 280f75d: Bump version of soap to 1.1.11 in dependencies
+
 ## 3.1.3
 
 ### Patch Changes
