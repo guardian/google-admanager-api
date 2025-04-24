@@ -40,7 +40,7 @@
     "@types/jest": "^29.4.0",
     "@types/node": "^22.14.1",
     "eslint": "^8.57.0",
-    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-prettier": "^10.1.2",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-import-resolver-typescript": "^4.3.4",
     "eslint-plugin-eslint-comments": "^3.2.0",
