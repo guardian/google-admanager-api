@@ -10,13 +10,13 @@ importers:
     dependencies:
       axios:
         specifier: ^1.8.4
-        version: 1.9.0(debug@4.4.0)
+        version: 1.9.0(debug@4.4.1)
       google-auth-library:
         specifier: ^9.13.0
         version: 9.15.1
       soap:
-        specifier: 1.1.11
-        version: 1.1.11
+        specifier: 1.1.12
+        version: 1.1.12
       superstruct:
         specifier: ^2.0.2
         version: 2.0.2
@@ -981,15 +981,6 @@ packages:
       supports-color:
         optional: true
 
-  debug@4.4.0:
-    resolution: {integrity: sha512-6WTZ/IxCY/T6BALoZHaE4ctp9xm+Z5kY/pzYaCHRFeyVhojxlrm+46y68HA6hr0TcwEssoxNiDEUJQjfPZ/RYA==}
-    engines: {node: '>=6.0'}
-    peerDependencies:
-      supports-color: '*'
-    peerDependenciesMeta:
-      supports-color:
-        optional: true
-
   debug@4.4.1:
     resolution: {integrity: sha512-KcKCqiftBJcZr++7ykoDIEwSa3XWowTfNPo92BYxjXiyYEVrUQh2aLyhxBCwww+heortUFxEJYcRzosstTEBYQ==}
     engines: {node: '>=6.0'}
@@ -1377,9 +1368,9 @@ packages:
     resolution: {integrity: sha512-hGfm/slu0ZabnNt4oaRZ6uREyfCj6P4fT/n6A1rGV+Z0VdGXjfOhVUpkn6qVQONHGIFwmveGXyDs75+nr6FM8w==}
     engines: {node: '>= 6'}
 
-  formidable@3.5.3:
-    resolution: {integrity: sha512-pQEHGLZjLRyfLCe6r6n8IQGqHEceKfYR5tIf/iUDn5SabaitfVR/pIskxnyvSSl122J63rFY17i68hrfK0BVOA==}
-    deprecated: 'ATTENTION: please upgrade to latest of v3 (v3.5.4), should be working on Node v14, v16, v18 and recent lts'
+  formidable@3.5.4:
+    resolution: {integrity: sha512-YikH+7CUTOtP44ZTnUhR7Ic2UASBPOqmaRkRKxRbywPTe5VxF7RRCck4af9wutiZ/QKM5nME9Bie2fFaPz5Gug==}
+    engines: {node: '>=14.0.0'}
 
   fs-extra@7.0.1:
     resolution: {integrity: sha512-YJDaCJZEnBmcbw13fvdAM9AwNOJwOzrE4pqMqBq5nFiEqXUqHwlK4B+3pUw6JNvfSPtX05xFHtYy/1ni01eGCw==}
@@ -2432,8 +2423,8 @@ packages:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
 
-  soap@1.1.11:
-    resolution: {integrity: sha512-wxpKktgEZZvxHIKisFPB4VgURNhSuSJU3mX/1kP11GxlENNzYe0gWk3w/+vLhpx68mMSMjeMR/8sahaPXVBj+Q==}
+  soap@1.1.12:
+    resolution: {integrity: sha512-bfgy09VAA2Pnv8I/qDpMvPFPV//eIGr/DOeaLx3uexpMrI+gq8Xuvp3KlTZYMhKFwjwgcLd+YpabFbOv82R5gQ==}
     engines: {node: '>=14.17.0'}
 
   source-map-support@0.5.13:
@@ -2761,8 +2752,8 @@ packages:
     resolution: {integrity: sha512-7KxauUdBmSdWnmpaGFg+ppNjKF8uNLry8LyzjauQDOVONfFLNKrKvQOxZ/VuTIcS/gge/YNahf5RIIQWTSarlg==}
     engines: {node: ^12.13.0 || ^14.15.0 || >=16.0.0}
 
-  xml-crypto@6.1.1:
-    resolution: {integrity: sha512-ni6H4Xnd5zvpDKvevmFmmKNojF2cAoTcioeSasICsDTkF0pjqS/PlHsMCLjiruH0N6iVa3OCBMHRLwRfcUPo2g==}
+  xml-crypto@6.1.2:
+    resolution: {integrity: sha512-leBOVQdVi8FvPJrMYoum7Ici9qyxfE4kVi+AkpUoYCSXaQF4IlBm1cneTK9oAxR61LpYxTx7lNcsnBIeRpGW2w==}
     engines: {node: '>=16'}
 
   xpath@0.0.33:
@@ -3826,18 +3817,18 @@ snapshots:
 
   axe-core@4.10.3: {}
 
-  axios-ntlm@1.4.4(debug@4.4.0):
+  axios-ntlm@1.4.4(debug@4.4.1):
     dependencies:
-      axios: 1.9.0(debug@4.4.0)
+      axios: 1.9.0(debug@4.4.1)
       des.js: 1.1.0
       dev-null: 0.1.1
       js-md4: 0.3.2
     transitivePeerDependencies:
       - debug
 
-  axios@1.9.0(debug@4.4.0):
+  axios@1.9.0(debug@4.4.1):
     dependencies:
-      follow-redirects: 1.15.9(debug@4.4.0)
+      follow-redirects: 1.15.9(debug@4.4.1)
       form-data: 4.0.2
       proxy-from-env: 1.1.0
     transitivePeerDependencies:
@@ -4052,10 +4043,6 @@ snapshots:
       is-data-view: 1.0.2
 
   debug@3.2.7:
-    dependencies:
-      ms: 2.1.3
-
-  debug@4.4.0:
     dependencies:
       ms: 2.1.3
 
@@ -4621,9 +4608,9 @@ snapshots:
 
   flatted@3.3.3: {}
 
-  follow-redirects@1.15.9(debug@4.4.0):
+  follow-redirects@1.15.9(debug@4.4.1):
     optionalDependencies:
-      debug: 4.4.0
+      debug: 4.4.1
 
   for-each@0.3.5:
     dependencies:
@@ -4636,7 +4623,7 @@ snapshots:
       es-set-tostringtag: 2.1.0
       mime-types: 2.1.35
 
-  formidable@3.5.3:
+  formidable@3.5.4:
     dependencies:
       '@paralleldrive/cuid2': 2.2.2
       dezalgo: 1.0.4
@@ -5900,18 +5887,18 @@ snapshots:
 
   slash@3.0.0: {}
 
-  soap@1.1.11:
+  soap@1.1.12:
     dependencies:
-      axios: 1.9.0(debug@4.4.0)
-      axios-ntlm: 1.4.4(debug@4.4.0)
-      debug: 4.4.0
-      formidable: 3.5.3
+      axios: 1.9.0(debug@4.4.1)
+      axios-ntlm: 1.4.4(debug@4.4.1)
+      debug: 4.4.1
+      formidable: 3.5.4
       get-stream: 6.0.1
       lodash: 4.17.21
       sax: 1.4.1
       strip-bom: 3.0.0
       whatwg-mimetype: 4.0.0
-      xml-crypto: 6.1.1
+      xml-crypto: 6.1.2
     transitivePeerDependencies:
       - supports-color
 
@@ -6290,7 +6277,7 @@ snapshots:
       imurmurhash: 0.1.4
       signal-exit: 3.0.7
 
-  xml-crypto@6.1.1:
+  xml-crypto@6.1.2:
     dependencies:
       '@xmldom/is-dom-node': 1.0.1
       '@xmldom/xmldom': 0.8.10
