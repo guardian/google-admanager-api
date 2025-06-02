@@ -1,5 +1,11 @@
 # @guardian/google-admanager-api
 
+## 3.1.5
+
+### Patch Changes
+
+- 5147105: Bump axios dependency version
+
 ## 3.1.4
 
 ### Patch Changes
