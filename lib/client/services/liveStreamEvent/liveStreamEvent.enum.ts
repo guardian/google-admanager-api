@@ -1,5 +1,5 @@
 /**
- * Describes the status of a {@link https://developers.google.com/ad-manager/api/reference/v202405/LiveStreamEventService.LiveStreamEvent LiveStreamEvent} object.
+ * Describes the status of a {@link https://developers.google.com/ad-manager/api/reference/v202505/LiveStreamEventService.LiveStreamEvent LiveStreamEvent} object.
  */
 export enum LiveStreamEventStatus {
   /**
@@ -102,7 +102,7 @@ export enum DynamicAdInsertionType {
 }
 
 /**
- * The {@link https://developers.google.com/ad-manager/api/reference/v202405/LiveStreamEventService.LiveStreamEvent LiveStreamEvent} streaming format.
+ * The {@link https://developers.google.com/ad-manager/api/reference/v202505/LiveStreamEventService.LiveStreamEvent LiveStreamEvent} streaming format.
  */
 export enum StreamingFormat {
   /**
