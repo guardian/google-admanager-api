@@ -37,7 +37,7 @@ import {
 import { array, boolean, number, object, type Describe } from "superstruct";
 
 /**
- * An interval of a {@link https://developers.google.com/ad-manager/api/reference/v202405/ForecastService.CustomPacingCurve CustomPacingCurve}.
+ * An interval of a {@link https://developers.google.com/ad-manager/api/reference/v202505/ForecastService.CustomPacingCurve CustomPacingCurve}.
  * A custom pacing goal contains a start time and an amount.
  * The goal will apply until either the next custom pacing goal's getStartTime or the line item's end time if it is the last goal.
  */
@@ -65,10 +65,10 @@ export const CustomPacingGoalsStruct: Describe<CustomPacingGoal> = object({
 });
 
 /**
- * A LineItemActivityAssociation associates a {@link https://developers.google.com/ad-manager/api/reference/v202405/LineItemService.LineItem LineItem}
- * with an {@link https://developers.google.com/ad-manager/api/reference/v202405/ActivityService.Activity Activity} so that the conversions of the
- * {@link https://developers.google.com/ad-manager/api/reference/v202405/ActivityService.Activity Activity} can be counted against the
- * {@link https://developers.google.com/ad-manager/api/reference/v202405/LineItemService.LineItem LineItem}.
+ * A LineItemActivityAssociation associates a {@link https://developers.google.com/ad-manager/api/reference/v202505/LineItemService.LineItem LineItem}
+ * with an {@link https://developers.google.com/ad-manager/api/reference/v202505/ActivityService.Activity Activity} so that the conversions of the
+ * {@link https://developers.google.com/ad-manager/api/reference/v202505/ActivityService.Activity Activity} can be counted against the
+ * {@link https://developers.google.com/ad-manager/api/reference/v202505/LineItemService.LineItem LineItem}.
  */
 export type LineItemActivityAssociation = {
   /**
@@ -98,7 +98,7 @@ export const LineItemActivityAssociationStruct: Describe<LineItemActivityAssocia
   });
 
 /**
- * A curve consisting of {@link https://developers.google.com/ad-manager/api/reference/v202405/ForecastService.CustomPacingGoal CustomPacingGoal} objects that is used to pace line item delivery.
+ * A curve consisting of {@link https://developers.google.com/ad-manager/api/reference/v202505/ForecastService.CustomPacingGoal CustomPacingGoal} objects that is used to pace line item delivery.
  */
 export type CustomPacingCurve = {
   /**
@@ -229,7 +229,7 @@ export type LineItemSummary = {
   lineItemType: LineItemType;
   /**
    * The priority for the line item. Valid values range from 1 to 16. This field is optional and defaults to the default priority of the
-   * {@link https://developers.google.com/ad-manager/api/reference/v202405/LineItemService.LineItemType LineItemType}.
+   * {@link https://developers.google.com/ad-manager/api/reference/v202505/LineItemService.LineItemType LineItemType}.
    */
   priority: number;
   /**
