@@ -1,6 +1,6 @@
 /**
  * Represents the actions that can be performed on
- * {@link https://developers.google.com/ad-manager/api/reference/v202405/OrderService.Order Order} objects.
+ * {@link https://developers.google.com/ad-manager/api/reference/v202505/OrderService.Order Order} objects.
  */
 export abstract class OrderAction {
   buildAttributes(): object {
@@ -10,8 +10,8 @@ export abstract class OrderAction {
 
 /**
  * The action used for approving
- * {@link https://developers.google.com/ad-manager/api/reference/v202405/OrderService.Order Order} objects.
- * All {@link https://developers.google.com/ad-manager/api/reference/v202405/ForecastService.LineItem LineItem}
+ * {@link https://developers.google.com/ad-manager/api/reference/v202505/OrderService.Order Order} objects.
+ * All {@link https://developers.google.com/ad-manager/api/reference/v202505/ForecastService.LineItem LineItem}
  * objects within the order will be approved as well.
  * For more information on what happens to an order and its line items when it is approved,
  * see the {@link https://support.google.com/dfp_premium/answer/177334 Ad Manager Help Center}.
@@ -33,11 +33,11 @@ export class ApproveOrders implements OrderAction {
 
 /**
  * The action used for approving
- * {@link https://developers.google.com/ad-manager/api/reference/v202405/OrderService.Order Order} objects.
- * All {@link https://developers.google.com/ad-manager/api/reference/v202405/ForecastService.LineItem LineItem}
+ * {@link https://developers.google.com/ad-manager/api/reference/v202505/OrderService.Order Order} objects.
+ * All {@link https://developers.google.com/ad-manager/api/reference/v202505/ForecastService.LineItem LineItem}
  * objects within the order will be approved as well.
  * This action does not make any changes to the
- * {@link https://developers.google.com/ad-manager/api/reference/v202405/ForecastService.LineItem#reservationStatus LineItem.reservationStatus}
+ * {@link https://developers.google.com/ad-manager/api/reference/v202505/ForecastService.LineItem#reservationStatus LineItem.reservationStatus}
  * of the line items within the order.
  * If there are reservable line items that have not been reserved the operation will not succeed.
  */
@@ -70,7 +70,7 @@ export class DeleteOrders implements OrderAction {
 
 /**
  * The action used for disapproving Order objects.
- * All {@link https://developers.google.com/ad-manager/api/reference/v202405/ForecastService.LineItem LineItem} objects within the order will be disapproved as well.
+ * All {@link https://developers.google.com/ad-manager/api/reference/v202505/ForecastService.LineItem LineItem} objects within the order will be disapproved as well.
  */
 export class DisapproveOrders implements OrderAction {
   buildAttributes(): object {
@@ -80,9 +80,9 @@ export class DisapproveOrders implements OrderAction {
 
 /**
  * The action used for disapproving Order objects.
- * All {@link https://developers.google.com/ad-manager/api/reference/v202405/ForecastService.LineItem LineItem} objects within the order will be disapproved as well.
+ * All {@link https://developers.google.com/ad-manager/api/reference/v202505/ForecastService.LineItem LineItem} objects within the order will be disapproved as well.
  * This action does not make any changes to the
- * {@link https://developers.google.com/ad-manager/api/reference/v202405/ForecastService.LineItem#reservationStatus LineItem.reservationStatus}
+ * {@link https://developers.google.com/ad-manager/api/reference/v202505/ForecastService.LineItem#reservationStatus LineItem.reservationStatus}
  * of the line items within the order.
  */
 export class DisapproveOrdersWithoutReservationChanges implements OrderAction {
@@ -92,7 +92,7 @@ export class DisapproveOrdersWithoutReservationChanges implements OrderAction {
 }
 
 /**
- * The action used for pausing all {@link https://developers.google.com/ad-manager/api/reference/v202405/ForecastService.LineItem LineItem} objects within an order.
+ * The action used for pausing all {@link https://developers.google.com/ad-manager/api/reference/v202505/ForecastService.LineItem LineItem} objects within an order.
  */
 export class PauseOrders implements OrderAction {
   buildAttributes(): object {
@@ -102,7 +102,7 @@ export class PauseOrders implements OrderAction {
 
 /**
  * The action used for resuming Order objects.
- * {@link https://developers.google.com/ad-manager/api/reference/v202405/ForecastService.LineItem LineItem} objects within the order that are legible to resume will resume as well.
+ * {@link https://developers.google.com/ad-manager/api/reference/v202505/ForecastService.LineItem LineItem} objects within the order that are legible to resume will resume as well.
  */
 export class ResumeOrders implements OrderAction {
   buildAttributes(): object {
@@ -122,7 +122,7 @@ export class RetractOrders implements OrderAction {
 /**
  * The action used for retracting Order objects.
  * This action does not make any changes to the
- * {@link https://developers.google.com/ad-manager/api/reference/v202405/ForecastService.LineItem#reservationStatus LineItem.reservationStatus} of the line items within the order.
+ * {@link https://developers.google.com/ad-manager/api/reference/v202505/ForecastService.LineItem#reservationStatus LineItem.reservationStatus} of the line items within the order.
  */
 export class RetractOrdersWithoutReservationChanges implements OrderAction {
   buildAttributes(): object {
@@ -141,7 +141,7 @@ export class SubmitOrdersForApproval implements OrderAction {
 
 /**
  * The action used for submitting Order objects for approval.
- * This action does not make any changes to the {@link https://developers.google.com/ad-manager/api/reference/v202405/ForecastService.LineItem#reservationStatus LineItem.reservationStatus}
+ * This action does not make any changes to the {@link https://developers.google.com/ad-manager/api/reference/v202505/ForecastService.LineItem#reservationStatus LineItem.reservationStatus}
  * of the line items within the order.
  */
 export class SubmitOrdersForApprovalWithoutReservationChanges

@@ -7,7 +7,7 @@ import type { ContactStatus } from "./contact.enum";
 type BaseContact = object;
 
 /**
- * A Contact represents a person who is affiliated with a single {@link https://developers.google.com/ad-manager/api/reference/v202405/CompanyService.Company?hl=pt Company}.
+ * A Contact represents a person who is affiliated with a single {@link https://developers.google.com/ad-manager/api/reference/v202505/CompanyService.Company?hl=pt Company}.
  * A contact can have a variety of contact information associated to it, and can be invited to view their company's orders, line items, creatives, and reports.
  */
 export type Contact = BaseContact & {
@@ -58,6 +58,6 @@ export type Contact = BaseContact & {
 };
 
 /**
- * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202405/ContactService.Contact?hl=pt Contact} objects.
+ * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202505/ContactService.Contact?hl=pt Contact} objects.
  */
 export type ContactPage = PageResult<Contact>;
