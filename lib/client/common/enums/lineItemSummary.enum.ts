@@ -1,8 +1,8 @@
 import { enums, type Describe } from "superstruct";
 
 /**
- * The strategy to use for displaying multiple {@link https://developers.google.com/ad-manager/api/reference/v202405/CreativeService.Creative Creative} \
- * objects that are associated with a {@link https://developers.google.com/ad-manager/api/reference/v202405/LineItemService.LineItem LineItem}.
+ * The strategy to use for displaying multiple {@link https://developers.google.com/ad-manager/api/reference/v202505/CreativeService.Creative Creative} \
+ * objects that are associated with a {@link https://developers.google.com/ad-manager/api/reference/v202505/LineItemService.LineItem LineItem}.
  */
 export enum CreativeRotationType {
   /**
@@ -61,7 +61,7 @@ export const CustomPacingGoalUnitEnum = enums([
 ]) as Describe<CustomPacingGoalUnit>;
 
 /**
- * Describes the {@link https://developers.google.com/ad-manager/api/reference/v202405/LineItemService.LineItem LineItem} actions that are billable.
+ * Describes the {@link https://developers.google.com/ad-manager/api/reference/v202505/LineItemService.LineItem LineItem} actions that are billable.
  */
 export enum CostType {
   /**
@@ -131,7 +131,7 @@ export const CostTypeEnum = enums([
 ]) as Describe<CostType>;
 
 /**
- * Describes the possible discount types on the cost of booking a {@link https://developers.google.com/ad-manager/api/reference/v202405/LineItemService.LineItem LineItem}.
+ * Describes the possible discount types on the cost of booking a {@link https://developers.google.com/ad-manager/api/reference/v202505/LineItemService.LineItem LineItem}.
  */
 export enum LineItemDiscountType {
   /**
