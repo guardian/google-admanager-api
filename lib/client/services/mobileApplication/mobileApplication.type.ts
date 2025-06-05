@@ -72,6 +72,6 @@ export type MobileApplication = {
 };
 
 /**
- * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202405/MobileApplicationService.MobileApplication mobile applications}.
+ * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202505/MobileApplicationService.MobileApplication mobile applications}.
  */
 export type MobileApplicationPage = PageResult<MobileApplication>;

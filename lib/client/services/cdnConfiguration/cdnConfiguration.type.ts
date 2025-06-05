@@ -113,6 +113,6 @@ export type CdnConfiguration = {
 };
 
 /**
- * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202405/CdnConfigurationService.CdnConfiguration CdnConfiguration} objects.
+ * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202505/CdnConfigurationService.CdnConfiguration CdnConfiguration} objects.
  */
 export type CdnConfigurationPage = PageResult<CdnConfiguration>;
