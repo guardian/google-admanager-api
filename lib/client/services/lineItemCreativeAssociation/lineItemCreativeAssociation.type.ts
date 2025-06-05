@@ -33,9 +33,9 @@ export type LineItemCreativeAssociationStats = {
 };
 
 /**
- * A LineItemCreativeAssociation associates a {@link https://developers.google.com/ad-manager/api/reference/v202405/CreativeService.Creative Creative}
- * or {@link https://developers.google.com/ad-manager/api/reference/v202405/CreativeSetService.CreativeSet CreativeSet} with a
- * {@link https://developers.google.com/ad-manager/api/reference/v202405/ForecastService.LineItem LineItem}
+ * A LineItemCreativeAssociation associates a {@link https://developers.google.com/ad-manager/api/reference/v202505/CreativeService.Creative Creative}
+ * or {@link https://developers.google.com/ad-manager/api/reference/v202505/CreativeSetService.CreativeSet CreativeSet} with a
+ * {@link https://developers.google.com/ad-manager/api/reference/v202505/ForecastService.LineItem LineItem}
  * so that the creative can be served in ad units targeted by the line item.
  */
 export type LineItemCreativeAssociation = {
@@ -110,14 +110,14 @@ export type LineItemCreativeAssociation = {
 };
 
 /**
- * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202405/LineItemCreativeAssociationService.LineItemCreativeAssociation LineItemCreativeAssociation} objects.
+ * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202505/LineItemCreativeAssociationService.LineItemCreativeAssociation LineItemCreativeAssociation} objects.
  */
 export type LineItemCreativeAssociationPage =
   PageResult<LineItemCreativeAssociation>;
 
 /**
- * Represents the {@link https://developers.google.com/ad-manager/api/reference/v202405/NativeStyleService.NativeStyle NativeStyle}
- * of a {@link https://developers.google.com/ad-manager/api/reference/v202405/CreativeService.Creative Creative} and its corresponding preview URL.
+ * Represents the {@link https://developers.google.com/ad-manager/api/reference/v202505/NativeStyleService.NativeStyle NativeStyle}
+ * of a {@link https://developers.google.com/ad-manager/api/reference/v202505/CreativeService.Creative Creative} and its corresponding preview URL.
  */
 export type CreativeNativeStylePreview = {
   /**

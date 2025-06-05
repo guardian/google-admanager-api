@@ -1,5 +1,5 @@
 /**
- * Indicates the type of CDN configuration for {@link https://developers.google.com/ad-manager/api/reference/v202405/CdnConfigurationService.CdnConfiguration CdnConfiguration}.
+ * Indicates the type of CDN configuration for {@link https://developers.google.com/ad-manager/api/reference/v202505/CdnConfigurationService.CdnConfiguration CdnConfiguration}.
  */
 export enum CdnConfigurationType {
   /**
@@ -13,7 +13,7 @@ export enum CdnConfigurationType {
 }
 
 /**
- * Indicates the status of the {@link https://developers.google.com/ad-manager/api/reference/v202405/CdnConfigurationService.CdnConfiguration CdnConfiguration}.
+ * Indicates the status of the {@link https://developers.google.com/ad-manager/api/reference/v202505/CdnConfigurationService.CdnConfiguration CdnConfiguration}.
  */
 export enum CdnConfigurationStatus {
   /**
@@ -50,7 +50,7 @@ export enum SecurityPolicyType {
 
 /**
  * Indicates the type of origin forwarding used to support Akamai authentication policies for
- * {@link https://developers.google.com/ad-manager/api/reference/v202405/LiveStreamEventService.LiveStreamEvent LiveStreamEvent}
+ * {@link https://developers.google.com/ad-manager/api/reference/v202505/LiveStreamEventService.LiveStreamEvent LiveStreamEvent}
  */
 export enum OriginForwardingType {
   /**

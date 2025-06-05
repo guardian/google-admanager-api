@@ -7,13 +7,13 @@ import type {
 
 /**
  * Provides methods for creating, updating and retrieving
- * {@link https://developers.google.com/ad-manager/api/reference/v202405/DaiEncodingProfileService.DaiEncodingProfile DaiEncodingProfile} objects.
+ * {@link https://developers.google.com/ad-manager/api/reference/v202505/DaiEncodingProfileService.DaiEncodingProfile DaiEncodingProfile} objects.
  *
  * This feature is not yet openly available for GAM Video publishers. Publishers will need to apply for access for this feature through their account managers.
  */
 export interface DaiEncodingProfileServiceOperations {
   /**
-   * Creates new {@link https://developers.google.com/ad-manager/api/reference/v202405/DaiEncodingProfileService.DaiEncodingProfile DaiEncodingProfile} objects.
+   * Creates new {@link https://developers.google.com/ad-manager/api/reference/v202505/DaiEncodingProfileService.DaiEncodingProfile DaiEncodingProfile} objects.
    *
    * @param daiEncodingProfiles the profiles to create
    * @returns the created profiles with their IDs filled in
@@ -22,16 +22,16 @@ export interface DaiEncodingProfileServiceOperations {
     daiEncodingProfiles: Partial<DaiEncodingProfile>[],
   ): Promise<DaiEncodingProfile[]>;
   /**
-   * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202405/DaiEncodingProfileService.DaiEncodingProfilePage DaiEncodingProfilePage}
-   * of {@link https://developers.google.com/ad-manager/api/reference/v202405/DaiEncodingProfileService.DaiEncodingProfile DaiEncodingProfile} objects that satisfy the given
-   * {@link https://developers.google.com/ad-manager/api/reference/v202405/DaiEncodingProfileService.Statement#query Statement.query}.
+   * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202505/DaiEncodingProfileService.DaiEncodingProfilePage DaiEncodingProfilePage}
+   * of {@link https://developers.google.com/ad-manager/api/reference/v202505/DaiEncodingProfileService.DaiEncodingProfile DaiEncodingProfile} objects that satisfy the given
+   * {@link https://developers.google.com/ad-manager/api/reference/v202505/DaiEncodingProfileService.Statement#query Statement.query}.
    * The following fields are supported for filtering:
    *
    * | PQL Property | PQL Property                                                                                                                                         |
    * | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-   * | id           | {@link https://developers.google.com/ad-manager/api/reference/v202405/DaiEncodingProfileService.DaiEncodingProfile#id DaiEncodingProfile.id}         |
-   * | name         | {@link https://developers.google.com/ad-manager/api/reference/v202405/DaiEncodingProfileService.DaiEncodingProfile#name DaiEncodingProfile.name}     |
-   * | status       | {@link https://developers.google.com/ad-manager/api/reference/v202405/DaiEncodingProfileService.DaiEncodingProfile#status DaiEncodingProfile.status} |
+   * | id           | {@link https://developers.google.com/ad-manager/api/reference/v202505/DaiEncodingProfileService.DaiEncodingProfile#id DaiEncodingProfile.id}         |
+   * | name         | {@link https://developers.google.com/ad-manager/api/reference/v202505/DaiEncodingProfileService.DaiEncodingProfile#name DaiEncodingProfile.name}     |
+   * | status       | {@link https://developers.google.com/ad-manager/api/reference/v202505/DaiEncodingProfileService.DaiEncodingProfile#status DaiEncodingProfile.status} |
    *
    * @param filterStatement a Publisher Query Language statement to filter a list of profiles
    * @returns the profiles that match the filter
@@ -40,8 +40,8 @@ export interface DaiEncodingProfileServiceOperations {
     filterStatement: Statement,
   ): Promise<DaiEncodingProfilePage>;
   /**
-   * Performs actions on {@link https://developers.google.com/ad-manager/api/reference/v202405/DaiEncodingProfileService.DaiEncodingProfile DaiEncodingProfile}
-   *  objects that match the given {@link https://developers.google.com/ad-manager/api/reference/v202405/DaiEncodingProfileService.Statement#query Statement.query}.
+   * Performs actions on {@link https://developers.google.com/ad-manager/api/reference/v202505/DaiEncodingProfileService.DaiEncodingProfile DaiEncodingProfile}
+   *  objects that match the given {@link https://developers.google.com/ad-manager/api/reference/v202505/DaiEncodingProfileService.Statement#query Statement.query}.
    *
    * @param daiEncodingProfileAction the action to perform
    * @param filterStatement a Publisher Query Language statement used to filter a set of profiles
@@ -52,7 +52,7 @@ export interface DaiEncodingProfileServiceOperations {
     filterStatement: Statement,
   ): Promise<UpdateResult>;
   /**
-   * Updates the specified {@link https://developers.google.com/ad-manager/api/reference/v202405/DaiEncodingProfileService.DaiEncodingProfile DaiEncodingProfile} objects.
+   * Updates the specified {@link https://developers.google.com/ad-manager/api/reference/v202505/DaiEncodingProfileService.DaiEncodingProfile DaiEncodingProfile} objects.
    *
    * @param daiEncodingProfiles the content profiles to update
    * @returns the updated profiles

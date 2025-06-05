@@ -3,7 +3,7 @@ import type { TeamAccessType, TeamStatus } from "./team.enum";
 
 /**
  * A Team defines a grouping of users and what entities they have access to.
- * Users are added to teams with {@link https://developers.google.com/ad-manager/api/reference/v202405/UserTeamAssociationService.UserTeamAssociation UserTeamAssociation} objects.
+ * Users are added to teams with {@link https://developers.google.com/ad-manager/api/reference/v202505/UserTeamAssociationService.UserTeamAssociation UserTeamAssociation} objects.
  */
 export type Team = {
   /**
@@ -37,6 +37,6 @@ export type Team = {
 };
 
 /**
- * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202405/TeamService.Team Team} objects.
+ * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202505/TeamService.Team Team} objects.
  */
 export type TeamPage = PageResult<Team>;
