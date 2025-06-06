@@ -255,7 +255,7 @@ export type CreativeAsset = {
    *
    * The assetByteArray will be null when the creative is retrieved.
    */
-  assetByteArray: BinaryData;
+  assetByteArray: string;
 
   /**
    * The file name of the asset. This attribute is required when creating a new asset (e.g. when assetByteArray is not null).
@@ -1216,6 +1216,6 @@ export type Creative = {
   VastRedirectCreative;
 
 /**
- * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202405/CreativeService.Creative Creative} objects.
+ * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202505/CreativeService.Creative Creative} objects.
  */
 export type CreativePage = PageResult<Creative>;

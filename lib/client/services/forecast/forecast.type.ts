@@ -253,7 +253,7 @@ export type GrpDemographicBreakdown = {
 };
 
 /**
- * Describes predicted inventory availability for a {@link https://developers.google.com/ad-manager/api/reference/v202405/ForecastService.ProspectiveLineItem ProspectiveLineItem}.
+ * Describes predicted inventory availability for a {@link https://developers.google.com/ad-manager/api/reference/v202505/ForecastService.ProspectiveLineItem ProspectiveLineItem}.
  *
  * Inventory has three threshold values along a line of possible inventory. From least to most, these are:
  *

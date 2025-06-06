@@ -216,11 +216,11 @@ export type BreakTemplate = {
 };
 
 /**
- * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202405/AdRuleService.AdRule AdRule} objects.
+ * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202505/AdRuleService.AdRule AdRule} objects.
  */
 export type AdRulePage = PageResult<AdRule>;
 
 /**
- * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202405/AdRuleService.BreakTemplate BreakTemplate} objects.
+ * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202505/AdRuleService.BreakTemplate BreakTemplate} objects.
  */
 export type BreakTemplatePage = PageResult<BreakTemplate>;

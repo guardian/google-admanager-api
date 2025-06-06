@@ -54,6 +54,7 @@ import { StartDateTimeTypeEnum } from "../../../common/enums";
  * Can be used to validate and parse LineItem objects
  */
 export const LineItemStruct: Describe<LineItem> = object({
+  // Line Item Summary
   orderId: number(),
   id: number(),
   name: string(),
@@ -117,6 +118,8 @@ export const LineItemStruct: Describe<LineItem> = object({
   viewabilityProviderCompanyIds: optional(array(number())),
   childContentEligibility: optional(ChildContentEligibilityEnum),
   customVastExtension: optional(string()),
+  repeatedCreativeServingEnabled: boolean(),
+  // Line Item
   targeting: TargetingStruct,
   creativeTargetings: optional(array(CreativeTargetingStruct)),
 });

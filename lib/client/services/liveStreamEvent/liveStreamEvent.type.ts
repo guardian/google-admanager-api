@@ -262,7 +262,7 @@ export type LiveStreamEvent = {
 };
 
 /**
- * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202405/LiveStreamEventService.LiveStreamEvent LiveStreamEvent} objects.
+ * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202505/LiveStreamEventService.LiveStreamEvent LiveStreamEvent} objects.
  */
 export type LiveStreamEventPage = PageResult<LiveStreamEvent>;
 

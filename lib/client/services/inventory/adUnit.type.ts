@@ -80,7 +80,7 @@ export type LabelFrequencyCap = {
 };
 
 /**
- * The summary of a parent {@link https://developers.google.com/ad-manager/api/reference/v202405/InventoryService.AdUnit AdUnit}.
+ * The summary of a parent {@link https://developers.google.com/ad-manager/api/reference/v202505/InventoryService.AdUnit AdUnit}.
  */
 export type AdUnitParent = {
   /**
@@ -275,6 +275,6 @@ export type AdUnit = {
 };
 
 /**
- * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202405/InventoryService.AdUnit AdUnit} objects.
+ * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202505/InventoryService.AdUnit AdUnit} objects.
  */
 export type AdUnitPage = PageResult<AdUnit>;

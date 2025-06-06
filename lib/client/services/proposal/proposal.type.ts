@@ -285,12 +285,12 @@ export type Proposal = {
 };
 
 /**
- * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202405/ProposalService.Proposal Proposal} objects.
+ * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202505/ProposalService.Proposal Proposal} objects.
  */
 export type ProposalPage = PageResult<Proposal>;
 
 /**
- * A comment associated with a programmatic {@link https://developers.google.com/ad-manager/api/reference/v202405/ProposalService.Proposal Proposal}
+ * A comment associated with a programmatic {@link https://developers.google.com/ad-manager/api/reference/v202505/ProposalService.Proposal Proposal}
  * that has been sent to Marketplace.
  */
 export type MarketplaceComment = {
@@ -313,7 +313,7 @@ export type MarketplaceComment = {
 };
 
 /**
- * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202405/ProposalService.MarketplaceComment MarketplaceComment} objects.
+ * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202505/ProposalService.MarketplaceComment MarketplaceComment} objects.
  */
 export type MarketplaceCommentPage = {
   /**

@@ -12,9 +12,9 @@ import { ValueStruct, type Value } from "../../../common/types";
 import {
   GoalTypeEnum,
   UnitTypeEnum,
+  InvitationStatus,
   type AccountStatus,
   type DeclarationType,
-  type DelegationStatus,
   type DelegationType,
   type GoalType,
   type OnboardingTask,
@@ -33,14 +33,47 @@ export type ThirdPartyDataDeclaration = {
 };
 
 export type ChildPublisher = {
+  /**
+   * Type of delegation the parent has been approved to have over the child.
+   * This field is read-only, and set to the proposed delegation type value proposedDelegationType upon approval by the child network.
+   * The value remains null if the parent network has not been approved.
+   */
   approvedDelegationType: DelegationType;
+  /**
+   * Type of delegation the parent has proposed to have over the child, pending approval of the child network.
+   * Set the value of this field to the delegation type you intend this network to have over the child network.
+   * Upon approval by the child network, its value is copied to approvedDelegationType, and proposedDelegationType is set to null.
+   */
   proposedDelegationType: DelegationType;
-  status: DelegationStatus;
-  accountStatus: AccountStatus;
+  /**
+   * Invitation status of the delegation relationship between parent and child. This field is read-only.
+   */
+  readonly invitationStatus: InvitationStatus;
+  /**
+   * Status of the child publisher's Ad Manager account based on ChildPublisher#status as well as Google's policy verification results.
+   * This field is read-only.
+   */
+  readonly accountStatus: AccountStatus;
+  /**
+   * Network code of child network.
+   */
   childNetworkCode: string;
+  /**
+   * The child publisher's seller ID, as specified in the parent publisher's sellers.json file.
+   * This field is only relevant for Manage Inventory child publishers
+   */
   sellerId: string;
+  /**
+   * The proposed revenue share that the parent publisher will receive in millipercentage (values 0 to 100000) for Manage Account proposals. For example, 15% is 15000 millipercent.
+   * For updates, this field is read-only. Use company actions to propose new revenue share agreements for existing MCM children. This field is ignored for Manage Inventory proposals.
+   */
   proposedRevenueShareMillipercent: number;
-  onboardingTasks: OnboardingTask[];
+  /**
+   * The child publisher's pending onboarding tasks.
+   * This will only be populated if the child publisher's AccountStatus is PENDING_GOOGLE_APPROVAL.
+   * This attribute is read-only.
+   */
+  readonly onboardingTasks: OnboardingTask[];
 };
 
 /**
@@ -66,12 +99,12 @@ export const MoneyStruct: Describe<Money> = object({
 });
 
 /**
- * Represents the dimensions of an {@link https://developers.google.com/ad-manager/api/reference/v202405/InventoryService.AdUnit AdUnit},
- * {@link https://developers.google.com/ad-manager/api/reference/v202405/ForecastService.LineItem LineItem} or
- * {@link https://developers.google.com/ad-manager/api/reference/v202405/CreativeService.Creative Creative}.
+ * Represents the dimensions of an {@link https://developers.google.com/ad-manager/api/reference/v202505/InventoryService.AdUnit AdUnit},
+ * {@link https://developers.google.com/ad-manager/api/reference/v202505/ForecastService.LineItem LineItem} or
+ * {@link https://developers.google.com/ad-manager/api/reference/v202505/CreativeService.Creative Creative}.
  *
  * For interstitial size (out-of-page), native, ignored and fluid size,
- * {@link https://developers.google.com/ad-manager/api/reference/v202405/DaiEncodingProfileService.Size Size} must be 1x1.
+ * {@link https://developers.google.com/ad-manager/api/reference/v202505/DaiEncodingProfileService.Size Size} must be 1x1.
  */
 export type Size = {
   /**
@@ -98,14 +131,14 @@ export const SizeStruct: Describe<Size> = object({
 });
 
 /**
- * The value of a {@link https://developers.google.com/ad-manager/api/reference/v202405/CustomFieldService.CustomField CustomField} for a particular entity.
+ * The value of a {@link https://developers.google.com/ad-manager/api/reference/v202505/CustomFieldService.CustomField CustomField} for a particular entity.
  */
 export type BaseCustomFieldValue = CustomFieldValue | DropDownCustomFieldValue;
 
 /**
- * The value of a {@link https://developers.google.com/ad-manager/api/reference/v202405/CustomFieldService.CustomField CustomField}
- * that does not have a {@link https://developers.google.com/ad-manager/api/reference/v202405/CustomFieldService.CustomField#dataType CustomField.dataType}
- * of {@link https://developers.google.com/ad-manager/api/reference/v202405/CustomFieldService.CustomFieldDataType#DROP_DOWN CustomFieldDataType.DROP_DOWN}.
+ * The value of a {@link https://developers.google.com/ad-manager/api/reference/v202505/CustomFieldService.CustomField CustomField}
+ * that does not have a {@link https://developers.google.com/ad-manager/api/reference/v202505/CustomFieldService.CustomField#dataType CustomField.dataType}
+ * of {@link https://developers.google.com/ad-manager/api/reference/v202505/CustomFieldService.CustomFieldDataType#DROP_DOWN CustomFieldDataType.DROP_DOWN}.
  */
 type CustomFieldValue = {
   /**
@@ -118,14 +151,14 @@ type CustomFieldValue = {
   };
   /**
    * The value for this field. The appropriate type of **Value** is determined by the
-   * {@link https://developers.google.com/ad-manager/api/reference/v202405/CustomFieldService.CustomField#dataType CustomField.dataType}
+   * {@link https://developers.google.com/ad-manager/api/reference/v202505/CustomFieldService.CustomField#dataType CustomField.dataType}
    * of the **CustomField** that this conforms to.
    *
-   * | {@link https://developers.google.com/ad-manager/api/reference/v202405/CustomFieldService.CustomFieldDataType CustomFieldDataType} | {@link https://developers.google.com/ad-manager/api/reference/v202405/OrderService.Value Value} type            |
+   * | {@link https://developers.google.com/ad-manager/api/reference/v202505/CustomFieldService.CustomFieldDataType CustomFieldDataType} | {@link https://developers.google.com/ad-manager/api/reference/v202505/OrderService.Value Value} type            |
    * | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-   * | {@link https://developers.google.com/ad-manager/api/reference/v202405/CustomFieldService.CustomFieldDataType#STRING STRING}       | 	{@link https://developers.google.com/ad-manager/api/reference/v202405/OrderService.TextValue TextValue}        |
-   * | {@link https://developers.google.com/ad-manager/api/reference/v202405/CustomFieldService.CustomFieldDataType#NUMBER NUMBER}       | 	{@link https://developers.google.com/ad-manager/api/reference/v202405/OrderService.NumberValue NumberValue}    |
-   * | {@link https://developers.google.com/ad-manager/api/reference/v202405/CustomFieldService.CustomFieldDataType#TOGGLE TOGGLE}       | 	{@link https://developers.google.com/ad-manager/api/reference/v202405/OrderService.BooleanValue BooleanValue}  |
+   * | {@link https://developers.google.com/ad-manager/api/reference/v202505/CustomFieldService.CustomFieldDataType#STRING STRING}       | 	{@link https://developers.google.com/ad-manager/api/reference/v202505/OrderService.TextValue TextValue}        |
+   * | {@link https://developers.google.com/ad-manager/api/reference/v202505/CustomFieldService.CustomFieldDataType#NUMBER NUMBER}       | 	{@link https://developers.google.com/ad-manager/api/reference/v202505/OrderService.NumberValue NumberValue}    |
+   * | {@link https://developers.google.com/ad-manager/api/reference/v202505/CustomFieldService.CustomFieldDataType#TOGGLE TOGGLE}       | 	{@link https://developers.google.com/ad-manager/api/reference/v202505/OrderService.BooleanValue BooleanValue}  |
    *
    */
   value: Value;
@@ -141,10 +174,10 @@ export const CustomFieldValueStruct: Describe<CustomFieldValue> = object({
 });
 
 /**
- * A {@link https://developers.google.com/ad-manager/api/reference/v202405/OrderService.CustomFieldValue CustomFieldValue} for a
- * {@link https://developers.google.com/ad-manager/api/reference/v202405/CustomFieldService.CustomField CustomField} that has a
- * {@link https://developers.google.com/ad-manager/api/reference/v202405/CustomFieldService.CustomField#dataType CustomField.dataType} of
- * {@link https://developers.google.com/ad-manager/api/reference/v202405/CustomFieldService.CustomFieldDataType#DROP_DOWN CustomFieldDataType.DROP_DOWN}
+ * A {@link https://developers.google.com/ad-manager/api/reference/v202505/OrderService.CustomFieldValue CustomFieldValue} for a
+ * {@link https://developers.google.com/ad-manager/api/reference/v202505/CustomFieldService.CustomField CustomField} that has a
+ * {@link https://developers.google.com/ad-manager/api/reference/v202505/CustomFieldService.CustomField#dataType CustomField.dataType} of
+ * {@link https://developers.google.com/ad-manager/api/reference/v202505/CustomFieldService.CustomFieldDataType#DROP_DOWN CustomFieldDataType.DROP_DOWN}
  */
 type DropDownCustomFieldValue = {
   /**
@@ -156,8 +189,8 @@ type DropDownCustomFieldValue = {
     "xsi:type": "DropDownCustomFieldValue";
   };
   /**
-   * The {@link https://developers.google.com/ad-manager/api/reference/v202405/CustomFieldService.CustomFieldOption#id ID}
-   * of the {@link https://developers.google.com/ad-manager/api/reference/v202405/CustomFieldService.CustomFieldOption CustomFieldOption} for this value.
+   * The {@link https://developers.google.com/ad-manager/api/reference/v202505/CustomFieldService.CustomFieldOption#id ID}
+   * of the {@link https://developers.google.com/ad-manager/api/reference/v202505/CustomFieldService.CustomFieldOption CustomFieldOption} for this value.
    */
   customFieldOptionId: number;
 };
@@ -174,7 +207,7 @@ export const DropDownCustomFieldValueStruct: Describe<DropDownCustomFieldValue> 
 
 /**
  * Represents a limit on the number of times a single viewer can be exposed to the same
- * {@link https://developers.google.com/ad-manager/api/reference/v202405/ForecastService.LineItem LineItem} in a specified time period.
+ * {@link https://developers.google.com/ad-manager/api/reference/v202505/ForecastService.LineItem LineItem} in a specified time period.
  */
 export type FrequencyCap = {
   /**
@@ -201,7 +234,7 @@ export const FrequencyCapStruct: Describe<FrequencyCap> = object({
 });
 
 /**
- * Defines the criteria a {@link https://developers.google.com/ad-manager/api/reference/v202405/LineItemService.LineItem LineItem} needs to satisfy to meet its delivery goal.
+ * Defines the criteria a {@link https://developers.google.com/ad-manager/api/reference/v202505/LineItemService.LineItem LineItem} needs to satisfy to meet its delivery goal.
  */
 export type Goal = {
   /**
