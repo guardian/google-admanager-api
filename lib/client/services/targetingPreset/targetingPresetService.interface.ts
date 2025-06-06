@@ -1,5 +1,5 @@
-import type { Statement } from "../../../common/types";
-import type { TargetingPresetPage } from "./targetingPresent.type";
+import type { Statement, UpdateResult } from "../../../common/types";
+import type { TargetingPresetPage } from "./targetingPreset.type";
 
 /**
  * Service for interacting with Targeting Presets.
@@ -22,4 +22,16 @@ export interface TargetingPresetServiceOperations {
   getTargetingPresetsByStatement(
     filterStatement: Statement,
   ): Promise<TargetingPresetPage>;
+
+  /**
+   * Performs actions on the saved targeting objects that match the given {@link https://developers.google.com/ad-manager/api/reference/v202505/TargetingPresetService.Statement filterStatement}.
+   *
+   * @param targetingPresetAction
+   * @param filterStatement
+   * @returns the result of perfoming the action
+   */
+  performTargetingPresetAction(
+    targetingPresentAction: unknown, // FIXME TargetingPresetAction | DeleteTargetingPresetAction,
+    filterStatement: Statement,
+  ): Promise<UpdateResult>;
 }
