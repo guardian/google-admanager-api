@@ -108,6 +108,7 @@ export const lineItems = [
       units: 100,
     },
     childContentEligibility: "DISALLOWED",
+    repeatedCreativeServingEnabled: false,
     targeting: {
       inventoryTargeting: {
         targetedAdUnits: [
@@ -220,6 +221,7 @@ export const lineItems = [
     videoMaxDuration: 0,
     primaryGoal: { goalType: "NONE", unitType: "IMPRESSIONS", units: -1 },
     childContentEligibility: "DISALLOWED",
+    repeatedCreativeServingEnabled: true,
     targeting: {
       inventoryTargeting: {
         targetedAdUnits: [{ adUnitId: "59342247", includeDescendants: true }],

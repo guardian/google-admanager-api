@@ -53,6 +53,6 @@ export type LineItemTemplate = {
 };
 
 /**
- * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202405/LineItemTemplateService.LineItemTemplate LineItemTemplate} objects.
+ * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202505/LineItemTemplateService.LineItemTemplate LineItemTemplate} objects.
  */
 export type LineItemTemplatePage = PageResult<LineItemTemplate>;

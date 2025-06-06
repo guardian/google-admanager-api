@@ -21,7 +21,7 @@ export type DaiIngestError = {
 };
 
 /**
- * Contains information about {@link https://developers.google.com/ad-manager/api/reference/v202405/ContentService.Content Content} from the CMS it was ingested from.
+ * Contains information about {@link https://developers.google.com/ad-manager/api/reference/v202505/ContentService.Content Content} from the CMS it was ingested from.
  */
 export type CmsContent = {
   /**
