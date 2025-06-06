@@ -12,9 +12,9 @@ import { ValueStruct, type Value } from "../../../common/types";
 import {
   GoalTypeEnum,
   UnitTypeEnum,
+  InvitationStatus,
   type AccountStatus,
   type DeclarationType,
-  type DelegationStatus,
   type DelegationType,
   type GoalType,
   type OnboardingTask,
@@ -33,14 +33,47 @@ export type ThirdPartyDataDeclaration = {
 };
 
 export type ChildPublisher = {
+  /**
+   * Type of delegation the parent has been approved to have over the child.
+   * This field is read-only, and set to the proposed delegation type value proposedDelegationType upon approval by the child network.
+   * The value remains null if the parent network has not been approved.
+   */
   approvedDelegationType: DelegationType;
+  /**
+   * Type of delegation the parent has proposed to have over the child, pending approval of the child network.
+   * Set the value of this field to the delegation type you intend this network to have over the child network.
+   * Upon approval by the child network, its value is copied to approvedDelegationType, and proposedDelegationType is set to null.
+   */
   proposedDelegationType: DelegationType;
-  status: DelegationStatus;
-  accountStatus: AccountStatus;
+  /**
+   * Invitation status of the delegation relationship between parent and child. This field is read-only.
+   */
+  readonly invitationStatus: InvitationStatus;
+  /**
+   * Status of the child publisher's Ad Manager account based on ChildPublisher#status as well as Google's policy verification results.
+   * This field is read-only.
+   */
+  readonly accountStatus: AccountStatus;
+  /**
+   * Network code of child network.
+   */
   childNetworkCode: string;
+  /**
+   * The child publisher's seller ID, as specified in the parent publisher's sellers.json file.
+   * This field is only relevant for Manage Inventory child publishers
+   */
   sellerId: string;
+  /**
+   * The proposed revenue share that the parent publisher will receive in millipercentage (values 0 to 100000) for Manage Account proposals. For example, 15% is 15000 millipercent.
+   * For updates, this field is read-only. Use company actions to propose new revenue share agreements for existing MCM children. This field is ignored for Manage Inventory proposals.
+   */
   proposedRevenueShareMillipercent: number;
-  onboardingTasks: OnboardingTask[];
+  /**
+   * The child publisher's pending onboarding tasks.
+   * This will only be populated if the child publisher's AccountStatus is PENDING_GOOGLE_APPROVAL.
+   * This attribute is read-only.
+   */
+  readonly onboardingTasks: OnboardingTask[];
 };
 
 /**
