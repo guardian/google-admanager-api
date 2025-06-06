@@ -428,16 +428,17 @@ export type LineItemSummary = {
   isMissingCreatives: boolean;
 
   /**
-   * Designates this line item as intended for YT Kids app. If true, all creatives associated with this line item must be reviewed and approved. See the Ad Manager Help Center for more information.
-   */
-  youtubeKidsRestricted?: boolean;
-
-  /**
    * Indicates the ProgrammaticCreativeSource of the programmatic line item. This is a read-only field. Any changes must be made on the ProposalLineItem.
    */
   programmaticCreativeSource?: ProgrammaticCreativeSource;
 
   thirdPartyMeasurementSettings?: ThirdPartyMeasurementSettings;
+
+  /**
+   * Designates this line item as intended for YT Kids app. If true, all creatives associated with this line item must be reviewed and approved. See the Ad Manager Help Center for more information.
+   */
+  youtubeKidsRestricted?: boolean;
+
   /**
    * The max duration of a video creative associated with this LineItem in milliseconds.
    *
@@ -484,4 +485,9 @@ export type LineItemSummary = {
    * Custom XML to be rendered in a custom VAST response at serving time.
    */
   customVastExtension?: string;
+
+  /**
+   * Indicates whether repeated creative serving is enabled for this line item.
+   */
+  repeatedCreativeServingEnabled: boolean;
 };
