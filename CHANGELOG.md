@@ -1,5 +1,11 @@
 # @guardian/google-admanager-api
 
+## 4.0.0
+
+### Major Changes
+
+- 9dce427: Bump use of GAM API to v202505
+
 ## 3.1.5
 
 ### Patch Changes
