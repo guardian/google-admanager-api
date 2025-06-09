@@ -24,6 +24,7 @@ import type {
   ThirdPartyMeasurementSettings,
 } from "../../common/types";
 import type {
+  BuyerPermissionType,
   NegotiationRole,
   RateType,
   ReservationStatus,
@@ -320,6 +321,10 @@ export type ProposalLineItem = {
    * The reason for pausing the ProposalLineItem, provided by the pauseRole. It is null when the ProposalLineItem is not paused. This attribute is read-only.
    */
   pauseReason: string;
+  /**
+   * Describes the buyer permission type.
+   */
+  buyerPermissionType: BuyerPermissionType;
 };
 
 /**
