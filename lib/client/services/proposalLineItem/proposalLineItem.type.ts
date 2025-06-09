@@ -24,6 +24,7 @@ import type {
   ThirdPartyMeasurementSettings,
 } from "../../common/types";
 import type {
+  BuyerPermissionType,
   NegotiationRole,
   RateType,
   ReservationStatus,
@@ -50,27 +51,23 @@ export type ProposalLineItemMakegoodInfo = {
 };
 
 /**
- * A ProposalLineItem is added to a programmatic {@link https://developers.google.com/ad-manager/api/reference/v202405/ProposalService.Proposal Proposal}
- * and is similar to a delivery {@link https://developers.google.com/ad-manager/api/reference/v202405/ForecastService.LineItem LineItem}.
+ * A ProposalLineItem is added to a programmatic {@link https://developers.google.com/ad-manager/api/reference/v202505/ProposalService.Proposal Proposal}
+ * and is similar to a delivery {@link https://developers.google.com/ad-manager/api/reference/v202505/ForecastService.LineItem LineItem}.
  * It contains delivery details including information like impression goal or quantity, start and end times, and targeting.
  */
 export type ProposalLineItem = {
   /**
    * The unique ID of the ProposalLineItem. This attribute is read-only.
    */
-  idproposals: number;
+  readonly id: number;
   /**
    * The unique ID of the Proposal, to which the ProposalLineItem belongs. This attribute is required for creation and then is readonly.
-   *
-   * This attribute is required.
    */
-  proposalIdproposals: number;
+  readonly proposalId: number;
   /**
    * The name of the ProposalLineItem which should be unique under the same Proposal. This attribute has a maximum length of 255 characters. This attribute can be configured as editable after the proposal has been submitted. Please check with your network administrator for editable fields configuration.
-   *
-   * This attribute is required.
    */
-  nameproposals: string;
+  name: string;
   /**
    * The date and time at which the line item associated with the ProposalLineItem is enabled to begin serving. This attribute is optional during creation, but required and must be in the future when it turns into a line item. The DateTime.timeZoneID is required if start date time is not null. This attribute becomes readonly once the ProposalLineItem has started delivering.
    */
@@ -80,25 +77,23 @@ export type ProposalLineItem = {
    */
   endDateTime: DateTime;
   /**
-   * The time zone ID in tz database format (e.g. "America/Los_Angeles") for this ProposalLineItem. The number of serving days is calculated in this time zone. So if rateType is RateType.CPD, it will affect the cost calculation. The startDateTime and endDateTime will be returned in this time zone. This attribute is optional and defaults to the network's time zone. This attribute is read-only.
-   */
-  timeZoneIdproposals: string;
-  /**
    * Provides any additional notes that may annotate the ProposalLineItem. This attribute is optional and has a maximum length of 65,535 characters. This attribute can be configured as editable after the proposal has been submitted. Please check with your network administrator for editable fields configuration.
    */
-  internalNotesproposals: string;
+  internalNotes: string;
   /**
    * The archival status of the ProposalLineItem. This attribute is read-only.
    */
-  isArchivedproposals: boolean;
+  readonly isArchived: boolean;
   /**
    * The goal(i.e. contracted quantity, quantity or limit) that this ProposalLineItem is associated with, which is used in its pacing and budgeting.
    * Goal.units must be greater than 0 when the proposal line item turns into a line item, Goal.goalType and Goal.unitType are readonly.
    * For a Preferred deal ProposalLineItem, the goal type can only be GoalType.NONE.
-   *
-   * This attribute is required.
    */
   goal: Goal;
+  /**
+   * The secondary goals that this ProposalLineItem is associated with. For a programmatic line item with the properties RateType.CPM and LineItemType.SPONSORSHIP, this field will have one goal which describes the impressions cap. For other cases, this field is an empty list.
+   */
+  secondaryGoals: Goal[];
   /**
    * The contracted number of impressions or clicks. If this is a LineItemType.SPONSORSHIP ProposalLineItem, has RateType.CPD as a rate type, and isProgrammatic is false,
    * then this represents the lifetime minimum impression. If this is a LineItemType.SPONSORSHIP ProposalLineItem, has RateType.CPD as a rate type, and isProgrammatic is true,
@@ -106,7 +101,7 @@ export type ProposalLineItem = {
    *
    * This attribute is required for percentage-based-goal proposal line items. It does not impact ad-serving and is for reporting purposes only.
    */
-  contractedUnitsBoughtproposals: number;
+  contractedUnitsBought: number;
   /**
    * The strategy for delivering ads over the course of the ProposalLineItem's duration. This attribute is optional and default value is DeliveryRateType.EVENLY.
    * For a Preferred deal ProposalLineItem, the value can only be DeliveryRateType.FRONTLOADED.
@@ -118,6 +113,12 @@ export type ProposalLineItem = {
    */
   roadblockingType: RoadblockingType;
   /**
+   * The options for allowing buyers to transact on the deal.
+   * - BuyerPermissionType.NEGOTIATOR_ONLY means that only the buyer listed on the deal can bid on the deal.
+   * - BuyerPermissionType.BIDDER means that all buyers under the listed buyer's bidder can bid on the deal.
+   */
+  buyerPermissionType: BuyerPermissionType;
+  /**
    * The delivery option for companions. This is only valid if the roadblocking type is RoadblockingType.CREATIVE_SET.
    * The default value for roadblocking creatives is CompanionDeliveryOption.OPTIONAL. The default value in other cases is CompanionDeliveryOption.UNKNOWN.
    * Providing something other than CompanionDeliveryOption.UNKNOWN will cause an error.
@@ -128,7 +129,6 @@ export type ProposalLineItem = {
    * defaults to the Product.videoMaxDuration on the Product it was created with, and only meaningful if this is a video proposal line item.
    */
   videoMaxDuration: number;
-
   /**
    * The proposal line item's creatives' skippability. This attribute is optional, only applicable for video proposal line items, and defaults to SkippableAdType.NOT_SKIPPABLE.
    */
@@ -138,12 +138,10 @@ export type ProposalLineItem = {
    * This attribute is optional during creation and defaults to the product's frequency caps if Product.allowFrequencyCapsCustomization is false.
    */
   frequencyCaps: FrequencyCap[];
-
   /**
    * The unique ID of corresponding LineItem. This will be null if the Proposal has not been pushed to Ad Manager. This attribute is read-only.
    */
   dfpLineItemId: number;
-
   /**
    * The corresponding LineItemType of the ProposalLineItem. For a programmatic ProposalLineItem, the value can only be one of:
    *
@@ -156,7 +154,6 @@ export type ProposalLineItem = {
    * The priority for the corresponding LineItem of the ProposalLineItem. This attribute is optional during creation and defaults to the product's priority, or a default value assigned by Google. See LineItem.priority for more information.
    */
   lineItemPriority: number;
-
   /**
    * The method used for billing the ProposalLineItem. This attribute is read-only.
    */
@@ -167,7 +164,6 @@ export type ProposalLineItem = {
    * This attribute is required.
    */
   creativePlaceholders: CreativePlaceholder[];
-
   /**
    * Contains the targeting criteria for the ProposalLineItem. This attribute is optional during creation and defaults to the product's targeting.
    */
@@ -191,6 +187,12 @@ export type ProposalLineItem = {
    * This attribute is optional and defaults to false.
    */
   effectiveAppliedLabels?: AppliedLabel[];
+  /**
+   * If a line item has a series of competitive exclusions on it, it could be blocked from serving with line items from the same advertiser. Setting this to true will allow line items from the same advertiser to serve regardless of the other competitive exclusion labels being applied.
+   *
+   * This attribute is optional and defaults to false.
+   */
+  disableSameAdvertiserCompetitiveExclusion?: boolean;
   /**
    * Indicates whether this ProposalLineItem has been sold. This attribute is read-only.
    */
@@ -266,20 +268,9 @@ export type ProposalLineItem = {
    */
   allowedFormats: AllowedFormats[];
   /**
-   * Whether or not the Proposal for this ProposalLineItem is a programmatic deal. This attribute is populated from Proposal.isProgrammatic. This attribute is read-only.
-   */
-  isProgrammatic: boolean;
-
-  /**
-   * The marketplace info if this proposal line item is programmatic, null otherwise.
-   */
-  marketplaceInfo: ProposalLineItemMarketplaceInfo;
-
-  /**
    * Additional terms shown to the buyer in Marketplace.
    */
   additionalTerms: string;
-
   /**
    * Indicates the ProgrammaticCreativeSource of the programmatic line item.
    */
@@ -288,12 +279,10 @@ export type ProposalLineItem = {
    * Contains the information for a proposal line item which has a target GRP demographic.
    */
   grpSettings: GrpSettings;
-
   /**
    * The estimated minimum impressions that should be delivered for a proposal line item.
    */
   estimatedMinimumImpressions: number;
-
   /**
    * Contains third party measurement settings for cross-sell Partners
    */
@@ -323,6 +312,6 @@ export type ProposalLineItem = {
 };
 
 /**
- * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202405/ProposalLineItemService.ProposalLineItem ProposalLineItem} objects.
+ * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202505/ProposalLineItemService.ProposalLineItem ProposalLineItem} objects.
  */
 export type ProposalLineItemPage = PageResult<ProposalLineItem>;
