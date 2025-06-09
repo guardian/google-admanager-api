@@ -4,13 +4,13 @@ import type { ContentBundle, ContentBundlePage } from "./contentBundle.type";
 
 /**
  * Provides methods for creating, updating and retrieving
- * {@link https://developers.google.com/ad-manager/api/reference/v202405/ContentBundleService.ContentBundle ContentBundle} objects.
+ * {@link https://developers.google.com/ad-manager/api/reference/v202505/ContentBundleService.ContentBundle ContentBundle} objects.
  *
  * A **ContentBundle** is a grouping of Content that match filter rules as well as taking into account explicitly included or excluded Content.
  */
 export interface ContentBundleServiceOperations {
   /**
-   * Creates new {@link https://developers.google.com/ad-manager/api/reference/v202405/ContentBundleService.ContentBundle ContentBundle} objects.
+   * Creates new {@link https://developers.google.com/ad-manager/api/reference/v202505/ContentBundleService.ContentBundle ContentBundle} objects.
    *
    * @param contentBundles the content bundles to create
    * @returns the created content bundles with their IDs filled in
@@ -19,16 +19,16 @@ export interface ContentBundleServiceOperations {
     contentBundles: Partial<ContentBundle>[],
   ): Promise<ContentBundle[]>;
   /**
-   * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202405/ContentBundleService.ContentBundlePage ContentBundlePage}
-   * of {@link https://developers.google.com/ad-manager/api/reference/v202405/ContentBundleService.ContentBundle ContentBundle} objects that satisfy the given
-   * {@link https://developers.google.com/ad-manager/api/reference/v202405/ContentBundleService.Statement#query Statement.query}.
+   * Gets a {@link https://developers.google.com/ad-manager/api/reference/v202505/ContentBundleService.ContentBundlePage ContentBundlePage}
+   * of {@link https://developers.google.com/ad-manager/api/reference/v202505/ContentBundleService.ContentBundle ContentBundle} objects that satisfy the given
+   * {@link https://developers.google.com/ad-manager/api/reference/v202505/ContentBundleService.Statement#query Statement.query}.
    * The following fields are supported for filtering:
    *
    * | PQL Property | PQL Property                                                                                                                          |
    * | ------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
-   * | id           | {@link https://developers.google.com/ad-manager/api/reference/v202405/ContentBundleService.ContentBundle#id ContentBundle.id}         |
-   * | name         | {@link https://developers.google.com/ad-manager/api/reference/v202405/ContentBundleService.ContentBundle#name ContentBundle.name}     |
-   * | status       | {@link https://developers.google.com/ad-manager/api/reference/v202405/ContentBundleService.ContentBundle#status ContentBundle.status} |
+   * | id           | {@link https://developers.google.com/ad-manager/api/reference/v202505/ContentBundleService.ContentBundle#id ContentBundle.id}         |
+   * | name         | {@link https://developers.google.com/ad-manager/api/reference/v202505/ContentBundleService.ContentBundle#name ContentBundle.name}     |
+   * | status       | {@link https://developers.google.com/ad-manager/api/reference/v202505/ContentBundleService.ContentBundle#status ContentBundle.status} |
    *
    * @param filterStatement a Publisher Query Language statement used to filter a set of content bundles
    * @returns the content bundles that match the given filter
@@ -37,7 +37,7 @@ export interface ContentBundleServiceOperations {
     filterStatement: Statement,
   ): Promise<ContentBundlePage>;
   /**
-   * Performs actions on {@link https://developers.google.com/ad-manager/api/reference/v202405/ContentBundleService.ContentBundle ContentBundle} objects that match the given Statement.
+   * Performs actions on {@link https://developers.google.com/ad-manager/api/reference/v202505/ContentBundleService.ContentBundle ContentBundle} objects that match the given Statement.
    *
    * @param contentBundleAction the action to perform
    * @param filterStatement 	a PQL statement used to filter content bundles
@@ -48,7 +48,7 @@ export interface ContentBundleServiceOperations {
     filterStatement: Statement,
   ): Promise<UpdateResult>;
   /**
-   * Updates the specified {@link https://developers.google.com/ad-manager/api/reference/v202405/ContentBundleService.ContentBundle ContentBundle} objects.
+   * Updates the specified {@link https://developers.google.com/ad-manager/api/reference/v202505/ContentBundleService.ContentBundle ContentBundle} objects.
    *
    * @param contentBundles the content bundles to update
    * @returns the updated content bundles

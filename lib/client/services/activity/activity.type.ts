@@ -14,8 +14,8 @@ export type Activity = {
    */
   id: number;
   /**
-   * The ID of the {@link https://developers.google.com/ad-manager/api/reference/v202405/ActivityGroupService.ActivityGroup ActivityGroup} \
-   * that this {@link https://developers.google.com/ad-manager/api/reference/v202405/ActivityService.Activity Activity} belongs to.
+   * The ID of the {@link https://developers.google.com/ad-manager/api/reference/v202505/ActivityGroupService.ActivityGroup ActivityGroup} \
+   * that this {@link https://developers.google.com/ad-manager/api/reference/v202505/ActivityService.Activity Activity} belongs to.
    */
   activityGroupId: number;
   /**
@@ -32,12 +32,12 @@ export type Activity = {
   status: ActivityStatus;
   /**
    * The activity type. This attribute is optional and defaults to
-   * {@link https://developers.google.com/ad-manager/api/reference/v202405/ActivityService.Activity.Type#PAGE_VIEWS Activity.Type.PAGE_VIEWS}
+   * {@link https://developers.google.com/ad-manager/api/reference/v202505/ActivityService.Activity.Type#PAGE_VIEWS Activity.Type.PAGE_VIEWS}
    */
   type: ActivityType;
 };
 
 /**
- * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202405/ActivityService.Activity Activity} objects.
+ * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202505/ActivityService.Activity Activity} objects.
  */
 export type ActivityPage = PageResult<Activity>;

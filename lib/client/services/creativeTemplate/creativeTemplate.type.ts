@@ -175,6 +175,6 @@ export type CreativeTemplate = {
 };
 
 /**
- * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202405/CreativeTemplateService.CreativeTemplate CreativeTemplate} objects.
+ * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202505/CreativeTemplateService.CreativeTemplate CreativeTemplate} objects.
  */
 export type CreativeTemplatePage = PageResult<CreativeTemplate>;

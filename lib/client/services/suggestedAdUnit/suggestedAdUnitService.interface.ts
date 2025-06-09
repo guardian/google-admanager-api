@@ -7,7 +7,7 @@ import type {
 
 /**
  * This service provides operations for retrieving and approving
- * {@link https://developers.google.com/ad-manager/api/reference/v202405/SuggestedAdUnitService.SuggestedAdUnit SuggestedAdUnit} objects.
+ * {@link https://developers.google.com/ad-manager/api/reference/v202505/SuggestedAdUnitService.SuggestedAdUnit SuggestedAdUnit} objects.
  *
  * Publishers may create ad tags that lack a corresponding ad unit defined in DFP,
  * in order to gather information about potential ads without needing to create dummy ad units and make them available for targeting in line items.
@@ -21,15 +21,15 @@ import type {
  */
 export interface SuggestedAdUnitServiceOperations {
   /**
-   * Gets a {@linkhttps://developers.google.com/ad-manager/api/reference/v202405/SuggestedAdUnitService.SuggestedAdUnitPage SuggestedAdUnitPage}
-   * of {@link https://developers.google.com/ad-manager/api/reference/v202405/SuggestedAdUnitService.SuggestedAdUnit SuggestedAdUnit} objects that satisfy the filter query.
+   * Gets a {@linkhttps://developers.google.com/ad-manager/api/reference/v202505/SuggestedAdUnitService.SuggestedAdUnitPage SuggestedAdUnitPage}
+   * of {@link https://developers.google.com/ad-manager/api/reference/v202505/SuggestedAdUnitService.SuggestedAdUnit SuggestedAdUnit} objects that satisfy the filter query.
    * There is a system-enforced limit of 1000 on the number of suggested ad units that are suggested at any one time.
    *
    *
    * | PQL Property | PQL Property                                                                                                                                          |
    * | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-   * | id           | {@link https://developers.google.com/ad-manager/api/reference/v202405/SuggestedAdUnitService.SuggestedAdUnit#id SuggestedAdUnit.id}                   |
-   * | numRequests  | {@link https://developers.google.com/ad-manager/api/reference/v202405/SuggestedAdUnitService.SuggestedAdUnit#numRequests SuggestedAdUnit.numRequests} |
+   * | id           | {@link https://developers.google.com/ad-manager/api/reference/v202505/SuggestedAdUnitService.SuggestedAdUnit#id SuggestedAdUnit.id}                   |
+   * | numRequests  | {@link https://developers.google.com/ad-manager/api/reference/v202505/SuggestedAdUnitService.SuggestedAdUnit#numRequests SuggestedAdUnit.numRequests} |
    *
    * **Note**: After API version 201311, the id field will only be numerical.
    *
@@ -40,14 +40,14 @@ export interface SuggestedAdUnitServiceOperations {
     filterStatement: Statement,
   ): Promise<SuggestedAdUnitPage>;
   /**
-   * Performs actions on {@link https://developers.google.com/ad-manager/api/reference/v202405/SuggestedAdUnitService.SuggestedAdUnit SuggestedAdUnit} objects that match the given
-   * {@link https://developers.google.com/ad-manager/api/reference/v202405/SuggestedAdUnitService.Statement#query Statement.query}.
+   * Performs actions on {@link https://developers.google.com/ad-manager/api/reference/v202505/SuggestedAdUnitService.SuggestedAdUnit SuggestedAdUnit} objects that match the given
+   * {@link https://developers.google.com/ad-manager/api/reference/v202505/SuggestedAdUnitService.Statement#query Statement.query}.
    * The following fields are supported for filtering:
    *
    * | PQL Property | PQL Property                                                                                                                                          |
    * | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-   * | id           | {@link https://developers.google.com/ad-manager/api/reference/v202405/SuggestedAdUnitService.SuggestedAdUnit#id SuggestedAdUnit.id}                   |
-   * | numRequests  | {@link https://developers.google.com/ad-manager/api/reference/v202405/SuggestedAdUnitService.SuggestedAdUnit#numRequests SuggestedAdUnit.numRequests} |
+   * | id           | {@link https://developers.google.com/ad-manager/api/reference/v202505/SuggestedAdUnitService.SuggestedAdUnit#id SuggestedAdUnit.id}                   |
+   * | numRequests  | {@link https://developers.google.com/ad-manager/api/reference/v202505/SuggestedAdUnitService.SuggestedAdUnit#numRequests SuggestedAdUnit.numRequests} |
    *
    * @param suggestedAdUnitAction the action to perform
    * @param filterStatement	a Publisher Query Language statement used to filter a set of suggested ad units

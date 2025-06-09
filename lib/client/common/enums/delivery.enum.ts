@@ -124,7 +124,7 @@ export const DeliveryForecastSourceEnum = enums([
 
 /**
  * The delivery option for companions.
- * Used for line items whose environmentType is {@link https://developers.google.com/ad-manager/api/reference/v202405/ProposalLineItemService.EnvironmentType#VIDEO_PLAYER EnvironmentType.VIDEO_PLAYER}.
+ * Used for line items whose environmentType is {@link https://developers.google.com/ad-manager/api/reference/v202505/ProposalLineItemService.EnvironmentType#VIDEO_PLAYER EnvironmentType.VIDEO_PLAYER}.
  */
 export enum CompanionDeliveryOption {
   /**

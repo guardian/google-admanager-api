@@ -70,3 +70,21 @@ export enum NegotiationRole {
   SELLER = "SELLER",
   UNKNOWN = "UNKNOWN",
 }
+
+/**
+ * Describes the buyer permission type.
+ */
+export enum BuyerPermissionType {
+  /**
+   * Only the buyer listed on the line item can transact.
+   */
+  NEGOTIATOR_ONLY = "NEGOTIATOR_ONLY",
+  /**
+   * All buyers under the listed buyer's bidder can transact on the line item.
+   */
+  BIDDER = "BIDDER",
+  /**
+   * The value returned if the actual value is not exposed by the requested API version.
+   */
+  UNKNOWN = "UNKNOWN",
+}

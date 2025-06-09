@@ -7,3 +7,4 @@ export * from "./delegation.enum";
 export * from "./thirdParty.enum";
 export * from "./delivery.enum";
 export * from "./general.enum";
+export * from "./invitationStatus.enum";

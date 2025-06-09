@@ -3,12 +3,12 @@ import type { AppliedLabel, ChildPublisher } from "../../common/types";
 import type { CompanyCreditStatus, CompanyType } from "./company.enum";
 
 /**
- * Settings for a {@link https://developers.google.com/ad-manager/api/reference/v202405/CompanyService.Company Company}.
+ * Settings for a {@link https://developers.google.com/ad-manager/api/reference/v202505/CompanyService.Company Company}.
  */
 export type CompanySettings = object;
 
 /**
- * Information required for {@link https://developers.google.com/ad-manager/api/reference/v202405/CompanyService.Company Company} of Type VIEWABILITY_PROVIDER.
+ * Information required for {@link https://developers.google.com/ad-manager/api/reference/v202505/CompanyService.Company Company} of Type VIEWABILITY_PROVIDER.
  * It contains all of the data needed to capture viewability metrics.
  */
 export type ViewabilityProvider = {
@@ -116,6 +116,6 @@ export type Company = {
 // export type CompanyAction = EndAgreementAction | ReInviteAction | ResendInvitationAction;
 
 /**
- * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202405/CompanyService.Company Company} objects.
+ * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202505/CompanyService.Company Company} objects.
  */
 export type CompanyPage = PageResult<Company>;
