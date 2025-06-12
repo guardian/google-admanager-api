@@ -1,5 +1,11 @@
 # @guardian/google-admanager-api
 
+## 4.0.1
+
+### Patch Changes
+
+- 9635903: Bump soap version
+
 ## 4.0.0
 
 ### Major Changes
