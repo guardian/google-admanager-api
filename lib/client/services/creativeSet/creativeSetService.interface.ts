@@ -25,7 +25,7 @@ export interface CreativeSetServiceOperations {
    * | masterCreativeId     | {@link https://developers.google.com/ad-manager/api/reference/v202505/CreativeSetService.CreativeSet#masterCreativeId CreativeSet.masterCreativeId}                                 |
    * | lastModifiedDateTime | {@link https://developers.google.com/ad-manager/api/reference/v202505/CreativeSetService.CreativeSet#lastModifiedDateTime CreativeSet.lastModifiedDateTime} |
    *
-   * @param filterStatement a Publisher Query Language statement used to filter a set of creative sets
+   * @param statement a Publisher Query Language statement used to filter a set of creative sets
    * @returns the creative sets that match the given filter
    */
   getCreativeSetsByStatement(
