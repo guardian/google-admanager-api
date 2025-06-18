@@ -29,7 +29,7 @@ export interface CreativeSetServiceOperations {
    * @returns the creative sets that match the given filter
    */
   getCreativeSetsByStatement(
-    filterStatement: Statement,
+    statement: Statement,
   ): Promise<CreativeSetPage>;
   /**
    * Updates the specified {@link https://developers.google.com/ad-manager/api/reference/v202505/CreativeSetService.CreativeSet CreativeSet}.
