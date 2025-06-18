@@ -16,18 +16,18 @@ export type AdUnitTargeting = {
 };
 
 export type TargetingPreset = {
-  id: number;
   /**
    * The unique ID of the TargetingPreset. This value is readonly and is assigned by Google.
    */
-  name: string;
+  readonly id: number;
   /**
    * The name of the TargetingPreset. This value is required to create a targeting preset and has a maximum length of 255 characters.
    */
-  targeting: Targeting;
+  name: string;
   /**
    * Contains the targeting criteria for the TargetingPreset. This attribute is required.
    */
+  targeting: Targeting;
 };
 
 /**
