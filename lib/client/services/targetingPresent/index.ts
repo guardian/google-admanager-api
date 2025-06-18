@@ -1,2 +1,2 @@
 export { TargetingPresetService } from "./targetingPresent.service";
-export * from "./targetingPresent.type"
+export * from "./targetingPresent.type";
