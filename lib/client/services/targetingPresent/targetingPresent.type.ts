@@ -1,4 +1,5 @@
 import type { PageResult } from "../../../common/types";
+import { Targeting } from "../../common/types";
 
 /**
  * Represents targeted or excluded ad units.
@@ -13,6 +14,22 @@ export type AdUnitTargeting = {
    */
   includeDescendants: boolean;
 };
+
+
+export type TargetingPreset = {
+  id: number;
+  /**
+   * The unique ID of the TargetingPreset. This value is readonly and is assigned by Google.
+   */
+  name: string;
+  /**
+   * The name of the TargetingPreset. This value is required to create a targeting preset and has a maximum length of 255 characters.
+   */
+  targeting: Targeting;
+  /**
+   * Contains the targeting criteria for the TargetingPreset. This attribute is required.
+   */
+}
 
 /**
  * Captures a paged query of TargetingPresetDto objects.
