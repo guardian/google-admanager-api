@@ -20,7 +20,7 @@ export class CreativeSetService implements CreativeSetServiceOperations {
     statement: Statement,
   ): Promise<CreativeSetPage> {
     return this._client.getCreativeSetsByStatement({
-      filterStatement,
+      statement,
     });
   }
 
