@@ -1,5 +1,11 @@
 # @guardian/google-admanager-api
 
+## 4.0.2
+
+### Patch Changes
+
+- e171e67: Fixes the getCreativeSetsByStatement method by updating its statement parameter name
+
 ## 4.0.1
 
 ### Patch Changes
