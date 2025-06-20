@@ -1,5 +1,8 @@
 import type { Statement } from "../../../common/types";
-import type { TargetingPresetPage } from "./targetingPresent.type";
+import type {
+  TargetingPreset,
+  TargetingPresetPage,
+} from "./targetingPreset.type";
 
 /**
  * Service for interacting with Targeting Presets.
@@ -22,4 +25,22 @@ export interface TargetingPresetServiceOperations {
   getTargetingPresetsByStatement(
     filterStatement: Statement,
   ): Promise<TargetingPresetPage>;
+
+  /**
+   * Creates targeting presets
+   * @param targetingPresets a list of targeting presets to be created
+   * @returns the newly created list of targeting presets
+   */
+  createTargetingPresets(
+    targetingPresets: TargetingPreset[],
+  ): Promise<TargetingPreset[]>;
+
+  /**
+   * Updates targeting presets
+   * @param targetingPresets a list of targeting presets to be updated
+   * @returns the newly updated list of targeting presets
+   */
+  updateTargetingPresets(
+    targetingPresets: TargetingPreset[],
+  ): Promise<TargetingPreset[]>;
 }

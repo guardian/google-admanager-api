@@ -48,7 +48,7 @@ export { SuggestedAdUnitService } from "./suggestedAdUnit";
 export {
   TargetingPresetService,
   type TargetingPreset,
-} from "./targetingPresent";
+} from "./targetingPreset";
 export { TeamService } from "./team";
 export { UserService } from "./user";
 export { UserTeamAssociationService } from "./userTeamAssociation";

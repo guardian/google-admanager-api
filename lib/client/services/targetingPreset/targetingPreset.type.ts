@@ -15,6 +15,11 @@ export type AdUnitTargeting = {
   includeDescendants: boolean;
 };
 
+/**
+ * Captures a paged query of TargetingPresetDto objects.
+ */
+export type TargetingPresetPage = PageResult<AdUnitTargeting>;
+
 export type TargetingPreset = {
   /**
    * The unique ID of the TargetingPreset. This value is readonly and is assigned by Google.
@@ -29,8 +34,3 @@ export type TargetingPreset = {
    */
   targeting: Targeting;
 };
-
-/**
- * Captures a paged query of TargetingPresetDto objects.
- */
-export type TargetingPresetPage = PageResult<AdUnitTargeting>;

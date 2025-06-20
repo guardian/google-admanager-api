@@ -3,8 +3,8 @@ import type { Statement } from "../../../common/types";
 import type {
   TargetingPreset,
   TargetingPresetPage,
-} from "./targetingPresent.type";
-import type { TargetingPresetServiceOperations } from "./targetingPresentService.interface";
+} from "./targetingPreset.type";
+import type { TargetingPresetServiceOperations } from "./targetingPresetService.interface";
 
 export class TargetingPresetService
   implements TargetingPresetServiceOperations
@@ -18,14 +18,18 @@ export class TargetingPresetService
   async getTargetingPresetsByStatement(
     filterStatement: Statement,
   ): Promise<TargetingPresetPage> {
-    return this._client.getTargetingPresetsByStatement({
-      filterStatement,
-    });
+    return this._client.getTargetingPresetsByStatement({ filterStatement });
   }
 
   async createTargetingPresets(
     targetingPresets: TargetingPreset[],
   ): Promise<TargetingPreset[]> {
     return this._client.createTargetingPresets({ targetingPresets });
+  }
+
+  async updateTargetingPresets(
+    targetingPresets: TargetingPreset[],
+  ): Promise<TargetingPreset[]> {
+    return this._client.updateTargetingPresets({ targetingPresets });
   }
 }
