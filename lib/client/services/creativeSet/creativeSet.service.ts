@@ -17,10 +17,10 @@ export class CreativeSetService implements CreativeSetServiceOperations {
   }
 
   async getCreativeSetsByStatement(
-    filterStatement: Statement,
+    statement: Statement,
   ): Promise<CreativeSetPage> {
     return this._client.getCreativeSetsByStatement({
-      filterStatement,
+      statement,
     });
   }
 
