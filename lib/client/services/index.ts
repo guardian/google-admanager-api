@@ -45,7 +45,10 @@ export { ReportService } from "./report";
 export { SiteService } from "./site";
 export { StreamActivityMonitorService } from "./streamActivityMonitor";
 export { SuggestedAdUnitService } from "./suggestedAdUnit";
-export { TargetingPresetService } from "./targetingPresent";
+export {
+  TargetingPresetService,
+  type TargetingPreset,
+} from "./targetingPreset";
 export { TeamService } from "./team";
 export { UserService } from "./user";
 export { UserTeamAssociationService } from "./userTeamAssociation";
