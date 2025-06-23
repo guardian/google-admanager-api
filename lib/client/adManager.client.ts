@@ -12,8 +12,8 @@ export class AdManagerClient {
   private credential: SACredential;
   protected applicationName: string;
   protected apiVersion: string;
-  logRequests = true;
-  logResponses = true;
+  logRequests = false;
+  logResponses = false;
 
   constructor(
     networkCode: number,

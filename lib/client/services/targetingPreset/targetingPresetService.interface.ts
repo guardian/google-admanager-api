@@ -32,7 +32,7 @@ export interface TargetingPresetServiceOperations {
    * @returns the newly created list of targeting presets
    */
   createTargetingPresets(
-    targetingPresets: TargetingPreset[],
+    targetingPresets: Omit<TargetingPreset, "id">[],
   ): Promise<TargetingPreset[]>;
 
   /**
@@ -41,6 +41,6 @@ export interface TargetingPresetServiceOperations {
    * @returns the newly updated list of targeting presets
    */
   updateTargetingPresets(
-    targetingPresets: TargetingPreset[],
+    targetingPresets: Omit<TargetingPreset, "id">[],
   ): Promise<TargetingPreset[]>;
 }
