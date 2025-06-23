@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       axios:
-        specifier: ^1.8.4
+        specifier: ^1.10.0
         version: 1.10.0(debug@4.4.1)
       google-auth-library:
         specifier: ^9.13.0
