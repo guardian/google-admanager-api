@@ -1,5 +1,12 @@
 # @guardian/google-admanager-api
 
+## 4.0.2
+
+### Patch Changes
+
+- e171e67: Fixes the getCreativeSetsByStatement method by updating its statement parameter name
+- e82f913: Bump axios version
+
 ## 4.0.1
 
 ### Patch Changes
