@@ -1,5 +1,17 @@
 # @guardian/google-admanager-api
 
+## 4.1.0
+
+### Minor Changes
+
+- f7e415c: Bump version of typescript
+- f728775: Bump version of google-auth
+
+### Patch Changes
+
+- e171e67: Fixes the getCreativeSetsByStatement method by updating its statement parameter name
+- e82f913: Bump axios version
+
 ## 4.0.1
 
 ### Patch Changes
