@@ -12,7 +12,11 @@ export { ContentService } from "./content";
 export { CreativeReviewService } from "./creativeReview";
 export { CreativeService, type Creative } from "./creative";
 export { CreativeSetService } from "./creativeSet";
-export { CreativeTemplateService } from "./creativeTemplate";
+export {
+  CreativeTemplateService,
+  type CreativeTemplate,
+  type CreativeTemplatePage,
+} from "./creativeTemplate";
 export { CreativeWrapperService } from "./creativeWrapper";
 export { CustomFieldService } from "./customField";
 export {
