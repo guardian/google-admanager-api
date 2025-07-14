@@ -104,9 +104,11 @@ export type CreativeTemplateVariable = {
   uniqueName: string;
 
   /**
-   * A descriptive help text that is displayed to users along with the label. This attribute is required and has a maximum length of 255 characters.
+   * Description of the creative template variable.
+   * Note: SOAP API docs claim this is required, but in practice
+   * it's often missing from actual GAM responses.
    */
-  description: string;
+  description?: string;
 
   /**
    * true if this variable is required to be filled in by users when creating TemplateCreative from the CreativeTemplate.
@@ -134,7 +136,7 @@ export type CreativeTemplate = {
   /**
    * The description of the creative template. This attribute is optional.
    */
-  description: string;
+  description?: string;
 
   /**
    * The list of creative template variables. This attribute is required.
