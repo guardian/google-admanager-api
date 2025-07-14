@@ -11,6 +11,9 @@ import type {
  * Use AssetCreativeTemplateVariableValue to specify the value for this variable when creating TemplateCreative from the TemplateCreative.
  */
 export type AssetCreativeTemplateVariable = {
+  attributes: {
+    "xsi:type": "AssetCreativeTemplateVariable";
+  };
   /**
    * A set of supported mime types. This set can be empty or null if there's no constraint, meaning files of any mime types are allowed.
    */
@@ -21,6 +24,9 @@ export type AssetCreativeTemplateVariable = {
  * Represents a long variable defined in a creative template.
  */
 export type LongCreativeTemplateVariable = {
+  attributes: {
+    "xsi:type": "LongCreativeTemplateVariable";
+  };
   /**
    * Default value to be filled in when creating creatives from the creative template.
    */
@@ -48,6 +54,9 @@ export type ListStringCreativeTemplateVariableVariableChoice = {
  * Use StringCreativeTemplateVariableValue to specify the value for this variable when creating a TemplateCreative from a CreativeTemplate.
  */
 export type ListStringCreativeTemplateVariable = {
+  attributes: {
+    "xsi:type": "ListStringCreativeTemplateVariable";
+  };
   /**
    * The values within the list users need to select from.
    */
@@ -66,6 +75,9 @@ export type ListStringCreativeTemplateVariable = {
  * Use StringCreativeTemplateVariableValue to specify the value for this variable when creating TemplateCreative from the TemplateCreative.
  */
 export type StringCreativeTemplateVariable = {
+  attributes: {
+    "xsi:type": "StringCreativeTemplateVariable";
+  };
   /**
    * Default value to be filled in when creating creatives from the creative template.
    */
@@ -78,6 +90,9 @@ export type StringCreativeTemplateVariable = {
  * Use UrlCreativeTemplateVariableValue to specify the value for this variable when creating TemplateCreative from the TemplateCreative
  */
 export type UrlCreativeTemplateVariable = {
+  attributes: {
+    "xsi:type": "UrlCreativeTemplateVariable";
+  };
   /**
    * Default value to be filled in when creating creatives from the creative template.
    */
