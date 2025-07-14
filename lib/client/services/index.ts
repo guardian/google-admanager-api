@@ -14,8 +14,11 @@ export { CreativeService, type Creative } from "./creative";
 export { CreativeSetService } from "./creativeSet";
 export {
   CreativeTemplateService,
+  CreativeTemplateType,
+  CreativeTemplateStatus,
   type CreativeTemplate,
   type CreativeTemplatePage,
+  type CreativeTemplateVariable,
 } from "./creativeTemplate";
 export { CreativeWrapperService } from "./creativeWrapper";
 export { CustomFieldService } from "./customField";
