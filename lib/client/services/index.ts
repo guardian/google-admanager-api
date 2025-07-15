@@ -37,7 +37,12 @@ export {
   LineItemCreativeAssociationService,
   type LineItemCreativeAssociation,
 } from "./lineItemCreativeAssociation";
-export { LineItemService, ActivateLineItems, type LineItem } from "./lineItem";
+export {
+  LineItemService,
+  ActivateLineItems,
+  LineItemStruct,
+  type LineItem,
+} from "./lineItem";
 export { LineItemTemplateService } from "./lineItemTemplate";
 export { LiveStreamEventService } from "./liveStreamEvent";
 export { MobileApplicationService } from "./mobileApplication";
