@@ -11,6 +11,9 @@ import type {
  * Use AssetCreativeTemplateVariableValue to specify the value for this variable when creating TemplateCreative from the TemplateCreative.
  */
 export type AssetCreativeTemplateVariable = {
+  attributes: {
+    "xsi:type": "AssetCreativeTemplateVariable";
+  };
   /**
    * A set of supported mime types. This set can be empty or null if there's no constraint, meaning files of any mime types are allowed.
    */
@@ -21,6 +24,9 @@ export type AssetCreativeTemplateVariable = {
  * Represents a long variable defined in a creative template.
  */
 export type LongCreativeTemplateVariable = {
+  attributes: {
+    "xsi:type": "LongCreativeTemplateVariable";
+  };
   /**
    * Default value to be filled in when creating creatives from the creative template.
    */
@@ -47,18 +53,19 @@ export type ListStringCreativeTemplateVariableVariableChoice = {
  *
  * Use StringCreativeTemplateVariableValue to specify the value for this variable when creating a TemplateCreative from a CreativeTemplate.
  */
-export type ListStringCreativeTemplateVariable = {
-  /**
-   * The values within the list users need to select from.
-   */
-  choices: ListStringCreativeTemplateVariableVariableChoice[];
+export type ListStringCreativeTemplateVariable =
+  StringCreativeTemplateVariable & {
+    /**
+     * The values within the list users need to select from.
+     */
+    choices: ListStringCreativeTemplateVariableVariableChoice[];
 
-  /**
-   * true if a user can specifiy an 'other' value. For example, if a variable called backgroundColor is defined as a list with values: red, green, blue,
-   * this boolean can be set to allow a user to enter a value not on the list such as purple.
-   */
-  allowOtherChoice: boolean;
-};
+    /**
+     * true if a user can specifiy an 'other' value. For example, if a variable called backgroundColor is defined as a list with values: red, green, blue,
+     * this boolean can be set to allow a user to enter a value not on the list such as purple.
+     */
+    allowOtherChoice: boolean;
+  };
 
 /**
  * Represents a string variable defined in a creative template.
@@ -70,7 +77,7 @@ export type StringCreativeTemplateVariable = {
    * Default value to be filled in when creating creatives from the creative template.
    */
   defaultValue: string;
-} & ListStringCreativeTemplateVariable;
+};
 
 /**
  * Represents a url variable defined in a creative template.
@@ -94,6 +101,17 @@ export type UrlCreativeTemplateVariable = {
  */
 export type CreativeTemplateVariable = {
   /**
+   * Metadata field indicating the type of the CreativeTemplateVariable
+   */
+  attributes: {
+    "xsi:type":
+      | "AssetCreativeTemplateVariable"
+      | "LongCreativeTemplateVariable"
+      | "StringCreativeTemplateVariable"
+      | "ListStringCreativeTemplateVariable"
+      | "UrlCreativeTemplateVariable";
+  };
+  /**
    * Label that is displayed to users when creating TemplateCreative from the CreativeTemplate. This attribute is required and has a maximum length of 127 characters.
    */
   label: string;
@@ -104,18 +122,22 @@ export type CreativeTemplateVariable = {
   uniqueName: string;
 
   /**
-   * A descriptive help text that is displayed to users along with the label. This attribute is required and has a maximum length of 255 characters.
+   * Description of the creative template variable.
+   * Note: SOAP API docs claim this is required, but in practice
+   * it's often missing from actual GAM responses.
    */
-  description: string;
+  description?: string;
 
   /**
    * true if this variable is required to be filled in by users when creating TemplateCreative from the CreativeTemplate.
    */
   isRequired: boolean;
-} & AssetCreativeTemplateVariable &
-  LongCreativeTemplateVariable &
-  StringCreativeTemplateVariable &
-  UrlCreativeTemplateVariable;
+} & (
+  | AssetCreativeTemplateVariable
+  | LongCreativeTemplateVariable
+  | StringCreativeTemplateVariable
+  | UrlCreativeTemplateVariable
+);
 
 /**
  * A template upon which a creative can be created.
@@ -134,7 +156,7 @@ export type CreativeTemplate = {
   /**
    * The description of the creative template. This attribute is optional.
    */
-  description: string;
+  description?: string;
 
   /**
    * The list of creative template variables. This attribute is required.
