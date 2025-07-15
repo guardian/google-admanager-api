@@ -53,21 +53,19 @@ export type ListStringCreativeTemplateVariableVariableChoice = {
  *
  * Use StringCreativeTemplateVariableValue to specify the value for this variable when creating a TemplateCreative from a CreativeTemplate.
  */
-export type ListStringCreativeTemplateVariable = {
-  attributes: {
-    "xsi:type": "ListStringCreativeTemplateVariable";
-  };
-  /**
-   * The values within the list users need to select from.
-   */
-  choices: ListStringCreativeTemplateVariableVariableChoice[];
+export type ListStringCreativeTemplateVariable =
+  StringCreativeTemplateVariable & {
+    /**
+     * The values within the list users need to select from.
+     */
+    choices: ListStringCreativeTemplateVariableVariableChoice[];
 
-  /**
-   * true if a user can specifiy an 'other' value. For example, if a variable called backgroundColor is defined as a list with values: red, green, blue,
-   * this boolean can be set to allow a user to enter a value not on the list such as purple.
-   */
-  allowOtherChoice: boolean;
-};
+    /**
+     * true if a user can specifiy an 'other' value. For example, if a variable called backgroundColor is defined as a list with values: red, green, blue,
+     * this boolean can be set to allow a user to enter a value not on the list such as purple.
+     */
+    allowOtherChoice: boolean;
+  };
 
 /**
  * Represents a string variable defined in a creative template.
@@ -75,14 +73,11 @@ export type ListStringCreativeTemplateVariable = {
  * Use StringCreativeTemplateVariableValue to specify the value for this variable when creating TemplateCreative from the TemplateCreative.
  */
 export type StringCreativeTemplateVariable = {
-  attributes: {
-    "xsi:type": "StringCreativeTemplateVariable";
-  };
   /**
    * Default value to be filled in when creating creatives from the creative template.
    */
   defaultValue: string;
-} & ListStringCreativeTemplateVariable;
+};
 
 /**
  * Represents a url variable defined in a creative template.
@@ -90,9 +85,6 @@ export type StringCreativeTemplateVariable = {
  * Use UrlCreativeTemplateVariableValue to specify the value for this variable when creating TemplateCreative from the TemplateCreative
  */
 export type UrlCreativeTemplateVariable = {
-  attributes: {
-    "xsi:type": "UrlCreativeTemplateVariable";
-  };
   /**
    * Default value to be filled in when creating creatives from the creative template.
    */
@@ -108,6 +100,17 @@ export type UrlCreativeTemplateVariable = {
  * Represents a variable defined in a creative template.
  */
 export type CreativeTemplateVariable = {
+  /**
+   * Metadata field indicating the type of the CreativeTemplateVariable
+   */
+  attributes: {
+    "xsi:type":
+      | "AssetCreativeTemplateVariable"
+      | "LongCreativeTemplateVariable"
+      | "StringCreativeTemplateVariable"
+      | "ListStringCreativeTemplateVariable"
+      | "UrlCreativeTemplateVariable";
+  };
   /**
    * Label that is displayed to users when creating TemplateCreative from the CreativeTemplate. This attribute is required and has a maximum length of 127 characters.
    */
@@ -129,10 +132,12 @@ export type CreativeTemplateVariable = {
    * true if this variable is required to be filled in by users when creating TemplateCreative from the CreativeTemplate.
    */
   isRequired: boolean;
-} & AssetCreativeTemplateVariable &
-  LongCreativeTemplateVariable &
-  StringCreativeTemplateVariable &
-  UrlCreativeTemplateVariable;
+} & (
+  | AssetCreativeTemplateVariable
+  | LongCreativeTemplateVariable
+  | StringCreativeTemplateVariable
+  | UrlCreativeTemplateVariable
+);
 
 /**
  * A template upon which a creative can be created.
