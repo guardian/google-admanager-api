@@ -11,9 +11,6 @@ import type {
  * Use AssetCreativeTemplateVariableValue to specify the value for this variable when creating TemplateCreative from the TemplateCreative.
  */
 export type AssetCreativeTemplateVariable = {
-  attributes: {
-    "xsi:type": "AssetCreativeTemplateVariable";
-  };
   /**
    * A set of supported mime types. This set can be empty or null if there's no constraint, meaning files of any mime types are allowed.
    */
@@ -24,9 +21,6 @@ export type AssetCreativeTemplateVariable = {
  * Represents a long variable defined in a creative template.
  */
 export type LongCreativeTemplateVariable = {
-  attributes: {
-    "xsi:type": "LongCreativeTemplateVariable";
-  };
   /**
    * Default value to be filled in when creating creatives from the creative template.
    */
