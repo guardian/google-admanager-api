@@ -1,11 +1,14 @@
+import { Describe, number, object, string } from "superstruct";
 import type { PageResult } from "../../../common/types";
-import type {
-  CustomTargetingKeyStatus,
-  CustomTargetingKeyType,
-  CustomTargetingValueMatchType,
-  CustomTargetingValueStatus,
-  ReportableType,
-  ValueDeclarationType,
+import {
+  CustomTargetingKeyTypeEnum,
+  CustomTargetingValueMatchTypeEnum,
+  type CustomTargetingKeyStatus,
+  type CustomTargetingKeyType,
+  type CustomTargetingValueMatchType,
+  type CustomTargetingValueStatus,
+  type ReportableType,
+  type ValueDeclarationType,
 } from "./customTargeting.enum";
 
 /**
@@ -89,6 +92,16 @@ export type CustomTargetingValue = {
    */
   status: CustomTargetingValueStatus;
 };
+
+export const CustomTargetingValueStruct: Describe<CustomTargetingValue> =
+  object({
+    customTargetingKeyId: number(),
+    id: number(),
+    name: string(),
+    displayName: string(),
+    matchType: CustomTargetingValueMatchTypeEnum,
+    status: CustomTargetingKeyTypeEnum,
+  });
 
 /**
  * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202505/CustomTargetingService.CustomTargetingValue CustomTargetingValue} objects.
