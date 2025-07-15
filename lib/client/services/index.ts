@@ -31,13 +31,18 @@ export {
 export { DaiAuthenticationKeyService } from "./daiAuthenticationKey";
 export { DaiEncodingProfileService } from "./daiEncodingProfile";
 export { ForecastService } from "./forecast";
-export { InventoryService, InventoryStatus, type AdUnit } from "./inventory";
+export { InventoryService, InventoryStatus, type AdUnit, type AdUnitParent } from "./inventory";
 export { LabelService } from "./label";
 export {
   LineItemCreativeAssociationService,
   type LineItemCreativeAssociation,
 } from "./lineItemCreativeAssociation";
-export { LineItemService, ActivateLineItems, type LineItem } from "./lineItem";
+export {
+  LineItemService,
+  ActivateLineItems,
+  LineItemStruct,
+  type LineItem,
+} from "./lineItem";
 export { LineItemTemplateService } from "./lineItemTemplate";
 export { LiveStreamEventService } from "./liveStreamEvent";
 export { MobileApplicationService } from "./mobileApplication";
