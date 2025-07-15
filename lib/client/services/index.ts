@@ -31,7 +31,7 @@ export {
 export { DaiAuthenticationKeyService } from "./daiAuthenticationKey";
 export { DaiEncodingProfileService } from "./daiEncodingProfile";
 export { ForecastService } from "./forecast";
-export { InventoryService } from "./inventory";
+export { InventoryService, InventoryStatus, type AdUnit } from "./inventory";
 export { LabelService } from "./label";
 export {
   LineItemCreativeAssociationService,
