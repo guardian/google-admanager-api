@@ -1,5 +1,11 @@
 # @guardian/google-admanager-api
 
+## 4.2.0
+
+### Minor Changes
+
+- 4b5cb34: Add CustomTargetingValue struct for type safety checks
+
 ## 4.1.0
 
 ### Minor Changes
