@@ -1,8 +1,8 @@
 import { Describe, number, object, string } from "superstruct";
 import type { PageResult } from "../../../common/types";
 import {
-  CustomTargetingKeyTypeEnum,
   CustomTargetingValueMatchTypeEnum,
+  CustomTargetingValueStatusEnum,
   type CustomTargetingKeyStatus,
   type CustomTargetingKeyType,
   type CustomTargetingValueMatchType,
@@ -100,7 +100,7 @@ export const CustomTargetingValueStruct: Describe<CustomTargetingValue> =
     name: string(),
     displayName: string(),
     matchType: CustomTargetingValueMatchTypeEnum,
-    status: CustomTargetingKeyTypeEnum,
+    status: CustomTargetingValueStatusEnum,
   });
 
 /**

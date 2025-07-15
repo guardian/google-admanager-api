@@ -145,7 +145,7 @@ export enum CustomTargetingValueStatus {
   UNKNOWN = "UNKNOWN",
 }
 
-export const CustomTargetingKeyTypeEnum = enums([
+export const CustomTargetingValueStatusEnum = enums([
   "ACTIVE",
   "INACTIVE",
   "UNKNOWN",
