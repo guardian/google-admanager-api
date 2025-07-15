@@ -117,6 +117,9 @@ export enum CustomTargetingValueMatchType {
   UNKNOWN = "UNKNOWN",
 }
 
+/**
+ * Represents a CustomTargetingValueMatchType enum in superstruct format.
+ */
 export const CustomTargetingValueMatchTypeEnum = enums([
   "EXACT",
   "BROAD",
@@ -145,6 +148,9 @@ export enum CustomTargetingValueStatus {
   UNKNOWN = "UNKNOWN",
 }
 
+/**
+ * Represents a CustomTargetingValueStatus enum in superstruct format.
+ */
 export const CustomTargetingValueStatusEnum = enums([
   "ACTIVE",
   "INACTIVE",

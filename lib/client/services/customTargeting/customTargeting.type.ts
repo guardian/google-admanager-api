@@ -93,6 +93,9 @@ export type CustomTargetingValue = {
   status: CustomTargetingValueStatus;
 };
 
+/**
+ * Represents a CustomTargetingValue struct
+ */
 export const CustomTargetingValueStruct: Describe<CustomTargetingValue> =
   object({
     customTargetingKeyId: number(),
