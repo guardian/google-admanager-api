@@ -1,3 +1,5 @@
+import { Describe, enums } from "superstruct";
+
 /**
  * Specifies the types for CustomTargetingKey objects.
  */
@@ -116,6 +118,19 @@ export enum CustomTargetingValueMatchType {
 }
 
 /**
+ * Represents a CustomTargetingValueMatchType enum in superstruct format.
+ */
+export const CustomTargetingValueMatchTypeEnum = enums([
+  "EXACT",
+  "BROAD",
+  "PREFIX",
+  "BROAD_PREFIX",
+  "SUFFIX",
+  "CONTAINS",
+  "UNKNOWN",
+]) as Describe<CustomTargetingValueMatchType>;
+
+/**
  * Describes the statuses for CustomTargetingValue objects.
  */
 export enum CustomTargetingValueStatus {
@@ -132,3 +147,12 @@ export enum CustomTargetingValueStatus {
    */
   UNKNOWN = "UNKNOWN",
 }
+
+/**
+ * Represents a CustomTargetingValueStatus enum in superstruct format.
+ */
+export const CustomTargetingValueStatusEnum = enums([
+  "ACTIVE",
+  "INACTIVE",
+  "UNKNOWN",
+]) as Describe<CustomTargetingValueStatus>;
