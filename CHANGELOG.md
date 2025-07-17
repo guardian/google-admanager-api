@@ -1,5 +1,11 @@
 # @guardian/google-admanager-api
 
+## 5.0.0
+
+### Major Changes
+
+- 608176a: updating the types and exporting from index for ease of consumption
+
 ## 4.2.0
 
 ### Minor Changes
