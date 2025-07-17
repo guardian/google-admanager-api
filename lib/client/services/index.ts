@@ -12,7 +12,14 @@ export { ContentService } from "./content";
 export { CreativeReviewService } from "./creativeReview";
 export { CreativeService, type Creative } from "./creative";
 export { CreativeSetService } from "./creativeSet";
-export { CreativeTemplateService } from "./creativeTemplate";
+export {
+  CreativeTemplateService,
+  CreativeTemplateType,
+  CreativeTemplateStatus,
+  type CreativeTemplate,
+  type CreativeTemplatePage,
+  type CreativeTemplateVariable,
+} from "./creativeTemplate";
 export { CreativeWrapperService } from "./creativeWrapper";
 export { CustomFieldService } from "./customField";
 export {
@@ -24,13 +31,23 @@ export {
 export { DaiAuthenticationKeyService } from "./daiAuthenticationKey";
 export { DaiEncodingProfileService } from "./daiEncodingProfile";
 export { ForecastService } from "./forecast";
-export { InventoryService } from "./inventory";
+export {
+  InventoryService,
+  InventoryStatus,
+  type AdUnit,
+  type AdUnitParent,
+} from "./inventory";
 export { LabelService } from "./label";
 export {
   LineItemCreativeAssociationService,
   type LineItemCreativeAssociation,
 } from "./lineItemCreativeAssociation";
-export { LineItemService, ActivateLineItems, type LineItem } from "./lineItem";
+export {
+  LineItemService,
+  ActivateLineItems,
+  LineItemStruct,
+  type LineItem,
+} from "./lineItem";
 export { LineItemTemplateService } from "./lineItemTemplate";
 export { LiveStreamEventService } from "./liveStreamEvent";
 export { MobileApplicationService } from "./mobileApplication";
