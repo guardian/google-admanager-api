@@ -15,8 +15,8 @@ importers:
         specifier: ^10.1.0
         version: 10.1.0
       soap:
-        specifier: 1.1.12
-        version: 1.1.12
+        specifier: 1.2.0
+        version: 1.2.0
       superstruct:
         specifier: ^2.0.2
         version: 2.0.2
@@ -2601,8 +2601,8 @@ packages:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
 
-  soap@1.1.12:
-    resolution: {integrity: sha512-bfgy09VAA2Pnv8I/qDpMvPFPV//eIGr/DOeaLx3uexpMrI+gq8Xuvp3KlTZYMhKFwjwgcLd+YpabFbOv82R5gQ==}
+  soap@1.2.0:
+    resolution: {integrity: sha512-LUncmLhklyVt4dFYjKGZhBVWNbV231yMlrhl7H9cDJQKGMUFaZI2bjWorpyRY1YkUMW080w1rTgDC/pyk3lj8w==}
     engines: {node: '>=14.17.0'}
 
   source-map-support@0.5.13:
@@ -6227,7 +6227,7 @@ snapshots:
 
   slash@3.0.0: {}
 
-  soap@1.1.12:
+  soap@1.2.0:
     dependencies:
       axios: 1.10.0(debug@4.4.1)
       axios-ntlm: 1.4.4(debug@4.4.1)
