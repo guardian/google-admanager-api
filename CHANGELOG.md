@@ -1,5 +1,11 @@
 # @guardian/google-admanager-api
 
+## 5.0.1
+
+### Patch Changes
+
+- d34f9c2: Bumps version of direct dependency `soap` and pins version of transitive dependency `form-data`
+
 ## 5.0.0
 
 ### Major Changes
