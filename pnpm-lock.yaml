@@ -10,7 +10,7 @@ importers:
     dependencies:
       axios:
         specifier: ^1.10.0
-        version: 1.10.0(debug@4.4.1)
+        version: 1.11.0(debug@4.4.1)
       google-auth-library:
         specifier: ^10.1.0
         version: 10.1.0
@@ -960,8 +960,8 @@ packages:
   axios-ntlm@1.4.4:
     resolution: {integrity: sha512-kpCRdzMfL8gi0Z0o96P3QPAK4XuC8iciGgxGXe+PeQ4oyjI2LZN8WSOKbu0Y9Jo3T/A7pB81n6jYVPIpglEuRA==}
 
-  axios@1.10.0:
-    resolution: {integrity: sha512-/1xYAC4MP/HEG+3duIhFr4ZQXR4sQXOIe+o6sdqzeykGLx6Upp/1p8MHqhINOvGeP7xyNHe7tsiJByc4SSVUxw==}
+  axios@1.11.0:
+    resolution: {integrity: sha512-1Lx3WLFQWm3ooKDYZD1eXmoGO9fxYQjrycfHFC8P0sCfQVXyROp0p9PFWBehewBOdCwHc+f/b8I0fMto5eSfwA==}
 
   axobject-query@4.1.0:
     resolution: {integrity: sha512-qIj0G9wZbMGNLjLmg1PT6v2mE9AH2zlnADJD/2tC6E00hgmhUOfEB6greHPAfLRSufHqROIUTkw6E+M3lH0PTQ==}
@@ -4178,14 +4178,14 @@ snapshots:
 
   axios-ntlm@1.4.4(debug@4.4.1):
     dependencies:
-      axios: 1.10.0(debug@4.4.1)
+      axios: 1.11.0(debug@4.4.1)
       des.js: 1.1.0
       dev-null: 0.1.1
       js-md4: 0.3.2
     transitivePeerDependencies:
       - debug
 
-  axios@1.10.0(debug@4.4.1):
+  axios@1.11.0(debug@4.4.1):
     dependencies:
       follow-redirects: 1.15.9(debug@4.4.1)
       form-data: 4.0.4
@@ -6315,7 +6315,7 @@ snapshots:
 
   soap@1.2.0:
     dependencies:
-      axios: 1.10.0(debug@4.4.1)
+      axios: 1.11.0(debug@4.4.1)
       axios-ntlm: 1.4.4(debug@4.4.1)
       debug: 4.4.1
       formidable: 3.5.4
