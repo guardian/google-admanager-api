@@ -1,5 +1,11 @@
 # @guardian/google-admanager-api
 
+## 5.0.2
+
+### Patch Changes
+
+- a16d3e9: bump soap and axios deps
+
 ## 5.0.1
 
 ### Patch Changes
