@@ -10,13 +10,13 @@ importers:
     dependencies:
       axios:
         specifier: ^1.10.0
-        version: 1.10.0(debug@4.4.1)
+        version: 1.11.0(debug@4.4.1)
       google-auth-library:
         specifier: ^10.1.0
         version: 10.1.0
       soap:
-        specifier: 1.2.0
-        version: 1.2.0
+        specifier: 1.2.1
+        version: 1.2.1
       superstruct:
         specifier: ^2.0.2
         version: 2.0.2
@@ -960,8 +960,8 @@ packages:
   axios-ntlm@1.4.4:
     resolution: {integrity: sha512-kpCRdzMfL8gi0Z0o96P3QPAK4XuC8iciGgxGXe+PeQ4oyjI2LZN8WSOKbu0Y9Jo3T/A7pB81n6jYVPIpglEuRA==}
 
-  axios@1.10.0:
-    resolution: {integrity: sha512-/1xYAC4MP/HEG+3duIhFr4ZQXR4sQXOIe+o6sdqzeykGLx6Upp/1p8MHqhINOvGeP7xyNHe7tsiJByc4SSVUxw==}
+  axios@1.11.0:
+    resolution: {integrity: sha512-1Lx3WLFQWm3ooKDYZD1eXmoGO9fxYQjrycfHFC8P0sCfQVXyROp0p9PFWBehewBOdCwHc+f/b8I0fMto5eSfwA==}
 
   axobject-query@4.1.0:
     resolution: {integrity: sha512-qIj0G9wZbMGNLjLmg1PT6v2mE9AH2zlnADJD/2tC6E00hgmhUOfEB6greHPAfLRSufHqROIUTkw6E+M3lH0PTQ==}
@@ -2632,8 +2632,8 @@ packages:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
 
-  soap@1.2.0:
-    resolution: {integrity: sha512-LUncmLhklyVt4dFYjKGZhBVWNbV231yMlrhl7H9cDJQKGMUFaZI2bjWorpyRY1YkUMW080w1rTgDC/pyk3lj8w==}
+  soap@1.2.1:
+    resolution: {integrity: sha512-QRkgCb8C99x1SxZ84jCJAd5VDFpp0MNL5O1X6vKtHp3Hba6UnN1Wdy0Lq+o1CmvBkxyxBYIW/Y+xPQLPq+Sv6g==}
     engines: {node: '>=14.17.0'}
 
   source-map-support@0.5.13:
@@ -4178,14 +4178,14 @@ snapshots:
 
   axios-ntlm@1.4.4(debug@4.4.1):
     dependencies:
-      axios: 1.10.0(debug@4.4.1)
+      axios: 1.11.0(debug@4.4.1)
       des.js: 1.1.0
       dev-null: 0.1.1
       js-md4: 0.3.2
     transitivePeerDependencies:
       - debug
 
-  axios@1.10.0(debug@4.4.1):
+  axios@1.11.0(debug@4.4.1):
     dependencies:
       follow-redirects: 1.15.9(debug@4.4.1)
       form-data: 4.0.4
@@ -6313,9 +6313,9 @@ snapshots:
 
   slash@3.0.0: {}
 
-  soap@1.2.0:
+  soap@1.2.1:
     dependencies:
-      axios: 1.10.0(debug@4.4.1)
+      axios: 1.11.0(debug@4.4.1)
       axios-ntlm: 1.4.4(debug@4.4.1)
       debug: 4.4.1
       formidable: 3.5.4

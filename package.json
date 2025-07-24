@@ -37,7 +37,7 @@
   "dependencies": {
     "axios": "^1.10.0",
     "google-auth-library": "^10.1.0",
-    "soap": "1.2.0",
+    "soap": "1.2.1",
     "superstruct": "^2.0.2"
   },
   "devDependencies": {
