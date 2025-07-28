@@ -976,13 +976,26 @@ export type UrlCreativeTemplateVariableValue = {
  */
 export type BaseCreativeTemplateVariableValue = {
   /**
+   * Metadata field indicating the type of the CreativeTemplateVariable
+   */
+  attributes: {
+    "xsi:type":
+      | "AssetCreativeTemplateVariableValue"
+      | "LongCreativeTemplateVariableValue"
+      | "StringCreativeTemplateVariableValue"
+      | "ListStringCreativeTemplateVariableValue"
+      | "UrlCreativeTemplateVariableValue";
+  };
+  /**
    * A uniqueName of the CreativeTemplateVariable.
    */
   uniqueName: string;
-} & AssetCreativeTemplateVariableValue &
-  LongCreativeTemplateVariableValue &
-  StringCreativeTemplateVariableValue &
-  UrlCreativeTemplateVariableValue;
+} & (
+  | AssetCreativeTemplateVariableValue
+  | LongCreativeTemplateVariableValue
+  | StringCreativeTemplateVariableValue
+  | UrlCreativeTemplateVariableValue
+);
 
 /**
  * A Creative that is created by the specified creative template.
