@@ -975,6 +975,17 @@ export type UrlCreativeTemplateVariableValue = {
  * A base class for storing values of the CreativeTemplateVariable.
  */
 export type BaseCreativeTemplateVariableValue = {
+   /**
+   * Metadata field indicating the type of the CreativeTemplateVariable
+   */
+  attributes: {
+    "xsi:type":
+      | "AssetCreativeTemplateVariable"
+      | "LongCreativeTemplateVariable"
+      | "StringCreativeTemplateVariable"
+      | "ListStringCreativeTemplateVariable"
+      | "UrlCreativeTemplateVariable";
+  };
   /**
    * A uniqueName of the CreativeTemplateVariable.
    */
