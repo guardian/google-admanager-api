@@ -1,5 +1,15 @@
 # @guardian/google-admanager-api
 
+## 5.1.0
+
+### Minor Changes
+
+- 3378d9c: updates the type exports for Creatives
+
+### Patch Changes
+
+- 1fcc2ad: Bump google-auth-library dependency
+
 ## 5.0.2
 
 ### Patch Changes
