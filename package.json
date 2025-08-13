@@ -45,7 +45,7 @@
     "@guardian/eslint-config": "^11.0.0",
     "@guardian/prettier": "^8.0.1",
     "@types/jest": "^30.0.0",
-    "@types/node": "^24.0.14",
+    "@types/node": "^24.2.1",
     "eslint": "^9.19.0",
     "jest": "^30.0.3",
     "open": "^10.1.0",
