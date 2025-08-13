@@ -1,5 +1,12 @@
 # @guardian/google-admanager-api
 
+## 5.1.1
+
+### Patch Changes
+
+- 1631850: Bump google-auth-library dependency
+- aee5b2b: Bump Typescript dependency
+
 ## 5.1.0
 
 ### Minor Changes
