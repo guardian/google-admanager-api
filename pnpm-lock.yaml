@@ -12,11 +12,11 @@ importers:
         specifier: ^1.11.0
         version: 1.11.0(debug@4.4.1)
       google-auth-library:
-        specifier: ^10.2.1
-        version: 10.2.1
+        specifier: ^10.3.0
+        version: 10.3.0
       soap:
-        specifier: 1.2.1
-        version: 1.2.1
+        specifier: 1.3.0
+        version: 1.3.0
       superstruct:
         specifier: ^2.0.2
         version: 2.0.2
@@ -831,8 +831,8 @@ packages:
     resolution: {integrity: sha512-CJDxIgE5I0FH+ttq/Fxy6nRpxP70+e2O048EPe85J2use3XKdatVM7dDVvFNjQudd9B49NPoZ+8PG49zj4Er8Q==}
     engines: {node: '>= 16'}
 
-  '@xmldom/xmldom@0.8.10':
-    resolution: {integrity: sha512-2WALfTl4xo2SkGCYRt6rDTFfk9R1czmBvUQy12gK2KuRKIpWEhcbbzy8EZXtz/jkRqHX8bFEc6FC1HjX4TUWYw==}
+  '@xmldom/xmldom@0.8.11':
+    resolution: {integrity: sha512-cQzWCtO6C8TQiYl1ruKNn2U6Ao4o4WBBcbL61yJl84x+j5sOWWFU9X7DpND8XZG3daDppSsigMdfAIl2upQBRw==}
     engines: {node: '>=10.0.0'}
 
   acorn-jsx@5.3.2:
@@ -1644,8 +1644,8 @@ packages:
     resolution: {integrity: sha512-jhIXaOzy1sb8IyocaruWSn1TjmnBVs8Ayhcy83rmxNJ8q2uWKCAj3CnJY+KpGSXCueAPc0i05kVvVKtP1t9S3g==}
     engines: {node: '>=10'}
 
-  google-auth-library@10.2.1:
-    resolution: {integrity: sha512-HMxFl2NfeHYnaL1HoRIN1XgorKS+6CDaM+z9LSSN+i/nKDDL4KFFEWogMXu7jV4HZQy2MsxpY+wA5XIf3w410A==}
+  google-auth-library@10.3.0:
+    resolution: {integrity: sha512-ylSE3RlCRZfZB56PFJSfUCuiuPq83Fx8hqu1KPWGK8FVdSaxlp/qkeMMX/DT/18xkwXIHvXEXkZsljRwfrdEfQ==}
     engines: {node: '>=18'}
 
   google-logging-utils@1.1.1:
@@ -2620,8 +2620,8 @@ packages:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
 
-  soap@1.2.1:
-    resolution: {integrity: sha512-QRkgCb8C99x1SxZ84jCJAd5VDFpp0MNL5O1X6vKtHp3Hba6UnN1Wdy0Lq+o1CmvBkxyxBYIW/Y+xPQLPq+Sv6g==}
+  soap@1.3.0:
+    resolution: {integrity: sha512-NM5+yZBldy+799yk74HvFQYNuMNXkwKVlNEYPhb7ChLVZ3mZEWTpGTiX1k5b8NHHD8NfPzrQebHH5nEazFF5pQ==}
     engines: {node: '>=14.17.0'}
 
   source-map-support@0.5.13:
@@ -4027,7 +4027,7 @@ snapshots:
 
   '@xmldom/is-dom-node@1.0.1': {}
 
-  '@xmldom/xmldom@0.8.10': {}
+  '@xmldom/xmldom@0.8.11': {}
 
   acorn-jsx@5.3.2(acorn@8.15.0):
     dependencies:
@@ -5112,7 +5112,7 @@ snapshots:
       merge2: 1.4.1
       slash: 3.0.0
 
-  google-auth-library@10.2.1:
+  google-auth-library@10.3.0:
     dependencies:
       base64-js: 1.5.1
       ecdsa-sig-formatter: 1.0.11
@@ -6296,7 +6296,7 @@ snapshots:
 
   slash@3.0.0: {}
 
-  soap@1.2.1:
+  soap@1.3.0:
     dependencies:
       axios: 1.11.0(debug@4.4.1)
       axios-ntlm: 1.4.4(debug@4.4.1)
@@ -6729,7 +6729,7 @@ snapshots:
   xml-crypto@6.1.2:
     dependencies:
       '@xmldom/is-dom-node': 1.0.1
-      '@xmldom/xmldom': 0.8.10
+      '@xmldom/xmldom': 0.8.11
       xpath: 0.0.33
 
   xpath@0.0.33: {}
