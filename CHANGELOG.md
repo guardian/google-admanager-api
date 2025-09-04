@@ -1,5 +1,11 @@
 # @guardian/google-admanager-api
 
+## 5.1.2
+
+### Patch Changes
+
+- 8867b20: Bump version of `google-auth-library` and `soap`
+
 ## 5.1.1
 
 ### Patch Changes
