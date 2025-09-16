@@ -1,5 +1,11 @@
 # @guardian/google-admanager-api
 
+## 5.1.3
+
+### Patch Changes
+
+- 4a654af: Bump `soap` version to 1.4.1 and `axios` version to 1.12.0
+
 ## 5.1.2
 
 ### Patch Changes
