@@ -10,13 +10,13 @@ importers:
     dependencies:
       axios:
         specifier: ^1.12.0
-        version: 1.12.2(debug@4.4.1)
+        version: 1.12.2(debug@4.4.3)
       google-auth-library:
         specifier: ^10.3.0
         version: 10.3.0
       soap:
-        specifier: 1.4.1
-        version: 1.4.1
+        specifier: 1.4.2
+        version: 1.4.2
       superstruct:
         specifier: ^2.0.2
         version: 2.0.2
@@ -958,8 +958,8 @@ packages:
     resolution: {integrity: sha512-Xm7bpRXnDSX2YE2YFfBk2FnF0ep6tmG7xPh8iHee8MIcrgq762Nkce856dYtJYLkuIoYZvGfTs/PbZhideTcEg==}
     engines: {node: '>=4'}
 
-  axios-ntlm@1.4.4:
-    resolution: {integrity: sha512-kpCRdzMfL8gi0Z0o96P3QPAK4XuC8iciGgxGXe+PeQ4oyjI2LZN8WSOKbu0Y9Jo3T/A7pB81n6jYVPIpglEuRA==}
+  axios-ntlm@1.4.6:
+    resolution: {integrity: sha512-4nR5cbVEBfPMTFkd77FEDpDuaR205JKibmrkaQyNwGcCx0szWNpRZaL0jZyMx4+mVY2PXHjRHuJafv9Oipl0Kg==}
 
   axios@1.12.2:
     resolution: {integrity: sha512-vMJzPewAlRyOgxV2dU0Cuz2O8zzzx9VYtbJOaBgXFeLc4IV/Eg50n4LowmehOOR61S8ZMpc2K5Sa7g6A4jfkUw==}
@@ -1151,6 +1151,15 @@ packages:
 
   debug@4.4.1:
     resolution: {integrity: sha512-KcKCqiftBJcZr++7ykoDIEwSa3XWowTfNPo92BYxjXiyYEVrUQh2aLyhxBCwww+heortUFxEJYcRzosstTEBYQ==}
+    engines: {node: '>=6.0'}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
+
+  debug@4.4.3:
+    resolution: {integrity: sha512-RGwwWnwQvkVfavKVt22FGLw+xYSdzARwm0ru6DhTVA3umU5hZc28V3kO4stgYryrTlLpuvgI9GiijltAjNbcqA==}
     engines: {node: '>=6.0'}
     peerDependencies:
       supports-color: '*'
@@ -2616,8 +2625,8 @@ packages:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
 
-  soap@1.4.1:
-    resolution: {integrity: sha512-tUrmwq5BGMo1ORi9F6nFufJkmVJbdJ4/oAK1QIpcb9IjtXs86kWDg8YDzRzADO9VLGXhmPTY4A4m9pyb/okJMg==}
+  soap@1.4.2:
+    resolution: {integrity: sha512-4U5jfQTsny5te/syFvhvuZs+sQGeA781oAKcIVQso4nmGT0N4N/bs/j5moRcboWEfCMJxSNr+l5hD21oaKK9cg==}
     engines: {node: '>=14.17.0'}
 
   source-map-support@0.5.13:
@@ -3022,7 +3031,7 @@ snapshots:
       '@babel/traverse': 7.28.3
       '@babel/types': 7.28.2
       convert-source-map: 2.0.0
-      debug: 4.4.1
+      debug: 4.4.3
       gensync: 1.0.0-beta.2
       json5: 2.2.3
       semver: 6.3.1
@@ -3181,7 +3190,7 @@ snapshots:
       '@babel/parser': 7.28.3
       '@babel/template': 7.27.2
       '@babel/types': 7.28.2
-      debug: 4.4.1
+      debug: 4.4.3
     transitivePeerDependencies:
       - supports-color
 
@@ -3867,7 +3876,7 @@ snapshots:
       '@typescript-eslint/types': 8.22.0
       '@typescript-eslint/typescript-estree': 8.22.0(typescript@5.9.2)
       '@typescript-eslint/visitor-keys': 8.22.0
-      debug: 4.4.1
+      debug: 4.4.3
       eslint: 9.35.0
       typescript: 5.9.2
     transitivePeerDependencies:
@@ -3887,7 +3896,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/typescript-estree': 8.22.0(typescript@5.9.2)
       '@typescript-eslint/utils': 8.22.0(eslint@9.35.0)(typescript@5.9.2)
-      debug: 4.4.1
+      debug: 4.4.3
       eslint: 9.35.0
       ts-api-utils: 2.1.0(typescript@5.9.2)
       typescript: 5.9.2
@@ -3902,7 +3911,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 8.22.0
       '@typescript-eslint/visitor-keys': 8.22.0
-      debug: 4.4.1
+      debug: 4.4.3
       fast-glob: 3.3.3
       is-glob: 4.0.3
       minimatch: 9.0.5
@@ -3916,7 +3925,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 8.30.1
       '@typescript-eslint/visitor-keys': 8.30.1
-      debug: 4.4.1
+      debug: 4.4.3
       fast-glob: 3.3.3
       is-glob: 4.0.3
       minimatch: 9.0.5
@@ -4169,18 +4178,18 @@ snapshots:
 
   axe-core@4.10.3: {}
 
-  axios-ntlm@1.4.4(debug@4.4.1):
+  axios-ntlm@1.4.6(debug@4.4.3):
     dependencies:
-      axios: 1.12.2(debug@4.4.1)
+      axios: 1.12.2(debug@4.4.3)
       des.js: 1.1.0
       dev-null: 0.1.1
       js-md4: 0.3.2
     transitivePeerDependencies:
       - debug
 
-  axios@1.12.2(debug@4.4.1):
+  axios@1.12.2(debug@4.4.3):
     dependencies:
-      follow-redirects: 1.15.9(debug@4.4.1)
+      follow-redirects: 1.15.9(debug@4.4.3)
       form-data: 4.0.4
       proxy-from-env: 1.1.0
     transitivePeerDependencies:
@@ -4387,6 +4396,10 @@ snapshots:
       ms: 2.1.3
 
   debug@4.4.1:
+    dependencies:
+      ms: 2.1.3
+
+  debug@4.4.3:
     dependencies:
       ms: 2.1.3
 
@@ -4660,7 +4673,7 @@ snapshots:
   eslint-import-resolver-typescript@3.7.0(eslint-plugin-import-x@4.6.1(eslint@9.35.0)(typescript@5.9.2))(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.22.0(eslint@9.35.0)(typescript@5.9.2))(eslint@9.35.0))(eslint@9.35.0):
     dependencies:
       '@nolyfill/is-core-module': 1.0.39
-      debug: 4.4.1
+      debug: 4.4.3
       enhanced-resolve: 5.17.1
       eslint: 9.35.0
       fast-glob: 3.3.3
@@ -4690,7 +4703,7 @@ snapshots:
       '@types/doctrine': 0.0.9
       '@typescript-eslint/scope-manager': 8.30.1
       '@typescript-eslint/utils': 8.30.1(eslint@9.35.0)(typescript@5.9.2)
-      debug: 4.4.1
+      debug: 4.4.3
       doctrine: 3.0.0
       enhanced-resolve: 5.17.1
       eslint: 9.35.0
@@ -4949,9 +4962,9 @@ snapshots:
 
   flatted@3.3.3: {}
 
-  follow-redirects@1.15.9(debug@4.4.1):
+  follow-redirects@1.15.9(debug@4.4.3):
     optionalDependencies:
-      debug: 4.4.1
+      debug: 4.4.3
 
   for-each@0.3.5:
     dependencies:
@@ -5173,7 +5186,7 @@ snapshots:
   https-proxy-agent@7.0.6:
     dependencies:
       agent-base: 7.1.4
-      debug: 4.4.1
+      debug: 4.4.3
     transitivePeerDependencies:
       - supports-color
 
@@ -5375,7 +5388,7 @@ snapshots:
   istanbul-lib-source-maps@5.0.6:
     dependencies:
       '@jridgewell/trace-mapping': 0.3.30
-      debug: 4.4.1
+      debug: 4.4.3
       istanbul-lib-coverage: 3.2.2
     transitivePeerDependencies:
       - supports-color
@@ -6290,11 +6303,11 @@ snapshots:
 
   slash@3.0.0: {}
 
-  soap@1.4.1:
+  soap@1.4.2:
     dependencies:
-      axios: 1.12.2(debug@4.4.1)
-      axios-ntlm: 1.4.4(debug@4.4.1)
-      debug: 4.4.1
+      axios: 1.12.2(debug@4.4.3)
+      axios-ntlm: 1.4.6(debug@4.4.3)
+      debug: 4.4.3
       formidable: 3.5.4
       get-stream: 6.0.1
       lodash: 4.17.21
