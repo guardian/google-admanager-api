@@ -304,7 +304,7 @@ export type Browser = {
   id: number;
   name: string;
   majorVersion: Version;
-  minorVersion?: Version;
+  minorVersion: Version;
 };
 
 /**
@@ -317,7 +317,7 @@ export const BrowserStruct: Describe<Browser> = object({
   id: number(),
   name: string(),
   majorVersion: VersionStruct,
-  minorVersion: optional(VersionStruct),
+  minorVersion: VersionStruct,
 });
 
 /**
@@ -596,8 +596,8 @@ export type OperatingSystemVersion = {
   id: number;
   name: string;
   majorVersion: Version;
-  minorVersion?: Version;
-  microVersion?: Version;
+  minorVersion: Version;
+  microVersion: Version;
 };
 
 /**
@@ -611,8 +611,8 @@ export const OperatingSystemVersionStruct: Describe<OperatingSystemVersion> =
     id: number(),
     name: string(),
     majorVersion: VersionStruct,
-    minorVersion: optional(VersionStruct),
-    microVersion: optional(VersionStruct),
+    minorVersion: VersionStruct,
+    microVersion: VersionStruct,
   });
 
 /**
