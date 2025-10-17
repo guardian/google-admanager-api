@@ -617,12 +617,12 @@ export type OperatingSystemVersionTargeting = {
   /**
    * Operating system versions that are being targeted by the LineItem.
    */
-  targetedOperatingSystemVersions: OperatingSystemVersion[];
+  targetedOperatingSystemVersions?: OperatingSystemVersion[];
 
   /**
    * Operating system versions that are being excluded by the LineItem.
    */
-  excludedOperatingSystemVersions: OperatingSystemVersion[];
+  excludedOperatingSystemVersions?: OperatingSystemVersion[];
 };
 
 /**
@@ -630,8 +630,12 @@ export type OperatingSystemVersionTargeting = {
  */
 export const OperatingSystemVersionTargetingStruct: Describe<OperatingSystemVersionTargeting> =
   object({
-    targetedOperatingSystemVersions: array(OperatingSystemVersionStruct),
-    excludedOperatingSystemVersions: array(OperatingSystemVersionStruct),
+    targetedOperatingSystemVersions: optional(
+      array(OperatingSystemVersionStruct),
+    ),
+    excludedOperatingSystemVersions: optional(
+      array(OperatingSystemVersionStruct),
+    ),
   });
 
 /**
