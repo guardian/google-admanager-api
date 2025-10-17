@@ -1,5 +1,11 @@
 # @guardian/google-admanager-api
 
+## 6.0.0
+
+### Major Changes
+
+- 4b9184a: Breaking change to operating system and browser version types to fix a bug
+
 ## 5.1.4
 
 ### Patch Changes
