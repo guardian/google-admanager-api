@@ -1,5 +1,11 @@
 # @guardian/google-admanager-api
 
+## 5.1.4
+
+### Patch Changes
+
+- e88d1fa: Fix type/validation issue with OperatingSystemVersionTargeting
+
 ## 5.1.3
 
 ### Patch Changes
