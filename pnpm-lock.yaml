@@ -10,13 +10,13 @@ importers:
     dependencies:
       axios:
         specifier: ^1.12.0
-        version: 1.12.2(debug@4.4.1)
+        version: 1.12.2(debug@4.4.3)
       google-auth-library:
         specifier: ^10.3.0
-        version: 10.3.0
+        version: 10.4.1
       soap:
-        specifier: 1.4.1
-        version: 1.4.1
+        specifier: 1.5.0
+        version: 1.5.0
       superstruct:
         specifier: ^2.0.2
         version: 2.0.2
@@ -957,8 +957,8 @@ packages:
     resolution: {integrity: sha512-Xm7bpRXnDSX2YE2YFfBk2FnF0ep6tmG7xPh8iHee8MIcrgq762Nkce856dYtJYLkuIoYZvGfTs/PbZhideTcEg==}
     engines: {node: '>=4'}
 
-  axios-ntlm@1.4.4:
-    resolution: {integrity: sha512-kpCRdzMfL8gi0Z0o96P3QPAK4XuC8iciGgxGXe+PeQ4oyjI2LZN8WSOKbu0Y9Jo3T/A7pB81n6jYVPIpglEuRA==}
+  axios-ntlm@1.4.6:
+    resolution: {integrity: sha512-4nR5cbVEBfPMTFkd77FEDpDuaR205JKibmrkaQyNwGcCx0szWNpRZaL0jZyMx4+mVY2PXHjRHuJafv9Oipl0Kg==}
 
   axios@1.12.2:
     resolution: {integrity: sha512-vMJzPewAlRyOgxV2dU0Cuz2O8zzzx9VYtbJOaBgXFeLc4IV/Eg50n4LowmehOOR61S8ZMpc2K5Sa7g6A4jfkUw==}
@@ -1146,15 +1146,6 @@ packages:
 
   debug@3.2.7:
     resolution: {integrity: sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==}
-    peerDependencies:
-      supports-color: '*'
-    peerDependenciesMeta:
-      supports-color:
-        optional: true
-
-  debug@4.4.1:
-    resolution: {integrity: sha512-KcKCqiftBJcZr++7ykoDIEwSa3XWowTfNPo92BYxjXiyYEVrUQh2aLyhxBCwww+heortUFxEJYcRzosstTEBYQ==}
-    engines: {node: '>=6.0'}
     peerDependencies:
       supports-color: '*'
     peerDependenciesMeta:
@@ -1581,12 +1572,12 @@ packages:
   functions-have-names@1.2.3:
     resolution: {integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==}
 
-  gaxios@7.1.1:
-    resolution: {integrity: sha512-Odju3uBUJyVCkW64nLD4wKLhbh93bh6vIg/ZIXkWiLPBrdgtc65+tls/qml+un3pr6JqYVFDZbbmLDQT68rTOQ==}
+  gaxios@7.1.2:
+    resolution: {integrity: sha512-/Szrn8nr+2TsQT1Gp8iIe/BEytJmbyfrbFh419DfGQSkEgNEhbPi7JRJuughjkTzPWgU9gBQf5AVu3DbHt0OXA==}
     engines: {node: '>=18'}
 
-  gcp-metadata@7.0.1:
-    resolution: {integrity: sha512-UcO3kefx6dCcZkgcTGgVOTFb7b1LlQ02hY1omMjjrrBzkajRMCFgYOjs7J71WqnuG1k2b+9ppGL7FsOfhZMQKQ==}
+  gcp-metadata@8.1.1:
+    resolution: {integrity: sha512-dTCcAe9fRQf06ELwel6lWWFrEbstwjUBYEhr5VRGoC+iPDZQucHppCowaIp8b8v92tU1G4X4H3b/Y6zXZxkMsQ==}
     engines: {node: '>=18'}
 
   gensync@1.0.0-beta.2:
@@ -1652,8 +1643,8 @@ packages:
     resolution: {integrity: sha512-jhIXaOzy1sb8IyocaruWSn1TjmnBVs8Ayhcy83rmxNJ8q2uWKCAj3CnJY+KpGSXCueAPc0i05kVvVKtP1t9S3g==}
     engines: {node: '>=10'}
 
-  google-auth-library@10.3.0:
-    resolution: {integrity: sha512-ylSE3RlCRZfZB56PFJSfUCuiuPq83Fx8hqu1KPWGK8FVdSaxlp/qkeMMX/DT/18xkwXIHvXEXkZsljRwfrdEfQ==}
+  google-auth-library@10.4.1:
+    resolution: {integrity: sha512-VlvZ+QDWng3aPh++0BSQlSJyjn4qgLLTmqylAR3as0dr6YwPkZpHcZAngAFr68TDVCUSQVRTkV73K/D3m7vEIg==}
     engines: {node: '>=18'}
 
   google-logging-utils@1.1.1:
@@ -2628,8 +2619,8 @@ packages:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
 
-  soap@1.4.1:
-    resolution: {integrity: sha512-tUrmwq5BGMo1ORi9F6nFufJkmVJbdJ4/oAK1QIpcb9IjtXs86kWDg8YDzRzADO9VLGXhmPTY4A4m9pyb/okJMg==}
+  soap@1.5.0:
+    resolution: {integrity: sha512-cT3+rKhABIkR7VkG0rtVlctQgBiKflq66jIRvpfiSxPph0Kx/pXhRWmGpvQ22crvswOhVypU/Idr88xjD15gWA==}
     engines: {node: '>=14.17.0'}
 
   source-map-support@0.5.13:
@@ -4183,18 +4174,18 @@ snapshots:
 
   axe-core@4.10.3: {}
 
-  axios-ntlm@1.4.4(debug@4.4.1):
+  axios-ntlm@1.4.6(debug@4.4.3):
     dependencies:
-      axios: 1.12.2(debug@4.4.1)
+      axios: 1.12.2(debug@4.4.3)
       des.js: 1.1.0
       dev-null: 0.1.1
       js-md4: 0.3.2
     transitivePeerDependencies:
       - debug
 
-  axios@1.12.2(debug@4.4.1):
+  axios@1.12.2(debug@4.4.3):
     dependencies:
-      follow-redirects: 1.15.9(debug@4.4.1)
+      follow-redirects: 1.15.9(debug@4.4.3)
       form-data: 4.0.4
       proxy-from-env: 1.1.0
     transitivePeerDependencies:
@@ -4398,10 +4389,6 @@ snapshots:
       is-data-view: 1.0.2
 
   debug@3.2.7:
-    dependencies:
-      ms: 2.1.3
-
-  debug@4.4.1:
     dependencies:
       ms: 2.1.3
 
@@ -4968,9 +4955,9 @@ snapshots:
 
   flatted@3.3.3: {}
 
-  follow-redirects@1.15.9(debug@4.4.1):
+  follow-redirects@1.15.9(debug@4.4.3):
     optionalDependencies:
-      debug: 4.4.1
+      debug: 4.4.3
 
   for-each@0.3.5:
     dependencies:
@@ -5029,7 +5016,7 @@ snapshots:
 
   functions-have-names@1.2.3: {}
 
-  gaxios@7.1.1:
+  gaxios@7.1.2:
     dependencies:
       extend: 3.0.2
       https-proxy-agent: 7.0.6
@@ -5037,9 +5024,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  gcp-metadata@7.0.1:
+  gcp-metadata@8.1.1:
     dependencies:
-      gaxios: 7.1.1
+      gaxios: 7.1.2
       google-logging-utils: 1.1.1
       json-bigint: 1.0.0
     transitivePeerDependencies:
@@ -5125,12 +5112,12 @@ snapshots:
       merge2: 1.4.1
       slash: 3.0.0
 
-  google-auth-library@10.3.0:
+  google-auth-library@10.4.1:
     dependencies:
       base64-js: 1.5.1
       ecdsa-sig-formatter: 1.0.11
-      gaxios: 7.1.1
-      gcp-metadata: 7.0.1
+      gaxios: 7.1.2
+      gcp-metadata: 8.1.1
       google-logging-utils: 1.1.1
       gtoken: 8.0.0
       jws: 4.0.0
@@ -5147,7 +5134,7 @@ snapshots:
 
   gtoken@8.0.0:
     dependencies:
-      gaxios: 7.1.1
+      gaxios: 7.1.2
       jws: 4.0.0
     transitivePeerDependencies:
       - supports-color
@@ -6309,11 +6296,11 @@ snapshots:
 
   slash@3.0.0: {}
 
-  soap@1.4.1:
+  soap@1.5.0:
     dependencies:
-      axios: 1.12.2(debug@4.4.1)
-      axios-ntlm: 1.4.4(debug@4.4.1)
-      debug: 4.4.1
+      axios: 1.12.2(debug@4.4.3)
+      axios-ntlm: 1.4.6(debug@4.4.3)
+      debug: 4.4.3
       formidable: 3.5.4
       get-stream: 6.0.1
       lodash: 4.17.21
