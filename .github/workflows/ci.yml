@@ -86,7 +86,7 @@ jobs:
         uses: ./.github/actions/setup-node-env
 
       - name: Fetch build
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: dist
           path: dist
