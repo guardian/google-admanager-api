@@ -62,5 +62,10 @@
     "googleads",
     "dfp",
     "ads"
-  ]
+  ],
+  "pnpm": {
+    "overrides": {
+      "glob@10": "^10.5.0"
+    }
+  }
 }
