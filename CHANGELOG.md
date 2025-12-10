@@ -1,5 +1,12 @@
 # @guardian/google-admanager-api
 
+## 6.0.1
+
+### Patch Changes
+
+- c0cdaa2: Pin jws
+- 0c6cc80: pin glob@10 to ^10.5.0 to address security vulnerability.
+
 ## 6.0.0
 
 ### Major Changes
