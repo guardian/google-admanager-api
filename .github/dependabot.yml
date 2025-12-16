@@ -11,27 +11,22 @@ updates:
       interval: "weekly"
       day: "monday"
       time: "09:00"
+    cooldown:
+      semver-major-days: 30
+      semver-minor-days: 14
+      semver-patch-days: 7
     groups:
       linters:
         patterns:
           - "*eslint*"
           - "*prettier*"
-        update-types:
-          - "minor"
-          - "patch"
       typescript:
         patterns:
           - "typescript"
       dependencies:
         dependency-type: "production"
-        update-types:
-          - "minor"
-          - "patch"
       dev-dependencies:
         dependency-type: "development"
-        update-types:
-          - "minor"
-          - "patch"
         exclude-patterns:
           - "typescript"
           - "*eslint*"
@@ -40,3 +35,5 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    cooldown:
+      default-days: 7
