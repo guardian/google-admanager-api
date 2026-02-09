@@ -7,9 +7,7 @@ import type {
 } from "./mobileApplication.type";
 import type { MobileApplicationServiceOperations } from "./mobileApplicationService.interface";
 
-export class MobileApplicationService
-  implements MobileApplicationServiceOperations
-{
+export class MobileApplicationService implements MobileApplicationServiceOperations {
   private _client: Client;
 
   constructor(client: Client) {

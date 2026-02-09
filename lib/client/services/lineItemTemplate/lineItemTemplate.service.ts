@@ -3,9 +3,7 @@ import type { Statement } from "../../../common/types";
 import type { LineItemTemplatePage } from "./lineItemTemplate.type";
 import type { LineItemTemplateServiceOperations } from "./lineItemTemplateService.interface";
 
-export class LineItemTemplateService
-  implements LineItemTemplateServiceOperations
-{
+export class LineItemTemplateService implements LineItemTemplateServiceOperations {
   private _client: Client;
 
   constructor(client: Client) {

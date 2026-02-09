@@ -3,9 +3,7 @@ import type { Statement } from "../../../common/types";
 import type { CreativeTemplatePage } from "./creativeTemplate.type";
 import type { CreativeTemplateServiceOperations } from "./creativeTemplateService.interface";
 
-export class CreativeTemplateService
-  implements CreativeTemplateServiceOperations
-{
+export class CreativeTemplateService implements CreativeTemplateServiceOperations {
   private _client: Client;
 
   constructor(client: Client) {

@@ -7,9 +7,7 @@ import type {
 } from "./audienceSegment.type";
 import type { AudienceSegmentServiceOperations } from "./audienceSegmentService.interface";
 
-export class AudienceSegmentService
-  implements AudienceSegmentServiceOperations
-{
+export class AudienceSegmentService implements AudienceSegmentServiceOperations {
   private _client: Client;
 
   constructor(client: Client) {

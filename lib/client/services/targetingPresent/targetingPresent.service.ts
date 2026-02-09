@@ -3,9 +3,7 @@ import type { Statement } from "../../../common/types";
 import type { TargetingPresetPage } from "./targetingPresent.type";
 import type { TargetingPresetServiceOperations } from "./targetingPresentService.interface";
 
-export class TargetingPresetService
-  implements TargetingPresetServiceOperations
-{
+export class TargetingPresetService implements TargetingPresetServiceOperations {
   private _client: Client;
 
   constructor(client: Client) {

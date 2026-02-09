@@ -10,9 +10,7 @@ import type {
 } from "./liveStreamEvent.type";
 import type { LiveStreamEventServiceOperations } from "./liveStreamEventService.interface";
 
-export class LiveStreamEventService
-  implements LiveStreamEventServiceOperations
-{
+export class LiveStreamEventService implements LiveStreamEventServiceOperations {
   private _client: Client;
 
   constructor(client: Client) {

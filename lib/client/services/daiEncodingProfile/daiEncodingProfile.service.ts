@@ -7,9 +7,7 @@ import type {
 } from "./daiEncodingProfile.type";
 import type { DaiEncodingProfileServiceOperations } from "./daiEncodingProfileService.interface";
 
-export class DaiEncodingProfileService
-  implements DaiEncodingProfileServiceOperations
-{
+export class DaiEncodingProfileService implements DaiEncodingProfileServiceOperations {
   private _client: Client;
 
   constructor(client: Client) {

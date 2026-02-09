@@ -144,9 +144,7 @@ export class SubmitOrdersForApproval implements OrderAction {
  * This action does not make any changes to the {@link https://developers.google.com/ad-manager/api/reference/v202505/ForecastService.LineItem#reservationStatus LineItem.reservationStatus}
  * of the line items within the order.
  */
-export class SubmitOrdersForApprovalWithoutReservationChanges
-  implements OrderAction
-{
+export class SubmitOrdersForApprovalWithoutReservationChanges implements OrderAction {
   buildAttributes(): object {
     return {};
   }

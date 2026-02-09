@@ -12,9 +12,7 @@ import type {
   CustomTargetingValuePage,
 } from "./customTargeting.type";
 
-export class CustomTargetingService
-  implements CustomTargetingServiceOperations
-{
+export class CustomTargetingService implements CustomTargetingServiceOperations {
   private _client: Client;
 
   constructor(client: Client) {

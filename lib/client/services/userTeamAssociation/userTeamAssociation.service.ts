@@ -7,9 +7,7 @@ import type {
 } from "./userTeamAssociation.type";
 import type { UserTeamAssociationServiceOperations } from "./userTeamAssociationService.interface";
 
-export class UserTeamAssociationService
-  implements UserTeamAssociationServiceOperations
-{
+export class UserTeamAssociationService implements UserTeamAssociationServiceOperations {
   private _client: Client;
 
   constructor(client: Client) {
