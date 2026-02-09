@@ -7,9 +7,7 @@ import type {
   CdnConfigurationPage,
 } from "./cdnConfiguration.type";
 
-export class CdnConfigurationService
-  implements CdnConfigurationServiceOperations
-{
+export class CdnConfigurationService implements CdnConfigurationServiceOperations {
   private _client: Client;
 
   constructor(client: Client) {

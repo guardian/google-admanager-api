@@ -7,9 +7,7 @@ import type {
 } from "./suggestedAdUnit.type";
 import type { SuggestedAdUnitServiceOperations } from "./suggestedAdUnitService.interface";
 
-export class SuggestedAdUnitService
-  implements SuggestedAdUnitServiceOperations
-{
+export class SuggestedAdUnitService implements SuggestedAdUnitServiceOperations {
   private _client: Client;
 
   constructor(client: Client) {

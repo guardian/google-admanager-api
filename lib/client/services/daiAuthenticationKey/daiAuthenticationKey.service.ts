@@ -7,9 +7,7 @@ import type {
 } from "./daiAuthenticationKey.type";
 import type { DaiAuthenticationKeyServiceOperations } from "./daiAuthenticationKeyService.interface";
 
-export class DaiAuthenticationKeyService
-  implements DaiAuthenticationKeyServiceOperations
-{
+export class DaiAuthenticationKeyService implements DaiAuthenticationKeyServiceOperations {
   private _client: Client;
 
   constructor(client: Client) {

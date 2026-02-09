@@ -29,5 +29,4 @@ export class PauseLiveStreamEvents implements LiveStreamEventAction {}
  * This action will only get applied to live streams with a refresh type of
  * {@link https://developers.google.com/ad-manager/api/reference/v202505/LiveStreamEventService.RefreshType#MANUAL RefreshType.MANUAL}.
  */
-export class RefreshLiveStreamEventMasterPlaylists
-  implements LiveStreamEventAction {}
+export class RefreshLiveStreamEventMasterPlaylists implements LiveStreamEventAction {}

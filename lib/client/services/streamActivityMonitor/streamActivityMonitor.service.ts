@@ -3,9 +3,7 @@ import type { Statement } from "../../../common/types";
 import type { SamSession } from "./streamActivityMonitor.type";
 import type { StreamActivityMonitorServiceOperations } from "./streamActivityMonitorService.interface";
 
-export class StreamActivityMonitorService
-  implements StreamActivityMonitorServiceOperations
-{
+export class StreamActivityMonitorService implements StreamActivityMonitorServiceOperations {
   private _client: Client;
 
   constructor(client: Client) {

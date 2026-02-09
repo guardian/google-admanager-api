@@ -9,9 +9,7 @@ import type {
 } from "./lineItemCreativeAssociation.type";
 import type { LineItemCreativeAssociationServiceOperations } from "./lineItemCreativeAssociationService.interface";
 
-export class LineItemCreativeAssociationService
-  implements LineItemCreativeAssociationServiceOperations
-{
+export class LineItemCreativeAssociationService implements LineItemCreativeAssociationServiceOperations {
   private _client: Client;
 
   constructor(client: Client) {

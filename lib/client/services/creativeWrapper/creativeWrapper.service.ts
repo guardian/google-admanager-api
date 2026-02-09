@@ -7,9 +7,7 @@ import type {
 } from "./creativeWrapper.type";
 import type { CreativeWrapperServiceOperations } from "./creativeWrapperService.interface";
 
-export class CreativeWrapperService
-  implements CreativeWrapperServiceOperations
-{
+export class CreativeWrapperService implements CreativeWrapperServiceOperations {
   private _client: Client;
 
   constructor(client: Client) {

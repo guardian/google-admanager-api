@@ -26,12 +26,10 @@ export abstract class CustomTargetingValueAction {}
  * The action used for activating inactive (i.e. deleted)
  * {@link https://developers.google.com/ad-manager/api/reference/v202505/CustomTargetingService.CustomTargetingValue CustomTargetingValue} objects.
  */
-export class ActivateCustomTargetingValues
-  implements CustomTargetingValueAction {}
+export class ActivateCustomTargetingValues implements CustomTargetingValueAction {}
 
 /**
  * Represents the delete action that can be performed on
  * {@link https://developers.google.com/ad-manager/api/reference/v202505/CustomTargetingService.CustomTargetingValue CustomTargetingValue} objects.
  */
-export class DeleteCustomTargetingValues
-  implements CustomTargetingValueAction {}
+export class DeleteCustomTargetingValues implements CustomTargetingValueAction {}

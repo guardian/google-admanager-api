@@ -8,9 +8,7 @@ import type {
 } from "./proposalLineItem.type";
 import type { ProposalLineItemServiceOperations } from "./proposalLineItemService.interface";
 
-export class ProposalLineItemService
-  implements ProposalLineItemServiceOperations
-{
+export class ProposalLineItemService implements ProposalLineItemServiceOperations {
   private _client: Client;
 
   constructor(client: Client) {

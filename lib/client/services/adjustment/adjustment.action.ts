@@ -11,5 +11,4 @@ export class ActivateForecastAdjustments implements ForecastAdjustmentAction {}
 /**
  * DeactivateForecastAdjustments
  */
-export class DeactivateForecastAdjustments
-  implements ForecastAdjustmentAction {}
+export class DeactivateForecastAdjustments implements ForecastAdjustmentAction {}
