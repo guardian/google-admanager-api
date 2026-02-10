@@ -1,5 +1,17 @@
 # @guardian/google-admanager-api
 
+## 6.0.2
+
+### Patch Changes
+
+- b692a54: Bumps axios from 1.13.2 to 1.13.5.
+- 8d7c45b: Pin to resolve security vulnerabilities:
+
+  @isaacs/brace-expansion@5: ^5.0.1
+  storybook@10: ^10.1.10
+
+- 93ddcd3: Bump dependency versions for axios, google-auth-library, soap
+
 ## 6.0.1
 
 ### Patch Changes
