@@ -2,7 +2,7 @@ name: CI
 on:
   push:
     branches:
-      - "main"
+      - 'main'
   pull_request:
 
 permissions: write-all
@@ -75,6 +75,10 @@ jobs:
     needs: [build, test, lint, types]
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+      pull-requests: write
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
@@ -108,8 +112,8 @@ jobs:
         uses: changesets/action@c48e67d110a68bc90ccf1098e9646092baacaa87 # v1.6.0
         with:
           publish: pnpm changeset publish
-          title: "🦋 Release package updates"
-          commit: "Bump package versions"
+          title: '🦋 Release package updates'
+          commit: 'Bump package versions'
           setupGitUser: false
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
