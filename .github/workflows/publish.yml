@@ -39,11 +39,8 @@ jobs:
       - name: Set up Node
         uses: ./.github/actions/setup-node-env
 
-      - name: Fetch build
-        uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
-        with:
-          name: dist
-          path: dist
+      - name: Build package
+        run: pnpm build
 
       - name: Use GitHub App Token
         uses: actions/create-github-app-token@29824e69f54612133e76f7eaac726eef6c875baf # v2.2.1
