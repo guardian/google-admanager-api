@@ -1,5 +1,11 @@
 # @guardian/google-admanager-api
 
+## 6.0.3
+
+### Patch Changes
+
+- 75cdb58: No-op: force publishing a new version of the package after NPM permissions and workflow adjustments
+
 ## 6.0.2
 
 ### Patch Changes
