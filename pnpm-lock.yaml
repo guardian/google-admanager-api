@@ -21,8 +21,8 @@ importers:
         specifier: 10.5.0
         version: 10.5.0
       soap:
-        specifier: 1.6.0
-        version: 1.6.0
+        specifier: 1.6.4
+        version: 1.6.4
       superstruct:
         specifier: 2.0.2
         version: 2.0.2
@@ -2463,8 +2463,8 @@ packages:
   lodash.startcase@4.4.0:
     resolution: {integrity: sha512-+WKqsK294HMSc2jEbNgpHpd0JfIBhp7rEV4aqXWqFr6AlXov+SlcgB1Fv01y2kGe3Gc8nMW7VA0SrGuSkRfIEg==}
 
-  lodash@4.17.21:
-    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
+  lodash@4.17.23:
+    resolution: {integrity: sha512-LgVTMpQtIopCi79SJeDiP0TfWi5CNEc/L/aRdTh3yIvmZXTnheWpKjSZhnvMl8iXbC1tFg9gdHHDMLoV7CnG+w==}
 
   loose-envify@1.4.0:
     resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
@@ -2908,8 +2908,9 @@ packages:
   safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
-  sax@1.4.3:
-    resolution: {integrity: sha512-yqYn1JhPczigF94DMS+shiDMjDowYO6y9+wB/4WgO0Y19jWYk0lQ4tuG5KI7kj4FTp1wxPj5IFfcrz/s1c3jjQ==}
+  sax@1.4.4:
+    resolution: {integrity: sha512-1n3r/tGXO6b6VXMdFT54SHzT9ytu9yr7TaELowdYpMqY/Ao7EnlQGmAQ1+RatX7Tkkdm6hONI2owqNx2aZj5Sw==}
+    engines: {node: '>=11.0.0'}
 
   scheduler@0.27.0:
     resolution: {integrity: sha512-eNv+WrVbKu1f3vbYJT/xtiF5syA5HPIMtf9IgY/nKg0sWqzAUEvqY/xm7OcZc/qafLx/iO9FgOmeSAp4v5ti/Q==}
@@ -2973,9 +2974,9 @@ packages:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
 
-  soap@1.6.0:
-    resolution: {integrity: sha512-koOlNMAONSSVP38WakXEWz3WaYFupJJ08eicwrIvQsv9k2Qwz5JLLS6COqJVpIVCwffcqf8InMs+NYPw1bLOjA==}
-    engines: {node: '>=14.17.0'}
+  soap@1.6.4:
+    resolution: {integrity: sha512-cVsVgMpN8kAEjzdBm8o1aSPawLIxmQsDlo0EHiFyii4IAcvndAwxG6cWVyR+6FKDrSNnPg7oi9my0LQz6r+B3w==}
+    engines: {node: '>=20.9.0'}
 
   source-map-support@0.5.13:
     resolution: {integrity: sha512-SHSKFHadjVA5oR4PPqhtAVdcBWwRYVd6g6cAXnIbRiIwc2EhPrTuKUBdSLvlEKyIP3GCf89fltvcZiP9MMFA1w==}
@@ -6423,7 +6424,7 @@ snapshots:
 
   lodash.startcase@4.4.0: {}
 
-  lodash@4.17.21: {}
+  lodash@4.17.23: {}
 
   loose-envify@1.4.0:
     dependencies:
@@ -6857,7 +6858,7 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
-  sax@1.4.3: {}
+  sax@1.4.4: {}
 
   scheduler@0.27.0: {}
 
@@ -6929,15 +6930,15 @@ snapshots:
 
   slash@3.0.0: {}
 
-  soap@1.6.0:
+  soap@1.6.4:
     dependencies:
       axios: 1.13.5(debug@4.4.3)
       axios-ntlm: 1.4.6(debug@4.4.3)
       debug: 4.4.3
       formidable: 3.5.4
       get-stream: 6.0.1
-      lodash: 4.17.21
-      sax: 1.4.3
+      lodash: 4.17.23
+      sax: 1.4.4
       strip-bom: 3.0.0
       whatwg-mimetype: 4.0.0
       xml-crypto: 6.1.2
