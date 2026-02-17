@@ -1,5 +1,11 @@
 # @guardian/google-admanager-api
 
+## 6.0.4
+
+### Patch Changes
+
+- 6db8740: Bump `soap` dependency to 1.6.4
+
 ## 6.0.3
 
 ### Patch Changes
