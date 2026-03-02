@@ -281,7 +281,7 @@ export type BandwidthGroupTargeting = {
   /**
    * Indicates whether bandwidth groups should be targeted or excluded. This attribute is optional and defaults to true.
    */
-  isTargeted: boolean;
+  isTargeted?: boolean;
 
   /**
    * The bandwidth groups that are being targeted or excluded by the LineItem.
@@ -294,7 +294,7 @@ export type BandwidthGroupTargeting = {
  */
 export const BandwidthGroupTargetingStruct: Describe<BandwidthGroupTargeting> =
   object({
-    isTargeted: boolean(),
+    isTargeted: optional(boolean()),
     bandwidthGroups: array(TechnologyStruct),
   });
 
@@ -335,20 +335,20 @@ export type BrowserTargeting = {
   /**
    * Indicates whether browsers should be targeted or excluded. This attribute is optional and defaults to true.
    */
-  isTargeted: boolean;
+  isTargeted?: boolean;
 
   /**
    * Browsers that are being targeted or excluded by the LineItem.
    */
-  browsers: Browser[];
+  browsers: Technology[];
 };
 
 /**
  * Represents a BrowserTargeting struct.
  */
 export const BrowserTargetingStruct: Describe<BrowserTargeting> = object({
-  isTargeted: boolean(),
-  browsers: array(BrowserStruct),
+  isTargeted: optional(boolean()),
+  browsers: array(TechnologyStruct),
 });
 
 /**
@@ -358,7 +358,7 @@ export type BrowserLanguageTargeting = {
   /**
    * Indicates whether browsers languages should be targeted or excluded. This attribute is optional and defaults to true.
    */
-  isTargeted: boolean;
+  isTargeted?: boolean;
 
   /**
    * Browser languages that are being targeted or excluded by the LineItem.
@@ -371,7 +371,7 @@ export type BrowserLanguageTargeting = {
  */
 export const BrowserLanguageTargetingStruct: Describe<BrowserLanguageTargeting> =
   object({
-    isTargeted: boolean(),
+    isTargeted: optional(boolean()),
     browserLanguages: array(TechnologyStruct),
   });
 
@@ -430,7 +430,7 @@ export type DeviceManufacturerTargeting = {
   /**
    * Indicates whether device manufacturers should be targeted or excluded. This attribute is optional and defaults to true.
    */
-  isTargeted: boolean;
+  isTargeted?: boolean;
 
   /**
    * Device manufacturers that are being targeted or excluded by the LineItem.
@@ -443,7 +443,7 @@ export type DeviceManufacturerTargeting = {
  */
 export const DeviceManufacturerTargetingStruct: Describe<DeviceManufacturerTargeting> =
   object({
-    isTargeted: boolean(),
+    isTargeted: optional(boolean()),
     deviceManufacturers: array(TechnologyStruct),
   });
 
@@ -454,7 +454,7 @@ export type MobileCarrierTargeting = {
   /**
    * Indicates whether mobile carriers should be targeted or excluded. This attribute is optional and defaults to true.
    */
-  isTargeted: boolean;
+  isTargeted?: boolean;
 
   /**
    * Mobile carriers that are being targeted or excluded by the LineItem.
@@ -467,7 +467,7 @@ export type MobileCarrierTargeting = {
  */
 export const MobileCarrierTargetingStruct: Describe<MobileCarrierTargeting> =
   object({
-    isTargeted: boolean(),
+    isTargeted: optional(boolean()),
     mobileCarriers: array(TechnologyStruct),
   });
 
@@ -577,7 +577,7 @@ export type OperatingSystemTargeting = {
   /**
    * Indicates whether operating systems should be targeted or excluded. This attribute is optional and defaults to true.
    */
-  isTargeted: boolean;
+  isTargeted?: boolean;
 
   /**
    * Operating systems that are being targeted or excluded by the LineItem.
@@ -590,7 +590,7 @@ export type OperatingSystemTargeting = {
  */
 export const OperatingSystemTargetingStruct: Describe<OperatingSystemTargeting> =
   object({
-    isTargeted: boolean(),
+    isTargeted: optional(boolean()),
     operatingSystems: array(TechnologyStruct),
   });
 
