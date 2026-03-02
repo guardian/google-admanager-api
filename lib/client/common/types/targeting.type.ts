@@ -222,13 +222,17 @@ export const DayPartTargetingStruct: Describe<DayPartTargeting> = object({
 export type Technology = {
   attributes: {
     "xsi:type":
-      | "DeviceCapability"
       | "BandwidthGroup"
+      | "Browser"
       | "BrowserLanguage"
+      | "DeviceCapability"
       | "DeviceCategory"
       | "DeviceManufacturer"
       | "MobileCarrier"
-      | "OperatingSystem";
+      | "MobileDevice"
+      | "MobileDeviceSubmodel"
+      | "OperatingSystem"
+      | "OperatingSystemVersion";
   };
   /**
    * The unique ID of the Technology. This value is required for all forms of TechnologyTargeting.
@@ -246,13 +250,17 @@ export type Technology = {
  */
 
 export const TechnologyAttributesValuesEnum = enums([
-  "DeviceCapability",
   "BandwidthGroup",
+  "Browser",
   "BrowserLanguage",
+  "DeviceCapability",
   "DeviceCategory",
   "DeviceManufacturer",
   "MobileCarrier",
+  "MobileDevice",
+  "MobileDeviceSubmodel",
   "OperatingSystem",
+  "OperatingSystemVersion",
 ]);
 
 /**
@@ -749,7 +757,7 @@ export type UserDomainTargeting = {
   /**
    * Indicates whether domains should be targeted or excluded. This attribute is optional and defaults to true.
    */
-  targeted: boolean;
+  targeted?: boolean;
 };
 
 /**
@@ -757,7 +765,7 @@ export type UserDomainTargeting = {
  */
 export const UserDomainTargetingStruct: Describe<UserDomainTargeting> = object({
   domains: array(string()),
-  targeted: boolean(),
+  targeted: optional(boolean()),
 });
 
 /**
@@ -807,7 +815,7 @@ export type MobileApplicationTargeting = {
   /**
    * Indicates whether mobile apps should be targeted or excluded. This attribute is optional and defaults to true.
    */
-  isTargeted: boolean;
+  isTargeted?: boolean;
 };
 
 /**
@@ -816,7 +824,7 @@ export type MobileApplicationTargeting = {
 export const MobileApplicationTargetingStruct: Describe<MobileApplicationTargeting> =
   object({
     mobileApplicationIds: array(number()),
-    isTargeted: boolean(),
+    isTargeted: optional(boolean()),
   });
 
 /**
