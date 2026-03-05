@@ -19,7 +19,7 @@ jobs:
         uses: ./.github/actions/setup-node-env
 
       - name: Run unit tests
-        run: pnpm test -- --ci
+        run: pnpm test
 
   lint:
     name: Lint
