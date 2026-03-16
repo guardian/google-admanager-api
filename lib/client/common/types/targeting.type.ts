@@ -32,7 +32,7 @@ import {
   VideoPositionTargetingStruct,
   type VideoPositionTargeting,
 } from "./videoPosition.type";
-import { Size } from "./general.type";
+import { Size, SizeStruct } from "./general.type";
 
 /**
  * A {@link https://developers.google.com/ad-manager/api/reference/v202505/AdjustmentService.Location Location} represents a geographical entity that can be targeted.
@@ -222,13 +222,17 @@ export const DayPartTargetingStruct: Describe<DayPartTargeting> = object({
 export type Technology = {
   attributes: {
     "xsi:type":
-      | "DeviceCapability"
       | "BandwidthGroup"
+      | "Browser"
       | "BrowserLanguage"
+      | "DeviceCapability"
       | "DeviceCategory"
       | "DeviceManufacturer"
       | "MobileCarrier"
-      | "OperatingSystem";
+      | "MobileDevice"
+      | "MobileDeviceSubmodel"
+      | "OperatingSystem"
+      | "OperatingSystemVersion";
   };
   /**
    * The unique ID of the Technology. This value is required for all forms of TechnologyTargeting.
@@ -246,13 +250,17 @@ export type Technology = {
  */
 
 export const TechnologyAttributesValuesEnum = enums([
-  "DeviceCapability",
   "BandwidthGroup",
+  "Browser",
   "BrowserLanguage",
+  "DeviceCapability",
   "DeviceCategory",
   "DeviceManufacturer",
   "MobileCarrier",
+  "MobileDevice",
+  "MobileDeviceSubmodel",
   "OperatingSystem",
+  "OperatingSystemVersion",
 ]);
 
 /**
@@ -273,7 +281,7 @@ export type BandwidthGroupTargeting = {
   /**
    * Indicates whether bandwidth groups should be targeted or excluded. This attribute is optional and defaults to true.
    */
-  isTargeted: boolean;
+  isTargeted?: boolean;
 
   /**
    * The bandwidth groups that are being targeted or excluded by the LineItem.
@@ -286,7 +294,7 @@ export type BandwidthGroupTargeting = {
  */
 export const BandwidthGroupTargetingStruct: Describe<BandwidthGroupTargeting> =
   object({
-    isTargeted: boolean(),
+    isTargeted: optional(boolean()),
     bandwidthGroups: array(TechnologyStruct),
   });
 
@@ -327,20 +335,20 @@ export type BrowserTargeting = {
   /**
    * Indicates whether browsers should be targeted or excluded. This attribute is optional and defaults to true.
    */
-  isTargeted: boolean;
+  isTargeted?: boolean;
 
   /**
    * Browsers that are being targeted or excluded by the LineItem.
    */
-  browsers: Browser[];
+  browsers: Technology[];
 };
 
 /**
  * Represents a BrowserTargeting struct.
  */
 export const BrowserTargetingStruct: Describe<BrowserTargeting> = object({
-  isTargeted: boolean(),
-  browsers: array(BrowserStruct),
+  isTargeted: optional(boolean()),
+  browsers: array(TechnologyStruct),
 });
 
 /**
@@ -350,7 +358,7 @@ export type BrowserLanguageTargeting = {
   /**
    * Indicates whether browsers languages should be targeted or excluded. This attribute is optional and defaults to true.
    */
-  isTargeted: boolean;
+  isTargeted?: boolean;
 
   /**
    * Browser languages that are being targeted or excluded by the LineItem.
@@ -363,7 +371,7 @@ export type BrowserLanguageTargeting = {
  */
 export const BrowserLanguageTargetingStruct: Describe<BrowserLanguageTargeting> =
   object({
-    isTargeted: boolean(),
+    isTargeted: optional(boolean()),
     browserLanguages: array(TechnologyStruct),
   });
 
@@ -422,7 +430,7 @@ export type DeviceManufacturerTargeting = {
   /**
    * Indicates whether device manufacturers should be targeted or excluded. This attribute is optional and defaults to true.
    */
-  isTargeted: boolean;
+  isTargeted?: boolean;
 
   /**
    * Device manufacturers that are being targeted or excluded by the LineItem.
@@ -435,7 +443,7 @@ export type DeviceManufacturerTargeting = {
  */
 export const DeviceManufacturerTargetingStruct: Describe<DeviceManufacturerTargeting> =
   object({
-    isTargeted: boolean(),
+    isTargeted: optional(boolean()),
     deviceManufacturers: array(TechnologyStruct),
   });
 
@@ -446,7 +454,7 @@ export type MobileCarrierTargeting = {
   /**
    * Indicates whether mobile carriers should be targeted or excluded. This attribute is optional and defaults to true.
    */
-  isTargeted: boolean;
+  isTargeted?: boolean;
 
   /**
    * Mobile carriers that are being targeted or excluded by the LineItem.
@@ -459,7 +467,7 @@ export type MobileCarrierTargeting = {
  */
 export const MobileCarrierTargetingStruct: Describe<MobileCarrierTargeting> =
   object({
-    isTargeted: boolean(),
+    isTargeted: optional(boolean()),
     mobileCarriers: array(TechnologyStruct),
   });
 
@@ -569,7 +577,7 @@ export type OperatingSystemTargeting = {
   /**
    * Indicates whether operating systems should be targeted or excluded. This attribute is optional and defaults to true.
    */
-  isTargeted: boolean;
+  isTargeted?: boolean;
 
   /**
    * Operating systems that are being targeted or excluded by the LineItem.
@@ -582,7 +590,7 @@ export type OperatingSystemTargeting = {
  */
 export const OperatingSystemTargetingStruct: Describe<OperatingSystemTargeting> =
   object({
-    isTargeted: boolean(),
+    isTargeted: optional(boolean()),
     operatingSystems: array(TechnologyStruct),
   });
 
@@ -749,7 +757,7 @@ export type UserDomainTargeting = {
   /**
    * Indicates whether domains should be targeted or excluded. This attribute is optional and defaults to true.
    */
-  targeted: boolean;
+  targeted?: boolean;
 };
 
 /**
@@ -757,7 +765,7 @@ export type UserDomainTargeting = {
  */
 export const UserDomainTargetingStruct: Describe<UserDomainTargeting> = object({
   domains: array(string()),
-  targeted: boolean(),
+  targeted: optional(boolean()),
 });
 
 /**
@@ -807,7 +815,7 @@ export type MobileApplicationTargeting = {
   /**
    * Indicates whether mobile apps should be targeted or excluded. This attribute is optional and defaults to true.
    */
-  isTargeted: boolean;
+  isTargeted?: boolean;
 };
 
 /**
@@ -816,7 +824,7 @@ export type MobileApplicationTargeting = {
 export const MobileApplicationTargetingStruct: Describe<MobileApplicationTargeting> =
   object({
     mobileApplicationIds: array(number()),
-    isTargeted: boolean(),
+    isTargeted: optional(boolean()),
   });
 
 /**
@@ -858,31 +866,43 @@ export type InventoryUrlTargeting = {
 };
 
 /**
- * A collection of targeted inventory urls.
- */
-export type InventorySizeTargeting = {
-  /**
-   * Whether the inventory sizes should be targeted or excluded.
-   */
-  isTargeted: boolean;
-
-  /**
-   * A list of TargetedSizeDtos.
-   */
-  targetedSizes: TargetedSize[];
-};
-
-export type TargetedSize = {
-  size: Size;
-};
-
-/**
  * Represents an InventoryUrlTargeting struct.
  */
 export const InventoryUrlTargetingStruct: Describe<InventoryUrlTargeting> =
   object({
     targetedUrls: array(InventoryUrlStruct),
     excludedUrls: array(InventoryUrlStruct),
+  });
+
+/**
+ * Vertical targeting information. The IDs listed here correspond to the IDs in the AD_CATEGORY table of type VERTICAL.
+ */
+export type VerticalTargeting = {
+  targetedVerticalIds: number[];
+  excludedVerticalIds: number[];
+};
+
+/**
+ * Represents a VerticalTargeting struct.
+ */
+export const VerticalTargetingStruct: Describe<VerticalTargeting> = object({
+  targetedVerticalIds: array(number()),
+  excludedVerticalIds: array(number()),
+});
+
+/**
+ * Content label targeting information.
+ */
+export type ContentLabelTargeting = {
+  excludedContentLabelIds: number[];
+};
+
+/**
+ * Represents a ContentLabelTargeting struct.
+ */
+export const ContentLabelTargetingStruct: Describe<ContentLabelTargeting> =
+  object({
+    excludedContentLabelIds: array(number()),
   });
 
 /**
@@ -907,6 +927,38 @@ export const RequestPlatformTargetingStruct: Describe<RequestPlatformTargeting> 
   object({
     targetedRequestPlatforms: array(RequestPlatformEnum),
   });
+
+/**
+ * A collection of targeted inventory urls.
+ */
+export type InventorySizeTargeting = {
+  /**
+   * Whether the inventory sizes should be targeted or excluded.
+   */
+  isTargeted: boolean;
+
+  /**
+   * A list of TargetedSizeDtos.
+   */
+  targetedSizes: TargetedSize[];
+};
+
+/**
+ * Represents an InventorySizeTargeting struct.
+ */
+export const InventorySizeTargetingStruct: Describe<InventorySizeTargeting> =
+  object({
+    isTargeted: boolean(),
+    targetedSizes: array(
+      object({
+        size: SizeStruct,
+      }),
+    ),
+  });
+
+export type TargetedSize = {
+  size: Size;
+};
 
 /**
  * Contains targeting criteria for LineItem objects. See LineItem.targeting.
@@ -984,6 +1036,16 @@ export type Targeting = {
   inventoryUrlTargeting?: InventoryUrlTargeting;
 
   /**
+   * Specifies the verticals that are targeted by the entity. The IDs listed here correspond to the IDs in the AD_CATEGORY table of type VERTICAL.
+   */
+  verticalTargeting?: VerticalTargeting;
+
+  /**
+   * Specifies the content labels that are excluded by the entity. The IDs listed here correspond to the IDs in the CONTENT_LABEL table.
+   */
+  contentLabelTargeting?: ContentLabelTargeting;
+
+  /**
    * Specifies the request platforms that are targeted by the LineItem. This attribute is required for video line items.
    *
    * This value is modifiable for video line items, but read-only for non-video line items.
@@ -1016,7 +1078,10 @@ export const TargetingStruct: Describe<Targeting> = object({
   mobileApplicationTargeting: optional(MobileApplicationTargetingStruct),
   buyerUserListTargeting: optional(BuyerUserListTargetingStruct),
   inventoryUrlTargeting: optional(InventoryUrlTargetingStruct),
+  verticalTargeting: optional(VerticalTargetingStruct),
+  contentLabelTargeting: optional(ContentLabelTargetingStruct),
   requestPlatformTargeting: optional(nullable(RequestPlatformTargetingStruct)),
+  inventorySizeTargeting: optional(InventorySizeTargetingStruct),
 });
 
 /**
