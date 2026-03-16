@@ -1,5 +1,15 @@
 # @guardian/google-admanager-api
 
+## 6.1.0
+
+### Minor Changes
+
+- dced0cc: Add verticalTargeting and contentLabelTargeting properties
+
+### Patch Changes
+
+- 6db8740: Bump `soap` dependency to 1.6.4
+
 ## 6.0.3
 
 ### Patch Changes
