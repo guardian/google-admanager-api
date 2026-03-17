@@ -37,7 +37,7 @@ export enum CustomFieldEntityType {
 }
 
 /**
- * The data types allowed for {@link https://developers.google.com/ad-manager/api/reference/v202505/CustomFieldService.CustomField CustomField} objects.
+ * The data types allowed for {@link https://developers.google.com/ad-manager/api/reference/latest/CustomFieldService.CustomField CustomField} objects.
  */
 export enum CustomFieldDataType {
   /**
