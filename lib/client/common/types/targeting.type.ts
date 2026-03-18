@@ -35,7 +35,7 @@ import {
 import { Size, SizeStruct } from "./general.type";
 
 /**
- * A {@link https://developers.google.com/ad-manager/api/reference/v202505/AdjustmentService.Location Location} represents a geographical entity that can be targeted.
+ * A {@link https://developers.google.com/ad-manager/api/reference/latest/AdjustmentService.Location Location} represents a geographical entity that can be targeted.
  * If a location type is not available because of the API version you are using,
  * the location will be represented as just the base class, otherwise it will be sub-classed correctly.
  */
@@ -133,17 +133,17 @@ export const AdUnitTargetingStruct: Describe<AdUnitTargeting> = object({
  */
 export type InventoryTargeting = {
   /**
-   * A list of targeted {@link https://developers.google.com/ad-manager/api/reference/v202505/AdjustmentService.AdUnitTargeting AdUnitTargeting}.
+   * A list of targeted {@link https://developers.google.com/ad-manager/api/reference/latest/AdjustmentService.AdUnitTargeting AdUnitTargeting}.
    */
   targetedAdUnits?: AdUnitTargeting[];
 
   /**
-   * A list of excluded {@link https://developers.google.com/ad-manager/api/reference/v202505/AdjustmentService.AdUnitTargeting AdUnitTargeting}.
+   * A list of excluded {@link https://developers.google.com/ad-manager/api/reference/latest/AdjustmentService.AdUnitTargeting AdUnitTargeting}.
    */
   excludedAdUnits?: AdUnitTargeting[];
 
   /**
-   * A list of targeted {@link https://developers.google.com/ad-manager/api/reference/v202505/PlacementService.Placement Placement} ids.
+   * A list of targeted {@link https://developers.google.com/ad-manager/api/reference/latest/PlacementService.Placement Placement} ids.
    */
   targetedPlacementIds?: number[];
 };
@@ -199,9 +199,9 @@ export type DayPartTargeting = {
 
   /**
    * Specifies the time zone to be used for delivering
-   * {@link https://developers.google.com/ad-manager/api/reference/v202505/ForecastService.LineItem LineItem} objects.
+   * {@link https://developers.google.com/ad-manager/api/reference/latest/ForecastService.LineItem LineItem} objects.
    * This attribute is optional and defaults to
-   * {@link https://developers.google.com/ad-manager/api/reference/v202505/AdjustmentService.DeliveryTimeZone#BROWSER DeliveryTimeZone.BROWSER}.
+   * {@link https://developers.google.com/ad-manager/api/reference/latest/AdjustmentService.DeliveryTimeZone#BROWSER DeliveryTimeZone.BROWSER}.
    *
    * Setting this has no effect if targeting all days and times.
    */
@@ -1031,7 +1031,7 @@ export type Targeting = {
 
   /**
    * Specifies the URLs that are targeted by the entity.
-   * This is currently only supported by {@link https://developers.google.com/ad-manager/api/reference/v202505/YieldGroupService.YieldGroup YieldGroup}.
+   * This is currently only supported by {@link https://developers.google.com/ad-manager/api/reference/latest/YieldGroupService.YieldGroup YieldGroup}.
    */
   inventoryUrlTargeting?: InventoryUrlTargeting;
 

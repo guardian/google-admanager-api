@@ -50,7 +50,7 @@ export type CustomTargetingKey = {
 };
 
 /**
- * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202505/CustomTargetingService.CustomTargetingKey CustomTargetingKey} objects.
+ * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/latest/CustomTargetingService.CustomTargetingKey CustomTargetingKey} objects.
  */
 export type CustomTargetingKeyPage = PageResult<CustomTargetingKey>;
 
@@ -107,6 +107,6 @@ export const CustomTargetingValueStruct: Describe<CustomTargetingValue> =
   });
 
 /**
- * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/v202505/CustomTargetingService.CustomTargetingValue CustomTargetingValue} objects.
+ * Captures a page of {@link https://developers.google.com/ad-manager/api/reference/latest/CustomTargetingService.CustomTargetingValue CustomTargetingValue} objects.
  */
 export type CustomTargetingValuePage = PageResult<CustomTargetingValue>;
