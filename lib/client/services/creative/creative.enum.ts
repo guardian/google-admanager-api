@@ -556,6 +556,10 @@ export enum MimeType {
    */
   VIDEO_FLV = "VIDEO_FLV",
   /**
+   * video/mp2t
+   */
+  VIDEO_MP2T = "VIDEO_MP2T",
+  /**
    * video/mp4
    */
   VIDEO_MP4 = "VIDEO_MP4",
