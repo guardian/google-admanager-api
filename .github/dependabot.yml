@@ -32,7 +32,9 @@ updates:
           - "*eslint*"
           - "*prettier*"
   - package-ecosystem: "github-actions"
-    directory: "/"
+    directories:
+      - "/.github/workflows"
+      - "/.github/actions/setup-node-env"
     schedule:
       interval: "weekly"
     cooldown:
