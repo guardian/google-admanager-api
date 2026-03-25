@@ -548,12 +548,12 @@ export type MobileDeviceSubmodelTargeting = {
   /**
    * Mobile device submodels that are being targeted by the LineItem.
    */
-  targetedMobileDeviceSubmodels: MobileDeviceSubmodel[];
+  targetedMobileDeviceSubmodels?: MobileDeviceSubmodel[];
 
   /**
    * Mobile device submodels that are being excluded by the LineItem.
    */
-  excludedMobileDeviceSubmodels: MobileDeviceSubmodel[];
+  excludedMobileDeviceSubmodels?: MobileDeviceSubmodel[];
 };
 
 /**
@@ -561,8 +561,8 @@ export type MobileDeviceSubmodelTargeting = {
  */
 export const MobileDeviceSubmodelTargetingStruct: Describe<MobileDeviceSubmodelTargeting> =
   object({
-    targetedMobileDeviceSubmodels: array(MobileDeviceSubmodelStruct),
-    excludedMobileDeviceSubmodels: array(MobileDeviceSubmodelStruct),
+    targetedMobileDeviceSubmodels: optional(array(MobileDeviceSubmodelStruct)),
+    excludedMobileDeviceSubmodels: optional(array(MobileDeviceSubmodelStruct)),
   });
 
 /**
