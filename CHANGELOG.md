@@ -1,5 +1,11 @@
 # @guardian/google-admanager-api
 
+## 6.1.2
+
+### Patch Changes
+
+- 6329e1e: Allow mobile device submodels targeting values to be optional
+
 ## 6.1.1
 
 ### Patch Changes
