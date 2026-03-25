@@ -1,5 +1,12 @@
 # @guardian/google-admanager-api
 
+## 6.1.1
+
+### Patch Changes
+
+- 60b564f: Allow targetedMobileDevices and excludedMobileDevices to be undefined in mobile device targeting
+- 60b564f: Update browser targeting to only allow strings & update operating system targeting to only allow numbers
+
 ## 6.1.0
 
 ### Minor Changes
