@@ -502,12 +502,12 @@ export type MobileDeviceTargeting = {
   /**
    * Mobile devices that are being targeted by the LineItem.
    */
-  targetedMobileDevices: MobileDevice[];
+  targetedMobileDevices?: MobileDevice[];
 
   /**
    * Mobile devices that are being excluded by the LineItem.
    */
-  excludedMobileDevices: MobileDevice[];
+  excludedMobileDevices?: MobileDevice[];
 };
 
 /**
@@ -515,8 +515,8 @@ export type MobileDeviceTargeting = {
  */
 export const MobileDeviceTargetingStruct: Describe<MobileDeviceTargeting> =
   object({
-    targetedMobileDevices: array(MobileDeviceStruct),
-    excludedMobileDevices: array(MobileDeviceStruct),
+    targetedMobileDevices: optional(array(MobileDeviceStruct)),
+    excludedMobileDevices: optional(array(MobileDeviceStruct)),
   });
 
 /**
