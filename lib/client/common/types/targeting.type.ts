@@ -8,7 +8,6 @@ import {
   object,
   optional,
   string,
-  union,
   type Describe,
 } from "superstruct";
 import { DayOfWeekEnum, type DayOfWeek } from "../../../common/enums";
@@ -298,10 +297,6 @@ export const BandwidthGroupTargetingStruct: Describe<BandwidthGroupTargeting> =
     bandwidthGroups: array(TechnologyStruct),
   });
 
-export type Version = string | number;
-
-export const VersionStruct: Describe<Version> = union([string(), number()]);
-
 /**
  * Represents an internet browser. The id and name are suppose to be inherited from the Technology type.
  */
@@ -311,8 +306,8 @@ export type Browser = {
   };
   id: number;
   name: string;
-  majorVersion: Version;
-  minorVersion: Version;
+  majorVersion: string;
+  minorVersion: string;
 };
 
 /**
@@ -324,8 +319,8 @@ export const BrowserStruct: Describe<Browser> = object({
   }),
   id: number(),
   name: string(),
-  majorVersion: VersionStruct,
-  minorVersion: VersionStruct,
+  majorVersion: string(),
+  minorVersion: string(),
 });
 
 /**
@@ -603,9 +598,9 @@ export type OperatingSystemVersion = {
   };
   id: number;
   name: string;
-  majorVersion: Version;
-  minorVersion: Version;
-  microVersion: Version;
+  majorVersion: number;
+  minorVersion: number;
+  microVersion: number;
 };
 
 /**
@@ -618,9 +613,9 @@ export const OperatingSystemVersionStruct: Describe<OperatingSystemVersion> =
     }),
     id: number(),
     name: string(),
-    majorVersion: VersionStruct,
-    minorVersion: VersionStruct,
-    microVersion: VersionStruct,
+    majorVersion: number(),
+    minorVersion: number(),
+    microVersion: number(),
   });
 
 /**
