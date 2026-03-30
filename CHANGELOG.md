@@ -1,5 +1,16 @@
 # @guardian/google-admanager-api
 
+## 7.0.0
+
+### Major Changes
+
+- 7b7d08c: Bump GAM API version to v202508
+
+### Patch Changes
+
+- 39ad5b4: Update dependency versions for `axios`, `google-auth-library` and `soap`
+- 215941a: Fix targeting type and struct of BrowserTargeting 'browsers' field
+
 ## 6.1.2
 
 ### Patch Changes
