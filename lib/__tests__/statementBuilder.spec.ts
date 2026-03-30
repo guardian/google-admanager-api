@@ -1,3 +1,5 @@
+import { describe, it } from "node:test";
+import assert from "node:assert";
 import { InvalidOperationException } from "../common/handlers/exceptions.handler";
 import { StatementBuilder } from "../common/utils";
 
@@ -13,7 +15,8 @@ describe("test StatementBuilder", () => {
       .offset(1)
       .toStatement().query;
 
-    expect(query).toBe(
+    assert.equal(
+      query,
       "SELECT Id FROM table WHERE a = b AND b = c ORDER BY a ASC, b DESC LIMIT 200 OFFSET 1",
     );
   });
@@ -29,7 +32,8 @@ describe("test StatementBuilder", () => {
       .offset(1)
       .toStatement().query;
 
-    expect(query).toBe(
+    assert.equal(
+      query,
       "SELECT Id FROM table WHERE a = b AND b = c ORDER BY a ASC, b DESC LIMIT 200 OFFSET 1",
     );
   });
@@ -43,7 +47,8 @@ describe("test StatementBuilder", () => {
       .offset(1)
       .toStatement().query;
 
-    expect(query).toBe(
+    assert.equal(
+      query,
       "WHERE a = b AND b = c ORDER BY a ASC, b DESC LIMIT 200 OFFSET 1",
     );
   });
@@ -56,7 +61,8 @@ describe("test StatementBuilder", () => {
       .limit(200)
       .toStatement().query;
 
-    expect(query).toBe(
+    assert.equal(
+      query,
       "WHERE a = b AND b = c ORDER BY a ASC, b DESC LIMIT 200",
     );
   });
@@ -65,7 +71,7 @@ describe("test StatementBuilder", () => {
     const statementBuilder = new StatementBuilder();
     const query = statementBuilder.limit(500).toStatement().query;
 
-    expect(query).toBe("LIMIT 500");
+    assert.equal(query, "LIMIT 500");
   });
 
   it("to statement limit and offset", () => {
@@ -76,11 +82,13 @@ describe("test StatementBuilder", () => {
       .where("a = b")
       .orderBy("a");
 
-    expect(query.toStatement().query).toBe(
+    assert.equal(
+      query.toStatement().query,
       "WHERE a = b ORDER BY a LIMIT 500 OFFSET 1",
     );
 
-    expect(query.removeLimitAndOffset().toStatement().query).toBe(
+    assert.equal(
+      query.removeLimitAndOffset().toStatement().query,
       "WHERE a = b ORDER BY a",
     );
   });
@@ -89,16 +97,17 @@ describe("test StatementBuilder", () => {
     const statementBuilder = new StatementBuilder();
     const query = statementBuilder.limit(500).offset(1).toStatement().query;
 
-    expect(query).toBe("LIMIT 500 OFFSET 1");
+    assert.equal(query, "LIMIT 500 OFFSET 1");
   });
 
   it("to statement not initial offset", () => {
     const statementBuilder = new StatementBuilder();
     const query = statementBuilder.limit(500).where("a = b").orderBy("a");
 
-    expect(query.toStatement().query).toBe("WHERE a = b ORDER BY a LIMIT 500");
+    assert.equal(query.toStatement().query, "WHERE a = b ORDER BY a LIMIT 500");
 
-    expect(query.increaseOffsetBy(120).toStatement().query).toBe(
+    assert.equal(
+      query.increaseOffsetBy(120).toStatement().query,
       "WHERE a = b ORDER BY a LIMIT 500 OFFSET 120",
     );
   });
@@ -111,11 +120,13 @@ describe("test StatementBuilder", () => {
       .where("a = b")
       .orderBy("a");
 
-    expect(query.toStatement().query).toBe(
+    assert.equal(
+      query.toStatement().query,
       "WHERE a = b ORDER BY a LIMIT 500 OFFSET 10",
     );
 
-    expect(query.increaseOffsetBy(30).toStatement().query).toBe(
+    assert.equal(
+      query.increaseOffsetBy(30).toStatement().query,
       "WHERE a = b ORDER BY a LIMIT 500 OFFSET 40",
     );
   });
@@ -124,17 +135,13 @@ describe("test StatementBuilder", () => {
     const statementBuilder = new StatementBuilder();
     const query = statementBuilder.toStatement().query;
 
-    expect(query).toBe("");
+    assert.equal(query, "");
   });
 
   it("to statement offset without limit", () => {
     const statementBuilder = new StatementBuilder();
     const query = statementBuilder.offset(500);
 
-    try {
-      query.toStatement();
-    } catch (error) {
-      expect(error).toBeInstanceOf(InvalidOperationException);
-    }
+    assert.throws(() => query.toStatement(), InvalidOperationException);
   });
 });

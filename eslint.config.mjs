@@ -2,7 +2,6 @@ import guardian from "@guardian/eslint-config";
 
 export default [
   ...guardian.configs.recommended,
-  ...guardian.configs.jest,
   {
     /** TODO - Address these and remove the disabling of these rules  */
     rules: {
