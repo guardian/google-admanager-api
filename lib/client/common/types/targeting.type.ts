@@ -335,7 +335,7 @@ export type BrowserTargeting = {
   /**
    * Browsers that are being targeted or excluded by the LineItem.
    */
-  browsers: Technology[];
+  browsers: Browser[];
 };
 
 /**
@@ -343,7 +343,7 @@ export type BrowserTargeting = {
  */
 export const BrowserTargetingStruct: Describe<BrowserTargeting> = object({
   isTargeted: optional(boolean()),
-  browsers: array(TechnologyStruct),
+  browsers: array(BrowserStruct),
 });
 
 /**
