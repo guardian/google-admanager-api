@@ -11,7 +11,7 @@
     "lint": "eslint 'lib/**/*.ts'",
     "prettier:check": "prettier . --check --cache",
     "prettier:fix": "prettier . --write --cache",
-    "test": "jest --config jestconfig.json"
+    "test": "glob -c \"STAGE=TEST tsx --test --test-reporter spec \" \"**/*.{test,spec}.ts\""
   },
   "repository": {
     "type": "git",
@@ -44,16 +44,15 @@
     "@changesets/cli": "^2.30.0",
     "@guardian/eslint-config": "^14.0.0",
     "@guardian/prettier": "^10.0.0",
-    "@types/jest": "^30.0.0",
     "@types/node": "^25.3.3",
     "eslint": "^9.39.3",
-    "jest": "^30.2.0",
+    "glob-bin": "^1.1.0",
     "open": "^11.0.0",
     "prettier": "^3.8.1",
     "server-destroy": "^1.0.1",
-    "ts-jest": "^29.4.6",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.21.0",
     "typescript": "5.9.3"
   },
   "keywords": [

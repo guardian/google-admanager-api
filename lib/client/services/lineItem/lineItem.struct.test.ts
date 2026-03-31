@@ -1,15 +1,19 @@
+import { describe, it } from "node:test";
+import assert from "node:assert";
 import { LineItemStruct } from "./lineItem.struct";
 import { lineItems } from "../../../fixtures/line-items";
 
 describe("LineItemStruct", () => {
-  it.each(lineItems)("should validate a valid object", (lineItem) => {
-    try {
-      LineItemStruct.assert(lineItem);
-    } catch (error) {
-      console.log(error);
+  lineItems.map((lineItem) => {
+    it("should validate a valid object", () => {
+      try {
+        LineItemStruct.assert(lineItem);
+      } catch (error) {
+        console.log(error);
 
-      expect(error).toBeUndefined();
-    }
+        assert.equal(error, undefined);
+      }
+    });
   });
 
   it("should throw an error for an invalid object", () => {
@@ -25,6 +29,7 @@ describe("LineItemStruct", () => {
         },
       ],
     };
-    expect(() => LineItemStruct.assert(invalidLineItem)).toThrow();
+
+    assert.throws(() => LineItemStruct.assert(invalidLineItem));
   });
 });
