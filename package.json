@@ -61,5 +61,10 @@
     "googleads",
     "dfp",
     "ads"
-  ]
+  ],
+  "pnpm": {
+    "overrides": {
+      "@xmldom/xmldom@<0.8.12": ">=0.8.12"
+    }
+  }
 }
