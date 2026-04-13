@@ -1,5 +1,11 @@
 # @guardian/google-admanager-api
 
+## 7.0.1
+
+### Patch Changes
+
+- 6da998c: Bump axios version to 1.15.0
+
 ## 7.0.0
 
 ### Major Changes
