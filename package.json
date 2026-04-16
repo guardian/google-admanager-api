@@ -61,5 +61,10 @@
     "googleads",
     "dfp",
     "ads"
-  ]
+  ],
+  "pnpm": {
+    "overrides": {
+      "follow-redirects@<=1.15.11": ">=1.16.0"
+    }
+  }
 }
