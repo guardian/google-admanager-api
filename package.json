@@ -36,7 +36,7 @@
   "packageManager": "pnpm@10.30.3",
   "dependencies": {
     "axios": "1.15.0",
-    "google-auth-library": "10.6.1",
+    "google-auth-library": "10.6.2",
     "soap": "1.8.0",
     "superstruct": "2.0.2"
   },
