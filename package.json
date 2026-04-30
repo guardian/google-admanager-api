@@ -64,7 +64,8 @@
   ],
   "pnpm": {
     "overrides": {
-      "follow-redirects@<=1.15.11": ">=1.16.0"
+      "follow-redirects@<=1.15.11": ">=1.16.0",
+      "@xmldom/xmldom@<0.8.13": ">=0.8.13"
     }
   }
 }
