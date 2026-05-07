@@ -1,5 +1,14 @@
 # @guardian/google-admanager-api
 
+## 7.0.2
+
+### Patch Changes
+
+- a0a1c01: Bump dependency versions:
+  - Updates `axios` from 1.15.0 to 1.15.2
+  - Updates `google-auth-library` from 10.6.1 to 10.6.2
+  - Updates `soap` from 1.8.0 to 1.9.1
+
 ## 7.0.1
 
 ### Patch Changes
