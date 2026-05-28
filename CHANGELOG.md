@@ -1,5 +1,11 @@
 # @guardian/google-admanager-api
 
+## 7.0.3
+
+### Patch Changes
+
+- 7fb80c0: Bump dependency versions of `axios` and `soap`
+
 ## 7.0.2
 
 ### Patch Changes
