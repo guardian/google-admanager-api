@@ -35,9 +35,9 @@
   "homepage": "https://github.com/guardian/google-admanager-api#readme",
   "packageManager": "pnpm@10.30.3",
   "dependencies": {
-    "axios": "1.16.0",
+    "axios": "1.16.1",
     "google-auth-library": "10.6.2",
-    "soap": "1.9.2",
+    "soap": "1.9.3",
     "superstruct": "2.0.2"
   },
   "devDependencies": {
