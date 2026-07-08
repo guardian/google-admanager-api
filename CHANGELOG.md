@@ -1,5 +1,11 @@
 # @guardian/google-admanager-api
 
+## 7.0.4
+
+### Patch Changes
+
+- 18bc13e: Add pnpm overrides to force versions between particular ranges for the following dependencies: `brace-expansion`, `esbuild`, `form-data`, `@babel/core`
+
 ## 7.0.3
 
 ### Patch Changes
