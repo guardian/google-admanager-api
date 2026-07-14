@@ -5,6 +5,7 @@ import type {
   BaseCustomFieldValue,
   Size,
   ThirdPartyDataDeclaration,
+  ThirdPartyDataDeclarationStatus,
 } from "../../common/types";
 import type { ConversionEvent_TrackingUrlsMapEntry } from "../creativeWrapper/creativeWrapper.type";
 import type {
@@ -980,22 +981,22 @@ export type BaseCreativeTemplateVariableValue = {
    */
   attributes: {
     "xsi:type":
-      | "AssetCreativeTemplateVariableValue"
-      | "LongCreativeTemplateVariableValue"
-      | "StringCreativeTemplateVariableValue"
-      | "ListStringCreativeTemplateVariableValue"
-      | "UrlCreativeTemplateVariableValue";
+    | "AssetCreativeTemplateVariableValue"
+    | "LongCreativeTemplateVariableValue"
+    | "StringCreativeTemplateVariableValue"
+    | "ListStringCreativeTemplateVariableValue"
+    | "UrlCreativeTemplateVariableValue";
   };
   /**
    * A uniqueName of the CreativeTemplateVariable.
    */
   uniqueName: string;
 } & (
-  | AssetCreativeTemplateVariableValue
-  | LongCreativeTemplateVariableValue
-  | StringCreativeTemplateVariableValue
-  | UrlCreativeTemplateVariableValue
-);
+    | AssetCreativeTemplateVariableValue
+    | LongCreativeTemplateVariableValue
+    | StringCreativeTemplateVariableValue
+    | UrlCreativeTemplateVariableValue
+  );
 
 /**
  * A Creative that is created by the specified creative template.
@@ -1215,6 +1216,13 @@ export type Creative = {
    * This is distinct from any associated companies that Google may detect programmatically.
    */
   thirdPartyDataDeclaration: ThirdPartyDataDeclaration;
+
+  /**
+   * The status of the ThirdPartyDataDeclaration associated with a given creative.
+   *
+   * This is calculated by comparing the companies detected via automated scanning/parsing, with the companies declared in the ThirdPartyDataDeclaration.
+   */
+  thirdPartyDataDeclarationStatus: ThirdPartyDataDeclarationStatus;
 } & BaseDynamicAllocationCreative &
   BaseRichMediaStudioCreative &
   ClickTrackingCreative &
