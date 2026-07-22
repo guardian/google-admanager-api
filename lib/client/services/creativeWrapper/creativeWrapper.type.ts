@@ -1,5 +1,5 @@
 import type { PageResult } from "../../../common/types";
-import type { ThirdPartyDataDeclaration, ThirdPartyDataDeclarationStatus } from "../../common/types";
+import type { ThirdPartyDataDeclaration } from "../../common/types";
 import type {
   ConversionEvent,
   CreativeWrapperOrdering,
@@ -78,13 +78,6 @@ export type CreativeWrapper = {
    * It is copied to one of the underlying creatives. If the header creative is active then it is persisted there. Otherwise it is stored on the footer creative.
    */
   thirdPartyDataDeclaration: ThirdPartyDataDeclaration;
-
-  /**
-   * The status of the ThirdPartyDataDeclaration associated with a given creative.
-   *
-   * This is calculated by comparing the companies detected via automated scanning/parsing, with the companies declared in the ThirdPartyDataDeclaration.
-   */
-  thirdPartyDataDeclarationStatus: ThirdPartyDataDeclarationStatus;
 
   /**
    * If there are multiple wrappers for a creative, then ordering defines the order in which the HTML snippets are rendered.

@@ -5,7 +5,6 @@ import type {
   BaseCustomFieldValue,
   Size,
   ThirdPartyDataDeclaration,
-  ThirdPartyDataDeclarationStatus,
 } from "../../common/types";
 import type { ConversionEvent_TrackingUrlsMapEntry } from "../creativeWrapper/creativeWrapper.type";
 import type {
@@ -22,6 +21,7 @@ import type {
   ScalableType,
   SslManualOverride,
   SslScanResult,
+  ThirdPartyDataDeclarationStatus,
   VastRedirectType,
   VideoDeliveryType,
 } from "./creative.enum";
