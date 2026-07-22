@@ -25,12 +25,12 @@ import {
  * Represents a set of declarations about what (if any) third party companies are associated with a given creative.
  *
  * This can be set at the network level, as a default for all creatives, or overridden for a particular creative.
- *
  */
 export type ThirdPartyDataDeclaration = {
   declarationType: DeclarationType;
   thirdPartyCompanyIds: number[];
 };
+
 
 export type ChildPublisher = {
   /**
