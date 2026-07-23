@@ -1,5 +1,11 @@
 # @guardian/google-admanager-api
 
+## 7.0.5
+
+### Patch Changes
+
+- ab242c2: update version of axios
+
 ## 7.0.4
 
 ### Patch Changes
