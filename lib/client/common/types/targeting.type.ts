@@ -221,17 +221,17 @@ export const DayPartTargetingStruct: Describe<DayPartTargeting> = object({
 export type Technology = {
   attributes: {
     "xsi:type":
-      | "BandwidthGroup"
-      | "Browser"
-      | "BrowserLanguage"
-      | "DeviceCapability"
-      | "DeviceCategory"
-      | "DeviceManufacturer"
-      | "MobileCarrier"
-      | "MobileDevice"
-      | "MobileDeviceSubmodel"
-      | "OperatingSystem"
-      | "OperatingSystemVersion";
+    | "BandwidthGroup"
+    | "Browser"
+    | "BrowserLanguage"
+    | "DeviceCapability"
+    | "DeviceCategory"
+    | "DeviceManufacturer"
+    | "MobileCarrier"
+    | "MobileDevice"
+    | "MobileDeviceSubmodel"
+    | "OperatingSystem"
+    | "OperatingSystemVersion";
   };
   /**
    * The unique ID of the Technology. This value is required for all forms of TechnologyTargeting.
@@ -951,6 +951,14 @@ export const InventorySizeTargetingStruct: Describe<InventorySizeTargeting> =
     ),
   });
 
+/**
+ * Publisher provided signals targeting information.
+ */
+export type PublisherProvidedSignalsTargeting = {
+  targetedTaxonomyCategoryIds?: number[];
+  excludedTaxonomyCategoryIds?: number[];
+};
+
 export type TargetedSize = {
   size: Size;
 };
@@ -1055,6 +1063,10 @@ export type Targeting = {
    * This is currently only supported on YieldGroup and TrafficDataRequest.
    */
   inventorySizeTargeting?: InventorySizeTargeting;
+  /**
+   * Publisher provided signals targeting information.
+   */
+  publisherProvidedSignalsTargeting?: PublisherProvidedSignalsTargeting;
 };
 
 /**
