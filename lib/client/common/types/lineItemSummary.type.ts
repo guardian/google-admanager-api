@@ -491,7 +491,7 @@ export type LineItemSummary = {
    */
   repeatedCreativeServingEnabled: boolean;
   /**
-   * The AllocationDeliveryProfile ID for this line item. 
+   * The AllocationDeliveryProfile ID for this line item.
    */
   deliveryAllocationProfileId?: number;
 };
