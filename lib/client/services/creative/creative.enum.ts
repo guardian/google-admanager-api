@@ -653,7 +653,6 @@ export enum VastRedirectType {
   LINEAR_AND_NON_LINEAR = "LINEAR_AND_NON_LINEAR",
 }
 
-
 /**
  * The status of the ThirdPartyDataDeclaration associated with a given creative.
  *
@@ -661,7 +660,7 @@ export enum VastRedirectType {
  */
 export enum ThirdPartyDataDeclarationStatus {
   /**
-   * The value returned if the actual value is not exposed by the requested API version. 
+   * The value returned if the actual value is not exposed by the requested API version.
    */
   UNKNOWN = "UNKNOWN",
   /**

@@ -31,7 +31,6 @@ export type ThirdPartyDataDeclaration = {
   thirdPartyCompanyIds: number[];
 };
 
-
 export type ChildPublisher = {
   /**
    * Type of delegation the parent has been approved to have over the child.

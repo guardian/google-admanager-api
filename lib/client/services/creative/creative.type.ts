@@ -981,22 +981,22 @@ export type BaseCreativeTemplateVariableValue = {
    */
   attributes: {
     "xsi:type":
-    | "AssetCreativeTemplateVariableValue"
-    | "LongCreativeTemplateVariableValue"
-    | "StringCreativeTemplateVariableValue"
-    | "ListStringCreativeTemplateVariableValue"
-    | "UrlCreativeTemplateVariableValue";
+      | "AssetCreativeTemplateVariableValue"
+      | "LongCreativeTemplateVariableValue"
+      | "StringCreativeTemplateVariableValue"
+      | "ListStringCreativeTemplateVariableValue"
+      | "UrlCreativeTemplateVariableValue";
   };
   /**
    * A uniqueName of the CreativeTemplateVariable.
    */
   uniqueName: string;
 } & (
-    | AssetCreativeTemplateVariableValue
-    | LongCreativeTemplateVariableValue
-    | StringCreativeTemplateVariableValue
-    | UrlCreativeTemplateVariableValue
-  );
+  | AssetCreativeTemplateVariableValue
+  | LongCreativeTemplateVariableValue
+  | StringCreativeTemplateVariableValue
+  | UrlCreativeTemplateVariableValue
+);
 
 /**
  * A Creative that is created by the specified creative template.
