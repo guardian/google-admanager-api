@@ -76,10 +76,6 @@ export type Company = {
    */
   creditStatus: CompanyCreditStatus;
   /**
-   * Specifies the default billing settings of this Company. This attribute is optional.
-   */
-  settings: CompanySettings;
-  /**
    * The set of labels applied to this company.
    */
   appliedLabels?: AppliedLabel[];
@@ -95,6 +91,16 @@ export type Company = {
    * Specifies the ID of the Google-recognized canonicalized form of this company. This attribute is optional.
    */
   thirdPartyCompanyId: number;
+  /**
+   * The Google-recognized id for the canonicalized form of the company. This attribute is optional. 
+   */
+  verifiedExchangeAdvertiserId?: number;
+  /**
+   * A unique ID for the brand mapped to this company. A brand is a subdivision of an advertiser; 
+   * if the brand is set, the verifiedExchangeAdvertiserId representing the advertiser must also be set. 
+   * This attribute is optional. 
+   */
+  verifiedExchangeBrandId?: number;
   /**
    * The date and time this company was last modified.
    */
