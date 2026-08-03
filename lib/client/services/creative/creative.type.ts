@@ -21,6 +21,7 @@ import type {
   ScalableType,
   SslManualOverride,
   SslScanResult,
+  ThirdPartyDataDeclarationStatus,
   VastRedirectType,
   VideoDeliveryType,
 } from "./creative.enum";
@@ -1215,6 +1216,13 @@ export type Creative = {
    * This is distinct from any associated companies that Google may detect programmatically.
    */
   thirdPartyDataDeclaration: ThirdPartyDataDeclaration;
+
+  /**
+   * The status of the ThirdPartyDataDeclaration associated with a given creative.
+   *
+   * This is calculated by comparing the companies detected via automated scanning/parsing, with the companies declared in the ThirdPartyDataDeclaration.
+   */
+  thirdPartyDataDeclarationStatus: ThirdPartyDataDeclarationStatus;
 } & BaseDynamicAllocationCreative &
   BaseRichMediaStudioCreative &
   ClickTrackingCreative &
