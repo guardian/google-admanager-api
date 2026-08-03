@@ -490,4 +490,8 @@ export type LineItemSummary = {
    * Indicates whether repeated creative serving is enabled for this line item.
    */
   repeatedCreativeServingEnabled: boolean;
+  /**
+   * The AllocationDeliveryProfile ID for this line item. 
+   */
+  deliveryAllocationProfileId?: number;
 };
