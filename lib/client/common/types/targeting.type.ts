@@ -951,6 +951,14 @@ export const InventorySizeTargetingStruct: Describe<InventorySizeTargeting> =
     ),
   });
 
+/**
+ * Publisher provided signals targeting information.
+ */
+export type PublisherProvidedSignalsTargeting = {
+  targetedTaxonomyCategoryIds?: number[];
+  excludedTaxonomyCategoryIds?: number[];
+};
+
 export type TargetedSize = {
   size: Size;
 };
@@ -1055,6 +1063,10 @@ export type Targeting = {
    * This is currently only supported on YieldGroup and TrafficDataRequest.
    */
   inventorySizeTargeting?: InventorySizeTargeting;
+  /**
+   * Publisher provided signals targeting information.
+   */
+  publisherProvidedSignalsTargeting?: PublisherProvidedSignalsTargeting;
 };
 
 /**

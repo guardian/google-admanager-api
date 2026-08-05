@@ -309,6 +309,10 @@ export type ProposalLineItem = {
    * The reason for pausing the ProposalLineItem, provided by the pauseRole. It is null when the ProposalLineItem is not paused. This attribute is read-only.
    */
   pauseReason: string;
+  /**
+   * The AllocationDeliveryProfile ID for this proposal line item.
+   */
+  deliveryAllocationProfileId?: number;
 };
 
 /**
