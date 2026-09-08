@@ -47,12 +47,12 @@
     "@types/node": "26.2.0",
     "eslint": "9.39.3",
     "glob-bin": "1.1.0",
-    "open": "11.0.1",
+    "open": "11.0.2",
     "prettier": "3.8.3",
     "server-destroy": "1.0.1",
     "ts-node": "10.9.2",
     "tsconfig-paths": "4.2.0",
-    "tsx": "4.23.12",
+    "tsx": "4.23.13",
     "typescript": "6.0.3"
   },
   "keywords": [
