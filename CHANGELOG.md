@@ -1,5 +1,12 @@
 # @guardian/google-admanager-api
 
+## 8.0.1
+
+### Patch Changes
+
+- f72b1cf: Update dependencies
+- fda58df: Update axios dependency to 1.19.0
+
 ## 8.0.0
 
 ### Major Changes
