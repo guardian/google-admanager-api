@@ -1,5 +1,11 @@
 # @guardian/google-admanager-api
 
+## 8.0.2
+
+### Patch Changes
+
+- da3b241: Bump google-auth-library to v11
+
 ## 8.0.1
 
 ### Patch Changes
