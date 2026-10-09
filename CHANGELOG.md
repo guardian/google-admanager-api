@@ -1,5 +1,12 @@
 # @guardian/google-admanager-api
 
+## 8.0.2
+
+### Patch Changes
+
+- da3b241: Bump google-auth-library to v11
+- ac7f0d2: Bump version of axios dependency to 1.20.0
+
 ## 8.0.1
 
 ### Patch Changes
