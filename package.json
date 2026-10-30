@@ -42,10 +42,10 @@
   },
   "devDependencies": {
     "@changesets/cli": "3.0.3",
-    "@guardian/eslint-config": "14.0.1",
+    "@guardian/eslint-config": "16.0.0",
     "@guardian/prettier": "10.0.0",
     "@types/node": "26.6.2",
-    "eslint": "9.39.3",
+    "eslint": "9.39.5",
     "glob-bin": "1.1.0",
     "open": "11.0.4",
     "prettier": "3.8.3",
@@ -64,13 +64,17 @@
   ],
   "pnpm": {
     "overrides": {
-      "shell-quote@<1.11.0": ">=1.11.0",
-      "follow-redirects@<=1.15.11": ">=1.16.1",
+      "@babel/core@<=7.29.0": ">=7.29.6",
       "@xmldom/xmldom@<0.8.13": ">=0.9.12",
-      "brace-expansion@>=5.0.0 <5.0.6": ">=5.0.6",
+      "brace-expansion@<1.1.20": "^1.1.20",
+      "brace-expansion@>=4.0.0 <5.0.9": ">=5.0.9",
+      "browserslist@<=4.28.6": ">=4.28.7",
       "esbuild@>=0.27.3 <0.28.1": ">=0.28.1",
+      "follow-redirects@<=1.15.11": ">=1.16.1",
       "form-data@>=4.0.0 <4.0.6": ">=4.0.6",
-      "@babel/core@<=7.29.0": ">=7.29.6"
+      "launch-editor@<2.14.2": ">=2.14.2",
+      "shell-quote@<1.11.0": ">=1.11.0",
+      "zod@<4.6.6": ">=4.6.6"
     }
   }
 }
